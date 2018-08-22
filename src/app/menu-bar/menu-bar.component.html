@@ -1,0 +1,21 @@
+<div class="container">
+
+  <ul class="mainmenus">
+    <li *ngFor="let mainmenu of mainmenus" routerLink="/{{mainmenu.id}}">
+      <!-- <nav>
+        <a routerLink="/blueprint-process">{{mainmenu.title}}</a>
+      </nav> -->
+      {{mainmenu.title}}
+
+      <!-- <a href="#">
+        <span class="badge">{{mainmenu.title}}</span>
+      </a> -->
+    </li>
+  </ul>
+
+</div>
+
+<!-- <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/heroes">Heroes</a>
+  </nav> -->

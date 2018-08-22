@@ -1,0 +1,25 @@
+.flex-flexible {
+    flex: 1;
+}
+
+.flex-initial {
+    flex: initial;
+}
+.flex-row {
+    display: flex; /* or inline-flex */
+    flex-direction: row; 
+    /* row | row-reverse | column | column-reverse; */
+}
+
+.flex-column {
+    display: flex; /* or inline-flex */
+    flex-direction: column; 
+    /* row | row-reverse | column | column-reverse; */
+}
+
+.main-area{
+    background-color:#fff;
+}
+.submenu-area{
+    background-color:#eee;
+}

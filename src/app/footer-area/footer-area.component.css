@@ -1,0 +1,13 @@
+.container {
+    background-color: #fff;
+}
+.nav-item {
+    padding: 1em;
+    color:#3a7a5e;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    color:#000;
+    cursor: pointer;
+}
