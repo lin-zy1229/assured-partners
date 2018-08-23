@@ -1,15 +1,23 @@
 <div class="container">
     <ul class="submenus">
-      <li *ngFor="let submenu of submenus">
-        {{submenu.title}}
-        <!-- <a href="#">
-      <span class="badge">{{submenu.title}}</span> 
-    </a> -->
+      <li *ngFor="let submenu of submenus" routerLink="./{{submenu.id}}">
+        <div class="submenu-title">
+          {{submenu.title}}
+          <div class="submenu-subtitle" *ngIf="submenu.sub_title">
+            {{submenu.sub_title}}
+          </div>
+        </div>
   
-        <span class="submenu-nav-symbol">
+  
+        <!-- <a href="#">
+        <span class="badge">{{submenu.title}}</span> 
+      </a> -->
+  
+        <div class="submenu-nav-symbol">
           <fa name="angle-right" animation=""></fa>
-        </span>
+        </div>
   
       </li>
     </ul>
+  
   </div>

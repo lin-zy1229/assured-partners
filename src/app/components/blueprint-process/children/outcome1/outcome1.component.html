@@ -1,3 +1,42 @@
-<p>
-  outcome1 works!
-</p>
+<div class="container">
+  <div class="page-title">
+    Outcome #1 – Watson/Wyatt% of Employees Responding Favorably Concerning Their Benefits
+
+  </div>
+
+  <div class="contents-column">
+
+
+    <div class="contents-row">
+      <div class="form">
+
+
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="description" sticky>
+            <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="benabvavg" sticky>
+            <mat-header-cell *matHeaderCellDef> Benifites Above Average </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.benabvavg}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="benbelavg" sticky>
+            <mat-header-cell *matHeaderCellDef> Benifites Below Average </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.benbelavg}} </mat-cell>
+          </ng-container>
+
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>

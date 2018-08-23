@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    padding-left:2em;
+}
+
+.form-description>i{
+    color:#00000011;
+    font-size:2em;
+}
+.form-description>i.fa-quote-left{
+    margin-right: -1em;
+}
+.form-description>i.fa-quote-right{
+    margin-left: -1em;
+}
+
+  span.indent {
+      margin-left:1.5em;
+  }
+
+  .diagram{
+      display: flex;
+      flex-direction: row;
+  }
+
+  .diagram-item{
+    display: flex;
+    flex-direction: column;
+    color: #41c562;
+    align-items: center;
+    padding-top: 3em;
+  }
+
+  .diagram-bridge {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left:2em;
+    padding-right:2em;
+  }
+  .diagram-arrow{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+  }

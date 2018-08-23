@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-two-pitfalls-to-overcome',
   templateUrl: './two-pitfalls-to-overcome.component.html',
-  styleUrls: ['./two-pitfalls-to-overcome.component.css']
+  styleUrls: ['./two-pitfalls-to-overcome.component.css',
+  '../../../../common/common_styles.css']
 })
 export class TwoPitfallsToOvercomeComponent implements OnInit {
 

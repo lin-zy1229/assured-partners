@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-outcomes-learning-from-the-prospect',
   templateUrl: './outcomes-learning-from-the-prospect.component.html',
-  styleUrls: ['./outcomes-learning-from-the-prospect.component.css']
+  styleUrls: ['./outcomes-learning-from-the-prospect.component.css',
+  '../../../../common/common_styles.css']
 })
 export class OutcomesLearningFromTheProspectComponent implements OnInit {
 

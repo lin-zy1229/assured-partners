@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { BlueprintProcessRoutingModule } from './blueprint-process-routing.module';
 import { BlueprintAndTheWedgeComponent } from './children/blueprint-and-the-wedge/blueprint-and-the-wedge.component';
@@ -26,11 +25,36 @@ import { Outcome1Component } from './children/outcome1/outcome1.component';
 import { DrivingThePointHomeComponent } from './children/driving-the-point-home/driving-the-point-home.component';
 import { HomeOfTheBlueprintProcessComponent } from './children/home-of-the-blueprint-process/home-of-the-blueprint-process.component';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule, MatSelectModule, MatOptionModule, MatListModule, MatTableModule, MatCardModule, MatButtonModule } from '@angular/material';
+
+
+const modules = [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatTableModule,
+    MatCardModule,
+    MatButtonModule
+];
+
 @NgModule({
   imports: [
-    CommonModule,
+    modules,
     BlueprintProcessRoutingModule
   ],
+  exports: [
+    modules,
+    BlueprintProcessRoutingModule
+  ],
+  
   declarations: [BlueprintAndTheWedgeComponent, TheBlueprintComponent, TheBPProcessComponent, TheBPPhilosophyComponent, TheChangeFormulaComponent, WhatMakesYouDifferentComponent, TwoPitfallsToOvercomeComponent, TheVaccumnCleanerSalespersonComponent, TheAdvisorConsultantComponent, TheInitialMeetingComponent, TheInitialMeetingTheOpenComponent, OutcomesComponent, OutcomesPCComponent, OutcomesEBComponent, OutcomesLearningFromTheProspectComponent, Phase1AndPhase2Component, TheScorecardComponent, APowerfulDiscoverySessionComponent, ScorecardDiscussionPointsComponent, TheBlueprintKeyDiscoveryFindingsComponent, Outcome1Component, DrivingThePointHomeComponent, HomeOfTheBlueprintProcessComponent]
 })
 export class BlueprintProcessModule { }

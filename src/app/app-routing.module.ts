@@ -8,7 +8,9 @@ import { MappingItOutComponent } from './components/mapping-it-out/mapping-it-ou
 import { ProactiveServiceComponent } from './components/proactive-service/proactive-service.component';
 import { ProspectingComponent } from './components/prospecting/prospecting.component';
 import { TheTruthComponent } from './components/the-truth/the-truth.component';
-
+//
+// Blueprint Process
+//
 import { BlueprintAndTheWedgeComponent } from './components/blueprint-process/children/blueprint-and-the-wedge/blueprint-and-the-wedge.component';
 import { TheBlueprintComponent } from './components/blueprint-process/children/the-blueprint/the-blueprint.component';
 import { TheBPProcessComponent } from './components/blueprint-process/children/the-bpprocess/the-bpprocess.component';
@@ -32,6 +34,24 @@ import { TheBlueprintKeyDiscoveryFindingsComponent } from './components/blueprin
 import { Outcome1Component } from './components/blueprint-process/children/outcome1/outcome1.component';
 import { DrivingThePointHomeComponent } from './components/blueprint-process/children/driving-the-point-home/driving-the-point-home.component';
 import { HomeOfTheBlueprintProcessComponent } from './components/blueprint-process/children/home-of-the-blueprint-process/home-of-the-blueprint-process.component';
+//
+// Mapping It Out
+//
+import { HomeMappingItOutComponent } from './components/mapping-it-out/children/home-mapping-it-out/home-mapping-it-out.component';
+import { SettingTheStageComponent } from './components/mapping-it-out/children/setting-the-stage/setting-the-stage.component';
+import { MappingItOutSubItemComponent } from './components/mapping-it-out/children/mapping-it-out-sub-item/mapping-it-out-sub-item.component';
+import { TheMapWhatIsOnItComponent } from './components/mapping-it-out/children/the-map-what-is-on-it/the-map-what-is-on-it.component';
+import { WhoComponent } from './components/mapping-it-out/children/who/who.component';
+import { WhoKeyQuestionComponent } from './components/mapping-it-out/children/who-key-question/who-key-question.component';
+import { WhenComponent } from './components/mapping-it-out/children/when/when.component';
+import { HowMakingSureTheyGetItComponent } from './components/mapping-it-out/children/how-making-sure-they-get-it/how-making-sure-they-get-it.component';
+import { WhyConfirmingTheyWantItComponent } from './components/mapping-it-out/children/why-confirming-they-want-it/why-confirming-they-want-it.component';
+import { NotesComponent } from './components/mapping-it-out/children/notes/notes.component';
+import { PresentingToWinComponent } from './components/mapping-it-out/children/presenting-to-win/presenting-to-win.component';
+import { DinnerWithFriendsComponent } from './components/mapping-it-out/children/dinner-with-friends/dinner-with-friends.component';
+import { ConclusionComponent } from './components/mapping-it-out/children/conclusion/conclusion.component';
+import { SomeAnalogiesComponent } from './components/mapping-it-out/children/some-analogies/some-analogies.component';
+import { WrittenServiceTimeline2017Component } from './components/mapping-it-out/children/written-service-timeline2017/written-service-timeline2017.component';
 
 const routes: Routes = [
   {
@@ -63,7 +83,26 @@ const routes: Routes = [
     ]
   },
   { path: '2', component: LeverageRelationComponent },
-  { path: '3', component: MappingItOutComponent },
+  {
+    path: '3', component: MappingItOutComponent,
+    children: [
+      { path: '', component: HomeMappingItOutComponent },
+      { path: '1', component: SettingTheStageComponent },
+      { path: '2', component: MappingItOutSubItemComponent },
+      { path: '3', component: TheMapWhatIsOnItComponent },
+      { path: '4', component: WhoComponent },
+      { path: '5', component: WhoKeyQuestionComponent },
+      { path: '6', component: WhenComponent },
+      { path: '7', component: HowMakingSureTheyGetItComponent },
+      { path: '8', component: WhyConfirmingTheyWantItComponent },
+      { path: '9', component: NotesComponent },
+      { path: '10', component: PresentingToWinComponent },
+      { path: '11', component: DinnerWithFriendsComponent },
+      { path: '12', component: ConclusionComponent },
+      { path: '13', component: SomeAnalogiesComponent },
+      { path: '14', component: WrittenServiceTimeline2017Component },
+    ]
+  },
   { path: '4', component: ProactiveServiceComponent },
   { path: '5', component: ProspectingComponent },
   { path: '6', component: TheTruthComponent }

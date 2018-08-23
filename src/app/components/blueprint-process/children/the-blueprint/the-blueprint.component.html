@@ -1,3 +1,99 @@
-<p>
-  the-blueprint works!
-</p>
+<div class="container">
+	<div class="page-title">
+		The Blueprint "Five Bottlenecks to Growth"
+	</div>
+
+	<div class="contents-column">
+
+		<p class="form-question">1. Time – Small business is a cancer to growth</p>
+		<p class="form-question">2. Expectations</p>
+		<span class="description">A. What is your average Revenue per Relationship (RPR)?</span>
+		<span class="description">B. What “Should” it be?</span>
+
+		<div class="contents-row">
+			<div class="form">
+
+
+				<mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
+					<ng-container matColumnDef="description">
+						<mat-header-cell *matHeaderCellDef> </mat-header-cell>
+						<mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+					</ng-container>
+
+					<ng-container matColumnDef="accts">
+						<mat-header-cell *matHeaderCellDef> # Accts </mat-header-cell>
+						<mat-cell *matCellDef="let element"> {{element.accts}} </mat-cell>
+					</ng-container>
+
+					<ng-container matColumnDef="revCategory">
+						<mat-header-cell *matHeaderCellDef> Rev / Category </mat-header-cell>
+						<mat-cell *matCellDef="let element"> {{element.revCategory}} </mat-cell>
+					</ng-container>
+
+					<ng-container matColumnDef="rpr">
+						<mat-header-cell *matHeaderCellDef> RPR </mat-header-cell>
+						<mat-cell *matCellDef="let element"> {{element.rpr}} </mat-cell>
+					</ng-container>
+
+					<ng-container matColumnDef="percent">
+						<mat-header-cell *matHeaderCellDef> </mat-header-cell>
+						<mat-cell *matCellDef="let element"> {{element.percent}} </mat-cell>
+					</ng-container>
+
+					<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+					<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+				</mat-table>
+				<p></p>
+				<mat-table [dataSource]="dataSource2" class="mat-elevation-z8">
+						<ng-container matColumnDef="description">
+							<mat-header-cell *matHeaderCellDef> </mat-header-cell>
+							<mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+						</ng-container>
+	
+						<ng-container matColumnDef="accts">
+							<mat-header-cell *matHeaderCellDef> # Accts </mat-header-cell>
+							<mat-cell *matCellDef="let element"> {{element.accts}} </mat-cell>
+						</ng-container>
+	
+						<ng-container matColumnDef="revCategory">
+							<mat-header-cell *matHeaderCellDef> Rev / Category </mat-header-cell>
+							<mat-cell *matCellDef="let element"> {{element.revCategory}} </mat-cell>
+						</ng-container>
+	
+						<ng-container matColumnDef="rpr">
+							<mat-header-cell *matHeaderCellDef> RPR </mat-header-cell>
+							<mat-cell *matCellDef="let element"> {{element.rpr}} </mat-cell>
+						</ng-container>
+	
+						<ng-container matColumnDef="percent">
+							<mat-header-cell *matHeaderCellDef> </mat-header-cell>
+							<mat-cell *matCellDef="let element"> {{element.percent}} </mat-cell>
+						</ng-container>
+	
+						<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+						<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+					</mat-table>
+	
+			</div>
+
+			<div>
+				<img src="/src/assets/blueprint-process/3-image.png">
+			</div>
+
+		</div>
+
+		<p class="form-question">3. Who do I Call on?</p>
+		<span class="description">A. Who is your ideal client and buyer?</span>
+		<p class="form-question">4. What do I Say to Get in Front of Them?</p>
+		<span class="description">A. We say waaaaaaay too much</span>
+		<span class="description">B. Create curiosity – Don’t sell</span>
+
+		<p class="form-question">5. What needs to happen to get hired?</p>
+		<span class="description">A. Your model is “open sourced” and is all about intelligence to find a better way</span>
+		<span class="description">B. Blue Ocean strategy – Blue Ocean is the opposite of Red Ocean where everyone is beating each
+			other up and creating a lot of “blood” in the ocean – Opposite George</span>
+		<span class="description">C. Show them something they have yet to experience</span>
+		<p></p>
+
+	</div>
+</div>

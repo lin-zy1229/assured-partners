@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.contents-row{
+    display: flex;
+    flex-direction: row;
+}
+.contents-column{
+    display: flex;
+    flex-direction: column;
+    padding-left:2em;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.form > * {
+    width: 90%;
+}
+span.description {
+    padding-left: 2em;
+    padding-bottom: 0.5em;
+}
+mat-header-row {
+    background-color:#4472c4;
+}
+mat-header-cell {
+    color:white;
+    font-size:0.9em;
+}
+.mat-table-sticky {
+    border-right: 1px solid #fff;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+mat-row:nth-child(even){
+    background-color:#cfd5ea;
+}
+mat-row:nth-child(odd){
+    background-color:#eef1fa;
+}

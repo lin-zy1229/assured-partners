@@ -1,3 +1,20 @@
-<p>
-  the-scorecard works!
-</p>
+<div class="container">
+  <div class="page-title">
+    The Scorecard
+  </div>
+
+
+
+  <div class="contents">
+    <span class="form-question">THE BLUEPRINT SCORECARD</span>
+    <span class="form-description">To help us understand your current situation and help get your plan on a high performing
+      level, please complete the scorecard and check the number that most reflects your thoughts on each paired phrase.</span>
+
+    <div *ngFor="let question of questions" class="row">
+      <div class="former {{question.color}}">{{question.first}}</div>
+      <button *ngFor="let num of [1,2,3,4,5,6,7,8,9,10]" mat-stroked-button mat-fab color="primary">{{num}}</button>
+      <div class="latter {{question.color}}">{{question.last}}</div>
+    </div>
+
+  </div>
+</div>

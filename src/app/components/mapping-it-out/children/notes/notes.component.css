@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.contents{
+    display: flex;
+    flex-direction: row;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+  
+ .form > * {
+    width: 90%;
+ }
+ .image-left {
+     padding: 5em;
+ }

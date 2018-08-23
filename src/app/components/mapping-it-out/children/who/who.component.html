@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="page-title">
+      Who?
+    </div>
+    <div class="card-container">
+  
+  
+      <!-- [ngClass]="{ 'hide': stage!=0}" -->
+      <!-- *ngIf="stage===0" [@enterAnimation] -->
+      <div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="contents">
+  
+        <section class="shape-section">
+          <div class="shape rectangle round green">
+            <div class="content-in-shape"><span class="title">Setting the Stage</span></div>
+          </div>
+  
+          <div class="line-vertical"></div>
+          <div class="rectangle-no-bottom"></div>
+  
+          <div class="shape-section-side">
+            <div class="shape round blue cursor-pointer" (click)="onClick1()">
+              <div class="content-in-shape"><span class="title">Our next step, “Mapping out the Strategy
+                </span></div>
+            </div>
+  
+            <div class="shape round blue cursor-pointer" (click)="onClick2()">
+              <div class="content-in-shape"><span class="title">What are the signs the buyer is ready to get serious</span></div>
+            </div>
+          </div>
+  
+        </section>
+        <p></p>
+        <p class="form-description center margin-10">There comes a point in your process, where you have confirmed that the prospect
+          is showing interest in some or all the items you have pulled out of your tool box.</p>
+        <p class="form-description center margin-10">Based on your interpretation of his or her body language and verbal language,
+          you have decided the prospect is ready to dig deeper into these proactive services.</p>
+        <p></p>
+  
+      </div>
+  
+  
+      <div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-1" class="contents">
+        <div>
+          <button mat-button color="primary" (click)="onBack()">Back</button>
+        </div>
+        <span class="form-title center bold">What are the signs the buyer is ready to get serious</span>
+  
+  
+        <div class="content-box">
+          <span>Our next step, <span class="emphasis">“Mapping out the Strategy”</span> is where we will go to confirm our buyer’s
+            buy in – or simply put, determine if they are actually interested in what we have suggested they may need.</span>
+        </div>
+  
+      </div>
+  
+  
+      <div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-2" class="contents">
+        <div>
+          <button mat-button color="primary" (click)="onBack()">Back</button>
+        </div>
+        <span class="form-title center bold">What are the signs the buyer is ready to get serious</span>
+  
+        <span class="form-description center margin-10">The buyer has told you he or she is not getting this proactive service
+          or that one. How can you tell if you have given them enough evidence that your services are special, to move on?
+        </span>
+  
+        <div class="side-contents">
+  
+          <div class="row-contents">
+            <span class="form-question center">1. Keywords or phrases that say “Let’s Go”
+            </span>
+  
+            <span class="form-description emphasis indent"><li>We’ve never seen that before</li></span>
+            <span class="form-description emphasis indent"><li>How does it work?</li></span>
+            <span class="form-description emphasis indent"><li>Interesting</li></span>
+  
+          </div>
+  
+          <div class="row-contents">
+            <span class="form-question center">2. Look for positive body language
+            </span>
+  
+            <span class="form-description emphasis indent"><li>Sitting up on the edge of their seat</li></span>
+            <span class="form-description emphasis indent"><li>Agitated or excited tone of speech</li></span>
+            <span class="form-description emphasis indent"><li>Raising their eyebrows</li></span>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
