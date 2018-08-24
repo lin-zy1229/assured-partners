@@ -8,25 +8,25 @@
 	<div class="contents">
 
 		<section class="shape-section">
-			<div class="container shape circle gray">
+			<div *ngIf="stage>=0" [@enterAnimation-0]="stage" id='shape-0' class="container shape circle gray cursor-pointer" (click)="onClick1()">
 				<div class="content-in-shape"><span class="title">(D)issatisfaction</span></div>
 			</div>
 
-			<span class="formula">+</span>
+			<span *ngIf="stage>=1" [@enterAnimation-arrow-0]="stage" class="formula">+</span>
 
-			<div class="container shape diamond green">
+			<div *ngIf="stage>=1" [@enterAnimation-1]="stage" id='shape-1' class="container shape diamond green cursor-pointer" (click)="onClick2()">
 				<div class="content-in-shape"><span class="title">(V)ision</span></div>
 			</div>
 
-			<span class="formula">+</span>
+			<span *ngIf="stage>=2" [@enterAnimation-arrow-1]="stage" class="formula">+</span>
 
-			<div class="container shape diamond green">
+			<div *ngIf="stage>=2" [@enterAnimation-2]="stage" id='shape-2' class="container shape diamond green cursor-pointer" (click)="onClick3()">
 				<div class="content-in-shape"><span class="title">(F)irst Concrete Steps</span></div>
 			</div>
 
-			<span class="formula">></span>
+			<span *ngIf="stage>=3" [@enterAnimation-arrow-2]="stage" class="formula">></span>
 
-			<div class="container shape diamond green">
+			<div *ngIf="stage>=3" [@enterAnimation-3]="stage" id='shape-3' class="container shape diamond green cursor-pointer" (click)="onClick4()">
 				<div class="content-in-shape"><span class="title">(R)esistance to Change</span></div>
 			</div>
 		</section>

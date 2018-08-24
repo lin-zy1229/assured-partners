@@ -1,9 +1,9 @@
-<div class="container">
+<div class="page-container">
 	<div class="page-title">
 		The Map - What is on it?
 	</div>
 
-	<div class="side-contents">
+	<div class="page-content-side">
 		<section class="shape-section">
 			<div [ngClass]="{ 'green': stage==1}" class="shape rectangle round blue cursor-pointer" (click)="onClick1()">
 				<div class="content-in-shape"><span class="title">What is it</span></div>
@@ -32,7 +32,7 @@
 
 			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="contents">
 				<div class="home-page-list-item">
-					<img src="/src/assets/mapping-it-out/3-1.png">
+					<img src="assets/mapping-it-out/3-1.png">
 					<div class="desc">
 						<span class="form-title">What?</span>
 						<span class="form-description">What – is the Service Called</span>
@@ -41,7 +41,7 @@
 				</div>
 
 				<div class="home-page-list-item">
-					<img src="/src/assets/mapping-it-out/3-1.png">
+					<img src="assets/mapping-it-out/3-1.png">
 					<div class="desc">
 
 						<span class="form-title">Who?</span>
@@ -51,7 +51,7 @@
 				</div>
 
 				<div class="home-page-list-item">
-					<img src="/src/assets/mapping-it-out/3-1.png">
+					<img src="assets/mapping-it-out/3-1.png">
 					<div class="desc">
 
 						<span class="form-title">When?</span>
@@ -61,7 +61,7 @@
 
 
 				<div class="home-page-list-item">
-					<img src="/src/assets/mapping-it-out/3-1.png">
+					<img src="assets/mapping-it-out/3-1.png">
 					<div class="desc">
 
 						<span class="form-title">How?</span>
@@ -71,7 +71,7 @@
 
 
 				<div class="home-page-list-item">
-					<img src="/src/assets/mapping-it-out/3-1.png">
+					<img src="assets/mapping-it-out/3-1.png">
 					<div class="desc">
 
 						<span class="form-title">Why?</span>
@@ -84,7 +84,7 @@
 
 			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-main" class="contents">
 				<div>
-					<button mat-button color="primary" (click)="onBack()">Back</button>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 
 				<div class="content-box">
@@ -97,7 +97,7 @@
 
 			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-main" class="contents">
 				<div>
-					<button mat-button color="primary" (click)="onBack()">Back</button>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 				<span class="form-title bold">Help the Prospect Understand What is Coming Next</span>
 				<span class="form-question">The prospect has probably never been through an exercise like this. Most likely, their experience
@@ -110,7 +110,7 @@
 
 			<div *ngIf="stage===3" [@enterAnimation] id="setting-the-stage-main" class="contents">
 				<div>
-					<button mat-button color="primary" (click)="onBack()">Back</button>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 				<span class="form-title bold">What’s it Called?</span>
 				<span class="form-question">Give your service a name – we’ll get into this more when we talk about writing 

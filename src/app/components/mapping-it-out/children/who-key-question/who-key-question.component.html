@@ -1,3 +1,109 @@
-<p>
-  who-key-question works!
-</p>
+<div class="page-container">
+	<div class="page-title">
+		Who? - Key Question (Jerry - CFO)
+	</div>
+	<div class="page-content">
+		<div class="card-container">
+
+			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+				<div class="side-contents">
+					<div class="contents2">
+						<div class="home-page-list-item">
+							<div><img src="assets/mapping-it-out/5-1.png"></div>
+							<span class="form-question">Okay, what is Jerry's last name?</span>
+						</div>
+
+						<div class="home-page-list-item">
+							<div><img src="assets/mapping-it-out/5-1.png"></div>
+							<span class="form-question">How long has Jerry been your CFO?</span>
+						</div>
+						<div class="home-page-list-item">
+							<div><img src="assets/mapping-it-out/5-1.png"></div>
+							<span class="form-question">How did he get into the role, was he promoted, did he come from another company?
+							</span>
+						</div>
+						<div class="home-page-list-item">
+							<div><img src="assets/mapping-it-out/5-1.png"></div>
+							<span class="form-question">Can you walk me through his typical day? How does he get his hands dirty?
+							</span>
+						</div>
+						<div class="home-page-list-item">
+							<div><img src="assets/mapping-it-out/5-1.png"></div>
+							<span class="form-question">Would it be fair to call Jerry your right hand man?
+							</span>
+						</div>
+						<div class="home-page-list-item">
+							<div><img src="assets/mapping-it-out/5-1.png"></div>
+							<span class="form-question">Why did you mention him? Would he be a person who would be getting updates on the status
+								of the process?
+							</span>
+						</div>
+					</div>
+
+					<section class="shape-section">
+						<div class="content-box">
+							<span>Repeat this process for any people your prospect brings up. If they stall or are having problems coming up with
+								anyone ask for the usual suspects – those whom you know deal with this stuff, HR people, Financial people, their
+								assistants, etc. </span>
+						</div>
+
+						<div class="content-box emphasis">
+							<span class="emphasis">Remember to ask them if they see their broker playing a role in the service – what is it? How
+								much do they expect from him/her?</span>
+						</div>
+
+						<div [ngClass]="{ 'green': stage==1}" class="shape rectangle round blue cursor-pointer" (click)="onClick1()">
+							<div class="content-in-shape"><span class="title">“Why Do You Need All<br> This Information?”
+								</span></div>
+						</div>
+					</section>
+
+
+				</div>
+
+			</div>
+
+			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+				<div>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+				</div>
+
+				<p class="form-title">
+					“Why Do You Need All This Information?”
+				</p>
+
+				<span class="form-description">
+					It’s a common question. Truthfully, we want to learn as much as we can about how the company works and how the employees
+					interact. Why?
+				</span>
+
+
+
+
+
+
+				<span class="form-description emphasis indent">
+					<li>So we know who is going to be talking about us after we leave and so we know as much about their role in the decision
+						making process as possible</li>
+				</span>
+
+				<span class="form-description emphasis indent">
+					<li>So we can do our job well, be thorough and create a scenario where the customer is perfectly satisfied with the
+						service and its execution</li>
+				</span>
+
+				<p class="form-description">
+					Your Response: I understand Mr. X, I get that all the time. I promise you, I’m not going to ask for social security numbers
+					or anything like that, but would you agree that every company is different? (Sure) Well, I’m just trying to be sure
+					I understand how you and your employees work together, so I get this right! Fair enough?
+				</p>
+			</div>
+
+
+
+		</div>
+
+
+
+	</div>
+</div>

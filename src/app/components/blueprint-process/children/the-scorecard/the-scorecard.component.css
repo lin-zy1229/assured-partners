@@ -47,3 +47,8 @@ div.row{
   .green {
       color: green;
   }
+  .mat-fab {
+      background-color:rgba(255, 219, 219, 0.158);
+      color:black;
+      border-color:gray;
+  }

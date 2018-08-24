@@ -1,58 +1,108 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 2em 2em 2em 2em;
+    min-height: 600px;
+}
+
+.page-content-side {
+    display: flex;
+    flex-direction: row;
+    
+    padding: 2em 2em 2em 2em;
+    min-height: 600px;
+}
+.card-container {
+    height: 500px;
+}
+.card-content{
+    position: absolute;
+    /* width: 100%; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* padding:1em; */
+}
+
 .page-title {
-    color: #182757;
-    font-weight: bold;
-    font-size: 2.5em;
-    padding: 0.5em 0.5em 1em 1em;
+	color: #182757;
+	font-weight: bold;
+	font-size: 2.5em;
+	padding: 1em 0.5em 0.5em 1em;
 }
 
 .form-title {
-    color: #182757;
-    font-size: 1.4em;
-
-    padding-top: 1em;
-    padding-bottom: .2em;
+	color: #182757;
+	font-size: 1.4em;
+	padding-top: 1em;
+	padding-bottom: .2em;
+	font-weight: bold;
 }
+
 .form-question {
-    color: #182757;
-    font-size: 1.2em;
-    
-    padding-top: 1em;
-    padding-bottom:.3em;
-}
-.form-content {
-    color: #182757;
-    font-size: 1em;
-}
-.form-description {
-    color: #182757;
-    font-size: 1em;
-    padding-top: .2em;
-    padding-bottom:.5em;
+	color: #182757;
+	font-size: 1.2em;
+	padding-top: 1em;
+	padding-bottom: .3em;
 }
 
+.form-content {
+	color: #182757;
+	font-size: 1em;
+}
+
+.form-description {
+	color: #182757;
+	font-size: 1em;
+	padding-top: .2em;
+	padding-bottom: .5em;
+}
 
 span.emphasis {
-    color:#4fca6e;
-    font-style: italic;
-}
-.indent{
-    padding-left: 2em;
+	color: #4fca6e;
+	font-style: italic;
 }
 
-.arrow-line { 
+.indent {
+	padding-left: 2em;
+}
+
+.arrow-line {
 	width: 3em;
 	height: 0;
 	border-bottom: solid lightgray .3em;
-  }
-  .arrow-line-long { 
+}
+
+.arrow-line-long {
 	width: 9em;
 	height: 0;
 	border-bottom: solid lightgray .3em;
-  }
-  .arrow{
+}
+
+.arrow {
 	width: 0;
 	height: 0;
 	border-style: solid;
 	border-width: .5em 0 .5em 1em;
 	border-color: transparent transparent transparent lightgray;
-  }
+}
+
+.arrow.up {
+	transform: rotate(-90deg);
+}
+
+.arrow.down {
+	transform: rotate(90deg);
+}
+.arrow.left {
+	transform: rotate(180deg);
+}
+.cursor-pointer {
+    cursor: pointer;
+}

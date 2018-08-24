@@ -1,5 +1,11 @@
 .container {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
     width: 17em;
+    
+}
+
+.container>img:focus {
+    outline: 0;
 }

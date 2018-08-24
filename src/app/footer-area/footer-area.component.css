@@ -1,13 +1,14 @@
 .container {
     background-color: #fff;
+    border-top: solid lightgray 1px;
+    padding: 0.8em;
 }
 .nav-item {
-    padding: 1em;
+    padding: 0 1em 0 1em;
     color:#3a7a5e;
 }
 
 .nav-item:hover {
     font-weight: bold;
-    color:#000;
     cursor: pointer;
 }

@@ -27,6 +27,11 @@
 	background-color: #1473e7;
 	box-shadow: 0px 4px 10px grey;
   }
+  .mainmenus li:focus {
+    color: #fff;
+	background-color: #1473e7;
+	box-shadow: 0px 4px 10px grey;
+  }
   
   .mainmenus a {
     color: #888;

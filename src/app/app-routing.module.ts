@@ -52,8 +52,13 @@ import { DinnerWithFriendsComponent } from './components/mapping-it-out/children
 import { ConclusionComponent } from './components/mapping-it-out/children/conclusion/conclusion.component';
 import { SomeAnalogiesComponent } from './components/mapping-it-out/children/some-analogies/some-analogies.component';
 import { WrittenServiceTimeline2017Component } from './components/mapping-it-out/children/written-service-timeline2017/written-service-timeline2017.component';
+import { HomeLeverageRelationComponent } from './components/leverage-relation/children/home-leverage-relation/home-leverage-relation.component';
+import { HomeProactiveServiceComponent } from './components/proactive-service/children/home-proactive-service/home-proactive-service.component';
+import { HomeProspectingComponent } from './components/prospecting/children/home-prospecting/home-prospecting.component';
+import { HomeTheTruthComponent } from './components/the-truth/children/home-the-truth/home-the-truth.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/1', pathMatch: 'full' },
   {
     path: '1', component: BlueprintProcessComponent,
     children: [
@@ -82,7 +87,19 @@ const routes: Routes = [
       { path: '22', component: DrivingThePointHomeComponent },
     ]
   },
-  { path: '2', component: LeverageRelationComponent },
+  {
+    path: '2', component: LeverageRelationComponent,
+    children: [
+      { path: '', component: HomeLeverageRelationComponent },
+      { path: '1', component: HomeLeverageRelationComponent },
+      { path: '2', component: HomeLeverageRelationComponent },
+      { path: '3', component: HomeLeverageRelationComponent },
+      { path: '4', component: HomeLeverageRelationComponent },
+      { path: '5', component: HomeLeverageRelationComponent },
+      { path: '6', component: HomeLeverageRelationComponent },
+      { path: '7', component: HomeLeverageRelationComponent },
+    ]
+  },
   {
     path: '3', component: MappingItOutComponent,
     children: [
@@ -103,9 +120,61 @@ const routes: Routes = [
       { path: '14', component: WrittenServiceTimeline2017Component },
     ]
   },
-  { path: '4', component: ProactiveServiceComponent },
-  { path: '5', component: ProspectingComponent },
-  { path: '6', component: TheTruthComponent }
+  {
+    path: '4', component: ProactiveServiceComponent,
+    children: [
+      { path: '', component: HomeProactiveServiceComponent },
+      { path: '1', component: HomeProactiveServiceComponent },
+      { path: '2', component: HomeProactiveServiceComponent },
+      { path: '3', component: HomeProactiveServiceComponent },
+      { path: '4', component: HomeProactiveServiceComponent },
+      { path: '5', component: HomeProactiveServiceComponent },
+      { path: '6', component: HomeProactiveServiceComponent },
+      { path: '7', component: HomeProactiveServiceComponent },
+      { path: '8', component: HomeProactiveServiceComponent },
+      { path: '9', component: HomeProactiveServiceComponent },
+      { path: '10', component: HomeProactiveServiceComponent },
+      { path: '11', component: HomeProactiveServiceComponent },
+      { path: '12', component: HomeProactiveServiceComponent },
+      { path: '13', component: HomeProactiveServiceComponent },
+      { path: '14', component: HomeProactiveServiceComponent },
+    ]
+  },
+  {
+    path: '5', component: ProspectingComponent,
+    children: [
+      { path: '', component: HomeProspectingComponent },
+      { path: '1', component: HomeProspectingComponent },
+      { path: '2', component: HomeProspectingComponent },
+      { path: '3', component: HomeProspectingComponent },
+      { path: '4', component: HomeProspectingComponent },
+      { path: '5', component: HomeProspectingComponent },
+      { path: '6', component: HomeProspectingComponent },
+      { path: '7', component: HomeProspectingComponent },
+      { path: '8', component: HomeProspectingComponent },
+      { path: '9', component: HomeProspectingComponent },
+      { path: '10', component: HomeProspectingComponent },
+      { path: '11', component: HomeProspectingComponent },
+      { path: '12', component: HomeProspectingComponent },
+      { path: '13', component: HomeProspectingComponent },
+      { path: '14', component: HomeProspectingComponent },
+      { path: '15', component: HomeProspectingComponent },
+      { path: '16', component: HomeProspectingComponent },
+      { path: '17', component: HomeProspectingComponent },
+    ]
+  },
+  {
+    path: '6', component: TheTruthComponent,
+    children: [
+      { path: '', component: HomeTheTruthComponent },
+      { path: '1', component: HomeTheTruthComponent },
+      { path: '2', component: HomeTheTruthComponent },
+      { path: '3', component: HomeTheTruthComponent },
+      { path: '4', component: HomeTheTruthComponent },
+      { path: '5', component: HomeTheTruthComponent },
+      { path: '6', component: HomeTheTruthComponent },
+    ]
+  }
 
 ];
 
@@ -113,7 +182,7 @@ const routes: Routes = [
   imports: [
 
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, { useHash: true })
 
   ],
   declarations: [],

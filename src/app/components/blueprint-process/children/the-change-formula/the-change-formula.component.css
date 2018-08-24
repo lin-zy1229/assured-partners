@@ -17,17 +17,38 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
+  	/* animation */
+	height: 170px;
+	margin-top: 1em;
   }
   .shape {
-      margin: 1em 2em 1em 2em;
-      height: 8em;
-      width:8em;
-      text-align: center;
+	/* animation */
+	/* margin: 1em 2em 1em 2em; */
+	height: 8em;
+	width: 8em;
+	text-align: center;
+	/* animation */
+	position: absolute;
+  }
+  #shape-0 {
+    z-index: 4;
+  }
+  
+  #shape-1 {
+    z-index: 3;
+  }
+  
+  #shape-2 {
+    z-index: 2;
+  }
+  #shape-3 {
+    z-index: 1;
   }
   .shape.diamond {
     transform:rotate(45deg);
-    margin-left: 2em;
+    /* animation */
+    /* margin-left: 2em; */
   }
   .shape.circle {
     border-radius: 11.3em;

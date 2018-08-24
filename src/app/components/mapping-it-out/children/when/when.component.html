@@ -1,3 +1,136 @@
-<p>
-  when works!
-</p>
+<div class="page-container">
+	<div class="page-title">
+		When?
+	</div>
+	<div class="page-content">
+		<div class="card-container">
+
+
+			<!-- [ngClass]="{ 'hide': stage!=0}" -->
+			<!-- *ngIf="stage===0" [@enterAnimation] -->
+			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+
+				<p class="form-description center margin-10">Why would we want to establish when this service needs to happen? So the
+					buyer knows we think the service is actually going to take place! Once they tell us the time of year they want it done,
+					we have begun to plan for next year.</p>
+				<p class="form-description center margin-10"><span class="emphasis">Be specific, if they say “July”, ask them “Which
+						part of July do you think would be better, towards the beginning or towards the end?” In your notes, be sure to say
+						“First week of July</span></p>
+				<p></p>
+
+				<section class="shape-section">
+					<div class="shape rectangle round green">
+						<div class="content-in-shape"><span class="title">When</span></div>
+					</div>
+
+					<div class="line-vertical"></div>
+					<div class="rectangle-no-bottom"></div>
+
+					<div class="shape-section-side">
+						<div class="shape round blue cursor-pointer" (click)="onClick1()">
+							<div class="content-in-shape"><span class="title">They will often say</span></div>
+						</div>
+
+						<div class="shape round blue cursor-pointer" (click)="onClick2()">
+							<div class="content-in-shape"><span class="title">You should<br> respond instead with:
+								</span></div>
+						</div>
+
+						<div class="shape round blue cursor-pointer" (click)="onClick3()">
+							<div class="content-in-shape"><span class="title">Collaboration <br> and the Buyer’s<br> Perception
+								</span></div>
+						</div>
+					</div>
+
+				</section>
+				<p></p>
+
+
+			</div>
+
+
+			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+				<div>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+				</div>
+
+				<p class="form-title center">
+					They will often say:
+				</p>
+				<div class="quote-box">
+					<p class="form-description center">
+						“I’m not sure, you brought<br>it up?”
+					</p>
+				</div>
+				<div style="display: flex;justify-content: center;">
+					<div class="arrow down"></div>
+				</div>
+
+
+				<div style="display: flex;justify-content: center;">
+					<img src="assets/mapping-it-out/6-1.png">
+				</div>
+
+				<p class="form-description center">
+					It will be your tendency, and human nature by the way, to simply start puking on them about when YOU think it should be done
+					–
+				</p>
+				<div style="display: flex;justify-content: center;">
+					<button mat-button color="accent"><i class="fa fa-times"></i> STOP</button>
+				</div>
+
+			</div>
+
+			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+				<div>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+				</div>
+
+				<p class="form-title center">
+					You should respond instead with:
+				</p>
+				<div class="quote-box">
+					<p class="form-description center">
+						“I know a company a lot like yours, <br>and they decided to do it <br>the first week of July because they wanted .
+						. .”
+					</p>
+				</div>
+				<div style="display: flex;justify-content: center;">
+					<div class="arrow down"></div>
+				</div>
+
+
+				<div style="display: flex;justify-content: center;">
+					<img src="assets/mapping-it-out/6-2.png">
+				</div>
+
+				<p class="form-description center">
+					Fight off the urge to talk about yourself or your experience, focusing instead on the prospect, their experience and what
+					is better for them! More on this during <span class="emphasis">“How”</span>
+				</p>
+
+
+			</div>
+
+			<div *ngIf="stage===3" [@enterAnimation] id="setting-the-stage-2" class="card-content">
+				<div>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+				</div>
+				<span class="form-title bold">Collaboration and the Buyer’s Perception
+				</span>
+
+				<span class="form-description">We are trying to change the buyer’s perception of what this experience has probably always
+					been like, and begin to subtly communicate that we are collaborating! This is the beginning of your Written Service
+					Timeline for next year!
+
+				</span>
+				<div class="content-box">
+					<span class="form-description">How refreshing it will be to our prospect to learn you are not there to tell them what
+						to do, but instead to hear what they want!
+					</span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

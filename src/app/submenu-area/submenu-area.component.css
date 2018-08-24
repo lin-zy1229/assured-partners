@@ -45,6 +45,13 @@
   
   .submenus li:hover {
     color: #fff;
+    background-color: #8f8f8f;
+    /* left: 0.2em; */
+    box-shadow: 1px 0px 5px grey;
+  }
+
+  .submenus li:focus {
+    color: #fff;
     background-color: #1473e7;
     /* left: 0.2em; */
     box-shadow: 1px 0px 5px grey;

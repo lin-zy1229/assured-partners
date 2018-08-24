@@ -1,3 +1,110 @@
-<p>
-  presenting-to-win works!
-</p>
+<div class="page-container">
+	<div class="page-title">
+		Presenting to Win!
+	</div>
+	<div class="page-content">
+
+
+		<div class="card-container">
+
+
+			<!-- [ngClass]="{ 'hide': stage!=0}" -->
+			<!-- *ngIf="stage===0" [@enterAnimation] -->
+			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+
+				<p class="form-title center margin-10">Objective: <span class="emphasis">Create a strategic buying environment leading
+						to a non-event closing scenario</span></p>
+
+				<div style="display:flex; flex-direction: row; justify-content: center; align-items:center;margin-bottom:2em;">
+					<div>
+						<img src="assets/mapping-it-out/10-1.png">
+					</div>
+					<div style="display: flex;justify-content: center;">
+						<div class="arrow left"></div>
+					</div>
+					<div class="quote-box">
+						<p class="form-description">
+							Most of the sales trainning focuses on YOU the seller, not the buyer.<br> -That is wrong
+						</p>
+					</div>
+				</div>
+
+				<section class="shape-section">
+					<div class="shape rectangle round green">
+						<div class="content-in-shape"><span class="title">Presenting to Win!</span></div>
+					</div>
+
+					<div class="line-vertical"></div>
+					<div class="rectangle-no-bottom"></div>
+
+					<div class="shape-section-side">
+						<div class="shape round blue cursor-pointer" (click)="onClick1()">
+							<div class="content-in-shape"><span class="title">The Basics
+								</span></div>
+						</div>
+
+						<div class="shape round blue cursor-pointer" (click)="onClick2()">
+							<div class="content-in-shape"><span class="title">Technique:<br>Seting Price Aside</span></div>
+						</div>
+					</div>
+
+				</section>
+
+			</div>
+
+
+			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+				<div>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+				</div>
+
+
+				<p class="form-title">The Basics</p>
+				<span class="form-description">1. Stop talking about yourself and your company</span>
+				<span class="form-description">2. Communicate your strengths through the use of analogies, instead of preaching about
+					your achievements</span>
+				<span class="form-description">3. Ask the buyers if they are still comfortable terminating their current relationship</span>
+				<span class="form-description">4. What you have developed is your property</span>
+				<span class="form-description">5. If they can’t or won’t play by your rules, you leave</span>
+			</div>
+
+
+			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-2" class="card-content">
+				<div>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+				</div>
+				<p class="form-title">Technique: Setting Price Aside</p>
+
+
+				<div class="row-contents">
+					<div class="side-contents" style="align-items:center;">
+						<div>
+							<img src="assets/mapping-it-out/10-2.png">
+						</div>
+						<div class="row-contents">
+							<span class="form-question">Problem:</span>
+
+							<span class="form-description">If you hand out a binder, know that nothing you say for the next minute or so is going
+								to register. Your buyer will instantly begin combing through the content until they find the page with the rates.
+							</span>
+						</div>
+
+					</div>
+
+					<div class="side-contents" style="align-items:center;">
+						<div>
+							<img src="assets/mapping-it-out/10-3.png">
+						</div>
+						<div class="row-contents">
+							<span class="form-question">Solution:</span>
+							<span class="form-description">Bring a single sheet of paper and have the rate printed on it and hand that out before
+								you say anything about your proposal. Then ask them, <span class="emphasis">“Okay, is it alright to start digging
+									into what is behind that number?”</span></span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,3 +1,73 @@
-<p>
-  dinner-with-friends works!
-</p>
+<div class="page-container">
+	<div class="page-title">
+		Dinner With Friends . . .
+	</div>
+	<div class="page-content">
+		<div class="card-container">
+
+
+			<!-- [ngClass]="{ 'hide': stage!=0}" -->
+			<!-- *ngIf="stage===0" [@enterAnimation] -->
+			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+
+				<div class="who-home-image-contents">
+					<div><img src="assets/mapping-it-out/11-1.png"></div>
+				</div>
+
+				<section class="shape-section">
+					<div class="shape-section-side">
+						<div class="shape round blue cursor-pointer" (click)="onClick1()">
+							<div class="content-in-shape"><span class="title">Dinner With Friends . . .
+								</span></div>
+						</div>
+
+						<div class="arrow left"></div>
+						<div class="arrow-line"></div>
+						<div class="arrow"></div>
+
+						<div class="shape round blue cursor-pointer" (click)="onClick2()">
+							<div class="content-in-shape"><span class="title">For Discussion</span></div>
+						</div>
+					</div>
+
+				</section>
+
+
+
+			</div>
+
+
+			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+				<div>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+				</div>
+
+				<p class="form-question">Think about it. When you go into a presentation with an agenda that simply regurgitates your
+					company line you use statements like:</p>
+				<span class="form-description emphasis indent"><li>We are the “X” biggest agency in the business</li></span>
+				<span class="form-description emphasis indent"><li>We have all these great markets</li></span>
+				<span class="form-description emphasis indent"><li>We have vast amounts of experience</li></span>
+				<span class="form-description emphasis indent"><li>Our service team is the best in the industry</li></span>
+				<span class="form-description emphasis indent"><li>I have solved problems for many companies over the years.</li></span>
+			</div>
+
+
+			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-2" class="card-content">
+				<div>
+					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+				</div>
+
+				<p class="form-question">For Discussion</p>
+				<span class="form-description emphasis indent"><li>What are your impressions of this couple?</li></span>
+				<span class="form-description emphasis indent"><li>Would you be anxious to join them for another dinner anytime soon?</li></span>
+				<span class="form-description emphasis indent"><li>Were you impressed by the new couple?</li></span>
+				<span class="form-description emphasis indent"><li>Consider the reasons for your reactions . . . </li></span>
+				<span class="form-description emphasis indent"><li>Is the message you are delivering using any different from your competition?</li></span>
+				<span class="form-description emphasis indent"><li>Does your message create an environment where the buyer is thinking
+						“This is different”?</li></span>
+				<span class="form-description emphasis indent"><li>Or would they say, “This presenter is really interested in my company
+						and our issues”?</li></span>
+			</div>
+		</div>
+	</div>
+</div>
