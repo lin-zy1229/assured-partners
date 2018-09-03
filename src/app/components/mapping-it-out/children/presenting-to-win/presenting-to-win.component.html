@@ -7,10 +7,7 @@
 
 		<div class="card-container">
 
-
-			<!-- [ngClass]="{ 'hide': stage!=0}" -->
-			<!-- *ngIf="stage===0" [@enterAnimation] -->
-			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+			<div *ngIf="page===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
 
 				<p class="form-title center margin-10">Objective: <span class="emphasis">Create a strategic buying environment leading
 						to a non-event closing scenario</span></p>
@@ -20,42 +17,47 @@
 						<img src="assets/mapping-it-out/10-1.png">
 					</div>
 					<div style="display: flex;justify-content: center;">
-						<div class="arrow left"></div>
+						<div class="quote-arrow left"></div>
 					</div>
 					<div class="quote-box">
-						<p class="form-description">
+						<p class="form-question">
 							Most of the sales trainning focuses on YOU the seller, not the buyer.<br> -That is wrong
 						</p>
 					</div>
 				</div>
 
-				<section class="shape-section">
-					<div class="shape rectangle round green">
+
+
+
+				<section class="shape-section-column">
+					<div *ngIf="stage>=0" [@enterAnimation-down-2-0]="stage" (click)="onClickShape(0, 1)" class="shape rectangle round green">
 						<div class="content-in-shape"><span class="title">Presenting to Win!</span></div>
 					</div>
 
-					<div class="line-vertical"></div>
-					<div class="rectangle-no-bottom"></div>
+					<div *ngIf="stage>=1" class="absolute">
+						<div [@enterAnimation-down-arrow-2-0-0]="stage" class="line-vertical"></div>
+						<div [@enterAnimation-down-arrow-2-0-1]="stage" class="rectangle-no-bottom-30-2"></div>
+					</div>
 
-					<div class="shape-section-side">
-						<div class="shape round blue cursor-pointer" (click)="onClick1()">
-							<div class="content-in-shape"><span class="title">The Basics
-								</span></div>
+					<div *ngIf="stage>=1" class="shape-section-column shape-wide-container">
+						<div [@enterAnimation-down-2-1-0]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(1)">
+							<div class="content-in-shape"><span class="title">The Basics</span></div>
 						</div>
 
-						<div class="shape round blue cursor-pointer" (click)="onClick2()">
+						<div [@enterAnimation-down-2-1-1]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(2)">
 							<div class="content-in-shape"><span class="title">Technique:<br>Seting Price Aside</span></div>
 						</div>
 					</div>
 
 				</section>
 
+
 			</div>
 
 
-			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+			<div *ngIf="page===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 
 
@@ -69,19 +71,19 @@
 			</div>
 
 
-			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-2" class="card-content">
+			<div *ngIf="page===2" [@enterAnimation] id="setting-the-stage-2" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 				<p class="form-title">Technique: Setting Price Aside</p>
 
 
-				<div class="row-contents">
-					<div class="side-contents" style="align-items:center;">
-						<div>
+				<div class="flex-col">
+					<div class="flex-row" style="align-items:center;">
+						<div style="padding:2em;">
 							<img src="assets/mapping-it-out/10-2.png">
 						</div>
-						<div class="row-contents">
+						<div class="flex-col">
 							<span class="form-question">Problem:</span>
 
 							<span class="form-description">If you hand out a binder, know that nothing you say for the next minute or so is going
@@ -91,11 +93,11 @@
 
 					</div>
 
-					<div class="side-contents" style="align-items:center;">
-						<div>
+					<div class="flex-row" style="align-items:center;">
+						<div style="padding:2em;">
 							<img src="assets/mapping-it-out/10-3.png">
 						</div>
-						<div class="row-contents">
+						<div class="flex-col">
 							<span class="form-question">Solution:</span>
 							<span class="form-description">Bring a single sheet of paper and have the rate printed on it and hand that out before
 								you say anything about your proposal. Then ask them, <span class="emphasis">“Okay, is it alright to start digging
@@ -106,5 +108,11 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/11');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/9');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

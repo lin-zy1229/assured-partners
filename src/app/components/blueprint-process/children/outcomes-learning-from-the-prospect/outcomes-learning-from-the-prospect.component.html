@@ -1,63 +1,76 @@
-<div class="container">
-  <div class="page-title">
-    Outcomes - Learning from the Prospect
-  </div>
+<div class="page-container">
+	<div class="page-title">
+		Outcomes - Learning from the Prospect
+	</div>
+
+	<div class="page-content">
+
+		<section class="shape-section">
+			<div *ngIf="stage>=0" [@enterAnimation-0]="stage" (click)="onClickShape(1)" class="shape circle gray">
+				<div class="content-in-shape"><span class="title">State an outcome you believe
+					</span></div>
+			</div>
+
+			<div *ngIf="stage>=1" [@enterAnimation-arrow-4-0]="stage" class="arrow-container">
+				<div class="arrow-line"></div>
+				<div class="arrow"></div>
+			</div>
+
+			<div *ngIf="stage>=1" [@enterAnimation-1]="stage" (click)="onClickShape(2)" class="shape diamond green">
+				<div class="content-in-shape"><span class="title">Explain<br>a third party</span></div>
+			</div>
+
+			<div *ngIf="stage>=2" [@enterAnimation-arrow-4-1]="stage" class="arrow-container">
+				<div class="arrow-line"></div>
+				<div class="arrow"></div>
+			</div>
+
+			<div *ngIf="stage>=2" [@enterAnimation-2]="stage" (click)="onClickShape(3)" class="shape diamond green">
+				<div class="content-in-shape"><span class="title">Ask the prospect</span></div>
+			</div>
+
+			<div *ngIf="stage>=3" [@enterAnimation-arrow-4-2]="stage" class="arrow-container">
+				<img src="assets/blueprint-process/13-arrow-double.png">
+			</div>
+
+			<!-- <div *ngIf="stage>=3" [@enterAnimation-3]="stage" (click)="onClickShape(0)" class="shape"> -->
+			<div *ngIf="stage>=3" [@enterAnimation-4-3-up]="stage" (click)="(0)" class="shape diamond small green top">
+				<div class="content-in-shape"><span class="title">How are you measuring that?</span></div>
+			</div>
+			<div *ngIf="stage>=3" [@enterAnimation-4-3-down]="stage" (click)="(0)" class="shape diamond small green bottom">
+				<div class="content-in-shape"><span class="title">Can I see your reporting tool</span></div>
+			</div>
+			<!-- </div> -->
+
+
+		</section>
+		<p>
+
+		</p>
+		<span [@enterSentenceAnimation]="stage>=0" class="form-question">1. State an outcome you believe in and are committed
+			to helping the prospect (and clients) achieve.
+		</span>
+
+		<span [@enterSentenceAnimation]="stage>=1" class="form-question">2. Explain a third party story or some research
+			that forced you to change your thinking.</span>
+
+		<span [@enterSentenceAnimation]="stage>=2" class="form-question">3. Ask the prospect, “Walk me through the process
+			you have in place to get this outcome at a high level.</span>
+		<span [@enterSentenceAnimation]="stage>=2" class="form-description indent">A. Avoid “yes/no” questions that could give them an easy out – challenge them, expect
+			them to think through their explanation</span>
+
+		<span [@enterSentenceAnimation]="stage>=3" class="form-question">4. “How are you measuring that?”</span>
+		<span [@enterSentenceAnimation]="stage>=3" class="form-question">5. “Can I see your reporting tool?”</span>
 
 
 
-  <div class="contents">
-
-
-    <section class="shape-section">
-      <div class="container shape circle gray">
-        <div class="content-in-shape"><span class="title">State an outcome you believe
-          </span></div>
-      </div>
-
-      <div class="arrow-line"></div>
-      <div class="arrow"></div>
-
-      <div class="container shape diamond green">
-        <div class="content-in-shape"><span class="title">Explain a third party</span></div>
-      </div>
-
-      <div class="arrow-line"></div>
-      <div class="arrow"></div>
-
-      <div class="container shape diamond green">
-        <div class="content-in-shape"><span class="title">Ask the prospect</span></div>
-      </div>
-
-      <div>
-        <img src="assets/blueprint-process/13-arrow-double.png">
-      </div>
-
-      <div>
-        <div class="container shape diamond small green top">
-          <div class="content-in-shape"><span class="title">How are you measuring that?</span></div>
-        </div>
-        <div class="container shape diamond small green bottom">
-          <div class="content-in-shape"><span class="title">Can I see your reporting tool</span></div>
-        </div>
-      </div>
-
-
-    </section>
-
-    <span class="form-question">1. State an outcome you believe in and are committed to helping the prospect (and clients) achieve.</span>
-    <span class="form-question">2. Explain a third party story or some research that forced you to change your thinking.</span>
-    <span class="form-question">3. Ask the prospect, “Walk me through the process you have in place to get this outcome at a
-      high level.</span>
-    <span class="form-description indent">A. Avoid “yes/no” questions that could give them an easy out – challenge them,
-      expect them to think through their explanation</span>
-    <span class="form-question">4. “How are you measuring that?”</span>
-    <span class="form-question">5. “Can I see your reporting tool?”</span>
 
 
 
 
-
-
-
-  </div>
+	</div>
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/Outcomes%20-%20P&C');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20Initial%20Meeting%20-%20The%20Open');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+	</div>
 </div>

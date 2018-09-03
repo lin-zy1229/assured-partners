@@ -1,43 +1,49 @@
-<div class="container">
-  <div class="page-title">
-    Scorecard Discussion Points
-  </div>
+<div class="page-container">
+	<div class="page-title">
+		Scorecard Discussion Points
+	</div>
 
 
 
-  <div class="contents">
+	<div class="page-content">
 
-    <div class="diagram">
-      <div class="diagram-item">
-        <img src="assets/blueprint-process/20-1.png">
-        <p>Questions</p>
-      </div>
+		<div class="shape-section">
+			<div *ngIf="stage>=0" [@enterAnimation-Linear-2-0]="stage" (click)="onClickShape(1)" class="shape" style="height:11em;">
+				<img width=100% src="assets/blueprint-process/20-1.png">
+				<p>Questions</p>
+			</div>
 
-      <div class="diagram-bridge">
-        <div><font color=gray>Get Answer</font></div>
-        <div class="diagram-arrow" >
-          <div class="arrow-line-long"></div>
-          <div class="arrow"></div>
-        </div>
-      </div>
+			<div *ngIf="stage>=1" [@enterAnimation-arrow-1]="stage" class="vertical-container" style="margin-bottom: 60px;">
+				<div class="gray-forecolor">Get Answer</div>
+				<div class="arrow-container">
+					<div class="arrow-line-long"></div>
+					<div class="arrow"></div>
+				</div>
+			</div>
 
-      <div class="diagram-item">
-        <img src="assets/blueprint-process/20-2.png">
-        <p>Have Great Solutions</p>
-      </div>
+			<div *ngIf="stage>=1" [@enterAnimation-Linear-2-1]="stage" (click)="(0)" class="shape" style="height:11em;">
+				<img width=100% src="assets/blueprint-process/20-2.png">
+				<p>Have Great Solutions</p>
+			</div>
 
-    </div>
+		</div>
+		<p></p>
+		<p></p>
+		<span class="form-question">1. What are your greatest concerns?</span>
+		<span class="form-question">2. What do you like most about your current situation?</span>
+		<span class="form-question">3. If we were meeting in three years' time and were celebrating the success of your business
+			and its employees, what goal would you be most proud of achieving?</span>
+		<span class="form-question">4. What progress have you already made towards realizing your goals?</span>
+		<span class="form-question">5. What roadblocks stand in your way to achieving your goals listed in question 3?</span>
+		<span class="form-question">6. What are the most important actions you must take to overcome the roadblocks listed in question
+			5?
+		</span>
+		<span class="form-question">7. What actions do you need to take first?</span>
 
-    <span class="form-question">1. What are your greatest concerns?</span>
-    <span class="form-question">2. What do you like most about your current situation?</span>
-    <span class="form-question">3. If we were meeting in three years' time and were celebrating the success of your business
-      and its employees, what goal would you be most proud of achieving?</span>
-    <span class="form-question">4. What progress have you already made towards realizing your goals?</span>
-    <span class="form-question">5. What roadblocks stand in your way to achieving your goals listed in question 3?</span>
-    <span class="form-question">6. What are the most important actions you must take to overcome the roadblocks listed in
-      question 5?</span>
-    <span class="form-question">7. What actions do you need to take first?</span>
 
-
-  </div>
+	</div>
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20%22Blueprint%22Key%20Discovery%20Findings');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/A%20Powerful%20Discovery%20Session');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+	</div>
 </div>

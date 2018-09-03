@@ -3,26 +3,41 @@
 		Notes! Notes! Notes!
 	</div>
 
-	<div class="page-content-side">
-		<div class="image-left">
-			<img src="assets/mapping-it-out/9.png">
+	<div class="page-content">
+		<div class="row">
+			<div class="col-md-3">
+				<div style="padding:2em; max-width: 300px;">
+					<img width="100%" src="assets/mapping-it-out/9.png">
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="form">
+					<span class="form-question">We’ve talked a lot about taking notes. Not only is it important to demonstrate our sincerity,
+						but also because we are going to build our presentation around what is in those notes!</span>
+					<span class="form-question">Don’t miss – <span class="emphasis">“Presenting to Win”</span> to learn how to incorporate
+						these service and others into the final presentation.
+					</span>
+					<p></p>
+					<!-- <span class="form-title">NOTES:</span> -->
+					<mat-form-field>
+							
+						<textarea matInput matTextareaAutosize matAutosizeMinRows=5 matAutosizeMaxRows=15 placeholder="NOTES:"></textarea>
+					</mat-form-field>
+				</div>
+			</div>
 		</div>
 
 
 
 
-		<div class="form">
-			<span class="form-question">We’ve talked a lot about taking notes. Not only is it important to demonstrate our sincerity,
-				but also because we are going to build our presentation around what is in those notes!</span>
-			<span class="form-question">Don’t miss – <span class="emphasis">“Presenting to Win”</span> to learn how to incorporate
-				these service and others into the final presentation.
-			</span>
-			<p></p>
-			<!-- <span class="form-title">NOTES:</span> -->
-			<mat-form-field>
-				<textarea matInput placeholder="NOTES:"></textarea>
-			</mat-form-field>
-		</div>
 
+
+
+	</div>
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/10');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/8');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

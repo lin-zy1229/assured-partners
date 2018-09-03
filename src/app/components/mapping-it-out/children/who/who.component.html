@@ -6,47 +6,49 @@
 	<div class="page-content">
 
 
-		<div class="card-container">
+		<div class="card-container" style="height:650px">
 
 
 			<!-- [ngClass]="{ 'hide': stage!=0}" -->
 			<!-- *ngIf="stage===0" [@enterAnimation] -->
-			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+			<div *ngIf="page===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
 
-				<section class="shape-section">
-					<div class="shape rectangle round green">
+				<section class="shape-section-column">
+					<div *ngIf="stage>=0" [@enterAnimation-down-2-0]="stage" (click)="onClickShape(0, 1)" class="shape rectangle round green">
 						<div class="content-in-shape"><span class="title">The Devil’s Advocate</span></div>
 					</div>
 
-					<div class="line-vertical"></div>
-					<div class="rectangle-no-bottom"></div>
+					<div *ngIf="stage>=1" class="absolute">
+						<div [@enterAnimation-down-arrow-2-0-0]="stage" class="line-vertical"></div>
+						<div [@enterAnimation-down-arrow-2-0-1]="stage" class="rectangle-no-bottom-30-2"></div>
+					</div>
 
-					<div class="shape-section-side">
-						<div class="shape round blue cursor-pointer" (click)="onClick1()">
+					<div *ngIf="stage>=1" class="shape-section-column shape-wide-container">
+						<div [@enterAnimation-down-2-1-0]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(1)">
 							<div class="content-in-shape"><span class="title">Conversation</span></div>
 						</div>
 
-						<div class="shape round blue cursor-pointer" (click)="onClick2()">
+						<div [@enterAnimation-down-2-1-1]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(2)">
 							<div class="content-in-shape"><span class="title">Claims Review</span></div>
 						</div>
 					</div>
 
 				</section>
-
-				<div class="who-home-image-contents">
-					<div><img src="assets/mapping-it-out/4-1.png"></div>
+				<div style="display: flex;justify-content: center;">
+					<img src="assets/mapping-it-out/4-1.png">
 				</div>
+
 
 			</div>
 
 
-			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+			<div *ngIf="page===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 				<span class="form-title center bold">What are the signs the buyer is ready to get serious</span>
 
-
+				<p></p>
 				<div class="content-box">
 					<span>Our next step, <span class="emphasis">“Mapping out the Strategy”</span> is where we will go to confirm our buyer’s
 						buy in – or simply put, determine if they are actually interested in what we have suggested they may need.</span>
@@ -55,22 +57,33 @@
 			</div>
 
 
-			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-2" class="card-content">
+			<div *ngIf="page===2" [@enterAnimation] id="setting-the-stage-2" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 
-				<span class="form-title bold indent">Claims Review</span>
+				<span class="form-title bold">Claims Review</span>
 
-				<span class="form-description indent">In the work comp world, a claims review can help determine if there are claims
-					which have been open too long or claims which are in process and have reserves set too high. Our verbiage would look
-					like this: S: When your current broker came out, probably around the first of October, to do a Claims Review and he
-					got out . . . A list of your claims (Loss Runs) And looked through them to identify any claims where they’ve been going
-					on too long or had the estimates (reserves) set too high, then took his findings to your underwriter so you wouldn’t
-					have to worry about getting stuck paying higher premiums than you deserved, were you comfortable with how he did that?
-				</span>
+				<p class="form-description indent">In the work comp world, a claims review can help determine if there are claims which
+					have been open too long or claims which are in process and have reserves set too high. Our verbiage would look like
+					this:
+				</p>
+				<p class="form-description indent">S: When your current broker came out, probably around the first of October, to do
+					a Claims Review and he got out . . .
+					<br> A list of your claims (Loss Runs)
+					<br> And looked through them to identify any claims where they’ve been going on too
+					long or had the estimates (reserves) set too high, then took his findings to your underwriter so you wouldn’t have to
+					worry about getting stuck paying higher premiums than you deserved, were you comfortable with how he did that?
+				</p>
 
 			</div>
 		</div>
 	</div>
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/5');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/3');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+	</div>
+
 </div>

@@ -7,130 +7,261 @@
 
 		<div class="card-container">
 
-
-			<!-- [ngClass]="{ 'hide': stage!=0}" -->
-			<!-- *ngIf="stage===0" [@enterAnimation] -->
-			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+			<div *ngIf="page===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
 
 				<p class="form-description center margin-10">This is it, you’ve communicated what it is you do and how you and your team
 					do it. Now we need to know one thing – does your prospect want it?
 				</p>
-				<p class="form-question center margin-10">This step is simple, the verbiage is simple and their response should be easy
+				<p class="form-title center margin-10">This step is simple, the verbiage is simple and their response should be easy
 					to read. You are going to say:
 				</p>
 				<p></p>
 
-				<section class="shape-section">
-					<div class="shape rectangle round green">
-						<div class="content-in-shape"><span class="title">Why?-Confirming They Want it </span></div>
+				<section class="shape-section-column">
+					<div *ngIf="stage>=0" [@enterAnimation-down-2-0]="stage" (click)="onClickShape(0, 1)" class="shape rectangle round green">
+						<div class="content-in-shape"><span class="title">Why?-Confirming They Want it</span></div>
 					</div>
 
-					<div class="line-vertical"></div>
-					<div class="rectangle-no-bottom"></div>
+					<div *ngIf="stage>=1" class="absolute">
+						<div [@enterAnimation-down-arrow-2-0-0]="stage" class="line-vertical"></div>
+						<div [@enterAnimation-down-arrow-2-0-1]="stage" class="rectangle-no-bottom-30-2"></div>
+					</div>
 
-					<div class="shape-section-side">
-						<div class="shape round blue cursor-pointer" (click)="onClick1()">
+					<div *ngIf="stage>=1" class="shape-section-column shape-wide-container">
+						<div [@enterAnimation-down-2-1-0]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(1)">
 							<div class="content-in-shape"><span class="title">You are going to say</span></div>
 						</div>
 
-
-						<div class="shape round blue cursor-pointer" (click)="onClick3()">
+						<div [@enterAnimation-down-2-1-1]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(2)">
 							<div class="content-in-shape"><span class="title">Roll Back the Tape</span></div>
 						</div>
 					</div>
 
 				</section>
+
 				<p></p>
 
 
 			</div>
 
 
-			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+			<div *ngIf="page===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 
 				<p class="form-title center">
-					They will often say:
+					You're going to say
 				</p>
-				<div class="quote-box">
-					<p class="form-description center">
-						“I’m not sure, you brought<br>it up?”
-					</p>
-				</div>
-				<div style="display: flex;justify-content: center;">
-					<div class="arrow down"></div>
-				</div>
+				<mat-horizontal-stepper>
+					<mat-step [completed]="false">
+
+						<div class="flex-col">
+							<div class="flex-row">
+								<div class="flex-col" style="align-items: center">
+									<img src="assets/mapping-it-out/7-2.png">
+									<div>You</div>
+								</div>
+
+								<div class="flex-col">
+									<div class="flex-row">
+										<div class="arrow chat-arrow left" style="margin-top:1em;">
+
+										</div>
+										<div class="chat-box">
+											“Okay, I think I’ve got it. I only have one more question. (Pause like you are pondering how to phrase it) Why is doing it
+											this way important to you Mr. X? (Pause) Or better yet, what do you see as the consequences if you DON’T do it
+											this way?”
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<p></p>
+							<p></p>
+							<p></p>
+							<p class="form-question center">
+								Wait. Watch their body language, most often, this is a great test to see if they’ve been listening and are seriously contemplating
+								your services.
+								<br><br> If their response is something close to your catastrophic scenario during the <span class="emphasis">“Devil’s
+									Advocate”
+								</span> part, then you probably have a legitimate prospect.
+							</p>
+						</div>
+
+					</mat-step>
+
+					<mat-step [completed]="false">
+						<div class="flex-col">
+							<p class="form-title center">
+								You are looking for something like this:
+							</p>
+							<div class="flex-row">
+								<div class="flex-col" style="align-items: center">
+									<img src="assets/mapping-it-out/7-2.png">
+									<div>You</div>
+								</div>
+
+								<div class="flex-col">
+
+									<div class="flex-row">
+										<div class="arrow chat-arrow left" style="margin-top:1em;"></div>
+										<div class="chat-box">
+											<span> “Well, if I’m hearing you right, if we fail to have this Claims Review done each year, we could and actually
+												probably would end up paying more premium and not even know about it! That could add up really quick!”</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<p></p>
+							<p></p>
+							<p class="" style="text-align: center; color:#41c562; font-size:3em;">
+								---BOOM!---
+							</p>
+
+						</div>
+					</mat-step>
 
 
-				<div style="display: flex;justify-content: center;">
-					<img src="assets/mapping-it-out/6-1.png">
-				</div>
-
-				<p class="form-description center">
-					It will be your tendency, and human nature by the way, to simply start puking on them about when YOU think it should be done
-					–
-				</p>
-				<div style="display: flex;justify-content: center;">
-					<button mat-button color="accent"><i class="fa fa-times"></i> STOP</button>
-				</div>
+				</mat-horizontal-stepper>
 
 			</div>
 
 
-
-			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+			<div *ngIf="page===2" [@enterAnimation] id="setting-the-stage-1" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 
 				<p class="form-title center">
-					You should respond instead with:
+					Roll Back the Tape
 				</p>
-				<div class="quote-box">
-					<p class="form-description center">
-						“I know a company a lot like yours, <br>and they decided to do it <br>the first week of July because they wanted .
-						. .”
-					</p>
-				</div>
-				<div style="display: flex;justify-content: center;">
-					<div class="arrow down"></div>
-				</div>
+				<mat-horizontal-stepper>
+					<mat-step [completed]="false">
+						<p class="form-question center">
+							Once you’ve got your confirmation that this is something they want and you are sure they understand the consequences of neglect,
+							then say:
+						</p>
+						<div class="flex-col">
+							<div class="flex-row">
+								<div class="flex-col" style="align-items: center">
+									<img src="assets/mapping-it-out/7-2.png">
+									<div>You</div>
+								</div>
+
+								<div class="flex-col">
+									<div class="flex-row">
+										<div class="arrow chat-arrow left" style="margin-top:1em;">
+
+										</div>
+										<div class="chat-box">
+											“Let me be sure I’m on the right track and I’m hearing what you want, correctly. Okay with you?”
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<p></p>
+							<p></p>
+							<p></p>
+							<div class="indent" style="padding:1em; margin-left: 4em;"><strong>Simply start with</strong></div>
+
+							<div class="flex-row">
+								<div class="flex-col" style="align-items: center">
+									<img src="assets/mapping-it-out/7-2.png">
+									<div>You</div>
+								</div>
+
+								<div class="flex-col">
+
+									<div class="flex-row">
+										<div class="arrow chat-arrow left" style="margin-top:1em;"></div>
+										<div class="chat-box">
+											<span>“You want a claims review, you want it done the first week of July . . . “</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
 
 
-				<div style="display: flex;justify-content: center;">
-					<img src="assets/mapping-it-out/6-2.png">
-				</div>
+					</mat-step>
+					<mat-step [completed]="false">
+						<div class="flex-col">
+							<div class="indent" style="padding:1em; margin-left: 4em;"><strong>When you finish ask: </strong></div>
 
-				<p class="form-description center">
-					Fight off the urge to talk about yourself or your experience, focusing instead on the prospect, their experience and what
-					is better for them! More on this during <span class="emphasis">“How”</span>
-				</p>
+							<div class="flex-row">
+								<div class="flex-col" style="align-items: center">
+									<img src="assets/mapping-it-out/7-2.png">
+									<div>You</div>
+								</div>
+
+								<div class="flex-col">
+
+									<div class="flex-row">
+										<div class="arrow chat-arrow left" style="margin-top:1em;"></div>
+										<div class="chat-box">
+											<span>“Did I miss anything, or is that exactly how you want this done?”</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="indent" style="padding:1em; margin-left: 4em;"><strong>Once they respond that you’ve got it right, I liked
+									to throw in a </strong></div>
+
+							<div class="flex-row">
+								<div class="flex-col" style="align-items: center">
+									<img src="assets/mapping-it-out/7-2.png">
+									<div>You</div>
+								</div>
+
+								<div class="flex-col">
+
+									<div class="flex-row">
+										<div class="arrow chat-arrow left" style="margin-top:1em;"></div>
+										<div class="chat-box">
+											<span>“Hey! There’s the first item all mapped out for your 2017 game plan!” </span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</mat-step>
+
+					<mat-step [completed]="false">
+						<div class="flex-col">
+							<p class="form-title center" style="text-align: center">
+								Then say:
+							</p>
+
+							<p class="form-description center" style="text-align: center">
+								“Are you ready to get back to that Building Valuation now?”
+
+							</p>
+
+							<div style="display: flex;justify-content: center;">
+								<img src="assets/mapping-it-out/6-2.png">
+							</div>
+							<div style="text-align: center">You</div>
+
+						</div>
+					</mat-step>
+				</mat-horizontal-stepper>
 
 
 			</div>
 
-
-			<div *ngIf="stage===3" [@enterAnimation] id="setting-the-stage-2" class="card-content">
-				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
-				</div>
-				<span class="form-title bold">Collaboration and the Buyer’s Perception
-				</span>
-
-				<span class="form-description">We are trying to change the buyer’s perception of what this experience has probably always
-					been like, and begin to subtly communicate that we are collaborating! This is the beginning of your Written Service
-					Timeline for next year!
-
-				</span>
-				<div class="content-box">
-					<span class="form-description">How refreshing it will be to our prospect to learn you are not there to tell them what
-						to do, but instead to hear what they want!
-					</span>
-				</div>
-
-			</div>
 		</div>
+	</div>
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/9');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/7');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

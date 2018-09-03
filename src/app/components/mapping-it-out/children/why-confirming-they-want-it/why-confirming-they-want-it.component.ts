@@ -1,46 +1,45 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { Animation_for_Page, Animation_for_Shapes } from '../../../../data/globals';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-why-confirming-they-want-it',
-  templateUrl: './why-confirming-they-want-it.component.html',
-  styleUrls: ['./why-confirming-they-want-it.component.css',
-  '../../../../common/common_styles.css'],
-animations: [
-  trigger(
-    'enterAnimation', [
-      transition(':enter', [
-        style({ transform: 'translateX(100%)', opacity: 0 }),
-        animate('300ms', style({ transform: 'translateX(0)', opacity: 1 }))
-      ]),
-      transition(':leave', [
-        style({ transform: 'translateX(0)', opacity: 1 }),
-        animate('300ms', style({ transform: 'translateX(100%)', opacity: 0 }))
-      ])
-    ]
-  )
-],
+	selector: 'app-why-confirming-they-want-it',
+	templateUrl: './why-confirming-they-want-it.component.html',
+	styleUrls: ['./why-confirming-they-want-it.component.css',
+		'../../../../common/common_styles.css'],
+	animations: [
+		Animation_for_Page,
+		Animation_for_Shapes
+	],
 })
 export class WhyConfirmingTheyWantItComponent implements OnInit {
 
-  stage: number = 0;
-	constructor() { }
+	stage: number = 0;
+	page: number = 0;
+
+	constructor(public router: Router) { }
 
 	ngOnInit() {
 	}
 
-	onClick1() {
-		this.stage = 1;
+	onClickPage(_page) {
+		this.page = _page;
 	}
 
-	onClick2() {
-		this.stage = 2;
-  }
-  onClick3() {
-		this.stage = 3;
-	}
-	onBack() {
-		this.stage = 0;
+	onClickShape(_page, _stage) {
+		if (this.stage == _stage) {
+			this.stage--;
+		}
+		else if (this.stage < _stage) {
+			this.stage = _stage;
+		}
+		else {
+			if (_stage == 0) {
+				this.stage = 0;
+			} else {
+				this.stage = _stage - 1;
+			}
+		}
 	}
 
 }

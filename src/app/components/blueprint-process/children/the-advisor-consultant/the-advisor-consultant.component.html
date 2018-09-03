@@ -1,32 +1,37 @@
-<div class="container">
-    <div class="page-title">
-      The Advisor/Consultant
-    </div>
-  
-    <div class="contents">
-        <div class="page-left">
-            <img src="assets/blueprint-process/10-left-consultant.png">
-          </div>
-        
-          <div class="form">
-            <p class="form-title">What are some adjectives you would use to describe an advisor or consultant?</p>
-            <mat-form-field>
-              <input matInput placeholder="1st">
-            </mat-form-field>
-        
-            <mat-form-field>
-              <input matInput placeholder="2nd">
-            </mat-form-field>
-        
-            <mat-form-field>
-              <input matInput placeholder="3rd">
-            </mat-form-field>
-        
-            <mat-form-field>
-              <input matInput placeholder="4th">
-            </mat-form-field>
-            <p class="form-title">How does a doctor begin an appointment?  Not with a <span class="emphasis">“laser light show”</span>, nor do they <span class="emphasis">“pre-diagnose”</span></p>
-          </div>
-        
-    </div>
-  </div>
+<div class="page-container">
+	<div class="page-title">
+		The Advisor/Consultant
+	</div>
+
+	<div class="page-content-side">
+		<div class="page-left">
+			<img src="assets/blueprint-process/10-left-consultant.png">
+		</div>
+
+		<div class="flex-col">
+			<p class="form-question">What are some adjectives you would use to describe an advisor or consultant?</p>
+			<mat-form-field>
+				<input matInput placeholder="1st">
+			</mat-form-field>
+
+			<mat-form-field>
+				<input matInput placeholder="2nd">
+			</mat-form-field>
+
+			<mat-form-field>
+				<input matInput placeholder="3rd">
+			</mat-form-field>
+
+			<mat-form-field>
+				<input matInput placeholder="4th">
+			</mat-form-field>
+			<p class="form-question">How does a doctor begin an appointment? Not with a <span class="emphasis">“laser light show”</span>,
+				nor do they <span class="emphasis">“pre-diagnose”</span></p>
+		</div>
+
+	</div>
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20Initial%20Meeting');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20Vaccumn%20Cleaner%20Salesperson');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+	</div>
+</div>

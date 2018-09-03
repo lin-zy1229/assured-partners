@@ -1,28 +1,34 @@
-<div class="container">
+<div class="page-container">
 	<div class="page-title">
 		The BP Process (Three Meetings)
 	</div>
 
-	<div class="contents">
-		<div class="process">
-			<img src="assets/blueprint-process/4-1.png">
-			<span class="form-content">Initial</span>
-			<span class="form-title">15 Minutes</span>
-			<span class="form-question">The Initial Meeting (Lowering Buyer Resistance – 15 Minutes)</span>
-		</div>
+	<div class="page-content">
+		<div class="shape-section">
+			<div *ngIf="stage>=0" [@enterAnimation-3-0]="stage" (click)="onClickShape(1)" class="shape-with-description vertical-container-no-justify">
+				<div><img src="assets/blueprint-process/4-1.png"></div>
+				<span class="form-content">Initial</span>
+				<span class="form-title">15 Minutes</span>
+				<span class="form-question text-center">The Initial Meeting (Lowering Buyer Resistance – 15 Minutes)</span>
+			</div>
 
-		<div class="process">
-				<img src="assets/blueprint-process/4-2.png">
+			<div *ngIf="stage>=1" [@enterAnimation-3-1]="stage" (click)="onClickShape(2)" class="shape-with-description vertical-container-no-justify">
+				<div><img src="assets/blueprint-process/4-2.png"></div>
 				<span class="form-content">Discovery</span>
 				<span class="form-title">90 Minutes</span>
-				<span class="form-question">The Discovery Meeting (2nd Meeting - 90 Minutes)</span>
-		</div>
+				<span class="form-question text-center">The Discovery Meeting (2nd Meeting - 90 Minutes)</span>
+			</div>
 
-		<div class="process">
-				<img src="assets/blueprint-process/4-3.png">
+			<div *ngIf="stage>=2" [@enterAnimation-3-2]="stage" (click)="(0)" class="shape-with-description vertical-container-no-justify">
+				<div><img src="assets/blueprint-process/4-3.png"></div>
 				<span class="form-content">Blueprint</span>
 				<span class="form-title">90 Minutes</span>
-				<span class="form-question">The Blueprint (The Presentation – 90 Minutes)</span>
+				<span class="form-question text-center">The Blueprint (The Presentation – 90 Minutes)</span>
+			</div>
 		</div>
+	</div>
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20BP%20Philosophy');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20BlueprintFive%20Bottlenecks%20to%20Growth');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

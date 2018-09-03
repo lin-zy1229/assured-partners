@@ -1,37 +1,49 @@
-<div class="container">
+<div class="page-container">
 	<div class="page-title">
 		Phase 1 and Phase 2
 	</div>
 
-	<div class="side-contents">
-		<div class="side-item">
-			<mat-card>
-				<div class="title-image">
-					<img src="assets/blueprint-process/17-1.png">
-				</div>
+	<div class="page-content">
+		<div class="content-side-space-around">
+			<div class="side-item">
+				<mat-card>
+					<div class="title-image">
+						<img src="assets/blueprint-process/17-1.png">
+					</div>
 
-				<mat-card-title><p>Discovery</p></mat-card-title>
-				<mat-card-subtitle></mat-card-subtitle>
-				<mat-card-content>
-					<p class="form-description">A. The Starter Kit (Scorecard – You and the Prospect)</p>
-					<p class="form-description">B. Discovery Meeting (You and the Prospect)</p>
-					<p class="form-description">C. Assessment (Your team only)</p>
-				</mat-card-content>
-			</mat-card>
+					<mat-card-title>
+						<p>Discovery</p>
+					</mat-card-title>
+					<mat-card-subtitle></mat-card-subtitle>
+					<mat-card-content>
+						<p class="form-description">A. The Starter Kit (Scorecard – You and the Prospect)</p>
+						<p class="form-description">B. Discovery Meeting (You and the Prospect)</p>
+						<p class="form-description">C. Assessment (Your team only)</p>
+					</mat-card-content>
+				</mat-card>
+			</div>
+
+			<div class="side-item">
+				<mat-card>
+					<div class="title-image">
+						<img src="assets/blueprint-process/17-2.png">
+					</div>
+					<mat-card-title>
+						<p>Execution</p>
+					</mat-card-title>
+					<mat-card-subtitle></mat-card-subtitle>
+					<mat-card-content>
+						<p class="form-description">A. Breakthrough Planning Session (Figure it out)</p>
+						<p class="form-description">B. Ongoing Implementation (Get it up and Running)</p>
+						<p class="form-description">C. Continuous Evaluation (Review for effectiveness)</p>
+					</mat-card-content>
+				</mat-card>
+			</div>
 		</div>
-		<div class="side-item">
-			<mat-card>
-				<div class="title-image">
-					<img src="assets/blueprint-process/17-2.png">
-				</div>
-				<mat-card-title><p>Execution</p></mat-card-title>
-				<mat-card-subtitle></mat-card-subtitle>
-				<mat-card-content>
-					<p class="form-description">A. Breakthrough Planning Session (Figure it out)</p>
-					<p class="form-description">B. Ongoing Implementation (Get it up and Running)</p>
-					<p class="form-description">C. Continuous Evaluation (Review for effectiveness)</p>
-				</mat-card-content>
-			</mat-card>
-		</div>
+
+	</div>
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20Scorecard');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/Outcomes');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

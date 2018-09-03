@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-the-map-what-is-on-it',
@@ -24,8 +25,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 export class TheMapWhatIsOnItComponent implements OnInit {
 
 	stage: number = 0;
-	constructor() { }
-
+	constructor(public router: Router) { }
 	ngOnInit() {
 	}
 

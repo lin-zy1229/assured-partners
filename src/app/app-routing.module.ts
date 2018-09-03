@@ -58,37 +58,37 @@ import { HomeProspectingComponent } from './components/prospecting/children/home
 import { HomeTheTruthComponent } from './components/the-truth/children/home-the-truth/home-the-truth.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/1', pathMatch: 'full' },
+  { path: '', redirectTo: '/Blueprint Process', pathMatch: 'full' },
   {
-    path: '1', component: BlueprintProcessComponent,
+    path: 'Blueprint Process', component: BlueprintProcessComponent,
     children: [
       { path: '', component: HomeOfTheBlueprintProcessComponent },
-      { path: '1', component: BlueprintAndTheWedgeComponent },
-      { path: '2', component: TheBlueprintComponent },
-      { path: '3', component: TheBPProcessComponent },
-      { path: '4', component: TheBPPhilosophyComponent },
-      { path: '5', component: TheChangeFormulaComponent },
-      { path: '6', component: WhatMakesYouDifferentComponent },
-      { path: '7', component: TwoPitfallsToOvercomeComponent },
-      { path: '8', component: TheVaccumnCleanerSalespersonComponent },
-      { path: '9', component: TheAdvisorConsultantComponent },
-      { path: '10', component: TheInitialMeetingComponent },
-      { path: '11', component: TheInitialMeetingTheOpenComponent },
-      { path: '12', component: OutcomesLearningFromTheProspectComponent },
-      { path: '13', component: OutcomesPCComponent },
-      { path: '14', component: OutcomesEBComponent },
-      { path: '15', component: OutcomesComponent },
-      { path: '16', component: Phase1AndPhase2Component },
-      { path: '17', component: TheScorecardComponent },
-      { path: '18', component: APowerfulDiscoverySessionComponent },
-      { path: '19', component: ScorecardDiscussionPointsComponent },
-      { path: '20', component: TheBlueprintKeyDiscoveryFindingsComponent },
-      { path: '21', component: Outcome1Component },
-      { path: '22', component: DrivingThePointHomeComponent },
+      { path: 'Blueprint and The Wedge', component: BlueprintAndTheWedgeComponent },
+      { path: 'The BlueprintFive Bottlenecks to Growth', component: TheBlueprintComponent },
+      { path: 'The BP Process (Three Mettings)', component: TheBPProcessComponent },
+      { path: 'The BP Philosophy', component: TheBPPhilosophyComponent },
+      { path: 'The Change Formula', component: TheChangeFormulaComponent },
+      { path: 'What Makes You Different', component: WhatMakesYouDifferentComponent },
+      { path: 'Two Pitfalls to Overcome', component: TwoPitfallsToOvercomeComponent },
+      { path: 'The Vaccumn Cleaner Salesperson', component: TheVaccumnCleanerSalespersonComponent },
+      { path: 'The Advisor/Consultant', component: TheAdvisorConsultantComponent },
+      { path: 'The Initial Meeting', component: TheInitialMeetingComponent },
+      { path: 'The Initial Meeting - The Open', component: TheInitialMeetingTheOpenComponent },
+      { path: 'OutcomesLearning From The Prospect', component: OutcomesLearningFromTheProspectComponent },
+      { path: 'Outcomes - P&C', component: OutcomesPCComponent },
+      { path: 'Outcomes - EB', component: OutcomesEBComponent },
+      { path: 'Outcomes', component: OutcomesComponent },
+      { path: 'Phase 1 and Phase 2', component: Phase1AndPhase2Component },
+      { path: 'The Scorecard', component: TheScorecardComponent },
+      { path: 'A Powerful Discovery Session', component: APowerfulDiscoverySessionComponent },
+      { path: 'Scorecard Discussion Points', component: ScorecardDiscussionPointsComponent },
+      { path: 'The "Blueprint"Key Discovery Findings', component: TheBlueprintKeyDiscoveryFindingsComponent },
+      { path: 'Outcome #1', component: Outcome1Component },
+      { path: 'Driving The Point Home', component: DrivingThePointHomeComponent },
     ]
   },
   {
-    path: '2', component: LeverageRelationComponent,
+    path: 'Leverage Relation', component: LeverageRelationComponent,
     children: [
       { path: '', component: HomeLeverageRelationComponent },
       { path: '1', component: HomeLeverageRelationComponent },
@@ -101,7 +101,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: '3', component: MappingItOutComponent,
+    path: 'Mapping It Out', component: MappingItOutComponent,
     children: [
       { path: '', component: HomeMappingItOutComponent },
       { path: '1', component: SettingTheStageComponent },
@@ -121,7 +121,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: '4', component: ProactiveServiceComponent,
+    path: 'Proactive Service', component: ProactiveServiceComponent,
     children: [
       { path: '', component: HomeProactiveServiceComponent },
       { path: '1', component: HomeProactiveServiceComponent },
@@ -141,7 +141,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: '5', component: ProspectingComponent,
+    path: 'Prospecting', component: ProspectingComponent,
     children: [
       { path: '', component: HomeProspectingComponent },
       { path: '1', component: HomeProspectingComponent },
@@ -164,7 +164,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: '6', component: TheTruthComponent,
+    path: 'The Truth', component: TheTruthComponent,
     children: [
       { path: '', component: HomeTheTruthComponent },
       { path: '1', component: HomeTheTruthComponent },

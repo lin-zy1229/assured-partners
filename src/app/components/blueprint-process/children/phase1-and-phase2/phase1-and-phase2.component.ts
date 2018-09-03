@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-phase1-and-phase2',
@@ -8,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Phase1AndPhase2Component implements OnInit {
 
-  constructor() { }
-
+  constructor(public router: Router) { }
+  
   ngOnInit() {
   }
 

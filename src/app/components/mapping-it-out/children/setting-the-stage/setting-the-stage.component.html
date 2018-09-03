@@ -3,28 +3,35 @@
 		Setting the Stage
 	</div>
 	<div class="page-content">
-		<div class="card-container">
-			<!-- [ngClass]="{ 'hide': stage!=0}" -->
-			<!-- *ngIf="stage===0" [@enterAnimation] -->
-			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
 
-				<div class="shape-section">
-					
-					<div class="shape rectangle round green">
+		<div class="card-container">
+
+			<div *ngIf="page===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+
+				<div class="shape-section-column">
+
+					<div *ngIf="stage>=0" [@enterAnimation-down-2-0]="stage" (click)="onClickShape(0, 1)" class="shape rectangle round green">
 						<div class="content-in-shape"><span class="title">Setting the Stage</span></div>
 					</div>
 
-					<div class="line-vertical"></div>
-					<div class="rectangle-no-bottom"></div>
+					<div *ngIf="stage>=1" class="absolute">
+						<div [@enterAnimation-down-arrow-2-0-0]="stage" class="line-vertical"></div>
+						<div [@enterAnimation-down-arrow-2-0-1]="stage" class="rectangle-no-bottom-30-2"></div>
+					</div>
 
-					<div class="shape-section-side">
-						<div class="shape round blue cursor-pointer" (click)="onClick1()">
-							<div class="content-in-shape"><span class="title">Our next step, “Mapping out the Strategy
-								</span></div>
+					<!-- <div *ngIf="stage>=1" [@enterAnimation-down-arrow-2-0]="stage"  class="rectangle-no-bottom-30-2"></div> -->
+
+					<div *ngIf="stage>=1" class="shape-section-column shape-wide-container">
+						<div [@enterAnimation-down-2-1-0]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(1)">
+							<div class="content-in-shape">
+								<span class="title">Our next step, “Mapping out the Strategy</span>
+							</div>
 						</div>
 
-						<div class="shape round blue cursor-pointer" (click)="onClick2()">
-							<div class="content-in-shape"><span class="title">What are the signs the buyer is ready to get serious</span></div>
+						<div [@enterAnimation-down-2-1-1]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(2)">
+							<div class="content-in-shape">
+								<span class="title">What are the signs the buyer is ready to get serious</span>
+							</div>
 						</div>
 					</div>
 
@@ -34,27 +41,25 @@
 					is showing interest in some or all the items you have pulled out of your tool box.</p>
 				<p class="form-description center margin-10">Based on your interpretation of his or her body language and verbal language,
 					you have decided the prospect is ready to dig deeper into these proactive services.</p>
-				<p></p>
-
 			</div>
 
 
-			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+			<div *ngIf="page===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
-
 				<div class="content-box">
 					<span>Our next step, <span class="emphasis">“Mapping out the Strategy”</span> is where we will go to confirm our buyer’s
 						buy in – or simply put, determine if they are actually interested in what we have suggested they may need.</span>
 				</div>
 
+
 			</div>
 
 
-			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-2" class="card-content">
+			<div *ngIf="page===2" [@enterAnimation] id="setting-the-stage-2" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 				<span class="form-title center bold">What are the signs the buyer is ready to get serious</span>
 
@@ -62,29 +67,46 @@
 					or that one. How can you tell if you have given them enough evidence that your services are special, to move on?
 				</span>
 
-				<div class="side-contents">
+				<!-- <div class="side-contents"> -->
+				<div class="row">
 
-					<div class="row-contents">
-						<span class="form-question center">1. Keywords or phrases that say “Let’s Go”
-						</span>
+					<div class="col-sm-6">
+						<div class="row-contents">
+							<span class="form-question center">1. Keywords or phrases that say “Let’s Go”
+							</span>
 
-						<span class="form-description emphasis indent"><li>We’ve never seen that before</li></span>
-						<span class="form-description emphasis indent"><li>How does it work?</li></span>
-						<span class="form-description emphasis indent"><li>Interesting</li></span>
+							<li><span class="form-description emphasis">We’ve never seen that before</span></li>
+							<li><span class="form-description emphasis">How does it work?</span></li>
+							<li><span class="form-description emphasis">Interesting</span></li>
 
+						</div>
 					</div>
+					<div class="col-sm-6">
+						<div class="row-contents">
+							<span class="form-question center">2. Look for positive body language
+							</span>
 
-					<div class="row-contents">
-						<span class="form-question center">2. Look for positive body language
-						</span>
-
-						<span class="form-description emphasis indent"><li>Sitting up on the edge of their seat</li></span>
-						<span class="form-description emphasis indent"><li>Agitated or excited tone of speech</li></span>
-						<span class="form-description emphasis indent"><li>Raising their eyebrows</li></span>
+							<li><span class="form-description emphasis">Sitting up on the edge of their seat</span></li>
+							<li><span class="form-description emphasis">Agitated or excited tone of speech</span></li>
+							<li><span class="form-description emphasis">Raising their eyebrows</span></li>
+						</div>
 					</div>
-
 				</div>
+
+
+
+
+
+				<!-- </div> -->
 			</div>
+
 		</div>
+	</div>
+
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/2');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

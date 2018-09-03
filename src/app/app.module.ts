@@ -20,7 +20,7 @@ import { MappingItOutComponent } from './components/mapping-it-out/mapping-it-ou
 import { ProactiveServiceComponent } from './components/proactive-service/proactive-service.component';
 import { ProspectingComponent } from './components/prospecting/prospecting.component';
 import { TheTruthComponent } from './components/the-truth/the-truth.component';
-
+  
 import { BlueprintProcessSubmenuComponent } from './components/blueprint-process/blueprint-process-submenu/blueprint-process-submenu.component';
 import { LeverageRelationSubmenuComponent } from './components/leverage-relation/leverage-relation-submenu/leverage-relation-submenu.component';
 import { MappingItOutSubmenuComponent } from './components/mapping-it-out/mapping-it-out-submenu/mapping-it-out-submenu.component';

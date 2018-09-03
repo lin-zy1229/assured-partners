@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-who-key-question',
@@ -22,10 +23,16 @@ import { trigger, transition, style, animate } from '@angular/animations';
 	],
 })
 export class WhoKeyQuestionComponent implements OnInit {
-
+	questions = [
+		"Okay, what is Jerry's last name?",
+		"How long has Jerry been your CFO?",
+		"How did he get into the role, was he promoted, did he come from another company?",
+		"Can you walk me through his typical day? How does he get his hands dirty?",
+		"Would it be fair to call Jerry your right hand man?",
+		"Why did you mention him? Would he be a person who would be getting updates on the status of the process?",
+	];
 	stage: number = 0;
-	constructor() { }
-
+	constructor(public router: Router) { }
 	ngOnInit() {
 	}
 

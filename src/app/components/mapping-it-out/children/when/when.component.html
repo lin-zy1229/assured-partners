@@ -5,10 +5,7 @@
 	<div class="page-content">
 		<div class="card-container">
 
-
-			<!-- [ngClass]="{ 'hide': stage!=0}" -->
-			<!-- *ngIf="stage===0" [@enterAnimation] -->
-			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+			<div *ngIf="page===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
 
 				<p class="form-description center margin-10">Why would we want to establish when this service needs to happen? So the
 					buyer knows we think the service is actually going to take place! Once they tell us the time of year they want it done,
@@ -18,25 +15,27 @@
 						“First week of July</span></p>
 				<p></p>
 
-				<section class="shape-section">
-					<div class="shape rectangle round green">
+				<section class="shape-section-column">
+					<div *ngIf="stage>=0" [@enterAnimation-down-2-0]="stage" (click)="onClickShape(0, 1)" class="shape rectangle round green">
 						<div class="content-in-shape"><span class="title">When</span></div>
 					</div>
 
-					<div class="line-vertical"></div>
-					<div class="rectangle-no-bottom"></div>
+					<div *ngIf="stage>=1" class="absolute">
+						<div [@enterAnimation-down-arrow-2-0-3-0]="stage" class="line-vertical-h4em"></div>
+						<div [@enterAnimation-down-arrow-2-0-3-1]="stage" class="rectangle-no-bottom"></div>
+					</div>
 
-					<div class="shape-section-side">
-						<div class="shape round blue cursor-pointer" (click)="onClick1()">
+					<div *ngIf="stage>=1" class="shape-section-column shape-wide-container">
+						<div [@enterAnimation-down-2-1-3-0]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(1)">
 							<div class="content-in-shape"><span class="title">They will often say</span></div>
 						</div>
 
-						<div class="shape round blue cursor-pointer" (click)="onClick2()">
+						<div [@enterAnimation-down-2-1-3-1]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(2)">
 							<div class="content-in-shape"><span class="title">You should<br> respond instead with:
 								</span></div>
 						</div>
 
-						<div class="shape round blue cursor-pointer" (click)="onClick3()">
+						<div [@enterAnimation-down-2-1-3-2]="stage" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(3)">
 							<div class="content-in-shape"><span class="title">Collaboration <br> and the Buyer’s<br> Perception
 								</span></div>
 						</div>
@@ -48,10 +47,9 @@
 
 			</div>
 
-
-			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+			<div *ngIf="page===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 
 				<p class="form-title center">
@@ -59,11 +57,11 @@
 				</p>
 				<div class="quote-box">
 					<p class="form-description center">
-						“I’m not sure, you brought<br>it up?”
+						“I’m not sure, you brought it up?”
 					</p>
 				</div>
 				<div style="display: flex;justify-content: center;">
-					<div class="arrow down"></div>
+					<div class="quote-arrow down"></div>
 				</div>
 
 
@@ -81,9 +79,9 @@
 
 			</div>
 
-			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+			<div *ngIf="page===2" [@enterAnimation] id="setting-the-stage-1" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 
 				<p class="form-title center">
@@ -96,7 +94,7 @@
 					</p>
 				</div>
 				<div style="display: flex;justify-content: center;">
-					<div class="arrow down"></div>
+					<div class="quote-arrow down"></div>
 				</div>
 
 
@@ -112,9 +110,9 @@
 
 			</div>
 
-			<div *ngIf="stage===3" [@enterAnimation] id="setting-the-stage-2" class="card-content">
+			<div *ngIf="page===3" [@enterAnimation] id="setting-the-stage-2" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 				<span class="form-title bold">Collaboration and the Buyer’s Perception
 				</span>
@@ -124,7 +122,7 @@
 					Timeline for next year!
 
 				</span>
-				<div class="content-box">
+				<div class="content-box-no-width">
 					<span class="form-description">How refreshing it will be to our prospect to learn you are not there to tell them what
 						to do, but instead to hear what they want!
 					</span>
@@ -132,5 +130,11 @@
 
 			</div>
 		</div>
+	</div>
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/7');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/5');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

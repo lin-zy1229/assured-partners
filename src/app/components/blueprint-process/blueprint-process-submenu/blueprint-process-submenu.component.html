@@ -1,6 +1,6 @@
-<div class="container">
+<div class="">
   <ul class="submenus">
-    <li *ngFor="let submenu of submenus" routerLink="./{{submenu.id}}">
+    <li *ngFor="let submenu of submenus" routerLink="./{{submenu.title+''+submenu.sub_title}}">
       <div class="submenu-title">
         {{submenu.title}}
         <div class="submenu-subtitle" *ngIf="submenu.sub_title">

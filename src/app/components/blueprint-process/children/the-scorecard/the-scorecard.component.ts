@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-the-scorecard',
@@ -41,8 +42,8 @@ export class TheScorecardComponent implements OnInit {
 
   ];
 
-  constructor() { }
-
+  constructor(public router: Router) { }
+  
   ngOnInit() {
   }
 

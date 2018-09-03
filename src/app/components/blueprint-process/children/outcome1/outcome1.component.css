@@ -1,28 +1,4 @@
-.container {
-    display: flex;
-    flex-direction: column;
-}
-.contents-row{
-    display: flex;
-    flex-direction: row;
-}
-.contents-column{
-    display: flex;
-    flex-direction: column;
-    padding-left:2em;
-}
-.form {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-.form > * {
-    width: 90%;
-}
-span.description {
-    padding-left: 2em;
-    padding-bottom: 0.5em;
-}
+
 mat-header-row {
     background-color:#4472c4;
 }

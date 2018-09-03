@@ -3,68 +3,81 @@
 		Mapping it Out
 	</div>
 
-	
 
-	<div class="page-content-side">
-		<section class="shape-section">
-			<div [ngClass]="{ 'green': stage==1}" class="shape rectangle round blue cursor-pointer" (click)="onClick1()">
-				<div class="content-in-shape"><span class="title">Mappinng it Out</span></div>
+
+	<div class="page-content">
+		<div class="row">
+			<div class="col-md-4">
+				<section class="shape-section-column">
+					<div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClick1()">
+						<div class="content-in-shape"><span class="title">Mappinng it Out</span></div>
+					</div>
+
+					<div class="arrow up"></div>
+					<div class="arrow-line-vertical"></div>
+					<div class="arrow down"></div>
+
+					<div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClick2()">
+						<div class="content-in-shape"><span class="title">Write it down,<br>shut up and listen!</span></div>
+					</div>
+
+				</section>
 			</div>
-
-			<div class="arrow up"></div>
-			<div class="arrow-line-vertical"></div>
-			<div class="arrow down"></div>
-
-			<div [ngClass]="{ 'green': stage==2}" class="shape rectangle round blue cursor-pointer" (click)="onClick2()">
-				<div class="content-in-shape"><span class="title">Write it down,<br>shut up and listen!</span></div>
-			</div>
-
-		</section>
-
-		<div class="card-container">
+			<div class="col-md-8">
+				<div class="card-container">
 
 
-			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="contents">
-				<div><img src="assets/mapping-it-out/2-1.png"></div>
-			</div>
+					<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+						<div><img src="assets/mapping-it-out/2-1.png"></div>
+					</div>
 
 
-			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-main" class="contents">
-				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+						<div>
+							<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+						</div>
+
+						<span class="form-title bold">Mapping it Out</span>
+						<span class="form-question">Your job in this phase of the meeting is to determine what the prospect actually wants
+							instead of your telling them what they need.
+						</span><span class="form-question">
+							You are going to listen, write and guide the prospect. You are not going to tell them what to do, unless they actually ask
+							you to – and even then you will be careful to provide them with examples and ask them what they liked about them –
+							again, do NOT tell them what they should like, ask them.
+						</span>
+
+					</div>
+
+
+					<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-main" class="card-content">
+						<div>
+							<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+						</div>
+						<span class="form-title bold">Write it down, shut up and listen!</span>
+						<span class="form-question">Even if you think you have a photographic memory, it is important to write down what you
+							hear the prospect say.
+						</span>
+
+						<span class="form-question bold">
+							This will demonstrate that you are
+						</span>
+
+						<span class="form-description">A. This will demonstrate that you are</span>
+						<span class="form-description">B. Interested in what the buyer is saying.</span>
+						<span class="form-description">C. Making sure you get what they WANT right!</span>
+
+					</div>
+
 				</div>
-
-				<span class="form-title bold">Mapping it Out</span>
-				<span class="form-question">Your job in this phase of the meeting is to determine what the prospect actually wants instead
-					of your telling them what they need.
-				</span><span class="form-question">
-					You are going to listen, write and guide the prospect. You are not going to tell them what to do, unless they actually ask
-					you to – and even then you will be careful to provide them with examples and ask them what they liked about them – again,
-					do NOT tell them what they should like, ask them.
-				</span>
-
-			</div>
-
-
-			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-main" class="contents">
-				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
-				</div>
-				<span class="form-title bold">Write it down, shut up and listen!</span>
-				<span class="form-question">Even if you think you have a photographic memory, it is important to write down what you
-					hear the prospect say.
-				</span>
-
-				<span class="form-question bold">
-					This will demonstrate that you are
-				</span>
-
-				<span class="form-description">A. This will demonstrate that you are</span>
-				<span class="form-description">B. Interested in what the buyer is saying.</span>
-				<span class="form-description">C. Making sure you get what they WANT right!</span>
-
 			</div>
 
 		</div>
+	</div>
+
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/3');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/1');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mapping-it-out-sub-item',
@@ -23,8 +24,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class MappingItOutSubItemComponent implements OnInit {
   stage: number = 0;
-	constructor() { }
-
+  constructor(public router: Router) { }
 	ngOnInit() {
 	}
 

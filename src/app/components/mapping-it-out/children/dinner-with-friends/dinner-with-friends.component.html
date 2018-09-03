@@ -5,27 +5,24 @@
 	<div class="page-content">
 		<div class="card-container">
 
+			<div *ngIf="page===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
 
-			<!-- [ngClass]="{ 'hide': stage!=0}" -->
-			<!-- *ngIf="stage===0" [@enterAnimation] -->
-			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
 
-				<div class="who-home-image-contents">
-					<div><img src="assets/mapping-it-out/11-1.png"></div>
-				</div>
+				<div style="align-self: center;"><img src="assets/mapping-it-out/11-1.png"></div>
 
-				<section class="shape-section">
-					<div class="shape-section-side">
-						<div class="shape round blue cursor-pointer" (click)="onClick1()">
-							<div class="content-in-shape"><span class="title">Dinner With Friends . . .
-								</span></div>
-						</div>
-
+				<section class="shape-section-column">
+					<div class="absolute flex-row align-items-center">
 						<div class="arrow left"></div>
 						<div class="arrow-line"></div>
 						<div class="arrow"></div>
+					</div>
 
-						<div class="shape round blue cursor-pointer" (click)="onClick2()">
+					<div class="shape-section-column shape-wide-container">
+						<div [@enterAnimation-1-0]="0" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(1)">
+							<div class="content-in-shape"><span class="title">Dinner With Friends . . .</span></div>
+						</div>
+
+						<div [@enterAnimation-1-1]="0" class="shape rectangle round blue cursor-pointer" (click)="onClickPage(2)">
 							<div class="content-in-shape"><span class="title">For Discussion</span></div>
 						</div>
 					</div>
@@ -37,24 +34,48 @@
 			</div>
 
 
-			<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
+			<div *ngIf="page===1" [@enterAnimation] id="setting-the-stage-1" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 
-				<p class="form-question">Think about it. When you go into a presentation with an agenda that simply regurgitates your
-					company line you use statements like:</p>
-				<span class="form-description emphasis indent"><li>We are the “X” biggest agency in the business</li></span>
-				<span class="form-description emphasis indent"><li>We have all these great markets</li></span>
-				<span class="form-description emphasis indent"><li>We have vast amounts of experience</li></span>
-				<span class="form-description emphasis indent"><li>Our service team is the best in the industry</li></span>
-				<span class="form-description emphasis indent"><li>I have solved problems for many companies over the years.</li></span>
+				<mat-horizontal-stepper>
+					<mat-step [completed]="false">
+
+							<div class="flex-col">
+									<p class="form-question emphasis">Why Talking About Yourself and Your Company Doesn’t Work</p>
+									<span class="form-description indent">Your friends have invited you and your spouse to dinner.  They have also invited another couple you haven’t met.  During the dinner, the new couple dominates the conversation as they talk about how their children have performed in school or athletics, etc.  They talk about how successful they are in their careers.  At the end of the dinner, you know much about them, but they haven’t asked many, if any, questions about you.
+										</span>
+		
+								</div>
+
+					</mat-step>
+
+					<mat-step [completed]="false">
+						<div class="flex-col">
+							<p class="form-question">Think about it. When you go into a presentation with an agenda that simply regurgitates your
+								company line you use statements like:</p>
+							<span class="form-description emphasis indent"><li>We are the “X” biggest agency in the business</li></span>
+							<span class="form-description emphasis indent"><li>We have all these great markets</li></span>
+							<span class="form-description emphasis indent"><li>We have vast amounts of experience</li></span>
+							<span class="form-description emphasis indent"><li>Our service team is the best in the industry</li></span>
+							<span class="form-description emphasis indent"><li>I have solved problems for many companies over the years.</li></span>
+
+						</div>
+					</mat-step>
+
+
+				</mat-horizontal-stepper>
+
+
+
+
 			</div>
 
 
-			<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-2" class="card-content">
+			<div *ngIf="page===2" [@enterAnimation] id="setting-the-stage-2" class="card-content">
 				<div>
-					<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					<button mat-button color="primary" (click)="onClickPage(0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 				</div>
 
 				<p class="form-question">For Discussion</p>
@@ -70,4 +91,12 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/12');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/10');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+	</div>
+
 </div>

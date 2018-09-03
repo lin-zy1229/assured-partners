@@ -5,47 +5,53 @@
 
 
 	<div class="page-content-side">
-		<div class="contents">
+		<div class="" style="margin-right:2em;">
 
 			<section class="shape-section">
-				<div class="container shape circle gray">
-					<div class="content-in-shape"><span class="title">Distinguish yourself
+				<div  *ngIf="stage>=0" [@enterAnimation-0]="stage" (click)="onClickShape(1)"class="shape circle gray">
+					<div class="content-in-shape"><span class="title">Distinguish<br>yourself
 						</span></div>
 				</div>
 
-				<span class="formula">></span>
+				<span *ngIf="stage>=1" [@enterAnimation-formula-3-0]="stage" class="formula">></span>
 
-				<div class="container shape diamond green">
+				<div  *ngIf="stage>=1" [@enterAnimation-1]="stage" (click)="onClickShape(2)"class="shape diamond green">
 					<div class="content-in-shape"><span class="title">Allow buyers to reach conclusions
 						</span></div>
 				</div>
 
-				<span class="formula">></span>
+				<span *ngIf="stage>=2" [@enterAnimation-formula-3-1]="stage" class="formula">></span>
 
-				<div class="container shape diamond green">
+				<div  *ngIf="stage>=2" [@enterAnimation-2]="stage" (click)="(0)"class="shape diamond green">
 					<div class="content-in-shape"><span class="title">Enjoy satisfying relationships
 						</span></div>
 				</div>
 
 			</section>
 
-
-			<span class="form-question">So . . . how do you distinguish yourself from your competition, without throwing out the same
-				old tired lines?</span>
-			<span class="form-question">The first thing to understand is that you MUST allow your buyers to reach their own conclusions.
+			<p></p>
+			<p class="form-question">So . . . how do you distinguish yourself from your competition, without throwing out the same
+				old tired lines?</p>
+			<p class="form-question">The first thing to understand is that you MUST allow your buyers to reach their own conclusions.
 				Boxing people into a corner by <span class="emphasis">“overcoming objections”</span> does not and never has stimulated
-				mutually satisfying relationships.</span>
+				mutually satisfying relationships.</p>
 
 		</div>
 
-		<div class="contents">
+		<div class="">
 
 			<p class="form-title">For Discussion</p>
 
-			<span class="form-description emphasis"><li>What are some good questions you can ask your prospect to relax them and stimulate conversation?</li></span>
-			<span class="form-description emphasis"><li>Would you use analogies to communicate your points?</li></span>
-			<span class="form-description emphasis"><li>If so, what are some good ones you can think of now?</li></span>
-			<span class="form-description emphasis"><li>How can you illustrate that life with your firm will be better without just coming out and stating it?</li></span>
+			<p class="form-description emphasis"><li>What are some good questions you can ask your prospect to relax them and stimulate conversation?</li></p>
+			<p class="form-description emphasis"><li>Would you use analogies to communicate your points?</li></p>
+			<p class="form-description emphasis"><li>If so, what are some good ones you can think of now?</li></p>
+			<p class="form-description emphasis"><li>How can you illustrate that life with your firm will be better without just coming out and stating it?</li></p>
 		</div>
+
+	</div>
+
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Mapping%20It%20Out/13');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Mapping%20It%20Out/11');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

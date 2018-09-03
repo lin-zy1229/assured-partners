@@ -1,43 +1,50 @@
-<div class="container">
-  <div class="page-title">
-    Two Pitfalls to Overcome
-  </div>
+<div class="page-container">
+	<div class="page-title">
+		Two Pitfalls to Overcome
+	</div>
 
 
 
-  <div class="contents">
+	<div class="page-content">
+
+		<section class="shape-section">
+			<div *ngIf="stage>=0" [@enterAnimation-0]="stage" class="shape circle gray" (click)="onClickShape(1)">
+				<div class="content-in-shape"><span class="title">Our Project<br>Beleive</span></div>
+			</div>
+
+			<div *ngIf="stage>=1" [@enterAnimation-arrow-1]="stage" class="arrow-container">
+				<div class="arrow-line"></div>
+				<div class="arrow"></div>
+			</div>
+
+			<div *ngIf="stage>=1" [@enterAnimation-1]="stage" class="shape diamond green" (click)="onClickShape(2)">
+				<div class="content-in-shape"><span class="title">Do Anything</span></div>
+			</div>
+
+			<div *ngIf="stage>=2" [@enterAnimation-arrow-2]="stage" class="arrow-container">
+				<div class="arrow-line"></div>
+				<div class="arrow"></div>
+			</div>
+
+			<div *ngIf="stage>=2" [@enterAnimation-2]="stage" class="shape diamond green" (click)="(0)">
+				<div class="content-in-shape"><span class="title">Win Business</span></div>
+			</div>
+
+		</section>
+
+		<span class="form-question">1. Our prospects believe we will do anything to win their business</span>
+		<span class="form-question">2. Our prospects decide our value before they give themselves a chance to evaluate their situation</span>
+		<p></p>
+		<div>
+			<img src="assets/blueprint-process/8.png">
+		</div>
+		<span class="form-description"> Don’t fall into the trap of talking about yourself or your team.</span>
 
 
-    <section class="shape-section">
-      <div class="container shape circle gray">
-        <div class="content-in-shape"><span class="title">Our Project Beleive</span></div>
-      </div>
 
-      <div class="arrow-line"></div>
-      <div class="arrow"></div>
-
-      <div class="container shape diamond green">
-        <div class="content-in-shape"><span class="title">Do Anything</span></div>
-      </div>
-
-      <div class="arrow-line"></div>
-      <div class="arrow"></div>
-
-      <div class="container shape diamond green">
-        <div class="content-in-shape"><span class="title">Win Business</span></div>
-      </div>
-
-    </section>
-
-    <span class="form-title">1. Our prospects believe we will do anything to win their business</span>
-    <span class="form-title">2. Our prospects decide our value before they give themselves a chance to evaluate their situation</span>
-    <p></p>
-    <div>
-      <img src="assets/blueprint-process/8.png">
-    </div>
-    <span class="form-description"> Don’t fall into the trap of talking about yourself or your team.</span>
-
-
-
-  </div>
+	</div>
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20Vaccumn%20Cleaner%20Salesperson');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/What%20Makes%20You%20Different');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+	</div>
 </div>

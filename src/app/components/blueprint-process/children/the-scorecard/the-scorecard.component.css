@@ -1,54 +1,22 @@
-.container {
-    display: flex;
-    flex-direction: column;
-}
-.contents{
-    display: flex;
-    flex-direction: column;
-    padding-left:2em;
-}
-
-.form-description>i{
-    color:#00000011;
-    font-size:2em;
-}
-.form-description>i.fa-quote-left{
-    margin-right: -1em;
-}
-.form-description>i.fa-quote-right{
-    margin-left: -1em;
-}
-
-  span.indent {
-      margin-left:1.5em;
-  }
-  button {
-      font-size: 1.2em;
-  }
-div.row{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-  div.former, div.latter {
+div.former,
+div.latter {
     width: 15em;
     background: #e4e6f5;
-    
     display: flex;
     align-items: center;
-    padding:0.5em;
-    height: 5em;
-
+    padding: 0.5em;
+    height: 8em;
     border: solid #ccc 1px;
-    margin-top:2px;
-    margin-bottom:2px;
-  }
-  .green {
-      color: green;
-  }
-  .mat-fab {
-      background-color:rgba(255, 219, 219, 0.158);
-      color:black;
-      border-color:gray;
-  }
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size:1em;
+}
+
+.score-card-row .mat-fab {
+    background-color: rgba(255, 219, 219, 0.158);
+    color: black;
+    border-color: gray;
+}
+.score-card-row button {
+    font-size: 1.2em;
+}

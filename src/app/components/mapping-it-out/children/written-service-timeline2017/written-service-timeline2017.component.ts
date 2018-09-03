@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-written-service-timeline2017',
@@ -8,8 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WrittenServiceTimeline2017Component implements OnInit {
 
-  constructor() { }
-
+  constructor(public router: Router) { }
   ngOnInit() {
   }
 

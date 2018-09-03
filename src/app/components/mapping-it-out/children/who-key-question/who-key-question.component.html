@@ -6,57 +6,33 @@
 		<div class="card-container">
 
 			<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
-				<div class="side-contents">
-					<div class="contents2">
-						<div class="home-page-list-item">
-							<div><img src="assets/mapping-it-out/5-1.png"></div>
-							<span class="form-question">Okay, what is Jerry's last name?</span>
-						</div>
+				<div class="row">
+					<div class="col-md-7">
 
-						<div class="home-page-list-item">
-							<div><img src="assets/mapping-it-out/5-1.png"></div>
-							<span class="form-question">How long has Jerry been your CFO?</span>
-						</div>
-						<div class="home-page-list-item">
-							<div><img src="assets/mapping-it-out/5-1.png"></div>
-							<span class="form-question">How did he get into the role, was he promoted, did he come from another company?
-							</span>
-						</div>
-						<div class="home-page-list-item">
-							<div><img src="assets/mapping-it-out/5-1.png"></div>
-							<span class="form-question">Can you walk me through his typical day? How does he get his hands dirty?
-							</span>
-						</div>
-						<div class="home-page-list-item">
-							<div><img src="assets/mapping-it-out/5-1.png"></div>
-							<span class="form-question">Would it be fair to call Jerry your right hand man?
-							</span>
-						</div>
-						<div class="home-page-list-item">
-							<div><img src="assets/mapping-it-out/5-1.png"></div>
-							<span class="form-question">Why did you mention him? Would he be a person who would be getting updates on the status
-								of the process?
-							</span>
+						<div *ngFor="let question of questions" style="display:flex;flex-direction: row; align-items: center;">
+							<div style="margin-right:1em;"><img src="assets/mapping-it-out/5-1.png"></div>
+							<div class="form-question">{{question}}</div>
 						</div>
 					</div>
+					<div class="col-md-5">
+						<section class="row">
+							<div class="content-box-no-width red-forecolor">
+								<span>Repeat this process for any people your prospect brings up. If they stall or are having problems coming up
+									with anyone ask for the usual suspects – those whom you know deal with this stuff, HR people, Financial people,
+									their assistants, etc. </span>
+							</div>
 
-					<section class="shape-section">
-						<div class="content-box">
-							<span>Repeat this process for any people your prospect brings up. If they stall or are having problems coming up with
-								anyone ask for the usual suspects – those whom you know deal with this stuff, HR people, Financial people, their
-								assistants, etc. </span>
-						</div>
+							<div class="emphasis" style="margin:1em;">
+								<span class="emphasis">Remember to ask them if they see their broker playing a role in the service – what is it?
+									How much do they expect from him/her?</span>
+							</div>
 
-						<div class="content-box emphasis">
-							<span class="emphasis">Remember to ask them if they see their broker playing a role in the service – what is it? How
-								much do they expect from him/her?</span>
-						</div>
-
-						<div [ngClass]="{ 'green': stage==1}" class="shape rectangle round blue cursor-pointer" (click)="onClick1()">
-							<div class="content-in-shape"><span class="title">“Why Do You Need All<br> This Information?”
-								</span></div>
-						</div>
-					</section>
+							<div [ngClass]="{ 'green': stage==1}" class="shape position-unset rectangle round blue cursor-pointer" (click)="onClick1()" style="margin:auto;">
+								<div class="content-in-shape"><span class="title">“Why Do You Need All<br> This Information?”
+									</span></div>
+							</div>
+						</section>
+					</div>
 
 
 				</div>
@@ -105,5 +81,11 @@
 
 
 
+	</div>
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/6');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Mapping%20It%20Out/4');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

@@ -1,38 +1,48 @@
-<div class="container">
+<div class="page-container">
 	<div class="page-title">
 		The “Blueprint”
 	</div>
 
-	<div class="contents">
+	<div class="page-content">
 
 
 		<p class="form-title">1. Key Discovery Finding</p>
 
-		<div class="side-contents">
+		<div class="shape-section">
 
-			<div class="item">
-				<div><img src="assets/blueprint-process/21-1.png"></div>
-				<div class="process">
-					<span class="form-content">Dangers</span>
-					<span class="form-description">What is currently wrong with the plan - 4 or 5 example</span>
+			<div *ngIf="stage>=0" [@enterAnimation-3-0]="stage" (click)="onClickShape(1)" class="shape-with-description">
+				<div class="content-side-space-around">
+					<div><img src="assets/blueprint-process/21-1.png"></div>
+					<div class="vertical-container description-front-padding">
+						<span class="form-question">Dangers</span>
+						<span class="form-description">What is currently wrong with the plan - 4 or 5 example</span>
+					</div>
 				</div>
 			</div>
 
-			<div class="item">
-				<div><img src="assets/blueprint-process/21-2.png"></div>
-				<div class="process">
-					<span class="form-content">Dangers</span>
-					<span class="form-description">What is currently wrong with the plan - 4 or 5 example</span>
+			<div *ngIf="stage>=1" [@enterAnimation-3-1]="stage" (click)="onClickShape(2)" class="shape-with-description">
+				<div class="content-side-space-around">
+					<div><img src="assets/blueprint-process/21-2.png"></div>
+					<div class="vertical-container description-front-padding">
+						<span class="form-question">Opportunities</span>
+						<span class="form-description">What is the future focus – 4 or 5</span>
+					</div>
 				</div>
 			</div>
 
-			<div class="item">
-				<div><img src="assets/blueprint-process/21-3.png"></div>
-				<div class="process">
-					<span class="form-content">Dangers</span>
-					<span class="form-description">What is currently wrong with the plan - 4 or 5 example</span>
+			<div *ngIf="stage>=2" [@enterAnimation-3-2]="stage" (click)="(0)" class="shape-with-description">
+				<div class="content-side-space-around">
+					<div><img src="assets/blueprint-process/21-3.png"></div>
+					<div class="vertical-container description-front-padding">
+						<span class="form-question">Strengths</span>
+						<span class="form-description">Reinforce what is right with the plan 4 or 5</span>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/Outcome%20%231');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/Scorecard%20Discussion%20Points');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

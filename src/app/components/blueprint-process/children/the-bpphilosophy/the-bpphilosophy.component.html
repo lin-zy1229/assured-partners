@@ -1,59 +1,63 @@
-<div class="container">
-  <div class="page-title">
-    The BP Philosophy
-  </div>
+<div class="page-container">
+	<div class="page-title">
+		The BP Philosophy
+	</div>
+
+	<div class="page-content">
+
+		<span class="form-title">This is NOT a “capabilities” presentation</span>
+		<span class="form-description">Don’t bring anything with you, not even a business card – this is about THEM, not you</span>
 
 
+		<section class="shape-section">
+			<div *ngIf="stage>=0" [@enterAnimation-0]="stage" (click)="onClickShape(1)" id='shape-0' class="shape circle gray cursor-pointer">
+				<div class="content-in-shape"><span class="title">Come</span></div>
+			</div>
 
-  <div class="contents">
-
-    <p class="form-title">This is NOT a “capabilities” presentation</p>
-    <span class="form-description">Don’t bring anything with you, not even a business card – this is about THEM, not you</span>
-
-
-    <section class="shape-section">
-      <div *ngIf="stage>=0" [@enterAnimation-0]="stage" id='shape-0' class="container shape circle gray cursor-pointer" (click)="onClick1()">
-        <div class="content-in-shape"><span class="title">Come</span></div>
-      </div>
-
-      <div *ngIf="stage>=1" [@enterAnimation-arrow-1]="stage" class="container" style="display: flex;flex-direction: row; align-items: center; justify-content: center">
-        <div class="arrow-line"></div>
-        <div class="arrow"></div>
-      </div>
+			<div *ngIf="stage>=1" [@enterAnimation-arrow-1]="stage" class="arrow-container">
+				<div class="arrow-line"></div>
+				<div class="arrow"></div>
+			</div>
 
 
-      <div *ngIf="stage>=1" [@enterAnimation-1]="stage" id='shape-1' class="container shape diamond green cursor-pointer" (click)="onClick2()">
-        <div class="content-in-shape"><span class="title">Bring Nothing</span></div>
-      </div>
+			<div *ngIf="stage>=1" [@enterAnimation-1]="stage" id='shape-1' class="shape diamond green cursor-pointer" (click)="onClickShape(2)">
+				<div class="content-in-shape"><span class="title">Bring Nothing</span></div>
+			</div>
 
-      <div *ngIf="stage>=2" [@enterAnimation-arrow-2]="stage" class="container" style="display: flex;flex-direction: row; align-items: center; justify-content: center">
-        <div class="arrow-line"></div>
-        <div class="arrow"></div>
-      </div>
-
-
-      <div *ngIf="stage>=2" [@enterAnimation-2]="stage" id='shape-2' class="container shape diamond green cursor-pointer" (click)="onClick3()">
-        <div class="content-in-shape"><span class="title">This is about THEM</span></div>
-      </div>
-
-    </section>
-
-    <div *ngIf="stage>=1" [@enterSentenceAnimation]>
-      <p class="form-title">The “Keenan” Story</p>
-      <span class="form-description"><i class="fa fa-quote-left"></i>You are going to run this meeting, however, you are
-        not allowed to say our name or talk about us in any way.<i class="fa fa-quote-right"></i></span>
-    </div>
+			<div *ngIf="stage>=2" [@enterAnimation-arrow-2]="stage" class="arrow-container">
+				<div class="arrow-line"></div>
+				<div class="arrow"></div>
+			</div>
 
 
-    <div *ngIf="stage>=2" [@enterSentenceAnimation]>
-      <p class="form-title">Chad says:</p>
-      <span class="form-description"><i class="fa fa-quote-left"></i>Once we build a plan for them we can then, and only
-        then, begin to show our tools, capabilities and resources as relevant. If they will tell us . . . Then we can build
-        a plan.<i class="fa fa-quote-right"></i></span>
-    </div>
+			<div *ngIf="stage>=2" [@enterAnimation-2]="stage" id='shape-2' class="shape diamond green cursor-pointer" (click)="(0)">
+				<div class="content-in-shape"><span class="title">This is about THEM</span></div>
+			</div>
+
+		</section>
+
+		<div [@enterSentenceAnimation]="stage>=1">
+			<p class="form-title">The “Keenan” Story</p>
+			<span class="form-description"><i class="fa fa-quote-left"></i>You are going to run this meeting, however, you are not
+				allowed to say our name or talk about us in any way.<i class="fa fa-quote-right"></i></span>
+		</div>
+
+
+		<div [@enterSentenceAnimation]="stage>=2">
+			<p class="form-title">Chad says:</p>
+			<span class="form-description"><i class="fa fa-quote-left"></i>Once we build a plan for them we can then, and only then,
+				begin to show our tools, capabilities and resources as relevant. If they will tell us . . . Then we can build a plan.<i
+				 class="fa fa-quote-right"></i></span>
+		</div>
 
 
 
 
-  </div>
+	</div>
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20Change%20Formula');" mat-button color="primary" style="float:right;"
+		 href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20BP%20Process%20%28Three%20Mettings%29');" mat-button color="primary"
+		 style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+	</div>
 </div>

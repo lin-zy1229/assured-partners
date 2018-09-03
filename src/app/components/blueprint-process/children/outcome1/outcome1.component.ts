@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-outcome1',
@@ -10,8 +11,7 @@ export class Outcome1Component implements OnInit {
 
 	displayedColumns: string[] = ['description', 'benabvavg', 'benbelavg'];
 	dataSource = benData;
-	constructor() { }
-
+	constructor(public router:Router) { }
 	ngOnInit() {
 	}
 

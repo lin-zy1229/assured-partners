@@ -1,42 +1,46 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, transition, style, animate } from '@angular/animations';
+import { Animation_for_Page, Animation_for_Shapes } from '../../../../data/globals';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-setting-the-stage',
 	templateUrl: './setting-the-stage.component.html',
-	styleUrls: ['./setting-the-stage.component.css',
-		'../../../../common/common_styles.css'],
+	styleUrls: [
+		'./setting-the-stage.component.css',
+		'../../../../common/common_styles.css'
+	],
 	animations: [
-		trigger(
-			'enterAnimation', [
-				transition(':enter', [
-					style({ transform: 'translateX(100%)', opacity: 0 }),
-					animate('300ms ease-out', style({ transform: 'translateX(0)', opacity: 1 }))
-				]),
-				transition(':leave', [
-					style({ transform: 'translateX(0)', opacity: 1 }),
-					animate('300ms ease-in', style({ transform: 'translateX(100%)', opacity: 0 }))
-				])
-			]
-		)
+		Animation_for_Page,
+		Animation_for_Shapes
 	],
 })
 export class SettingTheStageComponent implements OnInit {
 
 	stage: number = 0;
-	constructor() { }
+	page: number = 0;
+
+	constructor(public router: Router) { }
 
 	ngOnInit() {
 	}
 
-	onClick1() {
-		this.stage = 1;
+	onClickPage(_page) {
+		this.page = _page;
 	}
 
-	onClick2() {
-		this.stage = 2;
-	}
-	onBack() {
-		this.stage = 0;
+	onClickShape(_page, _stage) {
+		if (this.stage == _stage) {
+			this.stage--;
+		}
+		else if (this.stage < _stage) {
+			this.stage = _stage;
+		}
+		else {
+			if (_stage == 0) {
+				this.stage = 0;
+			} else {
+				this.stage = _stage - 1;
+			}
+		}
 	}
 }

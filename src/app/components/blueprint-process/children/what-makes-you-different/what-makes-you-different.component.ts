@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-what-makes-you-different',
@@ -8,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WhatMakesYouDifferentComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public router: Router) { }
+  
   ngOnInit() {
   }
 

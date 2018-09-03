@@ -1,22 +1,9 @@
-.container {
-    display: flex;
-    flex-direction: column;
-}
-.contents{
-    display: flex;
-    flex-direction: column;
-    padding-left:2em;
-}
-.side-contents{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.side-item{
-    padding: 2em;
-}
 .title-image {
-    margin-top: -5em !important;
+    margin-top: -6em !important;
     display: flex;
     justify-content: center;
+}
+
+.side-item {
+    margin-top: 6em;
 }

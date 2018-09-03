@@ -1,48 +1,61 @@
-<div class="container">
-    <div class="page-title">
-      Driving the Point Home
-    </div>
-  
-  
-  
-    <div class="contents">
-  
-      <section class="shape-section">
-        <div class="container shape circle gray">
-          <div class="content-in-shape"><span class="title">Effective 
-              Communication 
-              & Education</span></div>
-        </div>
-  
-        <span class="formula">+</span>
-  
-        <div class="container shape diamond green">
-          <div class="content-in-shape"><span class="title">Necessary to
-              Implement</span></div>
-        </div>
-  
-        <span class="formula">+</span>
-  
-        <div class="container shape diamond green">
-          <div class="content-in-shape"><span class="title">Goals &
-              Objectives</span></div>
-        </div>
-  
-        <span class="formula">+</span>
-  
-        <div class="container shape diamond green">
-          <div class="content-in-shape"><span class="title">Illustrate 
-              “Action Plan”</span></div>
-        </div>
-      </section>
-  
-  
-      <span class="form-question">1.  Provide Examples of Effective Communication and Education</span>
-      <span class="form-question">2.  Provide the First Steps Necessary to Implement</span>
-      <span class="form-question">3.  State the Goals and Objectives of the Plan</span>
-      <span class="form-question">4. Illustrate the “Action Plan”</span>
-      <span class="form-description indent">A. This is your chance to begin closing</span>
-      <span class="form-description indent">B. “How soon do you think you need to begin implementing these things?”</span>
-  
-    </div>
-  </div>
+<div class="page-container">
+	<div class="page-title">
+		Driving the Point Home
+	</div>
+
+
+
+	<div class="page-content">
+
+		<section class="shape-section">
+			<div *ngIf="stage>=0" [@enterAnimation-0]="stage" id='shape-0' (click)="onClickShape(1)" class="shape circle gray">
+				<div class="content-in-shape"><span class="title">Effective Communication & Education</span></div>
+			</div>
+
+			<span *ngIf="stage>=1" [@enterAnimation-arrow-0]="stage" class="formula">+</span>
+
+			<div *ngIf="stage>=1" [@enterAnimation-1]="stage" id='shape-1' (click)="onClickShape(2)" class="shape diamond green">
+				<div class="content-in-shape">
+					<span class="title">Necessary to Implement
+					</span></div>
+			</div>
+
+			<span *ngIf="stage>=2" [@enterAnimation-arrow-1]="stage" class="formula">+</span>
+
+			<div *ngIf="stage>=2" [@enterAnimation-2]="stage" id='shape-2' (click)="onClickShape(3)" class="shape diamond green">
+				<div class="content-in-shape"><span class="title">Goals & Objectives
+					</span></div>
+			</div>
+
+			<span *ngIf="stage>=3" [@enterAnimation-arrow-2]="stage" class="formula">+</span>
+
+			<div *ngIf="stage>=3" [@enterAnimation-3]="stage" id='shape-3' (click)="(0)" class="shape diamond green">
+				<div class="content-in-shape"><span class="title">Illustrate “Action Plan”</span></div>
+			</div>
+		</section>
+
+		<div [@enterSentenceAnimation]="stage>=0" class="form-question">
+			<span class="form-question">1. Provide Examples of Effective Communication and Education</span>
+		</div>
+		<div [@enterSentenceAnimation]="stage>=1" class="form-question">
+			<span class="form-question">2. Provide the First Steps Necessary to Implement</span>
+
+		</div>
+		<div [@enterSentenceAnimation]="stage>=2" class="form-question">
+			<span class="form-question">3. State the Goals and Objectives of the Plan</span>
+
+		</div>
+		<div [@enterSentenceAnimation]="stage>=3" class="form-question">
+			<span class="form-question">4. Illustrate the “Action Plan”</span>
+			<li class="indent"><span class="form-description">A. This is your chance to begin closing</span></li>
+			<li class="indent"><span class="form-description">B. “How soon do you think you need to begin implementing these things?”</span></li>
+
+		</div>
+
+
+	</div>
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Leverage%20Relation');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/Outcome%20%231');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+	</div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-the-blueprint',
@@ -12,8 +13,7 @@ export class TheBlueprintComponent implements OnInit {
   dataSource1 = revData1;
   dataSource2 = revData2;
 
-  constructor() { }
-
+  constructor(public router: Router) { }
   ngOnInit() {
   }
 

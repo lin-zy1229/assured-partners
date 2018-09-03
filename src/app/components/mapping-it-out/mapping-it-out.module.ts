@@ -23,7 +23,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule, MatSelectModule, MatOptionModule, MatListModule, MatTableModule, MatStepperModule, MatButtonModule } from '@angular/material';
+import { MatInputModule, MatSelectModule, MatOptionModule, MatListModule, MatTableModule, MatStepperModule, MatButtonModule, MatGridListModule } from '@angular/material';
 
 
 const modules = [
@@ -37,6 +37,7 @@ const modules = [
     MatTableModule,
     MatStepperModule,
     MatButtonModule,
+    MatGridListModule,
 ];
 
 @NgModule({

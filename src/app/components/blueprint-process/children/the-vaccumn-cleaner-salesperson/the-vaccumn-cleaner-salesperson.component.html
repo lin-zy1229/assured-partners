@@ -1,32 +1,35 @@
-<div class="container">
-  <div class="page-title">
-    The Vacuum Cleaner Salesperson
-  </div>
+<div class="page-container">
+	<div class="page-title">
+		The Vacuum Cleaner Salesperson
+	</div>
 
-  <div class="contents">
-      <div class="page-left">
-          <img src="assets/blueprint-process/9-left-man.png">
-        </div>
-      
-        <div class="form">
-          <p class="form-title">What are some adjectives you would use to 
-              describe a vacuum cleaner salesperson?</p>
-          <mat-form-field>
-            <input matInput placeholder="1st">
-          </mat-form-field>
-      
-          <mat-form-field>
-            <input matInput placeholder="2nd">
-          </mat-form-field>
-      
-          <mat-form-field>
-            <input matInput placeholder="3rd">
-          </mat-form-field>
-      
-          <mat-form-field>
-            <input matInput placeholder="4th">
-          </mat-form-field>
-        </div>
-      
-  </div>
+	<div class="page-content-side">
+		<div class="page-left">
+			<img src="assets/blueprint-process/9-left-man.png">
+		</div>
+
+		<div class="flex-col">
+			<p class="form-question">What are some adjectives you would use to describe a vacuum cleaner salesperson?</p>
+			<mat-form-field>
+				<input matInput placeholder="1st">
+			</mat-form-field>
+
+			<mat-form-field>
+				<input matInput placeholder="2nd">
+			</mat-form-field>
+
+			<mat-form-field>
+				<input matInput placeholder="3rd">
+			</mat-form-field>
+
+			<mat-form-field>
+				<input matInput placeholder="4th">
+			</mat-form-field>
+		</div>
+
+	</div>
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20Advisor/Consultant');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/Two%20Pitfalls%20to%20Overcome');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+	</div>
 </div>

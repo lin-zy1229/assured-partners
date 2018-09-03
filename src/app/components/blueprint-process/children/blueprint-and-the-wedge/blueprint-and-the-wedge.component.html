@@ -1,50 +1,65 @@
-<div class="container">
-  <div class="page-title">
-    Blueprint and The Wedge
-  </div>
+<div class="page-container">
+	<div class="page-title">
+		Blueprint and The Wedge
+	</div>
 
-  <div class="contents">
+	<div class="page-content">
 
-    <ul>
-      <li>
-        Blueprint uses the term “Levers” where The Wedge uses “Wedges”. Both refer to proactive measures which can be taken to enhance
-        the prospect’s program
-      </li>
+			<li><span class="form-question">
+					Blueprint uses the term “Levers” where The Wedge uses “Wedges”. Both refer to proactive measures which can be taken to enhance
+					the prospect’s program</span>
+			</li>
 
-      <section class="shape-section">
-        <div class="container shape circle gray">
-          <div class="content-in-shape"><span class="title">Blueprint</span><span class="description">Provide evidence for
-              superior result</span></div>
-        </div>
+			<div class="content-side-space-around">
 
-        <div class="arrow-line"></div>
-        <div class="arrow"></div>
+				<section class="shape-section">
+					<div *ngIf="stage>=0" [@enterAnimation-0]="stage" class="shape circle gray" (click)="onClickShape(1)">
+						<div class="content-in-shape"><span class="title">Blueprint</span><span class="description">Provide evidence for superior
+								result
+							</span></div>
+					</div>
 
-        <div class="container shape diamond green">
-          <div class="content-in-shape"><span class="title">Levers</span></div>
-        </div>
+					<div *ngIf="stage>=1" [@enterAnimation-arrow-0]="stage" class="shape arrow-container">
+							<div class="arrow-line"></div>
+							<div class="arrow"></div>
+					</div>
 
-        <div class="container shape circle blue">
-          <div class="content-in-shape"><span class="title">Wedges</span></div>
-        </div>
-        <div class="arrow-line"></div>
-        <div class="arrow"></div>
+					<div *ngIf="stage>=1" [@enterAnimation-1]="stage" class="shape diamond green" (click)="(0)">
+						<div class="content-in-shape"><span class="title">Levers</span></div>
+					</div>
+				</section>
 
-        <div class="container shape diamond gold">
-          <div class="content-in-shape"><span class="title">Wedges</span><span class="description">Focus directly</span></div>
-        </div>
-      </section>
+				<section class="shape-section">
+					<div *ngIf="stage2>=0" [@enterAnimation-0]="stage2" class="shape circle blue" (click)="onClickShape2(1)">
+						<div class="content-in-shape"><span class="title">Wedges</span></div>
+					</div>
 
+					<div *ngIf="stage2>=1" [@enterAnimation-arrow-0]="stage2" class="shape arrow-container">
+							<div class="arrow-line"></div>
+							<div class="arrow"></div>
+					</div>
 
-      <li>
-        Philosophically the two strategies are similar, but take different approaches to convince the buyer(s) you provide an advantage
-        over the incumben
-      </li>
-      <li>
-        The Wedge directly focuses on qualifying the prospect – Blueprint is more focused on providing evidence of a superior result
-        directed at a multiple buyer scenario
-      </li>
-    </ul>
+					<div *ngIf="stage2>=1" [@enterAnimation-1]="stage2" class="shape diamond gold" (click)="(0)">
+						<div class="content-in-shape"><span class="title">Wedges</span><span class="description">Focus directly</span></div>
+					</div>
+				</section>
 
-  </div>
+			</div>
+
+			<p></p>
+			<li><span class="form-question">
+					Philosophically the two strategies are similar, but take different approaches to convince the buyer(s) you provide an advantage
+					over the incumben</span>
+			</li>
+			<p></p>
+			<li><span class="form-question">
+					The Wedge directly focuses on qualifying the prospect – Blueprint is more focused on providing evidence of a superior result
+					directed at a multiple buyer scenario</span>
+			</li>
+
+	</div>
+	<div class="page-footer>">
+			<button (click)="router.navigateByUrl('/Blueprint%20Process/The%20BlueprintFive%20Bottlenecks%20to%20Growth');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+			<button (click)="router.navigateByUrl('/Blueprint%20Process');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+		</div>
 </div>

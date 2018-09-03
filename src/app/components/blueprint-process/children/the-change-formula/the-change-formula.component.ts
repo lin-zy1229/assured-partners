@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animation_for_4_Shapes } from '../../../../data/globals';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-the-change-formula',
@@ -11,21 +12,23 @@ import { Animation_for_4_Shapes } from '../../../../data/globals';
 export class TheChangeFormulaComponent implements OnInit {
 
 	stage: number = 0;
-	constructor() { }
-
+	constructor(public router: Router) { }
 	ngOnInit() {
 	}
-	onClick1() {
-		this.stage = this.stage > 0 ? 0 : 1;
-	}
-	onClick2() {
-		this.stage = this.stage == 1 ? 2 : 1;
-	}
-	onClick3() {
-		this.stage = this.stage == 2 ? 3 : 2;
-	}
-	onClick4() {
-		this.stage = 0;
+	onClickShape(_stage) {
+		if (this.stage == _stage) {
+			this.stage--;
+		}
+		else if (this.stage < _stage) {
+			this.stage = _stage;
+		}
+		else {
+			if (_stage == 0) {
+				this.stage = 0;
+			} else {
+				this.stage = _stage - 1;
+			}
+		}
 	}
 
 }
