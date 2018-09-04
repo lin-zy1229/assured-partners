@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SubmenuAreaComponent } from '../../submenu-area/submenu-area.component';
+import { GlobalsService, MainMenuEnum } from '../../services/globals.service';
 
 
 @Component({
@@ -11,7 +11,10 @@ import { SubmenuAreaComponent } from '../../submenu-area/submenu-area.component'
 export class BlueprintProcessComponent implements OnInit {
 
   
-  constructor() { }
+  constructor() { 
+		GlobalsService.setSelectedMainMenu(MainMenuEnum.BlueprintProcess);
+
+  }
 
   ngOnInit() {
     

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainMenuEnum, GlobalsService } from '../../services/globals.service';
 
 @Component({
   selector: 'app-prospecting',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProspectingComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+		GlobalsService.setSelectedMainMenu(MainMenuEnum.Prospecting);
+
+  }
 
   ngOnInit() {
   }

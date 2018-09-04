@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalsService, MainMenuEnum } from '../../services/globals.service';
 
 @Component({
   selector: 'app-the-truth',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TheTruthComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+		GlobalsService.setSelectedMainMenu(MainMenuEnum.TheTruth);
+    
+  }
 
   ngOnInit() {
     

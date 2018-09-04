@@ -11,6 +11,8 @@ export const MainMenus: Menu[] = [
 
 ];
 
+
+
 export const Animation_for_Page = [
 	trigger(
 		'enterAnimation', [

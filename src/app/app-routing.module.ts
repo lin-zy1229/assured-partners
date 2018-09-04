@@ -56,6 +56,51 @@ import { HomeLeverageRelationComponent } from './components/leverage-relation/ch
 import { HomeProactiveServiceComponent } from './components/proactive-service/children/home-proactive-service/home-proactive-service.component';
 import { HomeProspectingComponent } from './components/prospecting/children/home-prospecting/home-prospecting.component';
 import { HomeTheTruthComponent } from './components/the-truth/children/home-the-truth/home-the-truth.component';
+import { CenterOfInfluenceWorksheetSubitemComponent } from './components/leverage-relation/children/center-of-influence-worksheet-subitem/center-of-influence-worksheet-subitem.component';
+import { AReferralOrAnIntroductionSubitemComponent } from './components/leverage-relation/children/areferral-or-an-introduction-subitem/areferral-or-an-introduction-subitem.component';
+import { WhatWouldYouSayAboutUsSubitemComponent } from './components/leverage-relation/children/what-would-you-say-about-us-subitem/what-would-you-say-about-us-subitem.component';
+import { WriteItOutSubitemComponent } from './components/leverage-relation/children/write-it-out-subitem/write-it-out-subitem.component';
+import { DontAlienateYourSourceSubitemComponent } from './components/leverage-relation/children/dont-alienate-your-source-subitem/dont-alienate-your-source-subitem.component';
+import { MyGoalsSubitemComponent } from './components/leverage-relation/children/my-goals-subitem/my-goals-subitem.component';
+import { RevenueTableSubitemComponent } from './components/leverage-relation/children/revenue-table-subitem/revenue-table-subitem.component';
+import { TheFiveCategoriesOfSalesPeopleSubitemComponent } from './components/proactive-service/children/the-five-categories-of-sales-people-subitem/the-five-categories-of-sales-people-subitem.component';
+import { TheChallengerSubitemComponent } from './components/proactive-service/children/the-challenger-subitem/the-challenger-subitem.component';
+import { RulesOfProspectEngagementSubitemComponent } from './components/proactive-service/children/rules-of-prospect-engagement-subitem/rules-of-prospect-engagement-subitem.component';
+import { ObjectiveResultSubitemComponent } from './components/proactive-service/children/objective-result-subitem/objective-result-subitem.component';
+import { PriceCoverageServiceSubitemComponent } from './components/proactive-service/children/price-coverage-service-subitem/price-coverage-service-subitem.component';
+import { DifferentiationBeUniqueSubitemComponent } from './components/proactive-service/children/differentiation-be-unique-subitem/differentiation-be-unique-subitem.component';
+import { DefiningProactiveServiceSubitemComponent } from './components/proactive-service/children/defining-proactive-service-subitem/defining-proactive-service-subitem.component';
+import { LadderOfAbstractionSubitemComponent } from './components/proactive-service/children/ladder-of-abstraction-subitem/ladder-of-abstraction-subitem.component';
+import { A3DefiningProactiveServiceSubitemComponent } from './components/proactive-service/children/a3-defining-proactive-service-subitem/a3-defining-proactive-service-subitem.component';
+import { A3ClaimsReviewProcessSubitemComponent } from './components/proactive-service/children/a3-claims-review-process-subitem/a3-claims-review-process-subitem.component';
+import { ArticulationOfThe3AProcessSubitemComponent } from './components/proactive-service/children/articulation-of-the3-aprocess-subitem/articulation-of-the3-aprocess-subitem.component';
+import { LetsTryOneOfYourOwnSubitemComponent } from './components/proactive-service/children/lets-try-one-of-your-own-subitem/lets-try-one-of-your-own-subitem.component';
+import { TheArticulationWedgeStyleSubitemComponent } from './components/proactive-service/children/the-articulation-wedge-style-subitem/the-articulation-wedge-style-subitem.component';
+import { TheArticulationBlueprintStyleSubitemComponent } from './components/proactive-service/children/the-articulation-blueprint-style-subitem/the-articulation-blueprint-style-subitem.component';
+import { ProspectingWhereToBeginSubitemComponent } from './components/prospecting/children/prospecting-where-to-begin-subitem/prospecting-where-to-begin-subitem.component';
+import { UsingSalesNavigatorSubitemComponent } from './components/prospecting/children/using-sales-navigator-subitem/using-sales-navigator-subitem.component';
+import { SearchSpotlightsSubitemComponent } from './components/prospecting/children/search-spotlights-subitem/search-spotlights-subitem.component';
+import { MultiThreadingSubitemComponent } from './components/prospecting/children/multi-threading-subitem/multi-threading-subitem.component';
+import { WhyPostOnLinkedInSubitemComponent } from './components/prospecting/children/why-post-on-linked-in-subitem/why-post-on-linked-in-subitem.component';
+import { ProspectingProcessToFollowSubitemComponent } from './components/prospecting/children/prospecting-process-to-follow-subitem/prospecting-process-to-follow-subitem.component';
+import { TouchesWeek12BeginningSubitemComponent } from './components/prospecting/children/touches-week12-beginning-subitem/touches-week12-beginning-subitem.component';
+import { TouchesWeek3GettingMeetingSubitemComponent } from './components/prospecting/children/touches-week3-getting-meeting-subitem/touches-week3-getting-meeting-subitem.component';
+import { FaceToFaceColdCallingSubitemComponent } from './components/prospecting/children/face-to-face-cold-calling-subitem/face-to-face-cold-calling-subitem.component';
+import { TouchesWeek4OrganizingSubitemComponent } from './components/prospecting/children/touches-week4-organizing-subitem/touches-week4-organizing-subitem.component';
+import { TouchesBeginningYourRelationshipCampaignSubitemComponent } from './components/prospecting/children/touches-beginning-your-relationship-campaign-subitem/touches-beginning-your-relationship-campaign-subitem.component';
+import { CenterOfInfluenceWorksheetSubitemComponent as CenterOfInfluenceWorksheetSubitemProspectingComponent} from './components/prospecting/children/center-of-influence-worksheet-subitem/center-of-influence-worksheet-subitem.component';
+import { AReferralOrAnIntroductionSubitemComponent as AReferralOrAnIntroductionSubitemProspectingComponent} from './components/prospecting/children/areferral-or-an-introduction-subitem/areferral-or-an-introduction-subitem.component';
+import { WhatWouldYouSayAboutUsSubitemComponent as WhatWouldYouSayAboutUsSubitemProspectingComponent} from './components/prospecting/children/what-would-you-say-about-us-subitem/what-would-you-say-about-us-subitem.component';
+import { WriteItOutSubitemComponent as WriteItOutSubitemProspectingComponent} from './components/prospecting/children/write-it-out-subitem/write-it-out-subitem.component';
+import { DontAlienateYourSourceSubitemComponent as DontAlienateYourSourceSubitemProspectingComponent} from './components/prospecting/children/dont-alienate-your-source-subitem/dont-alienate-your-source-subitem.component';
+import { MyGoalsSubitemComponent as MyGoalsSubitemProspectingComponent} from './components/prospecting/children/my-goals-subitem/my-goals-subitem.component';
+import { SettingTheStageSubitemComponent } from './components/the-truth/children/setting-the-stage-subitem/setting-the-stage-subitem.component';
+import { TheIntellectualResponseSubitemComponent } from './components/the-truth/children/the-intellectual-response-subitem/the-intellectual-response-subitem.component';
+import { TheRehearsalStepsSubitemComponent } from './components/the-truth/children/the-rehearsal-steps-subitem/the-rehearsal-steps-subitem.component';
+import { DilemmaSecondTransitionSubitemComponent } from './components/the-truth/children/dilemma-second-transition-subitem/dilemma-second-transition-subitem.component';
+import { TheCrystalBallSubitemComponent } from './components/the-truth/children/the-crystal-ball-subitem/the-crystal-ball-subitem.component';
+import { WrappingUpSubitemComponent } from './components/the-truth/children/wrapping-up-subitem/wrapping-up-subitem.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/Blueprint Process', pathMatch: 'full' },
@@ -91,13 +136,13 @@ const routes: Routes = [
     path: 'Leverage Relation', component: LeverageRelationComponent,
     children: [
       { path: '', component: HomeLeverageRelationComponent },
-      { path: '1', component: HomeLeverageRelationComponent },
-      { path: '2', component: HomeLeverageRelationComponent },
-      { path: '3', component: HomeLeverageRelationComponent },
-      { path: '4', component: HomeLeverageRelationComponent },
-      { path: '5', component: HomeLeverageRelationComponent },
-      { path: '6', component: HomeLeverageRelationComponent },
-      { path: '7', component: HomeLeverageRelationComponent },
+      { path: '1', component: CenterOfInfluenceWorksheetSubitemComponent },
+      { path: '2', component: AReferralOrAnIntroductionSubitemComponent },
+      { path: '3', component: RevenueTableSubitemComponent },
+      { path: '4', component: WhatWouldYouSayAboutUsSubitemComponent },
+      { path: '5', component: WriteItOutSubitemComponent },
+      { path: '6', component: DontAlienateYourSourceSubitemComponent },
+      { path: '7', component: MyGoalsSubitemComponent },
     ]
   },
   {
@@ -124,55 +169,55 @@ const routes: Routes = [
     path: 'Proactive Service', component: ProactiveServiceComponent,
     children: [
       { path: '', component: HomeProactiveServiceComponent },
-      { path: '1', component: HomeProactiveServiceComponent },
-      { path: '2', component: HomeProactiveServiceComponent },
-      { path: '3', component: HomeProactiveServiceComponent },
-      { path: '4', component: HomeProactiveServiceComponent },
-      { path: '5', component: HomeProactiveServiceComponent },
-      { path: '6', component: HomeProactiveServiceComponent },
-      { path: '7', component: HomeProactiveServiceComponent },
-      { path: '8', component: HomeProactiveServiceComponent },
-      { path: '9', component: HomeProactiveServiceComponent },
-      { path: '10', component: HomeProactiveServiceComponent },
-      { path: '11', component: HomeProactiveServiceComponent },
-      { path: '12', component: HomeProactiveServiceComponent },
-      { path: '13', component: HomeProactiveServiceComponent },
-      { path: '14', component: HomeProactiveServiceComponent },
+      { path: '1', component: TheFiveCategoriesOfSalesPeopleSubitemComponent },
+      { path: '2', component: TheChallengerSubitemComponent },
+      { path: '3', component: RulesOfProspectEngagementSubitemComponent },
+      { path: '4', component: ObjectiveResultSubitemComponent },
+      { path: '5', component: PriceCoverageServiceSubitemComponent },
+      { path: '6', component: DifferentiationBeUniqueSubitemComponent },
+      { path: '7', component: DefiningProactiveServiceSubitemComponent },
+      { path: '8', component: LadderOfAbstractionSubitemComponent },
+      { path: '9', component: A3DefiningProactiveServiceSubitemComponent },
+      { path: '10', component: A3ClaimsReviewProcessSubitemComponent },
+      { path: '11', component: ArticulationOfThe3AProcessSubitemComponent },
+      { path: '12', component: LetsTryOneOfYourOwnSubitemComponent },
+      { path: '13', component: TheArticulationWedgeStyleSubitemComponent },
+      { path: '14', component: TheArticulationBlueprintStyleSubitemComponent },
     ]
   },
   {
     path: 'Prospecting', component: ProspectingComponent,
     children: [
       { path: '', component: HomeProspectingComponent },
-      { path: '1', component: HomeProspectingComponent },
-      { path: '2', component: HomeProspectingComponent },
-      { path: '3', component: HomeProspectingComponent },
-      { path: '4', component: HomeProspectingComponent },
-      { path: '5', component: HomeProspectingComponent },
-      { path: '6', component: HomeProspectingComponent },
-      { path: '7', component: HomeProspectingComponent },
-      { path: '8', component: HomeProspectingComponent },
-      { path: '9', component: HomeProspectingComponent },
-      { path: '10', component: HomeProspectingComponent },
-      { path: '11', component: HomeProspectingComponent },
-      { path: '12', component: HomeProspectingComponent },
-      { path: '13', component: HomeProspectingComponent },
-      { path: '14', component: HomeProspectingComponent },
-      { path: '15', component: HomeProspectingComponent },
-      { path: '16', component: HomeProspectingComponent },
-      { path: '17', component: HomeProspectingComponent },
+      { path: '1', component: ProspectingWhereToBeginSubitemComponent },
+      { path: '2', component: UsingSalesNavigatorSubitemComponent },
+      { path: '3', component: SearchSpotlightsSubitemComponent },
+      { path: '4', component: MultiThreadingSubitemComponent },
+      { path: '5', component: WhyPostOnLinkedInSubitemComponent },
+      { path: '6', component: ProspectingProcessToFollowSubitemComponent },
+      { path: '7', component: TouchesWeek12BeginningSubitemComponent },
+      { path: '8', component: TouchesWeek3GettingMeetingSubitemComponent },
+      { path: '9', component: FaceToFaceColdCallingSubitemComponent },
+      { path: '10', component: TouchesWeek4OrganizingSubitemComponent },
+      { path: '11', component: TouchesBeginningYourRelationshipCampaignSubitemComponent },
+      { path: '12', component: CenterOfInfluenceWorksheetSubitemProspectingComponent },
+      { path: '13', component: AReferralOrAnIntroductionSubitemProspectingComponent },
+      { path: '14', component: WhatWouldYouSayAboutUsSubitemProspectingComponent },
+      { path: '15', component: WriteItOutSubitemProspectingComponent },
+      { path: '16', component: DontAlienateYourSourceSubitemProspectingComponent },
+      { path: '17', component: MyGoalsSubitemProspectingComponent },
     ]
   },
   {
     path: 'The Truth', component: TheTruthComponent,
     children: [
       { path: '', component: HomeTheTruthComponent },
-      { path: '1', component: HomeTheTruthComponent },
-      { path: '2', component: HomeTheTruthComponent },
-      { path: '3', component: HomeTheTruthComponent },
-      { path: '4', component: HomeTheTruthComponent },
-      { path: '5', component: HomeTheTruthComponent },
-      { path: '6', component: HomeTheTruthComponent },
+      { path: '1', component: SettingTheStageSubitemComponent },
+      { path: '2', component: TheIntellectualResponseSubitemComponent },
+      { path: '3', component: TheRehearsalStepsSubitemComponent },
+      { path: '4', component: DilemmaSecondTransitionSubitemComponent },
+      { path: '5', component: TheCrystalBallSubitemComponent },
+      { path: '6', component: WrappingUpSubitemComponent },
     ]
   }
 
