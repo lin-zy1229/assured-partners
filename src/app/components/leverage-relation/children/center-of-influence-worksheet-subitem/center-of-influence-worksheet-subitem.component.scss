@@ -1,0 +1,57 @@
+thead {
+    background-color: #4472c4;
+    color: white;
+    font-size: 0.9em;
+}
+
+thead>tr>th {
+    padding: 1em;
+}
+
+td {
+    border-right: 1px solid #fff;
+    padding: .5em;
+}
+
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #cfd5ea;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #eef1fa;
+}
+
+mat-horizontal-stepper.mat-stepper-horizontal {
+    display: flex;
+    flex-direction: column;
+}
+
+::ng-deep div.mat-horizontal-stepper-header-container {
+    order: 1;
+}
+
+::ng-deep div.mat-horizontal-content-container {
+    order: 0;
+}
+
+// ::ng-deep div.mat-horizontal-stepper-header-container [aria-posinset='1'] {
+//     display: flex;
+// }
+// ::ng-deep div.mat-horizontal-stepper-header-container [aria-posinset='2'] {
+//     display: flex;
+// }
+// ::ng-deep div.mat-horizontal-stepper-header-container [aria-posinset='3'] {
+//     display: flex;
+// }
+// ::ng-deep div.mat-horizontal-stepper-header-container [aria-posinset='4'] {
+//     display: none;
+// }
+
+// remove stepper label
+::ng-deep app-center-of-influence-worksheet-subitem mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
+    display: none;
+}
+// remove only last header line
+::ng-deep app-center-of-influence-worksheet-subitem div.mat-horizontal-stepper-header-container div.mat-stepper-horizontal-line:nth-last-child(2) {
+    display: none;
+}

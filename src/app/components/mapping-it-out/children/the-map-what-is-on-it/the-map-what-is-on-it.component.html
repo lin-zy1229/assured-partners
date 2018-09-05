@@ -7,7 +7,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<section class="shape-section-column-long">
-					<div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClick1()">
+					<div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(0,1)">
 						<div class="content-in-shape"><span class="title">What is it</span></div>
 					</div>
 
@@ -15,7 +15,7 @@
 					<div class="arrow-line-vertical"></div>
 					<div class="arrow down"></div>
 
-					<div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClick2()">
+					<div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(0,2)">
 						<div class="content-in-shape"><span class="title">Help the Prospect Understand What is Coming Next</span></div>
 					</div>
 
@@ -23,7 +23,7 @@
 					<div class="arrow-line-vertical"></div>
 					<div class="arrow down"></div>
 
-					<div [ngClass]="{ 'green': stage==3, 'blue': stage!=3 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClick3()">
+					<div [ngClass]="{ 'green': stage==3, 'blue': stage!=3 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(0,3)">
 						<div class="content-in-shape"><span class="title">What's it Called?</span></div>
 					</div>
 
@@ -34,18 +34,18 @@
 
 
 					<div *ngIf="stage===0" [@enterAnimation] id="setting-the-stage-main" class="card-content">
-						<div class="home-page-list-item">
+						<div class="flex-row">
 							<img src="assets/mapping-it-out/3-1.png">
-							<div class="desc">
+							<div class="flex-col">
 								<span class="form-title">What?</span>
 								<span class="form-description">What – is the Service Called</span>
 							</div>
 
 						</div>
 
-						<div class="home-page-list-item">
+						<div class="flex-row">
 							<img src="assets/mapping-it-out/3-1.png">
-							<div class="desc">
+							<div class="flex-col">
 
 								<span class="form-title">Who?</span>
 								<span class="form-description">Who at “ABC” Manufacturing would be involved?</span>
@@ -53,9 +53,9 @@
 
 						</div>
 
-						<div class="home-page-list-item">
+						<div class="flex-row">
 							<img src="assets/mapping-it-out/3-1.png">
-							<div class="desc">
+							<div class="flex-col">
 
 								<span class="form-title">When?</span>
 								<span class="form-description">When (what time of year) would you want this to happen?</span>
@@ -63,9 +63,9 @@
 						</div>
 
 
-						<div class="home-page-list-item">
+						<div class="flex-row">
 							<img src="assets/mapping-it-out/3-1.png">
-							<div class="desc">
+							<div class="flex-col">
 
 								<span class="form-title">How?</span>
 								<span class="form-description">How is it going to work (what is the process)?</span>
@@ -73,9 +73,9 @@
 						</div>
 
 
-						<div class="home-page-list-item">
+						<div class="flex-row">
 							<img src="assets/mapping-it-out/3-1.png">
-							<div class="desc">
+							<div class="flex-col">
 
 								<span class="form-title">Why?</span>
 								<span class="form-description">Why is doing it important?</span>
@@ -87,12 +87,11 @@
 
 					<div *ngIf="stage===1" [@enterAnimation] id="setting-the-stage-main" class="card-content">
 						<div>
-							<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+							<button mat-button color="primary" (click)="onClickShape(0,0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 						</div>
 
-						<div class="content-box">
-							<span>Our next step, <span class="emphasis">“Mapping out the Strategy”</span> is where we will go to confirm our buyer’s
-								buy in – or simply put, determine if they are actually interested in what we have suggested they may need.</span>
+						<div class="content-box-no-width">
+                                <strong>What is it</strong>– You will begin with something like: “So, in regards to this Claims Review . . . I’m going to walk you through a series of questions to be <span class="emphasis">sure I thoroughly understand what you want and how you want it done.</span>  It is important to me that I understand all the different aspects of why you want it, because every company is different . . . Does that make sense?”
 						</div>
 
 					</div>
@@ -100,7 +99,7 @@
 
 					<div *ngIf="stage===2" [@enterAnimation] id="setting-the-stage-main" class="card-content">
 						<div>
-							<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+							<button mat-button color="primary" (click)="onClickShape(0,0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 						</div>
 						<span class="form-title bold">Help the Prospect Understand What is Coming Next</span>
 						<span class="form-question">The prospect has probably never been through an exercise like this. Most likely, their
@@ -113,7 +112,7 @@
 
 					<div *ngIf="stage===3" [@enterAnimation] id="setting-the-stage-main" class="card-content">
 						<div>
-							<button mat-button color="primary" (click)="onBack()"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+							<button mat-button color="primary" (click)="onClickShape(0,0)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
 						</div>
 						<span class="form-title bold">What’s it Called?</span>
 						<span class="form-question">Give your service a name – we’ll get into this more when we talk about writing out your

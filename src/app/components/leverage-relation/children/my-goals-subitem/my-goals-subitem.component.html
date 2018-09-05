@@ -1,3 +1,116 @@
-<p>
-  my-goals-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        My Goals
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-title">
+                            My Goals
+                        </div>
+                        <div class="form-description">
+                            <p>The odds are good that your source will not have made the call for the introduction the first
+                                time you follow up.</p>
+                        </div>
+
+                        <div class="flex-row">
+                            <div class="flex-col">
+                                <li class="green-forecolor indent">Hours Prospecting/Week</li>
+                                <li class="green-forecolor indent">Touches/Week:</li>
+                                <li class="green-forecolor indent">Face to Face Attempts/Week</li>
+                                <li class="green-forecolor indent">Introductions/Month</li>
+                                <li class="green-forecolor indent">NB Meetings/Month</li>
+                            </div>
+
+                            <div class="flex-col">
+                                <li class="green-forecolor indent">Qualified Submissions/Month</li>
+                                <li class="green-forecolor indent">Closing Opportunities/Month</li>
+                                <li class="green-forecolor indent">Closing Ratio Goal</li>
+                                <li class="green-forecolor indent">Average Account Size Goal</li>
+                                <li class="green-forecolor indent">NB Revenue/Month</li>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div style="align-self: center">
+                            <img src="assets/leverage-relation/7-1.png">
+                        </div>
+
+                        <div class="form-title">
+                            Singles or Home Runs?
+                        </div>
+                        <div class="form-question">
+                            <p>The satisfaction of making a sale is unparalleled for a sales person. You may hear people
+                                say “Get some singles before you go for the home runs”. The question is, what is a single?
+                                You have defined your ideal account revenue minimum. Consider these singles. It’s okay to
+                                swing for the fences too, just remember to keep your focus on your activity goals, the rest
+                                will take care of itself.
+                            </p>
+                        </div>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="flex-row">
+                            <div class="flex-col" style="align-items: center">
+                                <img src="/src/assets/leverage-relation/6-1.png">
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="flex-row">
+                                    <div class="arrow chat-arrow-green left" style="margin-top:1em;">
+
+                                    </div>
+                                    <div class="chat-box-green form-question" style="padding:2em; line-height: 2em; letter-spacing:.05em;">
+                                        The more mediums you employ, the better chance you'll reach your prospect </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">My Goals</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                    <div class="content-in-shape"><span class="title">Singles or Home Runs?</span></div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+</div>

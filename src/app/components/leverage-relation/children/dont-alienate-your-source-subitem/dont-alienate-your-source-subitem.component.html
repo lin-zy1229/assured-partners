@@ -1,3 +1,112 @@
-<p>
-  dont-alienate-your-source-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Don't Alienate Your Source
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-title">
+                            Don’t Alienate Your Source
+                        </div>
+                        <div class="form-description">
+                            <p>The odds are good that your source will not have made the call for the introduction the first
+                                time you follow up.</p>
+                        </div>
+
+                        <li class="green-forecolor indent">
+                            Remind your source this is a voluntary activity and ask them “Are you still comfortable with this?”
+                        </li>
+                        <li class="green-forecolor indent">
+                            Set another follow up date – if they still haven’t made the call, set the next follow up date for at least a week down the
+                            line or simply ask your source when they’d like to set up the meeting.
+                        </li>
+
+                    </div>
+
+
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-title">
+                            Call Back Questions
+                        </div>
+                        <div class="form-question">
+                            <p>Once they've set the appointment</p>
+                        </div>
+
+
+                        <li class="green-forecolor indent">
+                            What’s going on with his/her company?
+                        </li>
+                        <li class="green-forecolor indent">
+                            What did you tell him/her? How did they respond?
+                        </li>
+                        <li class="green-forecolor indent">
+                            Did you talk about his/her current agent and their relationship?
+                        </li>
+                        <li class="green-forecolor indent">
+                            Did he/she bring up any specific questions or needs regarding his/her company?
+                        </li>
+
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="flex-row">
+                            <div class="flex-col" style="align-items: center">
+                                <img src="/src/assets/leverage-relation/6-1.png">
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="flex-row">
+                                    <div class="arrow chat-arrow-green left" style="margin-top:1em;">
+
+                                    </div>
+                                    <div class="chat-box-green form-question" style="padding:2em; line-height: 2em; letter-spacing:.05em;">
+                                        How many failed follow ups are too many?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">Don’t Alienate Your Source</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                    <div class="content-in-shape"><span class="title">Call Back Questions</span></div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+</div>

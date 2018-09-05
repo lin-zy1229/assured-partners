@@ -10,12 +10,33 @@ import { WhatWouldYouSayAboutUsSubitemComponent } from './children/what-would-yo
 import { WriteItOutSubitemComponent } from './children/write-it-out-subitem/write-it-out-subitem.component';
 import { DontAlienateYourSourceSubitemComponent } from './children/dont-alienate-your-source-subitem/dont-alienate-your-source-subitem.component';
 import { MyGoalsSubitemComponent } from './children/my-goals-subitem/my-goals-subitem.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule, MatStepperModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+
+const modules = [
+    BrowserModule,
+    BrowserAnimationsModule,
+    // MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    // MatSelectModule,
+    // MatOptionModule,
+    MatTableModule,
+    MatStepperModule,
+    MatButtonModule,
+    // MatGridListModule,
+];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    LeverageRelationRoutingModule
-  ],
-  declarations: [HomeLeverageRelationComponent, CenterOfInfluenceWorksheetSubitemComponent, AReferralOrAnIntroductionSubitemComponent, RevenueTableSubitemComponent, WhatWouldYouSayAboutUsSubitemComponent, WriteItOutSubitemComponent, DontAlienateYourSourceSubitemComponent, MyGoalsSubitemComponent]
+    imports: [
+        modules,
+        CommonModule,
+        LeverageRelationRoutingModule
+    ],
+    exports: [
+        modules,
+    ],
+    declarations: [HomeLeverageRelationComponent, CenterOfInfluenceWorksheetSubitemComponent, AReferralOrAnIntroductionSubitemComponent, RevenueTableSubitemComponent, WhatWouldYouSayAboutUsSubitemComponent, WriteItOutSubitemComponent, DontAlienateYourSourceSubitemComponent, MyGoalsSubitemComponent]
 })
 export class LeverageRelationModule { }

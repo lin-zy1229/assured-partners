@@ -1,3 +1,51 @@
-<p>
-  revenue-table-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+
+    </div>
+
+    <div class="page-content">
+        <table class="table table-dark table-hover table-striped mat-table-sticky mat-elevation-z8">
+            <thead class="thead-light">
+                <tr>
+                    <th>No</th>
+                    <th *ngFor="let colName of columnNames" style="vertical-align:middle;text-align:center;">{{colName}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let element of dataSource1; index as i">
+                    <td style="vertical-align:middle;text-align:center;">{{i+1}}</td>
+                    <td style="vertical-align:middle;text-align:left;">{{element.client}}</td>
+                    <td style="vertical-align:middle;text-align:right;">{{element.revenue == 0 ? '' : ('$ ' + (element.revenue
+                        | number))}}</td>
+                    <td style="vertical-align:middle;text-align:left;">{{element.percent}}</td>
+                    <td style="vertical-align:middle;text-align:center;">{{element.accts == 0 ? '' : element.accts}}</td>
+                    <td style="vertical-align:middle;text-align:right;">{{element.rev_category == 0 ? '' : element.rev_category}}</td>
+                    <td style="vertical-align:middle;text-align:right;">{{element.rpr == 0 ? '' : element.rpr}}</td>
+                    <td style="vertical-align:middle;text-align:right;">{{element.total_percent == 0 ? '' : element.total_percent + '%'}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-dark table-hover table-striped mat-table-sticky mat-elevation-z8">
+            <thead class="thead-light">
+                <tr>
+                    <th>No</th>
+                    <th *ngFor="let colName of columnNames" style="vertical-align:middle;text-align:center;">{{colName}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let element of dataSource2; index as i">
+                    <td style="vertical-align:middle;text-align:center;">{{i+1}}</td>
+                    <td style="vertical-align:middle;text-align:left;">{{element.client}}</td>
+                    <td style="vertical-align:middle;text-align:right;">{{element.revenue == 0 ? '' : ('$ ' + (element.revenue
+                        | number))}}</td>
+                    <td style="vertical-align:middle;text-align:left;">{{element.percent}}</td>
+                    <td style="vertical-align:middle;text-align:center;">{{element.accts == 0 ? '' : element.accts}}</td>
+                    <td style="vertical-align:middle;text-align:right;">{{element.rev_category == 0 ? '' : element.rev_category}}</td>
+                    <td style="vertical-align:middle;text-align:right;">{{element.rpr == 0 ? '' : element.rpr}}</td>
+                    <td style="vertical-align:middle;text-align:right;">{{element.total_percent == 0 ? '' : element.total_percent+'%'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+thead {
+    background-color: #4472c4;
+    color: white;
+    font-size: 0.9em;
+}
+
+thead>tr>th {
+    padding: 1em;
+}
+
+td {
+    border-right: 1px solid #fff;
+    padding: .5em;
+}
+
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #cfd5ea;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #eef1fa;
+}

@@ -1,0 +1,3 @@
+::ng-deep app-how-making-sure-they-get-it mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
+    display: none;
+}
