@@ -1,0 +1,17 @@
+mat-horizontal-stepper.mat-stepper-horizontal {
+    display: flex;
+    flex-direction: column;
+}
+
+// ::ng-deep div.mat-horizontal-stepper-header-container {
+//     order: 1;
+// }
+
+// ::ng-deep div.mat-horizontal-content-container{
+//     order: 0;
+// }
+
+// remove stepper label
+::ng-deep app-differentiation-be-unique-subitem mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
+    display: none;
+}

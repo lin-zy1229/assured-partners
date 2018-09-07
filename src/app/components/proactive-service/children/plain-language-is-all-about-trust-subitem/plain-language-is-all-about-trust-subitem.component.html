@@ -1,0 +1,199 @@
+<div class="page-container">
+    <div class="page-title">
+        Plain Language is all About TRUST
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="form-title">Plain Language is all About TRUST</div>
+
+                        <div class="form-description">
+                            The <span class="emphasis">“art”</span> of creating wedges from our proactive services begins
+                            with understanding that the terminology we use REQUIRES we avoid insurance jargon, lingo and
+                            acronyms.
+                        </div>
+
+                        <div class="form-question">
+                            When these phrases and terms come up while writing Proactive Services, stop and ask yourself,
+                        </div>
+
+
+                        <div class="flex-row">
+                            <div class="flex-col" style="align-items: center">
+                                <img src="assets/mapping-it-out/7-3.png">
+                                <div>You</div>
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="flex-row">
+                                    <div class="arrow chat-arrow left" style="margin-top:1em;">
+
+                                    </div>
+                                    <div class="chat-box">
+                                        <span>“What do I <img style="position: absolute; margin-top: -5px;" src="assets/proactive-service/10-x.png">mean
+                                            by ‘X’? </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <p style="padding:1em;"></p>
+                        <p class="form-description">
+                            Come up with another way of saying it which anyone would understand.
+                        </p>
+                        <p class="form-description">
+                            Articulating our services concisely and with plain language is a key to winning our prospect’s trust.
+                        </p>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div class="form-title">Attitude – Walk Away Ability . . </div>
+
+                        <div class="form-question">
+                            To the degree that you need a prospect to buy from you is the degree you are subject to manipulation. Ask yourself before
+                            the call,
+                        </div>
+                        <p></p>
+                        <div class="flex-row">
+                            <div class="flex-col" style="align-items: center">
+                                <img src="assets/mapping-it-out/7-3.png">
+                                <div>You</div>
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="flex-row">
+                                    <div class="arrow chat-arrow left" style="margin-top:1em;">
+
+                                    </div>
+                                    <div class="chat-box">
+                                        <span>"If this person does not buy from me, will it change the way I eat, the clothes
+                                            I wear, the car I drive, or my retirement?”</span>
+                                    </div>
+                                </div>
+                                <p></p>
+                                <div class="form-description">
+                                    <span>No. It will not, so go for it! – Randy Schwantz</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+
+                        <div class="form-title">Practice</div>
+
+                        <p class="form-question">
+                            Allow yourself the latitude to use any language you want as you are getting your thoughts on paper (so to speak). Once you
+                            feel confident you have all the information you need to effectively communicate the process,
+                            then begin to develop the language.
+                        </p>
+                        <p class="form-question">
+                            Read the Proactive Service out loud. Note the areas where you would modify the structure to make it flow more conversationally.
+                            Amend the areas where you are using jargon, lingo and acronyms and replace them with phrases
+                            or brief explanations.
+                        </p>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div class="form-title">For example, instead of saying</div>
+
+                        <div class="flex-row">
+                            <div class="flex-col" style="align-items: center">
+                                <img src="assets/mapping-it-out/7-3.png">
+                                <div>You</div>
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="flex-row">
+                                    <div class="arrow chat-arrow left" style="margin-top:1em;">
+
+                                    </div>
+                                    <div class="chat-box">
+
+                                        <span>“Experi<img style="position: absolute; margin-top: -5px;" src="assets/proactive-service/10-x.png">ence
+                                            MOD” </span>
+                                    </div>
+                                </div>
+                                <p></p>
+                                <div class="form-question">
+                                    You might say,
+                                </div>
+                                <div class="flex-row">
+                                    <div class="arrow chat-arrow left" style="margin-top:1em;">
+
+                                    </div>
+                                    <div class="chat-box">
+                                        <span>“The experience MOD, or the numerical value used in a work comp policy that
+                                            is used to set your rates”. </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-question">
+                            It is always better to explain thing in <span class="emphasis">“layman’s”</span> terms, knowing
+                            your prospect is understanding you, than to hope they get the lingo.
+                        </div>
+
+
+                    </div>
+                </mat-step>
+
+            </mat-horizontal-stepper>
+
+
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">Plain Language is all About TRUST</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                    <div class="content-in-shape"><span class="title">Attitude – Walk Away Ability . .</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==3, 'blue': stage!=3 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(3)">
+                    <div class="content-in-shape"><span class="title">Practice</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==4, 'blue': stage!=4 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(4)">
+                    <div class="content-in-shape"><span class="title">For example, Instead of saying </span></div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>

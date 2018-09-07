@@ -1,3 +1,77 @@
-<p>
-  a3-defining-proactive-service-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        "A3" - Defining a Proactive Service
+    </div>
+
+
+
+    <div class="page-content">
+
+        <div class="flex-row" style="justify-content: center">
+            <div><img style="margin-left: -5px;margin-right: -5px;" src="assets/proactive-service/11-1.png"></div>
+            <div><img style="margin-left: -5px;margin-right: -5px;" src="assets/proactive-service/11-2.png"></div>
+            <div><img style="margin-left: -5px;margin-right: -5px;" src="assets/proactive-service/11-3.png"></div>
+        </div>
+        <section class="shape-container-row" style="justify-content: space-around;">
+            <div (click)="onClickShape(1)" class="new-shape circle gray">
+                <div class="content-in-shape"><span class="title">Acquire</span></div>
+            </div>
+
+            <div class="flex-row" style="align-items:center">
+                <div class="arrow-line"></div>
+                <div class="arrow right"></div>
+            </div>
+
+
+            <div (click)="onClickShape(2)" class="new-shape diamond green">
+                <div class="content-in-shape">
+                    <span class="title">Analyze</span></div>
+            </div>
+
+            <div class="flex-row" style="align-items:center">
+                <div class="arrow-line"></div>
+                <div class="arrow right"></div>
+            </div>
+
+
+            <div (click)="onClickShape(3)" class="new-shape diamond green">
+                <div class="content-in-shape"><span class="title">Act</span></div>
+            </div>
+
+        </section>
+
+        <div class="flex-row" style="justify-content: space-evenly">
+
+            <div class="flex-col" style="flex:1;align-items: flex-start">
+                <li class="form-question emphasis">Spreadsheet</li>
+                <li class="form-question emphasis">Report</li>
+                <li class="form-question emphasis">List</li>
+                <li class="form-question emphasis">Policy</li>
+            </div>
+
+            <!-- <div class="flex-col" style="flex:1"></div> -->
+
+            <div class="flex-col" style="flex:1;align-items: flex-start">
+                <li class="form-question emphasis">Identify</li>
+                <li class="form-question emphasis">Solve</li>
+                <li class="form-question emphasis">Explain</li>
+            </div>
+
+            <!-- <div class="flex-col" style="flex:1"></div> -->
+
+            <div class="flex-col" style="flex:1;align-items: flex-start">
+                <li class="form-question emphasis">Players</li>
+                <li class="form-question emphasis">Strategy</li>
+                <li class="form-question emphasis">Implement</li>
+                <li class="form-question emphasis">Test</li>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-footer>">
+        <button (click)="router.navigateByUrl('/Leverage%20Relation');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+                class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+        <button (click)="router.navigateByUrl('/Blueprint%20Process/Outcome%20%231');" mat-button color="primary" style="float:right;"
+            href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+    </div>
+</div>

@@ -1,3 +1,123 @@
-<p>
-  price-coverage-service-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Price, Coverage & Service
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="form-title">Price</div>
+                        <div class="form-question">Your competition loves to talk about price</div>
+
+                        <li class="form-description emphasis indent">They have markets!</li>
+                        <li class="form-description emphasis indent">They have programs!</li>
+                        <li class="form-description emphasis indent">They will go find a better price!</li>
+
+                        <div class="form-question">But is this truly a “competitive advantage”? No. Price is a fickle mistress.
+                            <span class="red-forecolor" style="font-style:italic;">If you sell on price you will eventually
+                                lose on price.</span></div>
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div class="form-title">Coverage</div>
+                        <li class="form-description emphasis indent">Selling on coverage could be likened to selling a car
+                            because it has an engine</li>
+
+                        <div class="form-question red-forecolor" style="font-style:italic;">Finding areas where a prior agent
+                            has missed a coverage is a great door opener, but it will not keep a client for the long term.</div>
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+
+                        <div class="form-title">Service</div>
+
+
+
+
+                        <li class="form-description emphasis indent">Almost all of your competition is good at one thing,
+                            nearly without fail:
+                            <span class="red-forecolor" style="font-size:1.2em;">“REACTIVE”</span> service. Agents who lack
+                            a good track record in reactive service aren’t agents for long </li>
+                        <li class="form-description emphasis indent"><span class="red-forecolor" style="font-size:1.2em;">“PROACTIVE”</span>
+                            service is another story
+                        </li>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div class="form-title">
+                            What Makes You Better?
+                        </div>
+                        <div class="form-description">
+                            Please take a moment to list four items you believe makes your location better or different from the competition.
+                        </div>
+
+                        <div class="flex-col">
+                            <mat-form-field>
+                                <input matInput placeholder="(1)">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="(2)">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="(3)">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="(4)">
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                </mat-step>
+
+            </mat-horizontal-stepper>
+
+
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">Price</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                    <div class="content-in-shape"><span class="title">Coverage</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==3, 'blue': stage!=3 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(3)">
+                    <div class="content-in-shape"><span class="title">Service</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==4, 'blue': stage!=4 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(4)">
+                    <div class="content-in-shape"><span class="title">What Makes You Better?</span></div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>

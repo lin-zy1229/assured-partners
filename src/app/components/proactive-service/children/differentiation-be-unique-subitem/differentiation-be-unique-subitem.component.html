@@ -1,3 +1,125 @@
-<p>
-  differentiation-be-unique-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Differentiation-Be Unique
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="form-title">Differentiation
+                        </div>
+                        <div class="content-box-no-width form-question"><span class="emphasis">“In most cases differentiation
+                                is not what you have, it is how you do it. Better process leads to better results”</span>
+                            – Randy Schwantz Author of The Wedge
+                        </div>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div class="form-title">Be Unique</div>
+
+                        <div class="form-question">Your competition follows a simple, tired and typically ineffective formula.
+                        </div>
+
+                        <li class="form-description emphasis indent">Tell my company’s story</li>
+                        <li class="form-description emphasis indent">Gather relevant information from the prospect</li>
+                        <li class="form-description emphasis indent">Market the account </li>
+                        <li class="form-description emphasis indent">Pray for a good price</li>
+
+                        <div class="form-question">Following this formula is inefficient and will almost always lead to a
+                            false sense of security for the agent. You have typically won an account on either price or coverage
+                            and the result is that you will likely lose the account the same way.
+
+                        </div>
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+
+                        <div class="form-title">Setting the Stage</div>
+
+                        <div class="flex-row" style="justify-content: space-evenly">
+                            <div style="flex:1; padding:2em; ">
+                                <img width=100% src="assets/proactive-service/7-1.png" style="max-width:340px; max-height:470px;">
+                            </div>
+
+                            <div class="form-description" style="flex:1; padding:2em;">
+                                Setting the stage so the prospect comprehends that his/her expectations for your role in his/her business SHOULD be different,
+                                will help him/her understand that you are different and there to make a difference in the
+                                performance of their insurance package.
+
+                            </div>
+                        </div>
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div class="form-description">
+                            Your job is to proactively control the experience of your clients, making their future predictable
+                        </div>
+
+                        <div class="form-title">
+                            NOTES
+                        </div>
+
+                        <!-- <div class="mat-form-field-underline" style="position: static; height:1px;">
+                            <span class="mat-form-field-ripple" style="height:1px; opacity: 0.5; transform: scaleX(1);"></span>
+                        </div> -->
+
+
+                        <mat-form-field style="width: 100%;">
+                            <textarea matInput matTextareaAutosize matAutosizeMinRows=8 matAutosizeMaxRows=15 placeholder="" style="resize: vertical;"></textarea>
+                        </mat-form-field>
+
+                    </div>
+                </mat-step>
+
+            </mat-horizontal-stepper>
+
+
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">Differentiation</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                    <div class="content-in-shape"><span class="title">Be Unique</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==3, 'blue': stage!=3 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(3)">
+                    <div class="content-in-shape"><span class="title">Setting the Stage</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==4, 'blue': stage!=4 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(4)">
+                    <div class="content-in-shape"><span class="title">NOTES</span></div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>

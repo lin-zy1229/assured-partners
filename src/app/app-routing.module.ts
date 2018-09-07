@@ -100,6 +100,7 @@ import { TheRehearsalStepsSubitemComponent } from './components/the-truth/childr
 import { DilemmaSecondTransitionSubitemComponent } from './components/the-truth/children/dilemma-second-transition-subitem/dilemma-second-transition-subitem.component';
 import { TheCrystalBallSubitemComponent } from './components/the-truth/children/the-crystal-ball-subitem/the-crystal-ball-subitem.component';
 import { WrappingUpSubitemComponent } from './components/the-truth/children/wrapping-up-subitem/wrapping-up-subitem.component';
+import { PlainLanguageIsAllAboutTrustSubitemComponent } from './components/proactive-service/children/plain-language-is-all-about-trust-subitem/plain-language-is-all-about-trust-subitem.component';
 
 
 const routes: Routes = [
@@ -177,12 +178,13 @@ const routes: Routes = [
       { path: '6', component: DifferentiationBeUniqueSubitemComponent },
       { path: '7', component: DefiningProactiveServiceSubitemComponent },
       { path: '8', component: LadderOfAbstractionSubitemComponent },
-      { path: '9', component: A3DefiningProactiveServiceSubitemComponent },
-      { path: '10', component: A3ClaimsReviewProcessSubitemComponent },
-      { path: '11', component: ArticulationOfThe3AProcessSubitemComponent },
-      { path: '12', component: LetsTryOneOfYourOwnSubitemComponent },
-      { path: '13', component: TheArticulationWedgeStyleSubitemComponent },
-      { path: '14', component: TheArticulationBlueprintStyleSubitemComponent },
+      { path: '9', component: PlainLanguageIsAllAboutTrustSubitemComponent },
+      { path: '10', component: A3DefiningProactiveServiceSubitemComponent },
+      { path: '11', component: A3ClaimsReviewProcessSubitemComponent },
+      { path: '12', component: ArticulationOfThe3AProcessSubitemComponent },
+      { path: '13', component: LetsTryOneOfYourOwnSubitemComponent },
+      { path: '14', component: TheArticulationWedgeStyleSubitemComponent },
+      { path: '15', component: TheArticulationBlueprintStyleSubitemComponent },
     ]
   },
   {

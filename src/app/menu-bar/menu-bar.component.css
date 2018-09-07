@@ -2,7 +2,10 @@
 	background-color: #192857;
 	width: auto;
 }
-
+.mainmenu-title {
+    font-family: 'Lato';
+    font-size: 1.1em;
+}
 .mainmenus {
     display: flex;
     margin: 0;

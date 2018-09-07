@@ -1,0 +1,38 @@
+mat-horizontal-stepper.mat-stepper-horizontal {
+    display: flex;
+    flex-direction: column;
+}
+
+app-the-articulation-wedge-style-subitem div.mat-horizontal-stepper-header-container {
+    order: 1;
+}
+
+app-the-articulation-wedge-style-subitem div.mat-horizontal-content-container{
+    order: 0;
+}
+// remove stepper label
+app-the-articulation-wedge-style-subitem mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
+    display: none;
+}
+// remove only last header line
+app-the-articulation-wedge-style-subitem div.mat-horizontal-stepper-header-container div.mat-stepper-horizontal-line:nth-last-child(2) {
+    display: none;
+}
+
+//
+// for global, because of encapsulation: ViewEncapsulation.None 
+//
+app-the-articulation-wedge-style-subitem .mat-horizontal-stepper-header .mat-step-icon,
+app-the-articulation-wedge-style-subitem .mat-horizontal-stepper-header .mat-step-icon-not-touched {
+    margin-right: 0 !important;
+}
+
+app-the-articulation-wedge-style-subitem .mat-step-header {
+    border-radius: 50%;
+}
+
+app-the-articulation-wedge-style-subitem .mat-horizontal-stepper-header-container {
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+}

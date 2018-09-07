@@ -8,6 +8,8 @@
     padding-top: 0.5em;
 }
 .submenu-title {
+    font-family: 'Lato';
+    font-size: 1.2em;
     float: left;
     flex: flexible;
 }

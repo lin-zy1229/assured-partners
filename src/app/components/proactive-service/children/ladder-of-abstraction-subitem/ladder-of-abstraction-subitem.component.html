@@ -1,3 +1,82 @@
-<p>
-  ladder-of-abstraction-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Creating Articulation Using the “Ladder of Abstraction”
+    </div>
+
+
+
+    <div class="page-content">
+
+        <section class="shape-container-row" style="justify-content: space-evenly;">
+            <div (click)="onClickShape(1)" class="new-shape circle gray">
+                <div class="content-in-shape"><span class="title">Determine a Proactive Service</span></div>
+            </div>
+
+            <span class="new-formula">></span>
+
+            <div (click)="onClickShape(2)" class="new-shape diamond green">
+                <div class="content-in-shape">
+                    <span class="title">Place an action verb first</span></div>
+            </div>
+
+            <span class="new-formula">></span>
+
+            <div (click)="onClickShape(3)" class="new-shape diamond green">
+                <div class="content-in-shape"><span class="title">Develop the process</span></div>
+            </div>
+
+        </section>
+
+
+        <div class="form-question">1. Determine a Proactive Service</div>
+        <div class="form-question">2. Place an action verb first (ex. Renewal Forecast becomes Forecasting Renewals or Loss
+            Control becomes Controlling Losses)</div>
+        <div class="form-question">3. Develop the process</div>
+        <li class="form-description indent">What is needed to perform the service - almost always something tangible - reports,
+            loss runs, policies, benefit plan designs, etc.</li>
+        <li class="form-description indent">What is done with the information obtained - analysis, review, audit, etc.</li>
+        <li class="form-description indent">Based on the information derived from step two, what is the plan of action, specifically,
+            to correct the issue - negotiate with the underwrite, find better markets, develop a strategy, etc.</li>
+        <li class="form-description indent">Put the information into a step by step format
+            <ul style="list-style: none;">
+                <li class="form-description emphasis indent">A. Gather all the policies</li>
+                <li class="form-description emphasis indent">B. Review them for coverage gaps</li>
+                <li class="form-description emphasis indent">C. Contact the carrier to have the gaps filled and develop new
+                    pricing models</li>
+            </ul>
+        </li>
+
+        <li class="form-description indent">Identify the strongest step - where does the producer's expertise shine through
+            - where's the MEAT of what we do - it is almost always step two or three</li>
+        <li class="form-description indent">Break that step into the process that makes it work
+            <ul style="list-style: none;">
+                <li class="form-description emphasis indent">A. Examine the exclusions</li>
+                <li class="form-description emphasis indent">B. Identify which exclusions need to be amended</li>
+                <li class="form-description emphasis indent">C. Market the coverage to find the best deal</li>
+            </ul>
+        </li>
+
+        <li class="form-description indent">You now have written two wedges:
+            <ul style="list-style: none;">
+                <li class="form-description emphasis indent">A. When your broker came out to evaluate your coverages and
+                    they got out your policies, identified any areas where you needed more or less coverage and then developed
+                    a marketing strategy to address these issues, so you didn't have to worry about paying for coverage you
+                    don't need, or not having the coverage you do, how did that go?</li>
+                <li class="form-description emphasis indent">B. When your broker came out to evaluate your coverages and
+                    they got our a list of your exclusions, identified any areas where you needed coverage or didn't need
+                    coverage, then went to the market to determine your best deal, so you didn't have to worry about not
+                    having coverage you need or paying extra for coverage you didn't need, were you satisfied with how they
+                    did that?</li>
+            </ul>
+        </li>
+
+
+
+    </div>
+    <div class="page-footer>">
+        <button (click)="router.navigateByUrl('/Leverage%20Relation');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+                class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+        <button (click)="router.navigateByUrl('/Blueprint%20Process/Outcome%20%231');" mat-button color="primary" style="float:right;"
+            href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+    </div>
+</div>

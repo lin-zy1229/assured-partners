@@ -1,3 +1,79 @@
-<p>
-  the-articulation-wedge-style-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        The Articulation (Wedge Style)
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(2)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-title">
+                            Articulating – Why the Wedge Format
+                        </div>
+
+                        <div class="emphasis indent">
+                            <p>
+                                <li>Timing – State a specific time frame based on their renewal date – this puts the prospect
+                                    in a “planning” mode</li>
+                            </p>
+                            <p>
+                                <li>State what they incumbent was to do: An Equipment List Review, etc.</li>
+                            </p>
+                            <p>
+                                <li>Illustrate the process in plain, simple language</li>
+                            </p>
+                            <p>
+                                <li>MOST IMPORTANTLY, use the “negative” statement to hammer home the consequences of not using
+                                    this service</li>
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </mat-step>
+
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <!-- What -->
+                        <div *ngFor="let data of dataSource" class="flex-row" style="align-items: center;">
+                            <div style="width:150px; ">
+                                <div class="flex-col form-question" style="align-items: center;padding:1em;">
+                                    <img src="assets/{{data.image}}" style="padding:1em;">
+                                </div>
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="form-title">
+                                    {{data.title}}
+                                </div>
+                                <div class="form-question" [innerHTML]=data.content>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">Articulating – Why the Wedge Format
+                        </span></div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

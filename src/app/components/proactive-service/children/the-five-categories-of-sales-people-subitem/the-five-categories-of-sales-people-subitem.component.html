@@ -1,3 +1,71 @@
-<p>
-  the-five-categories-of-sales-people-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        The Five Categories of Sales People
+    </div>
+
+
+
+    <div class="page-content">
+
+        <section class="shape-container-row" style="justify-content: space-around;">
+            <div (click)="onClickShape(1)" class="new-shape circle gray">
+                <div class="content-in-shape"><span class="title">In recent years</span></div>
+            </div>
+
+            <span class="new-formula">></span>
+
+            <div (click)="onClickShape(2)" class="new-shape diamond green">
+                <div class="content-in-shape">
+                    <span class="title">Customers demanding</span></div>
+            </div>
+
+            <span class="new-formula">></span>
+
+            <div (click)="onClickShape(3)" class="new-shape diamond green">
+                <div class="content-in-shape"><span class="title">Salespeople to teach them</span></div>
+            </div>
+
+            <span class="new-formula">></span>
+
+            <div (click)="(0)" class="new-shape diamond green">
+                <div class="content-in-shape"><span class="title"> The Challenger Sale</span></div>
+            </div>
+        </section>
+
+        <div class="content-box-no-width">
+            <span class="emphasis">“In recent years, customers have been demanding more depth and expertise. They expect
+                salespeople to teach them things they don’t know.” </span><strong>– The Challenger Sale</strong>
+
+        </div>
+
+        <div class="form-title">
+                <span class="form-question">The Five Categories of Sales People</span>
+            </div>
+
+        <div class="form-question">
+            <span class="form-question indent">1. The Hard Worker</span>
+        </div>
+        <div class="form-question">
+            <span class="form-question indent">2. The Challenger</span>
+
+        </div>
+        <div class="form-question">
+            <span class="form-question indent">3. The Relationship Builder</span>
+
+        </div>
+        <div class="form-question">
+            <span class="form-question indent">4. The Lone Wolf</span>
+        </div>
+        <div class="form-question">
+            <span class="form-question indent">5. The Reactive Problem Solver</span>
+        </div>
+
+
+    </div>
+    <div class="page-footer>">
+        <button (click)="router.navigateByUrl('/Leverage%20Relation');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+                class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+        <button (click)="router.navigateByUrl('/Blueprint%20Process/Outcome%20%231');" mat-button color="primary" style="float:right;"
+            href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+    </div>
+</div>

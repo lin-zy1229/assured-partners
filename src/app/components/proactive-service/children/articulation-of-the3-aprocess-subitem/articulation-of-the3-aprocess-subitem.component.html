@@ -1,3 +1,135 @@
-<p>
-  articulation-of-the3-aprocess-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Articulation of the 3A Process
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(2)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-title">
+                            Articulation of the 3A Process
+                        </div>
+                        <div class="form-description">
+                            <p>Our next step is to get the process on paper.</p>
+
+                            <p>The first half of the process (illustrated to the left) allows you to:</p>
+                            <div class="emphasis indent">
+
+                                <li>Identify and name the proactive service</li>
+                                <li>Determine the tangible necessities needed to make the service happen</li>
+                                <li>Describe the analysis</li>
+                                <li>Illustrate the action to be taken</li>
+                                <li>Establish the timing of the service</li>
+                            </div>
+                            <p>It is permissible to use jargon, etc. when filling out the articulation, it will be amended
+                                when transferring the information to your preferred delivery style.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </mat-step>
+
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <!-- What -->
+                        <div class="flex-row" style="align-items: center; border: solid lightgray 1px; border-bottom-color: #00000000;">
+                            <div style="width:150px; border-right: solid lightgray 1px;">
+                                <div class="flex-col form-question" style="align-items: center;padding:1em;">
+                                    <img src="assets/proactive-service/13-what.png" style="padding:1em;"> What
+                                </div>
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="form-question emphasis indent">
+                                    <li>Claims Review</li>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Timing -->
+                        <div class="flex-row" style="align-items: center; border: solid lightgray 1px; border-bottom-color: #00000000;">
+                            <div style="width:150px; border-right: solid lightgray 1px;">
+                                <div class="flex-col form-question" style="align-items: center;padding:1em;">
+                                    <img src="assets/proactive-service/13-timing.png" style="padding:1em;"> Timing
+                                </div>
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="form-question emphasis indent">
+                                    <li> Identify a Specific Time During the Year</li>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Acquire -->
+                        <div class="flex-row" style="align-items: center; border: solid lightgray 1px; border-bottom-color: #00000000;">
+                            <div style="width:150px; border-right: solid lightgray 1px;">
+                                <div class="flex-col form-question" style="align-items: center;padding:1em;">
+                                    <img src="assets/proactive-service/13-acquire.png" style="padding:1em;"> Acquire
+                                </div>
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="form-question emphasis indent">
+                                    <li>A list of Claims</li>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Analyze -->
+                        <div class="flex-row" style="align-items: center; border: solid lightgray 1px; border-bottom-color: #00000000;">
+                            <div style="width:150px; border-right: solid lightgray 1px;">
+                                <div class="flex-col form-question" style="align-items: center;padding:1em;">
+                                    <img src="assets/proactive-service/13-analyze.png" style="padding:1em;"> Analyze
+                                </div>
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="form-question emphasis indent">
+                                    <li>Review Claims</li>
+                                    <li>Identify On-going claims</li>
+                                    <li>Benchmark Reserves</li>
+                                    <li>Determine any negative impacts</li>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ACT -->
+                        <div class="flex-row" style="align-items: center; border: solid lightgray 1px;">
+                            <div style="width:150px; border-right: solid lightgray 1px;">
+                                <div class="flex-col form-question" style="align-items: center;padding:1em;">
+                                    <img src="assets/proactive-service/13-act.png" style="padding:1em;"> ACT
+                                </div>
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="form-question emphasis indent">
+                                    <li>Get the underwriter involved</li>
+                                    <li>Modify the Estimates</li>
+                                    <li>Change the MOD</li>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">Articulation of the 3A Process</span></div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,10 @@
+/* hide stepper header label */
 ::ng-deep app-how-making-sure-they-get-it mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
     display: none;
+}
+/* for auto margin of stepper header icons */
+/* to bottom stepper header */
+::ng-deep app-how-making-sure-they-get-it mat-horizontal-stepper.mat-stepper-horizontal {
+    display: flex;
+    flex-direction: column;
 }

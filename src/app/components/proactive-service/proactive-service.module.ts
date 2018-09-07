@@ -17,12 +17,34 @@ import { ArticulationOfThe3AProcessSubitemComponent } from './children/articulat
 import { LetsTryOneOfYourOwnSubitemComponent } from './children/lets-try-one-of-your-own-subitem/lets-try-one-of-your-own-subitem.component';
 import { TheArticulationWedgeStyleSubitemComponent } from './children/the-articulation-wedge-style-subitem/the-articulation-wedge-style-subitem.component';
 import { TheArticulationBlueprintStyleSubitemComponent } from './children/the-articulation-blueprint-style-subitem/the-articulation-blueprint-style-subitem.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatStepperModule, MatInputModule, MatFormFieldModule, MatTableModule } from '@angular/material';
+import { PlainLanguageIsAllAboutTrustSubitemComponent } from './children/plain-language-is-all-about-trust-subitem/plain-language-is-all-about-trust-subitem.component';
+
+const modules = [
+    BrowserModule,
+    BrowserAnimationsModule,
+    // MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    // MatSelectModule,
+    // MatOptionModule,
+    // MatTableModule,
+    MatStepperModule,
+    MatButtonModule,
+    // MatGridListModule,
+];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ProactiveServiceRoutingModule
-  ],
-  declarations: [HomeProactiveServiceComponent, TheFiveCategoriesOfSalesPeopleSubitemComponent, TheChallengerSubitemComponent, RulesOfProspectEngagementSubitemComponent, ObjectiveResultSubitemComponent, PriceCoverageServiceSubitemComponent, DifferentiationBeUniqueSubitemComponent, DefiningProactiveServiceSubitemComponent, LadderOfAbstractionSubitemComponent, A3DefiningProactiveServiceSubitemComponent, A3ClaimsReviewProcessSubitemComponent, ArticulationOfThe3AProcessSubitemComponent, LetsTryOneOfYourOwnSubitemComponent, TheArticulationWedgeStyleSubitemComponent, TheArticulationBlueprintStyleSubitemComponent]
+    imports: [
+        modules,
+        CommonModule,
+        ProactiveServiceRoutingModule
+    ],
+    exports: [
+        modules,
+    ],
+    declarations: [HomeProactiveServiceComponent, TheFiveCategoriesOfSalesPeopleSubitemComponent, TheChallengerSubitemComponent, RulesOfProspectEngagementSubitemComponent, ObjectiveResultSubitemComponent, PriceCoverageServiceSubitemComponent, DifferentiationBeUniqueSubitemComponent, DefiningProactiveServiceSubitemComponent, LadderOfAbstractionSubitemComponent, A3DefiningProactiveServiceSubitemComponent, A3ClaimsReviewProcessSubitemComponent, ArticulationOfThe3AProcessSubitemComponent, LetsTryOneOfYourOwnSubitemComponent, TheArticulationWedgeStyleSubitemComponent, TheArticulationBlueprintStyleSubitemComponent, PlainLanguageIsAllAboutTrustSubitemComponent]
 })
 export class ProactiveServiceModule { }

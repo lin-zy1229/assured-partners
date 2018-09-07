@@ -55,6 +55,7 @@
 }
 
 .page-title {
+    font-family: 'Lato';
     color: #182757;
     font-weight: bold;
     font-size: 2.5em;
@@ -62,6 +63,7 @@
 }
 
 .form-title {
+    font-family: 'Lato';
     color: #182757;
     font-size: 1.4em;
     padding-top: 1em;
@@ -70,6 +72,7 @@
 }
 
 .form-question {
+    font-family: 'Lato';
     color: #182757;
     font-size: 1.2em;
     padding-top: 1em;
@@ -77,11 +80,13 @@
 }
 
 .form-content {
+    font-family: 'Lato';
     color: #182757;
     font-size: 1em;
 }
 
 .form-description {
+    font-family: 'Lato';
     color: #182757;
     font-size: 1em;
     padding-top: .2em;
@@ -476,4 +481,46 @@ span.formula {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.shape-container-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.new-shape {
+    height: 8em;
+    width: 8em;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    position: unset;
+    transform: rotate(0deg);
+}
+
+.new-shape.diamond {
+    transform: rotate(-45deg);
+}
+
+.new-shape.circle {
+    border-radius: 50%;
+    height: 11.3em;
+    width: 11.3em;
+}
+
+.new-shape.round {
+    border-radius: 5%;
+    color: #fff;
+}
+
+.new-shape.rectangle {
+    height: 5.5em;
+    width: 14em;
+}
+
+span.new-formula {
+    /* position: absolute; */
+    color: #41c562;
+    font-size: 3em;
 }

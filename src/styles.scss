@@ -28,51 +28,75 @@ $color_green: #41c562;
 $color_blue: #2194E0;
 $color_gray: #6d6e70;
 $color_gold: #fecc51;
-@keyframes sheen {
-    0% {
-        transform: skewY(-45deg) translateX(0);
-    }
-    100% {
-        transform: skewY(-45deg) translateX(12.5em);
-    }
-}
+// @keyframes sheen {
+//     0% {
+//         transform: skewY(-45deg) translateX(0);
+//     }
+//     100% {
+//         transform: skewY(-45deg) translateX(12.5em);
+//     }
+// }
 
-.button {
-    padding: 0.75em 2em;
-    text-align: center;
-    text-decoration: none;
-    color: $color;
-    border: 2px solid $color;
-    font-size: 24px;
-    display: inline-block;
-    border-radius: 0.3em;
-    transition: all 0.2s ease-in-out;
-    position: relative;
+// .button {
+//     padding: 0.75em 2em;
+//     text-align: center;
+//     text-decoration: none;
+//     color: $color;
+//     border: 2px solid $color;
+//     font-size: 24px;
+//     display: inline-block;
+//     border-radius: 0.3em;
+//     transition: all 0.2s ease-in-out;
+//     position: relative;
+//     overflow: hidden;
+//     &:before {
+//         content: "";
+//         background-color: rgba(255, 255, 255, 0.5);
+//         height: 100%;
+//         width: 3em;
+//         display: block;
+//         position: absolute;
+//         top: 0;
+//         left: -4.5em;
+//         transform: skewX(-45deg) translateX(0);
+//         transition: none;
+//     }
+//     &:hover {
+//         background-color: $color;
+//         color: #fff;
+//         border-bottom: 4px solid darken($color, 10%);
+//         &:before {
+//             transform: skewX(-45deg) translateX(13.5em);
+//             transition: all 0.5s ease-in-out;
+//         }
+//     }
+// }
+
+.shape {
+    // transition: all 0.2s ease-in-out;
     overflow: hidden;
     &:before {
         content: "";
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.301);
         height: 100%;
         width: 3em;
         display: block;
         position: absolute;
-        top: 0;
-        left: -4.5em;
-        transform: skewX(-45deg) translateX(0);
-        transition: none;
+        // top: 0;
+        // left: -10em;
+        transform: skewX(-45deg) translateX(-10em);
+        // transition: none;
     }
     &:hover {
-        background-color: $color;
         color: #fff;
-        border-bottom: 4px solid darken($color, 10%);
         &:before {
-            transform: skewX(-45deg) translateX(13.5em);
-            transition: all 0.5s ease-in-out;
+            transform: skewX(-45deg) translateX(20em);
+            transition: all 500ms ease-in-out;
         }
     }
 }
 
-.shape {
+.new-shape {
     // transition: all 0.2s ease-in-out;
     overflow: hidden;
     &:before {
@@ -115,6 +139,33 @@ $color_gold: #fecc51;
 }
 
 .shape.gold {
+    border-bottom: 3px solid darken($color_gold, 20%);
+    background: radial-gradient(circle, lighten($color_gold, 10%) 1%, darken($color_gold, 0%) 50%, darken($color_gold, 10%) 100%) !important;
+    box-shadow: 3px 3px 10px 1px darken($color_gold, 20%);
+}
+
+//
+// new-shape
+//
+.new-shape.green {
+    border-bottom: 3px solid darken($color_green, 20%);
+    background: radial-gradient(circle, lighten($color_green, 10%) 1%, darken($color_green, 0%) 50%, darken($color_green, 10%) 100%) !important;
+    box-shadow: 3px 3px 10px 1px darken($color_green, 20%);
+}
+
+.new-shape.blue {
+    border-bottom: 3px solid darken($color_blue, 20%);
+    background: radial-gradient(circle, lighten($color_blue, 10%) 1%, darken($color_blue, 0%) 50%, darken($color_blue, 10%) 100%) !important;
+    box-shadow: 3px 3px 10px 1px darken($color_blue, 20%);
+}
+
+.new-shape.gray {
+    border-bottom: 3px solid darken($color_gray, 20%);
+    background: radial-gradient(circle, lighten($color_gray, 10%) 1%, darken($color_gray, 0%) 50%, darken($color_gray, 10%) 100%) !important;
+    box-shadow: 3px 3px 10px 1px darken($color_gray, 20%);
+}
+
+.new-shape.gold {
     border-bottom: 3px solid darken($color_gold, 20%);
     background: radial-gradient(circle, lighten($color_gold, 10%) 1%, darken($color_gold, 0%) 50%, darken($color_gold, 10%) 100%) !important;
     box-shadow: 3px 3px 10px 1px darken($color_gold, 20%);

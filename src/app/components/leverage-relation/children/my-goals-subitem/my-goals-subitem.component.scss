@@ -3,11 +3,11 @@ mat-horizontal-stepper.mat-stepper-horizontal {
     flex-direction: column;
 }
 
-::ng-deep div.mat-horizontal-stepper-header-container {
+::ng-deep app-my-goals-subitem div.mat-horizontal-stepper-header-container {
     order: 1;
 }
 
-::ng-deep div.mat-horizontal-content-container{
+::ng-deep app-my-goals-subitem div.mat-horizontal-content-container{
     order: 0;
 }
 // remove stepper label
