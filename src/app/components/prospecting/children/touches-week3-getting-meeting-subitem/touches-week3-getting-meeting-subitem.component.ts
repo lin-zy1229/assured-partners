@@ -49,11 +49,12 @@ export class TouchesWeek3GettingMeetingSubitemComponent implements OnInit {
         let getLastElemIndex = 0;
         let element = <HTMLElement>document.querySelectorAll(selectorQuery)[getLastElemIndex];
 
-        if (index == this.sectionCount) {
-            element.style.display = "none";
-        } else {
-            element.style.display = "flex";
-        }
+        element.style.display = "none";
+        // if (index == this.sectionCount) {
+        //     element.style.display = "none";
+        // } else {
+        //     element.style.display = "flex";
+        // }
     }
 
 }

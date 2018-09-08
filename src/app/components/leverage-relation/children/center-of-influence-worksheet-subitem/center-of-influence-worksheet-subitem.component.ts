@@ -55,11 +55,12 @@ export class CenterOfInfluenceWorksheetSubitemComponent implements OnInit, After
         let getLastElemIndex = 0;
         let element = <HTMLElement>document.querySelectorAll(selectorQuery)[getLastElemIndex];
 
-        if (index == 3) {
-            element.style.display = "none";
-        } else {
-            element.style.display = "flex";
-        }
+        element.style.display = "none";
+        // if (index == 3) {
+        //     element.style.display = "none";
+        // } else {
+        //     element.style.display = "flex";
+        // }
 	}
 
 }
