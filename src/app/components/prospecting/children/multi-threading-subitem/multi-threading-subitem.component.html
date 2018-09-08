@@ -1,3 +1,194 @@
-<p>
-  multi-threading-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Multi - Threading
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(sectionCount+1)"><i class="fa fa-arrow-left"
+                                    style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">
+                            Focused, one-relationship approaches:
+                        </div>
+
+                        <li class="form-description emphasis indent">
+                            Increase the potential for a deal to fall through</li>
+                        <li class="form-description emphasis indent">
+                            Fail to take into account the ways B2B sales have transformed</li>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(sectionCount+1)"><i class="fa fa-arrow-left"
+                                    style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+                        <div class="form-main-title">
+                            In Addition:
+                        </div>
+
+                        <li class="form-description emphasis indent">
+                            The number of decision makers has increased</li>
+                        <li class="form-description emphasis indent">
+                            CEB research reveals that on average 5.4 people now sign off on each B2B purchasing decision</li>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(sectionCount+1)"><i class="fa fa-arrow-left"
+                                    style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">
+                            Multi – Threading Best Practices
+
+                        </div>
+
+                        <li class="form-description emphasis indent">Tailor your approach to each contact
+                        </li>
+                        <li class="form-description emphasis indent">Understand what matters to each individual
+                        </li>
+                        <li class="form-description emphasis indent">Keep up with contacts via LinkedIn to become familiar
+                            with their needs, goals, and priorities
+                        </li>
+                        <li class="form-description emphasis indent">Identify other important players in the company by watching
+                            what is posted
+                        </li>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div class="flex-row" style="align-items: center; padding-top: 2em;padding-bottom: 2em;">
+                            <!-- Multi - Threading -->
+                            <div class="flex-col">
+                                <section class="shape-container-row" style="justify-content: flex-start;">
+                                    <div class="gray shape position-unset circle cursor-pointer">
+                                        <div class="content-in-shape"><span class="title">Multi - Threading
+                                            </span></div>
+                                    </div>
+                                    <div class="flex-row" style="align-items:center">
+                                        <div class="arrow-line" style="margin-left: 2em;"></div>
+                                        <div class="arrow right" style="margin-right: 2em;"></div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <div class="flex-col" style="align-items: center; margin-left:-2em;margin-right:-2em;">
+                                <!-- HR VP, Controller -->
+                                <section class="shape-container-row" style="justify-content: flex-start">
+                                    <div class="green shape position-unset diamond cursor-pointer" style="margin-right: 2em;">
+                                        <div class="content-in-shape"><span class="title">HR VP
+                                            </span></div>
+                                    </div>
+                                    <div class="green shape position-unset diamond cursor-pointer" style="margin-left: 2em;">
+                                        <div class="content-in-shape"><span class="title">Controller
+                                            </span></div>
+                                    </div>
+                                </section>
+
+                                <div style="transform: rotate(-90deg);margin-bottom: 1em;">
+                                    <img src="assets/blueprint-process/13-arrow-double.png">
+                                </div>
+
+                                <!-- CFO, -->
+                                <section class="shape-container-row" style="justify-content: flex-start;">
+                                    <div class="green shape position-unset diamond cursor-pointer">
+                                        <div class="content-in-shape"><span class="title">CFO
+                                            </span></div>
+                                    </div>
+
+                                </section>
+                                <div style="transform: rotate(90deg); margin-top: 1em;">
+                                    <img src="assets/blueprint-process/13-arrow-double.png">
+                                </div>
+                                <!-- Risk Manager, Other Staff -->
+                                <section class="shape-container-row" style="justify-content: flex-start;">
+                                    <div class="green shape position-unset diamond cursor-pointer" style="margin-right: 2em;">
+                                        <div class="content-in-shape"><span class="title">Risk Manager
+                                            </span></div>
+                                    </div>
+                                    <div class="green shape position-unset diamond cursor-pointer" style="margin-left: 2em;">
+                                        <div class="content-in-shape"><span class="title">Other Staff (clerks, etc.)
+                                            </span></div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <!-- Thread1 and Thread2 -->
+                            <div class="flex-row" style="align-items: center">
+                                <div>
+                                    <img src="assets/blueprint-process/13-arrow-double.png">
+                                </div>
+                                <section class="shape-container">
+                                    <div class="green shape position-unset diamond cursor-pointer" style="margin-bottom: 2em;">
+                                        <div class="content-in-shape"><span class="title">Thread 1
+                                            </span></div>
+                                    </div>
+                                    <div class="green shape position-unset diamond cursor-pointer" style="margin-top: 2em;">
+                                        <div class="content-in-shape"><span class="title">Thread 2
+                                            </span></div>
+                                    </div>
+                                </section>
+                            </div>
+
+
+                        </div>
+                        <div class="form-question">
+                            When it comes to priming a sales prospecting pipeline, most insurance producers have been trained to focus on a single prospect
+                            or lead at each targeted company. But new research suggests that this approach is losing effectiveness
+                            in a modern, social-driven sales world
+
+                        </div>
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">Focused, one relationship approaches:
+                        </span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                    <div class="content-in-shape"><span class="title">In Addition:</span></div>
+                </div>
+
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==3, 'blue': stage!=3 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(3)">
+                    <div class="content-in-shape"><span class="title">Multi – Threading Best Practices</span></div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>

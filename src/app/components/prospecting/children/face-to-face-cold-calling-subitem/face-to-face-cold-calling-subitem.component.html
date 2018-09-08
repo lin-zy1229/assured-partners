@@ -1,3 +1,84 @@
-<p>
-  face-to-face-cold-calling-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Face to Face Cold Calling
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="form-main-title">Face to Face Cold Calling</div>
+
+                        <div class="form-title">1. Don’t Look Like You’re Selling</div>
+                        <li class="form-description emphasis indent">Ditch the tie</li>
+                        <li class="form-description emphasis indent">Don’t carry briefcase, notebook, etc.</li>
+
+                        <div class="form-title">2. Get to Know the Receptionist</div>
+                        <li class="form-description emphasis indent">Make note of her name, this probably won’t be the only
+                            time you see him/her</li>
+                        <li class="form-description emphasis indent">Pick out something to talk about – befriend him/her</li>
+
+                        <div class="form-title">3. Ask for the Person by Name</div>
+                        <li class="form-description emphasis indent">Be prepared, ask for “Joan, your CFO” not “Your CFO”
+                        </li>
+
+                        <div class="form-title">4. If Your Contact is Busy</div>
+                        <li class="form-description emphasis indent">Leave your “Drop” with a personal note, business card
+                            and move on, plan to come back</li>
+
+                        <div class="form-title">5. If Your Contact Comes Out</div>
+                        <li class="form-description emphasis indent">Tell them you know they are busy and that you would
+                            like to get on their calendar, unless they have time now</li>
+
+                        <div class="form-title">6. Be Persistent</div>
+                        <li class="form-description emphasis indent">It’s unlikely you’ll score on your first drop in, plan
+                            your schedule to come back no sooner than one week later and no later than three weeks later</li>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div class="form-main-title">Why Add Face to Face? Isn’t usingthe Phone More Efficient?</div>
+
+
+
+                        <li class="form-description emphasis indent">Oddly enough, in today’s world, there is no substitute
+                            for getting in front of someone</li>
+                        <li class="form-description emphasis indent">Push back can be high, but generally people are more
+                            receptive to a passive approach once you are in front of them – i.e., don’t force the meeting
+                            right then, ask if you can get on their calendar when it is convenient for them to meet</li>
+                        <li class="form-description emphasis indent">People are much less likely to cancel having met the
+                            person they have scheduled</li>
+
+                    </div>
+                </mat-step>
+
+            </mat-horizontal-stepper>
+
+
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': page==1, 'blue': page!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(1)">
+                    <div class="content-in-shape"><span class="title">Face to Face<br>
+                            Cold Calling</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': page==2, 'blue': page!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(2)">
+                    <div class="content-in-shape"><span class="title">Why Add Face<br>
+                            to Face?</span></div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>

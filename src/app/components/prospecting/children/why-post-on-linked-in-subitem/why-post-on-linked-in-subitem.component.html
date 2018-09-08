@@ -1,3 +1,92 @@
-<p>
-  why-post-on-linked-in-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Why post on LinkedIn?
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">Why post on LinkedIn?</div>
+
+                        <div class="form-question">1. Establish yourself as a thought leader with expertise</div>
+                        <li class="form-question emphasis indent">Industry insights, trends, functional expertise</li>
+
+                        <div class="form-question">2. Add value to your network</div>
+                        <li class="form-question emphasis indent">Leadership, career pieces, productivity tips</li>
+
+                        <div class="form-question">3. Recognize your network to build relationships</div>
+                        <li class="form-question emphasis indent">Colleagues’ posts, client news, tag connections</li>
+
+                        <div class="form-question">4. Share why you are proud to work at your company</div>
+                        <li class="form-question emphasis indent">Culture, achievements, leadership perspectives</li>
+
+                        <div class="form-question">5. Drive action with a clear call to action</div>
+                        <li class="form-question emphasis indent">Product promotion, job postings, marketing content</li>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+                        <div class="form-main-title">Five Bottlenecks to Growth</div>
+
+                        <div class="form-question">1. Expectations</div>
+                        <li class="form-question emphasis indent">Goals</li>
+                        <li class="form-question emphasis indent">Book Size</li>
+                        <li class="form-question emphasis indent">Capabilities (What you actually have vs. what you believe you have)</li>
+
+                        <div class="form-question">2. Time</div>
+                        <li class="form-question emphasis indent">Fewer accounts, bigger accounts</li>
+
+                        <div class="form-question">3. Who Do I Call On</div>
+
+                        <div class="form-question">4. How Do I Get Them to Meet With Me</div>
+
+                        <div class="form-question">5. Why Should They Buy From Me</div>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="flex-col" style="align-items: flex-end">
+                            <img width="100%" src="assets/prospecting/6-bg.png">
+                        </div>
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">Why post on LinkedIn?
+                        </span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                    <div class="content-in-shape"><span class="title">Five Bottlenecks to Growth</span></div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+</div>

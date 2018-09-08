@@ -1,3 +1,139 @@
-<p>
-  what-would-you-say-about-us-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        What Would You Say About Us?
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+
+                        <div class="form-main-title">
+                            What Would You Say About Us?
+                        </div>
+
+                        <div class="form-question">
+                            <p>If you leave it up to your source to come up with a dialogue, the odds are pretty good they
+                                will not have a positive effect. What is the person you want to meet going to think?
+                            </p>
+                        </div>
+
+                        <li class="form-description emphasis indent">
+                            Why is my friend doing this to me?
+                        </li>
+                        <li class="form-description emphasis indent">
+                            I already have a guy/gal
+                        </li>
+                        <li class="form-description emphasis indent">
+                            Oh, wait, this sounds interesting, perhaps there is something in it for me?
+                        </li>
+
+
+                        <div class="form-question">
+                            <p>Obviously we are looking for the third possible outcome. How do we get there? We coach our
+                                source, subtly, to encourage the outcome we desire.
+                            </p>
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-title">
+                            <strong>Exercise</strong> (A simple Wedge process)
+                        </div>
+
+                        <div class="form-question"><strong style="font-size: 1.5em;">S</strong>ituation</div>
+                        <li class="form-description emphasis indent">
+                            What was broken before your source met you?
+                        </li>
+
+                        <div class="form-question"><strong style="font-size: 1.5em;">O</strong>pportunity</div>
+                        <li class="form-description emphasis indent">
+                            How did you get in?
+                        </li>
+
+                        <div class="form-question"><strong style="font-size: 1.5em;">D</strong>ecision</div>
+                        <li class="form-description emphasis indent">
+                            Go from the first meeting through to the point they decided to hire you – what happened?
+                        </li>
+
+                        <div class="form-question"><strong style="font-size: 1.5em;">A</strong>ction</div>
+                        <li class="form-description emphasis indent">
+                            From the point of hire until now, what have you done for your client?
+                        </li>
+
+                        <div class="form-question"><strong style="font-size: 1.5em;">R</strong>esult</div>
+                        <li class="form-description emphasis indent">
+                            What are the quantifiable results of your actions? Have you saved money? Time? Enhanced resources?
+                        </li>
+
+
+
+
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="flex-row">
+                            <div class="flex-col" style="align-items: center">
+                                <img src="assets/leverage-relation/4-1.png">
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="flex-row">
+                                    <div class="arrow chat-arrow-green left" style="margin-top:1em;">
+
+                                    </div>
+                                    <div class="chat-box-green form-question" style="padding:2em; line-height: 2em; letter-spacing:.05em;">
+                                        What do you want your source to say about you and your company? Why?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">What Would You Say About Us?</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                    <div class="content-in-shape"><span class="title">Exercise</span></div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,101 @@
-<p>
-  search-spotlights-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Search Spotlights
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">
+                            Search Spotlights
+                        </div>
+                        <div class="form-question">
+                            <span style="color:green">1. Job Changes:</span> Spotlight identifies prospects who have changed
+                            jobs within the last three months
+                        </div>
+                        <div class="form-question">
+                            <span style="color:green">2. Shared Experiences:</span>
+                            Spotlight uncovers prospects who attended the same schools, worked at the same companies, or belong to the same LinkedIn
+                            Groups as you
+                        </div>
+                        <div class="form-question">
+                            <span style="color:green">3. LinkedIn Activity:</span>
+                            Spotlight shows prospects who have posted or shared content on LinkedIn in the past 30 days
+                        </div>
+                        <div class="form-question">
+                            <span style="color:green">4. Mentioned in the News:</span>
+                            Spotlight finds prospects who have been mentioned in the news in the past 30 days
+                        </div>
+                        <div class="form-question">
+                            <span style="color:green"> 5. Brand Engagement:</span>
+                            Spotlight identifies prospects who have fol lowed your company or commented on your company’s posts on LinkedIn
+                        </div>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">
+                            Saved Searches
+                        </div>
+                        <div class="form-question">
+                            Searching in Sales Navigator also provides the unique ability to save your frequent searches
+                        </div>
+
+
+                        <li class="form-description emphasis indent">
+                            You can easily access recent and saved searches from the homepage</li>
+                        <li class="form-description emphasis indent">
+                            You can access the list of your saved searches from the Search bar dropdown</li>
+                        <li class="form-description emphasis indent">
+                            When you save your searches, you will receive automated alerts when new leads match your criteria</li>
+                        <li class="form-description emphasis indent">
+                            Those new leads will be delivered straight to your inbox when they are identified</li>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="flex-col" style="align-items: flex-end">
+                            <img width="100%" src="assets/prospecting/4-bg.png">
+                        </div>
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">Search Spotlights</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                    <div class="content-in-shape"><span class="title">Saved Searches</span></div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,146 @@
-<p>
-  center-of-influence-worksheet-subitem works!
-</p>
+<div class="page-container">
+        <div class="page-title">
+            Center of Influence Worksheet
+        </div>
+    
+        <div class="page-content-side">
+    
+            <div style="flex:8;">
+                <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+    
+                    <mat-step [completed]="false">
+    
+                        <div class="flex-col">
+                            <div>
+                                <button mat-button color="primary" (click)="onClickShape(4)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                            </div>
+    
+                            <div class="form-title">
+                                1. Identify 10 Centers of Influence
+                            </div>
+                            <div class="form-description">
+                                A Center of Influence may be a current client, classmate or simply a friend who is a position of influence
+                            </div>
+    
+                            <li class="green-forecolor indent">Accountants</li>
+                            <li class="green-forecolor indent">Real Estate Agents</li>
+                            <li class="green-forecolor indent">Business Owners</li>
+                            <li class="green-forecolor indent">Attorneys</li>
+                            <li class="green-forecolor indent">Clients</li>
+                            <li class="green-forecolor indent">Political Figures</li>
+                        </div>
+    
+    
+                    </mat-step>
+    
+                    <mat-step [completed]="false">
+                        <div class="flex-col">
+    
+                            <div>
+                                <button mat-button color="primary" (click)="onClickShape(4)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                            </div>
+    
+                            <div class="form-title">
+                                2. Research Who They Know
+                            </div>
+                            <div class="form-description">
+                                There are many sources to figure out who they know and who among them you want to meet
+                            </div>
+    
+                            <li class="green-forecolor indent">Linked In</li>
+                            <li class="green-forecolor indent">Policy Certificates</li>
+                            <li class="green-forecolor indent">Social Groups – clubs, associations, etc.</li>
+                            <li class="green-forecolor indent">Websites</li>
+                        </div>
+                    </mat-step>
+    
+                    <mat-step [completed]="false">
+                        <div class="flex-col">
+    
+                            <div>
+                                <button mat-button color="primary" (click)="onClickShape(4)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                            </div>
+                            <div class="form-title">
+                                3. Figure the Approximate Revenue they Represent
+                            </div>
+                        </div>
+                    </mat-step>
+    
+                    <mat-step [completed]="false">
+                        <div class="flex-col">
+                            <div style="display:flex; flex-direction: row; align-items: flex-end; justify-content: space-between">
+                                <div style="padding:10px;">
+                                    <img src="assets/leverage-relation/1-uonline.png">
+                                </div>
+    
+                                <p style="text-align:right;">
+                                    Total Revenue on Worksheet: <span class="red-forecolor">${{totalRevenue | number}}</span>
+                                </p>
+                            </div>
+    
+                            <table class="table table-dark table-hover table-striped mat-table-sticky mat-elevation-z8">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>No</th>
+                                        <th *ngFor="let colName of columnNames" style="vertical-align:middle;text-align:center;">{{colName}}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let element of dataSource; index as i">
+                                        <td style="vertical-align:middle;text-align:center;">{{i+1}}</td>
+                                        <td style="vertical-align:middle;text-align:center;">{{element.centerOfInfluence}}</td>
+                                        <td [attr.colspan]="3" style="padding:0;">
+                                            <table *ngIf="element.peoplesInfos.length>0" width=100% class="table-striped">
+                                                <tbody>
+                                                    <tr *ngFor="let people of element.peoplesInfos">
+                                                        <td width=40%>{{people.peopleToMeet}}</td>
+                                                        <td width=40%>{{people.company}}</td>
+                                                        <td width=20%>{{people.revenue == 0 ? '' : ('$' + (people.revenue | number))}}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td style="vertical-align:middle;text-align:right;">{{element.total == 0 ? '' : ('$' + (element.total | number))}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </mat-step>
+    
+    
+                </mat-horizontal-stepper>
+            </div>
+            <div style="flex:1;">
+                <p class="form-title" style="text-align:center;">
+                    10 + 30 = Success
+                </p>
+                <section class="shape-section-column-long">
+                    <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                        <div class="content-in-shape"><span class="title">Identify 10 Centers<br> 
+                                of Influence</span></div>
+                    </div>
+    
+                    <div class="arrow up"></div>
+                    <div class="arrow-line-vertical"></div>
+                    <div class="arrow down"></div>
+    
+                    <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                        <div class="content-in-shape"><span class="title">Research <br>Who
+                                They Know</span></div>
+                    </div>
+    
+                    <div class="arrow up"></div>
+                    <div class="arrow-line-vertical"></div>
+                    <div class="arrow down"></div>
+    
+                    <div [ngClass]="{ 'green': stage==3, 'blue': stage!=3 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(3)">
+                        <div class="content-in-shape"><span class="title">Figure the 
+                                Approximate Revenue 
+                                they Represent
+                                </span></div>
+                    </div>
+    
+                </section>
+            </div>
+        </div>
+    </div>

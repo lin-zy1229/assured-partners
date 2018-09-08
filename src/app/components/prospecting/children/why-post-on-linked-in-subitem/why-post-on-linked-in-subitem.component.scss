@@ -1,0 +1,20 @@
+mat-horizontal-stepper.mat-stepper-horizontal {
+    display: flex;
+    flex-direction: column;
+}
+
+::ng-deep app-why-post-on-linked-in-subitem div.mat-horizontal-stepper-header-container {
+    order: 1;
+}
+
+::ng-deep app-why-post-on-linked-in-subitem div.mat-horizontal-content-container{
+    order: 0;
+}
+// remove stepper label
+::ng-deep app-why-post-on-linked-in-subitem mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
+    display: none;
+}
+// remove only last header line
+::ng-deep app-why-post-on-linked-in-subitem div.mat-horizontal-stepper-header-container div.mat-stepper-horizontal-line:nth-last-child(2) {
+    display: none;
+}

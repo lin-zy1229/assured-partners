@@ -20,12 +20,34 @@ import { WhatWouldYouSayAboutUsSubitemComponent } from './children/what-would-yo
 import { WriteItOutSubitemComponent } from './children/write-it-out-subitem/write-it-out-subitem.component';
 import { DontAlienateYourSourceSubitemComponent } from './children/dont-alienate-your-source-subitem/dont-alienate-your-source-subitem.component';
 import { MyGoalsSubitemComponent } from './children/my-goals-subitem/my-goals-subitem.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule, MatInputModule, MatStepperModule, MatButtonModule, MatChipsModule } from '@angular/material';
+
+const modules = [
+    BrowserModule,
+    BrowserAnimationsModule,
+    // MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    // MatSelectModule,
+    // MatOptionModule,
+    // MatTableModule,
+    MatStepperModule,
+    MatButtonModule,
+    // MatGridListModule,
+    MatChipsModule,
+];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ProspectingRoutingModule
-  ],
-  declarations: [HomeProspectingComponent, ProspectingWhereToBeginSubitemComponent, UsingSalesNavigatorSubitemComponent, SearchSpotlightsSubitemComponent, MultiThreadingSubitemComponent, WhyPostOnLinkedInSubitemComponent, ProspectingProcessToFollowSubitemComponent, TouchesWeek12BeginningSubitemComponent, TouchesWeek3GettingMeetingSubitemComponent, TouchesWeek4OrganizingSubitemComponent, TouchesBeginningYourRelationshipCampaignSubitemComponent, FaceToFaceColdCallingSubitemComponent, CenterOfInfluenceWorksheetSubitemComponent, AReferralOrAnIntroductionSubitemComponent, WhatWouldYouSayAboutUsSubitemComponent, WriteItOutSubitemComponent, DontAlienateYourSourceSubitemComponent, MyGoalsSubitemComponent]
+    imports: [
+        modules,
+        CommonModule,
+        ProspectingRoutingModule
+    ],
+    exports: [
+        modules,
+    ],
+    declarations: [HomeProspectingComponent, ProspectingWhereToBeginSubitemComponent, UsingSalesNavigatorSubitemComponent, SearchSpotlightsSubitemComponent, MultiThreadingSubitemComponent, WhyPostOnLinkedInSubitemComponent, ProspectingProcessToFollowSubitemComponent, TouchesWeek12BeginningSubitemComponent, TouchesWeek3GettingMeetingSubitemComponent, TouchesWeek4OrganizingSubitemComponent, TouchesBeginningYourRelationshipCampaignSubitemComponent, FaceToFaceColdCallingSubitemComponent, CenterOfInfluenceWorksheetSubitemComponent, AReferralOrAnIntroductionSubitemComponent, WhatWouldYouSayAboutUsSubitemComponent, WriteItOutSubitemComponent, DontAlienateYourSourceSubitemComponent, MyGoalsSubitemComponent]
 })
 export class ProspectingModule { }

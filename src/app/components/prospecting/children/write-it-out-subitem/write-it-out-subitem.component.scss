@@ -1,0 +1,25 @@
+mat-horizontal-stepper.mat-stepper-horizontal {
+    display: flex;
+    flex-direction: column;
+}
+
+::ng-deep div.mat-horizontal-stepper-header-container {
+    order: 1;
+}
+
+::ng-deep div.mat-horizontal-content-container{
+    order: 0;
+}
+
+::ng-deep app-write-it-out-subitem>div>div>div>mat-vertical-stepper>div.mat-step>mat-step-header {
+    border-radius: 0;
+}
+::ng-deep app-write-it-out-subitem>div>div>div>mat-vertical-stepper.mat-stepper-vertical>div.mat-step>mat-step-header>div.mat-step-icon-not-touched,
+::ng-deep app-write-it-out-subitem>div>div>div>mat-vertical-stepper.mat-stepper-vertical>div.mat-step>mat-step-header>div.mat-step-icon, {
+    border-radius: 0;
+}
+
+// remove stepper label
+::ng-deep app-write-it-out-subitem mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
+    display: none;
+}

@@ -1,3 +1,145 @@
-<p>
-  using-sales-navigator-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Using Sales Navigator to Develop Lead Lists That Make Sense
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">
+                            Search Options on <img src="/src/assets/prospecting/3-1.png"> SALES NAVIGATOR
+                        </div>
+                        <div class="form-title">
+                            Advanced Search with Lead Builder
+                        </div>
+                        <li class="form-question emphasis indent">
+                            Build your lead list with advanced search filters including seniority, function, company size, etc.
+                        </li>
+
+                        <div class="form-title">
+                            People Search
+                        </div>
+                        <li class="form-question emphasis indent">
+                            With over 500m up-to-date professional profiles, you can find the people you need
+                        </li>
+
+                        <div class="form-title">
+                            Company Search
+                        </div>
+                        <li class="form-question emphasis indent">
+                            With over 2m company pages on LinkedIn.com, you can find the companies you want to target
+                        </li>
+
+                        <div class="form-title">
+                            Lead Builder
+                        </div>
+                        <li class="form-question emphasis indent">
+                            Quickly find prospects using the most popular search criteria on Sales Navigator
+                        </li>
+
+                    </div>
+
+
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">
+                            Getting Started
+                        </div>
+
+                        <div class="form-title">Step 1:</div>
+                        <div class="form-question">
+                            Click on Lead Builder
+                        </div>
+                        <div class="form-title">Step 2:</div>
+                        <div class="form-question">
+                            Use Keywords, Company or Title to get started on your search
+                        </div>
+                        <div class="form-title">Step 3:</div>
+                        <div class="form-question">
+                            The TeamLink filterfinds prospects who are connected to your colleagues
+                        </div>
+                        <div class="form-title">Step 4:</div>
+                        <div class="form-question">
+                            The Geography filter allows you to target people and companies by multiple zip codes, U.S. states, or geographic areas
+                        </div>
+                        <div class="form-title">Step 5:</div>
+                        <div class="form-question">
+                            Refine your search more with search filters such as: Company Type, Years of experience and Years at current company
+                        </div>
+                        <div class="flex-row" style="align-items: center;">
+                            <img src="/src/assets/prospecting/3-1.png" style="margin-right:1em;">
+                            <div class="flex-col">
+                                <div class="form-title">LinkedIn Sales<br>Navigator</div>
+                                <div class="form-description" style="color:lightgray">LinkedIn Corporation</div>
+                                <mat-chip-list>
+                                    <mat-chip color="primary" selected>&nbsp;&nbsp;&nbsp;GET&nbsp;&nbsp;&nbsp;</mat-chip>
+                                </mat-chip-list>
+                            </div>
+                        </div>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="flex-row" style="align-items:center;">
+                            <div class="flex-col" style="align-items: center">
+                                <img src="assets/prospecting/3-2.png">
+                            </div>
+
+                            <div class="flex-col">
+                                <div class="flex-row">
+                                    <div class="arrow chat-arrow left" style="margin-top:1em;">
+
+                                    </div>
+                                    <div class="chat-box">
+                                        <span style="font-size:1.4em;line-height: 1.5em;">"building your pipeline is as simple as taking the
+                                            time to listen, engage, and respond in a meaningful way, on a regular basis."</span>
+                                        <div style="font-style: normal"> Kaka Sexton, Head of Social Media for LinkedIn</div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                    <div class="content-in-shape"><span class="title">Search Options on Sales Navigator</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                    <div class="content-in-shape"><span class="title">Getting Started
+                        </span></div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+</div>

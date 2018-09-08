@@ -1,3 +1,233 @@
-<p>
-  write-it-out-subitem works!
-</p>
+<div class="page-container">
+        <div class="page-title">
+            Write it out
+        </div>
+    
+        <div class="page-content-side">
+    
+            <div style="flex:8;">
+                <mat-vertical-stepper>
+                    <mat-step [completed]="false">
+                        <ng-template matStepLabel>
+                            <div class="form-title">
+                                Let's write it out:
+                            </div>
+                        </ng-template>
+                        <!-- <div class="form-title">
+                            Let's write it out:
+                        </div> -->
+                        <mat-horizontal-stepper #stepper1 (selectionChange)="selectionChange($event)">
+                            <mat-step [completed]="false">
+                                <div class="flex-col">
+                                    
+                                    <div class="mat-elevation-z8" style="display:flex; padding:2em; margin:1em;">
+                                        <mat-form-field style="width: 100%;">
+                                            <textarea matInput matTextareaAutosize matAutosizeMinRows=3 matAutosizeMaxRows=15 placeholder="Situation" style="resize: vertical;"></textarea>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </mat-step>
+    
+                            <mat-step [completed]="false">
+                                <div class="flex-col">
+    
+                                    
+                                    <div class="mat-elevation-z8" style="display:flex; padding:2em; margin:1em;">
+                                        <mat-form-field style="width: 100%;">
+                                            <textarea matInput matTextareaAutosize matAutosizeMinRows=3 matAutosizeMaxRows=15 placeholder="Opportunity" style="resize: vertical;"></textarea>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </mat-step>
+    
+                            <mat-step [completed]="false">
+                                <div class="flex-col">
+    
+                                    
+                                    <div class="mat-elevation-z8" style="display:flex; padding:2em; margin:1em;">
+                                        <mat-form-field style="width: 100%;">
+                                            <textarea matInput matTextareaAutosize matAutosizeMinRows=3 matAutosizeMaxRows=15 placeholder="Decision" style="resize: vertical;"></textarea>
+                                        </mat-form-field>
+                                    </div>
+    
+    
+                                </div>
+                            </mat-step>
+    
+                            <mat-step [completed]="false">
+                                <div class="flex-col">
+    
+                                    
+                                    <div class="mat-elevation-z8" style="display:flex; padding:2em; margin:1em;">
+                                        <mat-form-field style="width: 100%;">
+                                            <textarea matInput matTextareaAutosize matAutosizeMinRows=3 matAutosizeMaxRows=15 placeholder="Action" style="resize: vertical;"></textarea>
+                                        </mat-form-field>
+                                    </div>
+    
+    
+                                </div>
+                            </mat-step>
+    
+                            <mat-step [completed]="false">
+                                <div class="flex-col">
+    
+                                    
+                                    <div class="mat-elevation-z8" style="display:flex; padding:2em; margin:1em;">
+                                        <mat-form-field style="width: 100%;">
+                                            <textarea matInput matTextareaAutosize matAutosizeMinRows=3 matAutosizeMaxRows=15 placeholder="Result" style="resize: vertical;"></textarea>
+                                        </mat-form-field>
+                                    </div>
+    
+                                </div>
+                            </mat-step>
+    
+                        </mat-horizontal-stepper>
+                    </mat-step>
+    
+                    <mat-step [completed]="false">
+                        <ng-template matStepLabel>
+                            <div class="form-title">
+                                Exercise
+                            </div>
+                        </ng-template>
+                        <!-- <div class="form-title">
+                            Exercise
+                        </div> -->
+                        <mat-horizontal-stepper #stepper2 (selectionChange)="selectionChange($event)">
+                            <mat-step [completed]="false">
+                                <div class="flex-col">
+                                    
+                                    <div class="mat-elevation-z8" style="display:flex; padding:2em; margin:1em;">
+    
+                                        <div>
+                                            <div>
+                                                <Strong style="font-size: 2em;">S</Strong>ituation
+                                            </div>
+                                            <li class="emphasis">
+                                                What was broken before your source met you?
+                                            </li>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </mat-step>
+    
+                            <mat-step [completed]="false">
+                                <div class="flex-col">
+    
+                                    <div class="mat-elevation-z8" style="display:flex; padding:2em; margin:1em;">
+                                        <div>
+                                            <div>
+                                                <Strong style="font-size: 2em;">O</Strong>pportunity
+                                            </div>
+                                            <li class="emphasis">
+                                                How did you get in?
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-step>
+    
+                            <mat-step [completed]="false">
+                                <div class="flex-col">
+    
+                                    <div class="mat-elevation-z8" style="display:flex; padding:2em; margin:1em;">
+                                        <div>
+                                            <div>
+                                                <Strong style="font-size: 2em;">D</Strong>ecision
+                                            </div>
+                                            <li class="emphasis">
+                                                Go from the first meeting through to the point they decided to hire you – what happened?
+                                            </li>
+                                        </div>
+                                    </div>
+    
+    
+                                </div>
+                            </mat-step>
+    
+                            <mat-step [completed]="false">
+                                <div class="flex-col">
+    
+                                    <div class="mat-elevation-z8" style="display:flex; padding:2em; margin:1em;">
+                                        <div>
+                                            <div>
+                                                <Strong style="font-size: 2em;">A</Strong>ction
+                                            </div>
+                                            <li class="emphasis">
+                                                From the point of hire until now, what have you done for your client?
+                                            </li>
+                                        </div>
+                                    </div>
+    
+    
+                                </div>
+                            </mat-step>
+    
+                            <mat-step [completed]="false">
+                                <div class="flex-col">
+    
+                                    <div class="mat-elevation-z8" style="display:flex; padding:2em; margin:1em;">
+                                        <div>
+                                            <div>
+                                                <Strong style="font-size: 2em;">R</Strong>esult
+                                            </div>
+                                            <li class="emphasis">
+                                                What are the quantifiable results of your actions? Have you saved money? Time? Enhanced resources?
+                                            </li>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </mat-step>
+    
+                        </mat-horizontal-stepper>
+                    </mat-step>
+                </mat-vertical-stepper>
+    
+    
+            </div>
+            <div style="flex:1;">
+    
+                <section class="shape-container">
+                    <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                        <div class="content-in-shape"><span class="title">Situation</span></div>
+                    </div>
+    
+                    <div class="arrow up"></div>
+                    <div class="arrow-line-vertical"></div>
+                    <div class="arrow down"></div>
+    
+                    <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                        <div class="content-in-shape"><span class="title">Opportunity</span></div>
+                    </div>
+    
+                    <div class="arrow up"></div>
+                    <div class="arrow-line-vertical"></div>
+                    <div class="arrow down"></div>
+    
+                    <div [ngClass]="{ 'green': stage==3, 'blue': stage!=3 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(3)">
+                        <div class="content-in-shape"><span class="title">Decision</span></div>
+                    </div>
+    
+                    <div class="arrow up"></div>
+                    <div class="arrow-line-vertical"></div>
+                    <div class="arrow down"></div>
+    
+                    <div [ngClass]="{ 'green': stage==4, 'blue': stage!=4 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(4)">
+                        <div class="content-in-shape"><span class="title">Action</span></div>
+                    </div>
+    
+                    <div class="arrow up"></div>
+                    <div class="arrow-line-vertical"></div>
+                    <div class="arrow down"></div>
+    
+                    <div [ngClass]="{ 'green': stage==5, 'blue': stage!=5 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(5)">
+                        <div class="content-in-shape"><span class="title">Result</span></div>
+                    </div>
+    
+    
+                </section>
+            </div>
+        </div>
+    </div>

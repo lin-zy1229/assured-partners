@@ -35,6 +35,9 @@ export class WriteItOutSubitemComponent implements OnInit {
     }
     selectionChange(event) {
         this.stage = event.selectedIndex + 1;
+
+        // this.stepper1.selectedIndex = event.selectedIndex;
+        // this.stepper2.selectedIndex = event.selectedIndex;
     }
     moveStepper(index) {
         this.stage = index + 1;

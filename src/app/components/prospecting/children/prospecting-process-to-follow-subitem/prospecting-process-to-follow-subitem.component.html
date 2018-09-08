@@ -1,3 +1,144 @@
-<p>
-  prospecting-process-to-follow-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Prospecting - A Process to Follow
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickPage(sectionCount+1)"><i class="fa fa-arrow-left"
+                                    style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">
+                            Prospecting - A Process to Follow
+                        </div>
+
+                        <div class="form-question">
+                            1. Identify four verticals or geographic regions to target
+                        </div>
+
+                        <div class="form-question">
+                            2. Using your <span class="emphasis">“Ideal Prospect”</span> models, identify 20-25 target companies
+                            representing no less than $5,000 (or whatever minimum revenue threshold has been determined to
+                            best suit your situation)
+                        </div>
+
+                        <div class="form-question">
+                            3. Using Sales Navigator, Dunn & Bradstreet or other lead list building tools, identify the CEOs, CFOs, Risk Managers, Controllers,
+                            and HR Personnel for each company
+                        </div>
+
+                        <div class="form-question">
+                            4. You should then have approximately 50-60 contacts per <span class="emphasis">“category”</span>
+                            or when managing four campaigns at once, a total of approximately 200-250 contacts
+                        </div>
+
+                        <div class="form-question">
+                            5. Attempt to establish a connection via LinkedIn with these potential leads – if success ful, add them to a posting campaign
+                            utilizing <span class="emphasis">“Elevate”</span> or developing your
+                            own posting materials via company newsletters, other online posts you’ve saved, etc.
+                        </div>
+
+                        <div class="form-question">
+                            6. Your posting campaign should have two posts scheduled per week for four to six weeks
+                        </div>
+                    </div>
+
+
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickPage(sectionCount+1)"><i class="fa fa-arrow-left"
+                                    style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">Why post on LinkedIn?</div>
+
+                        <div class="form-question">1. Establish yourself as a thought leader with expertise</div>
+                        <li class="form-question emphasis indent">Industry insights, trends, functional expertise</li>
+
+                        <div class="form-question">2. Add value to your network</div>
+                        <li class="form-question emphasis indent">Leadership, career pieces, productivity tips</li>
+
+                        <div class="form-question">3. Recognize your network to build relationships</div>
+                        <li class="form-question emphasis indent">Colleagues’ posts, client news, tag connections</li>
+
+                        <div class="form-question">4. Share why you are proud to work at your company</div>
+                        <li class="form-question emphasis indent">Culture, achievements, leadership perspectives</li>
+
+                        <div class="form-question">5. Drive action with a clear call to action</div>
+                        <li class="form-question emphasis indent">Product promotion, job postings, marketing content</li>
+
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <section class="shape-container-row" style="justify-content: space-around;">
+                            <div (click)="onClickShape(1)" class="new-shape circle gray">
+                                <div class="content-in-shape"><span class="title">Identify regions
+                                    </span></div>
+                            </div>
+
+                            <div class="flex-row" style="align-items:center">
+                                <div class="arrow-line"></div>
+                                <div class="arrow right"></div>
+                            </div>
+
+
+                            <div (click)="onClickShape(2)" class="new-shape diamond green">
+                                <div class="content-in-shape">
+                                    <span class="title">Target companies
+                                    </span></div>
+                            </div>
+
+                            <div class="flex-row" style="align-items:center">
+                                <div class="arrow-line"></div>
+                                <div class="arrow right"></div>
+                            </div>
+
+
+                            <div (click)="onClickShape(3)" class="new-shape diamond green">
+                                <div class="content-in-shape"><span class="title">Establish Relationships
+                                    </span></div>
+                            </div>
+
+                        </section>
+
+
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': page==1, 'blue': page!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(1)">
+                    <div class="content-in-shape"><span class="title">A Process to Follow</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': page==2, 'blue': page!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(2)">
+                    <div class="content-in-shape"><span class="title">Getting Started
+                        </span></div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+</div>

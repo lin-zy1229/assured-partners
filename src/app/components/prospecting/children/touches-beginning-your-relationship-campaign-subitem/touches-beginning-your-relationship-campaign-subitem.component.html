@@ -1,3 +1,137 @@
-<p>
-  touches-beginning-your-relationship-campaign-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Touches - Beginning Your Relationship Campaign - Cont.
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickPage(sectionCount+1)"><i class="fa fa-arrow-left"
+                                    style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">The Numbers Matter</div>
+
+                        <li class="form-question">Using this formula, you can develop as many as 1,000 new contacts in a
+                            six month period
+                        </li>
+                        <li class="form-question">Your goal should be approximately 2 – 3 new business meetings per week
+                            or 8 – 12 per month
+                        </li>
+                        <li class="form-question">Presuming you disqualify 3 of 10 opportunities, you’ll net about 5 to 8
+                            closing opportunities per month
+                        </li>
+                        <li class="form-question">A dismal closing ratio of 20% would net about 1.5 new accounts per month
+                            or approximately 8 to 10 in six months
+                        </li>
+                        <li class="form-question">At an average revenue of say $7,500 per account, getting to $100,000 in
+                            revenue in a year is achievable
+                        </li>
+
+                    </div>
+
+
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickPage(sectionCount+1)"><i class="fa fa-arrow-left"
+                                    style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">The Numbers Matter Cont..</div>
+
+                        <div class="form-title">Track Your Data</div>
+
+
+
+                        <div class="form-question">1. Use a CRM Such as Microsoft Dynamics</div>
+                        <div class="form-question">2. Keep Your Campaigns Organized</div>
+                        <li class="form-description emphasis indent">At an average revenue of say $7,500 per account, getting
+                            to $100,000 in revenue in a year is achievable
+                        </li>
+                        <div class="form-question">3. Track How Many Touches it Took to Get a Meeting</div>
+                        <div class="form-question">4. Track How Many Accounts You “Disqualify”</div>
+                        <li class="form-description emphasis indent">Not every opportunity will eventually result in a closing
+                            opportunity
+                        </li>
+                        <div class="form-question">5. Track How Many Accounts you Attempt to Close, How Many You Win and
+                            How Many You Lose</div>
+                        <div class="form-question">6. Be Flexible</div>
+                        <li class="form-description emphasis indent">If you data shows you are not getting the numbers you
+                            desire, work with leadership to amend your approach – know what is working and what isn’t
+                        </li>
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <section class="shape-container-row" style="justify-content: space-around;">
+                            <div (click)="onClickShape(1)" class="new-shape circle gray">
+                                <div class="content-in-shape"><span class="title">During week four
+                                    </span></div>
+                            </div>
+
+                            <div class="flex-row" style="align-items:center">
+                                <div class="arrow-line"></div>
+                                <div class="arrow right"></div>
+                            </div>
+
+
+                            <div (click)="onClickShape(2)" class="new-shape diamond green">
+                                <div class="content-in-shape">
+                                    <span class="title">Target new company at least 20-25
+                                    </span></div>
+                            </div>
+
+                            <div class="flex-row" style="align-items:center">
+                                <div class="arrow-line"></div>
+                                <div class="arrow right"></div>
+                            </div>
+
+
+                            <div (click)="onClickShape(3)" class="new-shape diamond green">
+                                <div class="content-in-shape"><span class="title">$100,000 achievable in a year
+                                    </span></div>
+                            </div>
+
+                        </section>
+                        <p></p>
+                        <div class="form-question">
+                            During week four, begin at least one new 20-25 company target campaign. Depending on your book size, you should be administering
+                            at least one or two campaigns at all times. Follow the same steps as illustrated previously.
+
+                        </div>
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': page==1, 'blue': page!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(1)">
+                    <div class="content-in-shape"><span class="title">Using this formula...</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': page==2, 'blue': page!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(2)">
+                    <div class="content-in-shape"><span class="title">Track Your Data</span></div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+</div>

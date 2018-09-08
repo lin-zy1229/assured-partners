@@ -1,3 +1,146 @@
-<p>
-  areferral-or-an-introduction-subitem works!
-</p>
+<div class="page-container">
+        <div class="page-title">
+            A Referral? Or an Introduction?
+        </div>
+    
+        <div class="page-content-side">
+    
+            <div style="flex:8;">
+                <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                    <mat-step [completed]="false">
+                        <div class="flex-col">
+                            <div>
+                                <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                            </div>
+    
+                            <div class="form-title">
+                                A Referral? Or an Introduction?
+                            </div>
+                            <div class="form-description">
+                                <p>Why Make a Distinction?</p>
+    
+                                <p>Isn’t a referral and an introduction essentially the same thing? No, not when it comes to creating a relationship.</p>
+    
+                                <p>A referral is best probably best illustrated when you consider a visit to your doctor. Doctors have specialties.
+                                    If you are visiting your general practitioner because you have a rash, he or she may very well “refer” you to a dermatologist
+                                    for treatment. Why? Simple. Because you NEED a dermatologist.</p>
+    
+                                <p>An Introduction is Better</p>
+    
+                                <p>If you take the time to explain to your source what they are getting into and why, your chances for success increase
+                                    dramatically. Make them part of the process, encourage their input and finally, coach them on how to present the
+                                    meeting to the person you want to meet so they understand how they might benefit.</p>
+    
+                            </div>
+    
+                        </div>
+    
+    
+                    </mat-step>
+    
+                    <mat-step [completed]="false">
+                        <div class="flex-col">
+    
+                            <div>
+                                <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                            </div>
+    
+                            <div class="form-title">
+                                Excuses
+                            </div>
+                            <div class="flex-row" style="justify-content: space-between">
+                                <div class="flex-col">
+                                    <div class="form-question">1. It’s Just Not Me</div>
+                                    <li class="green-forecolor indent">
+                                        You are a producer – it is you
+                                    </li>
+                                    <div class="form-question">2. No Compelling Reason to Ask</div>
+                                    <li class="green-forecolor indent">
+                                        I’m already rich
+                                    </li>
+                                    <div class="form-question">3. I’m Too Busy</div>
+                                    <li class="green-forecolor indent">
+                                        Service work is for service personnel
+                                    </li>
+                                    <div class="form-question">4. I’m Already Getting Paid</div>
+                                    <li class="green-forecolor indent">
+                                        You’re growing your business
+                                    </li>
+                                    <div class="form-question">5. What’s in it for my Source?</div>
+                                    <li class="green-forecolor indent">
+                                        Your source loves to help
+                                    </li>
+    
+                                </div>
+                                <div class="flex-col">
+                                    <div class="form-question">6. Afraid it will Jeopardize a Good Relationship</div>
+                                    <li class="green-forecolor indent">
+                                        Do your job well, this isn’t an issue
+                                    </li>
+                                    <div class="form-question">7. I Can’t Find the Right Time</div>
+                                    <li class="green-forecolor indent">
+                                        Timing is easy
+                                    </li>
+                                    <div class="form-question">8. It Doesn’t Work</div>
+                                    <li class="green-forecolor indent">
+                                        Yeah . . . it does
+                                    </li>
+                                    <div class="form-question">9. I Don’t Know How</div>
+                                    <li class="green-forecolor indent">
+                                        You will soon
+                                    </li>
+                                    <div class="form-question">10. I Don’t Want to Look Greedy or Needy</div>
+                                    <li class="green-forecolor indent">
+                                        You’re growing your business
+                                    </li>
+                                </div>
+                            </div>
+    
+    
+                        </div>
+                    </mat-step>
+    
+                    <mat-step [completed]="false">
+                        <div class="flex-col">
+                            <div class="flex-row">
+                                <div class="flex-col" style="align-items: center">
+                                    <img src="assets/leverage-relation/2-1.png">
+                                </div>
+    
+                                <div class="flex-col">
+                                    <div class="flex-row">
+                                        <div class="arrow chat-arrow-green left" style="margin-top:1em;">
+    
+                                        </div>
+                                        <div class="chat-box-green form-question" style="padding:2em; line-height: 2em; letter-spacing:.05em;">
+                                            How would you react if someone asked you for a referral? Would you respond with enthusiasm? Reluctance? Trepidation? Why?
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-step>
+    
+    
+                </mat-horizontal-stepper>
+            </div>
+            <div style="flex:1;">
+    
+                <section class="shape-container">
+                    <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
+                        <div class="content-in-shape"><span class="title">A Referral? Or an Introduction?</span></div>
+                    </div>
+    
+                    <div class="arrow up"></div>
+                    <div class="arrow-line-vertical"></div>
+                    <div class="arrow down"></div>
+    
+                    <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
+                        <div class="content-in-shape"><span class="title">Excuses</span></div>
+                    </div>
+    
+    
+                </section>
+            </div>
+        </div>
+    </div>

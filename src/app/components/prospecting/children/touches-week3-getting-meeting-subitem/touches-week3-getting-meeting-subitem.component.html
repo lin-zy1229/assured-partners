@@ -1,3 +1,165 @@
-<p>
-  touches-week3-getting-meeting-subitem works!
-</p>
+<div class="page-container">
+    <div class="page-title">
+        Touches - Week 3 - Getting a Meeting
+    </div>
+
+    <div class="page-content-side">
+
+        <div style="flex:8;">
+            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div>
+                            <button mat-button color="primary" (click)="onClickPage(sectionCount+1)"><i class="fa fa-arrow-left"
+                                    style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">Week 3 -</div>
+
+                        <li class="form-question">If you have had email responses, click-throughs on postings, likes on postings,
+                            and/or comments on postings – note those showing interest and begin to establish a <span class="emphasis">“Top
+                                Contacts”
+                            </span>
+                            list</li>
+                        <li class="form-question">Begin to utilize your <span class="emphasis">“Inmail”</span> allotment
+                            to reach out to those you have categorized as “Top Contacts” opportunities – you get 30 per month,
+                            use them judiciously and wisely – if you get a response, that Inmail does not count towards your
+                            30 (see the sidebar at the right for Inmail direction)</li>
+                        <li class="form-question">Email the contacts who have not made your <span class="emphasis">“Top Contacts”</span>
+                            list with the same content as used in your Inmails</li>
+                        <li class="form-question">Follow up your Inmails and Emails with phone calls and face to face cold
+                            calls – see page 13.
+                        </li>
+
+                    </div>
+
+
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+
+                        <div>
+                            <button mat-button color="primary" (click)="onClickPage(sectionCount+1)"><i class="fa fa-arrow-left"
+                                    style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+                        </div>
+
+                        <div class="form-main-title">Inmail Priorities</div>
+
+                        <div class="form-title">1. Personalize</div>
+                        <li class="form-question emphasis indent">Reference commonalities
+                        </li>
+
+                        <div class="form-title">2. Build a Conversation</div>
+                        <div class="flex-row">
+                            <li class="form-question emphasis indent" style="margin-right:1em;">Ask a question – </li>
+
+                            <div class="flex-row">
+                                <div class="flex-col" style="align-items: center">
+                                    <img src="assets/mapping-it-out/7-2.png">
+                                    <div>You</div>
+                                </div>
+
+                                <div class="flex-col">
+                                    <div class="flex-row">
+                                        <div class="arrow chat-arrow left" style="margin-top:1em;">
+
+                                        </div>
+                                        <div class="chat-box">
+                                            <span>“What is your opinion on this?”</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-title">3. Keep it Short</div>
+                        <li class="form-question emphasis indent">Really Short, one or two sentences
+                        </li>
+
+                        <div class="form-title">4. Subject Lines Count</div>
+                        <li class="form-question emphasis indent">Social & Content Related</li>
+
+                        <div class="form-title">5. Call to Action</div>
+                        <li class="form-question emphasis indent">How are we going to move forward? Meeting, call, etc.
+                        </li>
+
+
+
+
+                    </div>
+                </mat-step>
+
+                <mat-step [completed]="false">
+                    <div class="flex-col">
+                        <section class="shape-container-row" style="justify-content: space-around;">
+                            <div (click)="onClickShape(1)" class="new-shape circle gray">
+                                <div class="content-in-shape"><span class="title">Week Three
+                                    </span></div>
+                            </div>
+
+                            <div class="flex-row" style="align-items:center">
+                                <div class="arrow-line"></div>
+                                <div class="arrow right"></div>
+                            </div>
+
+
+                            <div (click)="onClickShape(2)" class="new-shape diamond green">
+                                <div class="content-in-shape">
+                                    <span class="title">Hot Contacts
+                                    </span></div>
+                            </div>
+
+                            <div class="flex-row" style="align-items:center">
+                                <div class="arrow-line"></div>
+                                <div class="arrow right"></div>
+                            </div>
+
+
+                            <div (click)="onClickShape(3)" class="new-shape diamond green">
+                                <div class="content-in-shape"><span class="title">Inmail and Email
+                                    </span></div>
+                            </div>
+
+                            <div class="flex-row" style="align-items:center">
+                                <div class="arrow-line"></div>
+                                <div class="arrow right"></div>
+                            </div>
+
+
+                            <div (click)="onClickShape(4)" class="new-shape diamond green">
+                                <div class="content-in-shape"><span class="title">Face-to-face Cold Calls
+                                    </span></div>
+                            </div>
+
+                        </section>
+
+
+                    </div>
+                </mat-step>
+
+
+            </mat-horizontal-stepper>
+        </div>
+        <div style="flex:1;">
+
+            <section class="shape-container">
+                <div [ngClass]="{ 'green': page==1, 'blue': page!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(1)">
+                    <div class="content-in-shape"><span class="title">Week 3</span></div>
+                </div>
+
+                <div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': page==2, 'blue': page!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(2)">
+                    <div class="content-in-shape"><span class="title">Inmail Priorities</span></div>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+</div>
