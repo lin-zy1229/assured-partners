@@ -93,9 +93,18 @@ export const SubMenusProspecting: Menu[] = [
 ];
 export const SubMenusTheTruth: Menu[] = [
     { id: 1, title: 'Setting the Stage', sub_title: '' },
-    { id: 2, title: 'The Intellectual Response', sub_title: '' },
-    { id: 3, title: 'The Rehearsal Steps (From the Wedge)', sub_title: '' },
-    { id: 4, title: 'Dilemma! - 2nd Transition', sub_title: '' },
-    { id: 5, title: 'The Crystal Ball', sub_title: '' },
-    { id: 6, title: 'Wrapping Up', sub_title: '' },
+    { id: 2, title: 'Setting the Stage Cont.', sub_title: '' },
+    { id: 3, title: 'Proposals Cost Money', sub_title: '' },
+    { id: 4, title: 'The Intellectual Response', sub_title: '' },
+    { id: 5, title: 'The Intellectual Response Cont.', sub_title: '' },
+    { id: 6, title: 'What are Other Questions that Could Lead to an Intellectual Response?', sub_title: '' },
+    { id: 7, title: 'The Rehearsal Steps (From the Wedge Process)', sub_title: '' },
+    { id: 8, title: 'Three important items:', sub_title: '' },
+    { id: 9, title: 'More Scripting . . . ', sub_title: '' },
+    { id: 10, title: 'Dilemma!', sub_title: '' },
+    { id: 11, title: 'Really?!', sub_title: '' },
+    { id: 12, title: 'Rehearsing What Will Happen', sub_title: '' },
+    { id: 13, title: 'The Crystal Ball', sub_title: '' },
+    { id: 14, title: 'Wrapping Up', sub_title: '' },
+    { id: 15, title: 'NOTES:', sub_title: '' },
 ];

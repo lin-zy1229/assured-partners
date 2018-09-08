@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-my-goals-subitem',
@@ -12,8 +13,7 @@ export class MyGoalsSubitemComponent implements OnInit {
     stage: number = 0;
     appSubitemName: string = "app-my-goals-subitem";
 
-    constructor() {
-
+	constructor(public router:Router) {
     }
 
     ngOnInit() {

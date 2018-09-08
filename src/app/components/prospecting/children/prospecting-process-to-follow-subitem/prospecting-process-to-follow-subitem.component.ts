@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-prospecting-process-to-follow-subitem',
@@ -15,7 +16,7 @@ export class ProspectingProcessToFollowSubitemComponent implements OnInit {
     appSubitemName: string = "app-prospecting-process-to-follow-subitem";
     sectionCount: number = 2;
 
-    constructor() {
+    constructor(public router:Router) {
 
     }
 

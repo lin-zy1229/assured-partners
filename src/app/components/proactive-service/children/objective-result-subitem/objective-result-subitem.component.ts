@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-objective-result-subitem',
@@ -13,8 +14,7 @@ export class ObjectiveResultSubitemComponent implements OnInit {
     appMainitemName: string = "app-proactive-service";
     appSubitemName: string = "app-objective-result-subitem";
 
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

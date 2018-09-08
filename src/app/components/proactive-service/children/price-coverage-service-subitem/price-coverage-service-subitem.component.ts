@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-price-coverage-service-subitem',
@@ -13,8 +14,7 @@ export class PriceCoverageServiceSubitemComponent implements OnInit {
     appMainitemName: string = "app-proactive-service";
     appSubitemName: string = "app-price-coverage-service-subitem";
 
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

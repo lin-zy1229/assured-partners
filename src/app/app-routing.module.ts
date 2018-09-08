@@ -101,6 +101,16 @@ import { DilemmaSecondTransitionSubitemComponent } from './components/the-truth/
 import { TheCrystalBallSubitemComponent } from './components/the-truth/children/the-crystal-ball-subitem/the-crystal-ball-subitem.component';
 import { WrappingUpSubitemComponent } from './components/the-truth/children/wrapping-up-subitem/wrapping-up-subitem.component';
 import { PlainLanguageIsAllAboutTrustSubitemComponent } from './components/proactive-service/children/plain-language-is-all-about-trust-subitem/plain-language-is-all-about-trust-subitem.component';
+import { SettingTheStageContSubitemComponent } from './components/the-truth/children/setting-the-stage-cont-subitem/setting-the-stage-cont-subitem.component';
+import { ProposalsCostMoneySubitemComponent } from './components/the-truth/children/proposals-cost-money-subitem/proposals-cost-money-subitem.component';
+import { TheIntellectualResponseContSubitemComponent } from './components/the-truth/children/the-intellectual-response-cont-subitem/the-intellectual-response-cont-subitem.component';
+import { WhatAreOtherQuestionsSubitemComponent } from './components/the-truth/children/what-are-other-questions-subitem/what-are-other-questions-subitem.component';
+import { ThreeImportantItemsSubitemComponent } from './components/the-truth/children/three-important-items-subitem/three-important-items-subitem.component';
+import { MoreScriptingSubitemComponent } from './components/the-truth/children/more-scripting-subitem/more-scripting-subitem.component';
+import { DilemmaSubitemComponent } from './components/the-truth/children/dilemma-subitem/dilemma-subitem.component';
+import { ReallySubitemComponent } from './components/the-truth/children/really-subitem/really-subitem.component';
+import { RehearsingWhatWillHappenSubitemComponent } from './components/the-truth/children/rehearsing-what-will-happen-subitem/rehearsing-what-will-happen-subitem.component';
+import { NotesSubitemComponent } from './components/the-truth/children/notes-subitem/notes-subitem.component';
 
 
 const routes: Routes = [
@@ -215,11 +225,21 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeTheTruthComponent },
       { path: '1', component: SettingTheStageSubitemComponent },
-      { path: '2', component: TheIntellectualResponseSubitemComponent },
-      { path: '3', component: TheRehearsalStepsSubitemComponent },
-      { path: '4', component: DilemmaSecondTransitionSubitemComponent },
-      { path: '5', component: TheCrystalBallSubitemComponent },
-      { path: '6', component: WrappingUpSubitemComponent },
+      { path: '2', component: SettingTheStageContSubitemComponent },
+      { path: '3', component: ProposalsCostMoneySubitemComponent },
+      { path: '4', component: TheIntellectualResponseSubitemComponent },
+      { path: '5', component: TheIntellectualResponseContSubitemComponent },
+      { path: '6', component: WhatAreOtherQuestionsSubitemComponent },
+      { path: '7', component: TheRehearsalStepsSubitemComponent },
+      { path: '8', component: ThreeImportantItemsSubitemComponent },
+      { path: '9', component: MoreScriptingSubitemComponent },
+      { path: '10', component: DilemmaSubitemComponent },
+      { path: '11', component: ReallySubitemComponent },
+      { path: '12', component: RehearsingWhatWillHappenSubitemComponent },
+      { path: '13', component: TheCrystalBallSubitemComponent },
+      { path: '14', component: WrappingUpSubitemComponent },
+      { path: '15', component: NotesSubitemComponent },
+
     ]
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-multi-threading-subitem',
@@ -13,8 +14,7 @@ export class MultiThreadingSubitemComponent implements OnInit {
     appMainitemName: string = "app-prospecting";
     appSubitemName: string = "app-multi-threading-subitem";
     sectionCount: number = 3;
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

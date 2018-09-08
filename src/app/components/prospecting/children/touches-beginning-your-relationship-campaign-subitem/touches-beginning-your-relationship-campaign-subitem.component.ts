@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-touches-beginning-your-relationship-campaign-subitem',
@@ -15,8 +16,7 @@ export class TouchesBeginningYourRelationshipCampaignSubitemComponent implements
     appSubitemName: string = "app-touches-beginning-your-relationship-campaign-subitem";
     sectionCount: number = 2;
 
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

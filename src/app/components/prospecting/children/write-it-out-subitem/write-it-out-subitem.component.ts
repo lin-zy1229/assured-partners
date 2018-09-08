@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-write-it-out-subitem',
@@ -14,8 +15,7 @@ export class WriteItOutSubitemComponent implements OnInit {
     appMainitemName: string = "app-prospecting";
     appSubitemName: string = "app-write-it-out-subitem";
 
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

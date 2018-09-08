@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-the-articulation-wedge-style-subitem',
@@ -16,7 +17,7 @@ export class TheArticulationWedgeStyleSubitemComponent implements OnInit {
     appSubitemName: string = "app-the-articulation-wedge-style-subitem";
     dataSource: ArticulationData[];
 
-    constructor() {
+    constructor(public router: Router) {
         this.dataSource = [
             {
                 image: "proactive-service/15-when.png", title: "When",

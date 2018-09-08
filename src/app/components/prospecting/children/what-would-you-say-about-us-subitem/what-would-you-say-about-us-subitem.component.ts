@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-what-would-you-say-about-us-subitem',
@@ -14,8 +15,7 @@ export class WhatWouldYouSayAboutUsSubitemComponent implements OnInit {
     appMainitemName: string = "app-prospecting";
     appSubitemName: string = "app-what-would-you-say-about-us-subitem";
 
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

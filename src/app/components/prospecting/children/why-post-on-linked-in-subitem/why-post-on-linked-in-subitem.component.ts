@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-why-post-on-linked-in-subitem',
@@ -13,8 +14,7 @@ export class WhyPostOnLinkedInSubitemComponent implements OnInit {
     appMainitemName: string = "app-prospecting";
     appSubitemName: string = "app-why-post-on-linked-in-subitem";
 
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

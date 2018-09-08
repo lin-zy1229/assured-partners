@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-search-spotlights-subitem',
@@ -13,8 +14,7 @@ export class SearchSpotlightsSubitemComponent implements OnInit {
     appMainitemName: string = "app-prospecting";
     appSubitemName: string = "app-search-spotlights-subitem";
 
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

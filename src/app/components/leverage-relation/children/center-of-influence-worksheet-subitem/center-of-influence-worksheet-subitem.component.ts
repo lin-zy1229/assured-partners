@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-center-of-influence-worksheet-subitem',
@@ -15,7 +16,7 @@ export class CenterOfInfluenceWorksheetSubitemComponent implements OnInit, After
 	columnNames: string[] = ['Center Of Influence', 'People To Meet', 'Company', 'Revenue', 'Total Rev/C of Influence'];
 	totalRevenue: number = 0;
 	appSubitemName: string = "app-center-of-influence-worksheet-subitem";
-	constructor() {
+	constructor(public router:Router) {
 		//
 		// calculate total values
 		//

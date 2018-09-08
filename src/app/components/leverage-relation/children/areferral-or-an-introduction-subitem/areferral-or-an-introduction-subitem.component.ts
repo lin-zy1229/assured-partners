@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-areferral-or-an-introduction-subitem',
@@ -12,7 +13,7 @@ export class AReferralOrAnIntroductionSubitemComponent implements OnInit, AfterV
     stage: number = 0;
     appSubitemName: string = "app-areferral-or-an-introduction-subitem";
 
-    constructor() {
+	constructor(public router:Router) {
 
     }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-touches-week3-getting-meeting-subitem',
@@ -15,8 +16,7 @@ export class TouchesWeek3GettingMeetingSubitemComponent implements OnInit {
     appSubitemName: string = "app-touches-week3-getting-meeting-subitem";
     sectionCount: number = 2;
 
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

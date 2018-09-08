@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-the-articulation-blueprint-style-subitem',
@@ -14,8 +15,7 @@ export class TheArticulationBlueprintStyleSubitemComponent implements OnInit {
     appMainitemName: string = "app-proactive-service";
     appSubitemName: string = "app-the-articulation-blueprint-style-subitem";
 
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

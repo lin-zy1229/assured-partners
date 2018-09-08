@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-rules-of-prospect-engagement-subitem',
@@ -13,8 +14,7 @@ export class RulesOfProspectEngagementSubitemComponent implements OnInit {
     appMainitemName: string = "app-proactive-service";
     appSubitemName: string = "app-rules-of-prospect-engagement-subitem";
 
-    constructor() {
-
+    constructor(public router:Router) {
     }
 
     ngOnInit() {

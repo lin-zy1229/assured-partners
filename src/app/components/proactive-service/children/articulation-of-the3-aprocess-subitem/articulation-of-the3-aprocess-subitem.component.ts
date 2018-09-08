@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-articulation-of-the3-aprocess-subitem',
@@ -13,7 +14,7 @@ export class ArticulationOfThe3AProcessSubitemComponent implements OnInit {
     appMainitemName: string = "app-proactive-service";
     appSubitemName: string = "app-articulation-of-the3-aprocess-subitem";
 
-    constructor() {
+    constructor(public router:Router) {
 
     }
 
