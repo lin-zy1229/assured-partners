@@ -73,8 +73,8 @@ export const SubMenusProactiveService: Menu[] = [
     { id: 15, title: 'The Articulation (Blueprint Style)', sub_title: '' },
 ];
 export const SubMenusProspecting: Menu[] = [
-    { id: 1, title: 'Prospecting - Where to Begin', sub_title: '' },
-    { id: 2, title: 'Using Sales Navigator to Develop Lead Lists That Make Sense', sub_title: '' },
+    { id: 1, title: 'Define your Ideal Prospect', sub_title: '' },
+    { id: 2, title: 'Sales Navigator', sub_title: '' },
     { id: 3, title: 'Search Spotlights', sub_title: '' },
     { id: 4, title: 'Multi - Threading', sub_title: '' },
     { id: 5, title: 'Why post on LinkedIn?', sub_title: '' },
@@ -84,12 +84,12 @@ export const SubMenusProspecting: Menu[] = [
     { id: 9, title: 'Face to Face Cold Calling', sub_title: '' },
     { id: 10, title: 'Touches - Week 4 - Organizing Your Contacts', sub_title: '' },
     { id: 11, title: 'Touches - Beginning Your Relationship Campaign - Cont.', sub_title: '' },
-    { id: 12, title: 'Center of Influence Worksheet', sub_title: '' },
-    { id: 13, title: 'A Referral? Or an Introduction?', sub_title: '' },
-    { id: 14, title: 'What Would You Say About Us?', sub_title: '' },
-    { id: 15, title: 'Write it out', sub_title: '' },
-    { id: 16, title: 'Don\'t Alienate Your Source', sub_title: '' },
-    { id: 17, title: 'My Goals', sub_title: '' },
+    // { id: 12, title: 'Center of Influence Worksheet', sub_title: '' },
+    // { id: 13, title: 'A Referral? Or an Introduction?', sub_title: '' },
+    // { id: 14, title: 'What Would You Say About Us?', sub_title: '' },
+    // { id: 15, title: 'Write it out', sub_title: '' },
+    // { id: 16, title: 'Don\'t Alienate Your Source', sub_title: '' },
+    // { id: 17, title: 'My Goals', sub_title: '' },
 ];
 export const SubMenusTheTruth: Menu[] = [
     { id: 1, title: 'Setting the Stage', sub_title: '' },

@@ -101,13 +101,13 @@
 .form-description {
     font-family: 'Lato';
     color: #182757;
-    font-size: 1em;
+    font-size: 1.2em;
     padding-top: .2em;
     padding-bottom: .5em;
 }
 
 .emphasis {
-    color: #4fca6e;
+    color: #009e28;
     font-style: italic;
 }
 

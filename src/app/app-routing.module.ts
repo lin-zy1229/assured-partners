@@ -114,7 +114,7 @@ import { NotesSubitemComponent } from './components/the-truth/children/notes-sub
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/Blueprint Process', pathMatch: 'full' },
+  { path: '', redirectTo: '/Prospecting', pathMatch: 'full' },
   {
     path: 'Blueprint Process', component: BlueprintProcessComponent,
     children: [

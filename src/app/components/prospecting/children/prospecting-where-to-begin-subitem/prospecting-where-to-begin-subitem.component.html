@@ -178,28 +178,26 @@
             <mat-step [completed]="false">
                 <div class="flex-col">
                     <section class="shape-container-row" style="justify-content: space-around;">
-                        <div (click)="onClickShape(1)" class="new-shape circle gray">
+                        <div *ngIf="stage>=0" [@shapeAni-3-0]="stage" (click)="onClickShape(1)" class="new-shape circle gray">
                             <div class="content-in-shape"><span class="title">Define your ideal prospect</span></div>
                         </div>
 
-                        <div class="flex-row" style="align-items:center">
+                        <div *ngIf="stage>=1" class="flex-row" style="align-items:center">
                             <div class="arrow-line"></div>
                             <div class="arrow right"></div>
                         </div>
 
-
-                        <div (click)="onClickShape(2)" class="new-shape diamond green">
+                        <div *ngIf="stage>=1" (click)="onClickShape(2)" class="new-shape diamond green">
                             <div class="content-in-shape">
                                 <span class="title">Structure the prospect</span></div>
                         </div>
 
-                        <div class="flex-row" style="align-items:center">
+                        <div *ngIf="stage>=2" class="flex-row" style="align-items:center">
                             <div class="arrow-line"></div>
                             <div class="arrow right"></div>
                         </div>
 
-
-                        <div (click)="onClickShape(3)" class="new-shape diamond green">
+                        <div *ngIf="stage>=2" (click)="onClickShape(3)" class="new-shape diamond green">
                             <div class="content-in-shape"><span class="title">Write down
                                 </span></div>
                         </div>

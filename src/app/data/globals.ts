@@ -2,12 +2,12 @@ import { Menu } from './menu';
 import { trigger, transition, style, animate, state } from '@angular/animations';
 
 export const MainMenus: Menu[] = [
-	{ id: 1, title: 'Blueprint Process', sub_title: '' },
-	{ id: 2, title: 'Leverage Relation', sub_title: '' },
-	{ id: 3, title: 'Mapping It Out', sub_title: '' },
-	{ id: 4, title: 'Proactive Service', sub_title: '' },
 	{ id: 5, title: 'Prospecting', sub_title: '' },
+	{ id: 2, title: 'Leverage Relation', sub_title: '' },
+	{ id: 4, title: 'Proactive Service', sub_title: '' },
+	{ id: 3, title: 'Mapping It Out', sub_title: '' },
 	{ id: 6, title: 'The Truth', sub_title: '' },
+	{ id: 1, title: 'Blueprint Process', sub_title: '' },
 
 ];
 
@@ -187,6 +187,20 @@ export const Animation_for_4_Shapes =
 //Animation_for_Shapes
 export const Animation_for_Shapes =
 	[
+		trigger(
+			'shapeAni-3-0', [
+				state('0', style({  })),
+				state('1', style({  })),
+				state('2', style({  })),
+				transition('0 <=> 1', animate('500ms ease-out')),
+				transition('0 <=> 2', animate('500ms ease-out')),
+				transition('1 <=> 2', animate('500ms ease-out')),
+			]
+		),
+
+
+
+
 		trigger(
 			'enterAnimation-1-0', [
 				state('void', style({ transform: 'translateY(0) ', opacity: 0 })),

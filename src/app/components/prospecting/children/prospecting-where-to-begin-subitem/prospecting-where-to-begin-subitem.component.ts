@@ -1,12 +1,17 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
 import { Router } from '@angular/router';
+import {  Animation_for_3_Shapes, Animation_for_Arrows, Animation_for_Shapes } from '../../../../data/globals';
 
 @Component({
     selector: 'app-prospecting-where-to-begin-subitem',
     templateUrl: './prospecting-where-to-begin-subitem.component.html',
     styleUrls: ['./prospecting-where-to-begin-subitem.component.scss'
-    , '../../../../common/common_styles.css']
+	, '../../../../common/common_styles.css'],
+	animations: [Animation_for_3_Shapes,
+		Animation_for_Arrows,
+		Animation_for_Shapes
+	]
 })
 export class ProspectingWhereToBeginSubitemComponent implements OnInit {
 
@@ -36,7 +41,20 @@ export class ProspectingWhereToBeginSubitemComponent implements OnInit {
     }
 
     onClickShape(_stage) {
-        this.stage = _stage;
+		// this.stage = _stage;
+		if (this.stage == _stage) {
+			this.stage--;
+		}
+		else if (this.stage < _stage) {
+			this.stage = _stage;
+		}
+		else {
+			if (_stage == 0) {
+				this.stage = 0;
+			} else {
+				this.stage = _stage - 1;
+			}
+		}
     }
     selectionChange(event) {
         this.page = event.selectedIndex + 1;

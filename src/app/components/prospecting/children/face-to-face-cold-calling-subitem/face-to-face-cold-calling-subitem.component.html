@@ -25,8 +25,7 @@
                         </li>
 
                         <div class="form-title">4. If Your Contact is Busy</div>
-                        <li class="form-description emphasis indent">Leave your “Drop” with a personal note, business card
-                            and move on, plan to come back</li>
+                        <li class="form-description emphasis indent">Leave your drop and move on, plan to come back</li>
 
                         <div class="form-title">5. If Your Contact Comes Out</div>
                         <li class="form-description emphasis indent">Tell them you know they are busy and that you would
@@ -55,6 +54,48 @@
                             person they have scheduled</li>
 
                     </div>
+				</mat-step>
+				
+				<mat-step [completed]="false">
+                    <div class="flex-col">
+                        <div class="form-main-title">Drops Lead to Meetings</div>
+
+						<div class="form-question">– Try and come up with a creative leave behind or “Drop”</div>
+						<div class="form-question">– Some examples that have had success are:</div>
+
+						<li class="form-description emphasis indent">Yeti knock off cups “Why pay more?”</li>
+						<li class="form-description emphasis indent">Rubiks Cubes “Insurance can be a tough puzzle to solve – let us help”</li>
+						<li class="form-description emphasis indent">School gear (where did the person you met go to college?) </li>
+						<li class="form-description emphasis indent">What other ideas do you have</li>
+
+
+						<div class="form-question">– Leave the drop without any contact information – simply had it to the receptionist (be sure there is a note attached with the name of who it is for) and ask her/him to deliver it</div>
+						<div class="form-question">– Follow up the next day with a call or another visit and say “I’m the guy/gal who left you “X” yesterday</div>
+<!-- 						
+                        <li class="form-description emphasis indent">Ditch the tie</li>
+                        <li class="form-description emphasis indent">Don’t carry briefcase, notebook, etc.</li>
+
+                        <div class="form-title">2. Get to Know the Receptionist</div>
+                        <li class="form-description emphasis indent">Make note of her name, this probably won’t be the only
+                            time you see him/her</li>
+                        <li class="form-description emphasis indent">Pick out something to talk about – befriend him/her</li>
+
+                        <div class="form-title">3. Ask for the Person by Name</div>
+                        <li class="form-description emphasis indent">Be prepared, ask for “Joan, your CFO” not “Your CFO”
+                        </li>
+
+                        <div class="form-title">4. If Your Contact is Busy</div>
+                        <li class="form-description emphasis indent">Leave your drop and move on, plan to come back</li>
+
+                        <div class="form-title">5. If Your Contact Comes Out</div>
+                        <li class="form-description emphasis indent">Tell them you know they are busy and that you would
+                            like to get on their calendar, unless they have time now</li>
+
+                        <div class="form-title">6. Be Persistent</div>
+                        <li class="form-description emphasis indent">It’s unlikely you’ll score on your first drop in, plan
+                            your schedule to come back no sooner than one week later and no later than three weeks later</li> -->
+
+                    </div>
                 </mat-step>
 
             </mat-horizontal-stepper>
@@ -76,6 +117,14 @@
                 <div [ngClass]="{ 'green': page==2, 'blue': page!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(2)">
                     <div class="content-in-shape"><span class="title">Why Add Face<br>
                             to Face?</span></div>
+				</div>
+				
+				<div class="arrow up"></div>
+                <div class="arrow-line-vertical"></div>
+                <div class="arrow down"></div>
+
+                <div [ngClass]="{ 'green': page==3, 'blue': page!=3 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(3)">
+                    <div class="content-in-shape"><span class="title">Drops – Piquing Their Curiosity</span></div>
                 </div>
 
             </section>
