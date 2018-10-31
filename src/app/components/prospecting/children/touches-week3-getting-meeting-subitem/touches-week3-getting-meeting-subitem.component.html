@@ -27,7 +27,7 @@
 							list with the same content as used in your Inmails</li>
 						<li class="form-question">Follow up your Inmails and Emails with phone calls and face to face cold
 							calls
-							 <!-- – see page 13. -->
+							<!-- – see page 13. -->
 						</li>
 
 					</div>
@@ -92,42 +92,58 @@
 
 				<mat-step [completed]="false">
 					<div class="flex-col">
-						<section class="shape-container-row" style="justify-content: space-around;">
-							<div (click)="onClickShape(1)" class="new-shape circle gray">
+						<!-- <section class="shape-container-row" style="justify-content: space-around;"> -->
+						<section class="shape-section">
+
+							<!-- <div (click)="onClickShape(1)" class="new-shape circle gray"> -->
+							<div *ngIf="stage>=0" [@enterAnimation-4-0]="stage" (click)="onClickShape(1)" class="shape circle gray">
+
 								<div class="content-in-shape"><span class="title">Week Three
 									</span></div>
 							</div>
 
-							<div class="flex-row" style="align-items:center">
+							<!-- <div class="flex-row" style="align-items:center"> -->
+							<div *ngIf="stage>=1" [@enterAnimation-arrow-5-0]="stage" class="arrow-container">
+
 								<div class="arrow-line"></div>
 								<div class="arrow right"></div>
 							</div>
 
 
-							<div (click)="onClickShape(2)" class="new-shape diamond green">
+							<!-- <div (click)="onClickShape(2)" class="new-shape diamond green"> -->
+							<div *ngIf="stage>=1" [@enterAnimation-4-1]="stage" (click)="onClickShape(2)" class="shape diamond green">
+
 								<div class="content-in-shape">
 									<span class="title">Hot Contacts
 									</span></div>
 							</div>
 
-							<div class="flex-row" style="align-items:center">
+							<!-- <div class="flex-row" style="align-items:center"> -->
+							<div *ngIf="stage>=2" [@enterAnimation-arrow-5-1]="stage" class="arrow-container">
+
 								<div class="arrow-line"></div>
 								<div class="arrow right"></div>
 							</div>
 
 
-							<div (click)="onClickShape(3)" class="new-shape diamond green">
+							<!-- <div (click)="onClickShape(3)" class="new-shape diamond green"> -->
+							<div *ngIf="stage>=2" [@enterAnimation-4-2]="stage" (click)="onClickShape(3)" class="shape diamond green">
+
 								<div class="content-in-shape"><span class="title">Inmail and Email
 									</span></div>
 							</div>
 
-							<div class="flex-row" style="align-items:center">
+							<!-- <div class="flex-row" style="align-items:center"> -->
+							<div *ngIf="stage>=3" [@enterAnimation-arrow-5-2]="stage" class="arrow-container">
+
 								<div class="arrow-line"></div>
 								<div class="arrow right"></div>
 							</div>
 
 
-							<div (click)="onClickShape(4)" class="new-shape diamond green">
+							<!-- <div (click)="onClickShape(4)" class="new-shape diamond green"> -->
+							<div *ngIf="stage>=3" [@enterAnimation-4-3]="stage" (click)="(3)" class="shape diamond green">
+
 								<div class="content-in-shape"><span class="title">Face-to-face Cold Calls
 									</span></div>
 							</div>

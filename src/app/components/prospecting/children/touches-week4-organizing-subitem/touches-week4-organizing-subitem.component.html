@@ -1,57 +1,71 @@
 <div class="page-container">
-    <div class="page-title">
-        Touches - Week 4 - Organizing Your Contacts
-    </div>
+	<div class="page-title">
+		Touches - Week 4 - Organizing Your Contacts
+	</div>
 
 
 
-    <div class="page-content">
+	<div class="page-content">
 
-        <section class="shape-container-row" style="justify-content: space-evenly;">
-            <div (click)="onClickShape(1)" class="new-shape circle gray">
-                <div class="content-in-shape"><span class="title">Week Four
-                    </span></div>
-            </div>
+		<section class="shape-section">
+			<!-- <section class="shape-container-row" style="justify-content: space-evenly;"> -->
+			<!-- <div (click)="onClickShape(1)" class="new-shape circle gray"> -->
+			<div *ngIf="stage>=0" [@enterAnimation-0]="stage" (click)="onClickShape(1)" class="shape circle gray">
+				<div class="content-in-shape"><span class="title">Week Four
+					</span></div>
+			</div>
 
-            <div class="flex-row" style="align-items:center">
-                <div class="arrow-line"></div>
-                <div class="arrow right"></div>
-            </div>
+			<!-- <div class="flex-row" style="align-items:center"> -->
+			<div *ngIf="stage>=1" [@enterAnimation-arrow-3-0]="stage" class="arrow-container">
+				<div class="arrow-line"></div>
+				<div class="arrow right"></div>
+			</div>
 
-            <div (click)="onClickShape(2)" class="new-shape diamond green">
-                <div class="content-in-shape">
-                    <span class="title">Set Meeting? Categorize as “A” </span></div>
-            </div>
+			<div *ngIf="stage>=1" [@enterAnimation-1]="stage" (click)="onClickShape(2)" class="shape diamond green">
+				<!-- <div (click)="onClickShape(2)" class="new-shape diamond green"> -->
+				<div class="content-in-shape">
+					<span class="title">Set Meeting? Categorize as “A” </span></div>
+			</div>
 
-            <div>
-                <img src="assets/blueprint-process/13-arrow-double.png">
-            </div>
+			<!-- <div> -->
+			<div *ngIf="stage>=2" [@enterAnimation-arrow-3-1]="stage" class="arrow-container">
+				<img src="assets/blueprint-process/13-arrow-double.png">
+			</div>
 
-            <section class="shape-container" style="justify-content: space-around;">
-                <div (click)="onClickShape(3)" class="new-shape diamond green" style="margin-bottom: 2em;">
-                    <div class="content-in-shape"><span class="title">Potential? Categorize as “B” </span></div>
-                </div>
-                <div (click)="onClickShape(4)" class="new-shape diamond green" style="margin-top: 2em;">
-                    <div class="content-in-shape"><span class="title">No Activity? Categorize as “C”</span></div>
-                </div>
-            </section>
+			<!-- <section class="shape-container" style="justify-content: space-around;"> -->
+			<!-- <div (click)="onClickShape(3)" class="new-shape diamond green" style="margin-bottom: 2em;"> -->
+			<div *ngIf="stage>=2" [@enterAnimation-3-3-up]="stage" (click)="(0)" class="shape diamond small green top">
+				<div class="content-in-shape"><span class="title">Potential? Categorize as “B” </span></div>
+			</div>
+
+			<!-- <div (click)="onClickShape(4)" class="new-shape diamond green" style="margin-top: 2em;"> -->
+			<div *ngIf="stage>=2" [@enterAnimation-3-3-down]="stage" (click)="(0)" class="shape diamond small green bottom">
+
+				<div class="content-in-shape"><span class="title">No Activity? Categorize as “C”</span></div>
+			</div>
+			<!-- </section> -->
 
 
-        </section>
+		</section>
 
-        <div class="form-main-title">Week 4 -</div>
+		<div class="form-main-title">Week 4 -</div>
 
-        <li class="form-question">Categorize all the leads from these campaigns as <span class="emphasis">“A”</span>, those who have engaged and with whom
-            you’ve set a meeting</li>
-        <li class="form-question"><span class="emphasis">“B”</span> potential <span class="emphasis">“A”</span> leads that have liked a post, responded to an email or Inmail, etc. but
-            haven’t agreed to a meeting</li>
-        <li class="form-question"><span class="emphasis">“C”</span> those from whom you haven’t seen any activity</li>
-        <li class="form-question">File your <span class="emphasis">“B”</span> and <span class="emphasis">“C”</span> contacts to use again later in another campaign</li>
+		<li class="form-question">Categorize all the leads from these campaigns as <span class="emphasis">“A”</span>, those
+			who have engaged and with whom
+			you’ve set a meeting</li>
+		<li class="form-question"><span class="emphasis">“B”</span> potential <span class="emphasis">“A”</span> leads that
+			have liked a post, responded to an email or Inmail, etc. but
+			haven’t agreed to a meeting</li>
+		<li class="form-question"><span class="emphasis">“C”</span> those from whom you haven’t seen any activity</li>
+		<li class="form-question">File your <span class="emphasis">“B”</span> and <span class="emphasis">“C”</span> contacts
+			to use again later in another campaign</li>
 
-    </div>
+	</div>
 
-    <div class="page-footer>">
-			<button (click)="router.navigateByUrl('/Prospecting/11');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
-			<button (click)="router.navigateByUrl('/Prospecting/9');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Prospecting/11');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Prospecting/9');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

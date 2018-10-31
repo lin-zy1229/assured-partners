@@ -1,12 +1,18 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
 import { Router } from '@angular/router';
+import { Animation_for_Sentence, Animation_for_3_Shapes, Animation_for_Arrows, Animation_for_Shapes } from '../../../../data/globals';
 
 @Component({
     selector: 'app-the-articulation-blueprint-style-subitem',
     templateUrl: './the-articulation-blueprint-style-subitem.component.html',
     styleUrls: ['./the-articulation-blueprint-style-subitem.component.scss'
-        , '../../../../common/common_styles.css']
+        , '../../../../common/common_styles.css'],
+		animations: [Animation_for_3_Shapes,
+			Animation_for_Arrows,
+			Animation_for_Shapes,
+			Animation_for_Sentence
+		]
 })
 export class TheArticulationBlueprintStyleSubitemComponent implements OnInit {
 
@@ -36,8 +42,21 @@ export class TheArticulationBlueprintStyleSubitemComponent implements OnInit {
     }
 
     onClickShape(_stage) {
-        this.stage = _stage;
-    }
+		if (this.stage == _stage) {
+			this.stage--;
+		}
+		else if (this.stage < _stage) {
+			this.stage = _stage;
+		}
+		else {
+			if (_stage == 0) {
+				this.stage = 0;
+			} else {
+				this.stage = _stage - 1;
+			}
+		}
+	}
+	
     selectionChange(event) {
         this.page = event.selectedIndex + 1;
     }

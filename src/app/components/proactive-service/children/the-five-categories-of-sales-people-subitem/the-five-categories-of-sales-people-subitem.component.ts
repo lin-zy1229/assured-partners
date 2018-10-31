@@ -1,13 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Animation_for_4_Shapes, Animation_for_Sentence } from '../../../../data/globals';
 import { Router } from '@angular/router';
+import { Animation_for_4_Shapes, Animation_for_Sentence, Animation_for_3_Shapes, Animation_for_Arrows, Animation_for_Shapes } from '../../../../data/globals';
 
 @Component({
     selector: 'app-the-five-categories-of-sales-people-subitem',
     templateUrl: './the-five-categories-of-sales-people-subitem.component.html',
     styleUrls: ['./the-five-categories-of-sales-people-subitem.component.scss',
         '../../../../common/common_styles.css'],
-    animations: [Animation_for_4_Shapes, Animation_for_Sentence],
+	animations: [
+		// Animation_for_3_Shapes,
+		Animation_for_Arrows,
+		Animation_for_Shapes,
+		Animation_for_Sentence,
+		Animation_for_4_Shapes
+	]
 })
 export class TheFiveCategoriesOfSalesPeopleSubitemComponent implements OnInit {
 

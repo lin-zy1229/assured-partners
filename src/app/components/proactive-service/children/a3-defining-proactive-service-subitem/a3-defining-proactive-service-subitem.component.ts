@@ -1,11 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Animation_for_Sentence, Animation_for_3_Shapes, Animation_for_Arrows, Animation_for_Shapes } from '../../../../data/globals';
+
 
 @Component({
     selector: 'app-a3-defining-proactive-service-subitem',
     templateUrl: './a3-defining-proactive-service-subitem.component.html',
     styleUrls: ['./a3-defining-proactive-service-subitem.component.scss',
-        '../../../../common/common_styles.css']
+		'../../../../common/common_styles.css'],
+		animations: [Animation_for_3_Shapes,
+			Animation_for_Arrows,
+			Animation_for_Shapes,
+			Animation_for_Sentence
+		]
 })
 export class A3DefiningProactiveServiceSubitemComponent implements OnInit {
 

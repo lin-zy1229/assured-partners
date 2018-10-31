@@ -1,250 +1,260 @@
 <div class="page-container">
-    <div class="page-title">
-        Prospecting - Where to Begin
-    </div>
+	<div class="page-title">
+		Prospecting - Where to Begin
+	</div>
 
-    <div class="page-content">
+	<div class="page-content">
 
-        <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
-            <mat-step [completed]="false">
-                <div class="flex-col">
-                    <div>
-                        <button mat-button color="primary" (click)="onClickPage(2)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
-                    </div>
+		<mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+			<mat-step [completed]="false">
+				<div class="flex-col">
+					<div>
+						<button mat-button color="primary" (click)="onClickPage(2)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					</div>
 
-                    <div class="flex-col">
-                        <!-- Industry -->
-                        <section class="shape-container-row" style="justify-content: flex-start;">
-                            <div class="blue shape position-unset rectangle round cursor-pointer">
-                                <div class="content-in-shape"><span class="title">My Ideal Prospect:
-                                    </span></div>
-                            </div>
+					<div class="flex-col">
+						<!-- Industry -->
+						<section class="shape-container-row" style="justify-content: flex-start;">
+							<div class="blue shape position-unset rectangle round cursor-pointer">
+								<div class="content-in-shape"><span class="title">My Ideal Prospect:
+									</span></div>
+							</div>
 
-                            <div class="flex-row" style="align-items:center">
-                                <div class="arrow-line" style="margin-left: 2em;"></div>
-                                <div class="arrow right" style="margin-right: 2em;"></div>
-                            </div>
-
-
-                            <div class="new-shape diamond green">
-                                <div class="content-in-shape">
-                                    <span class="title">Niche or Verticle
-                                    </span></div>
-                            </div>
-
-                        </section>
-
-                        <div class="flex-col" style="margin-left: 6em;">
-                                <div class="arrow up"></div>
-                                <div class="arrow-line-vertical" style="margin-left: 5px;"></div>
-                                <div class="arrow down"></div>
-                        </div>
+							<div class="flex-row" style="align-items:center">
+								<div class="arrow-line" style="margin-left: 2em;"></div>
+								<div class="arrow right" style="margin-right: 2em;"></div>
+							</div>
 
 
-                        <!-- Employee Count  -->
-                        <section class="shape-container-row" style="justify-content: flex-start;">
-                            <div class="blue shape position-unset rectangle round cursor-pointer">
-                                <div class="content-in-shape"><span class="title">Employee Count </span></div>
-                            </div>
+							<div class="new-shape diamond green">
+								<div class="content-in-shape">
+									<span class="title">Niche or Verticle
+									</span></div>
+							</div>
 
-                            <div class="flex-row" style="align-items:center">
-                                <div class="arrow-line" style="margin-left: 2em;"></div>
-                                <div class="arrow right" style="margin-right: 2em;"></div>
-                            </div>
+						</section>
 
-
-                            <div class="new-shape diamond green">
-                                <div class="content-in-shape">
-                                    <span class="title">How Big Are They</span></div>
-                            </div>
-
-                            <div class="flex-row" style="align-items:center">
-                                <div class="arrow-line" style="margin-left: 2em;"></div>
-                                <div class="arrow right" style="margin-right: 2em;"></div>
-                            </div>
+						<div class="flex-col" style="margin-left: 6em;">
+							<div class="arrow up"></div>
+							<div class="arrow-line-vertical" style="margin-left: 5px;"></div>
+							<div class="arrow down"></div>
+						</div>
 
 
-                            <div class="new-shape diamond green">
-                                <div class="content-in-shape">
-                                    <span class="title">How many locations
-                                    </span></div>
-                            </div>
+						<!-- Employee Count  -->
+						<section class="shape-container-row" style="justify-content: flex-start;">
+							<div class="blue shape position-unset rectangle round cursor-pointer">
+								<div class="content-in-shape"><span class="title">Employee Count </span></div>
+							</div>
 
-                        </section>
-                        <div class="flex-col" style="margin-left: 6em;">
-                                <div class="arrow up"></div>
-                                <div class="arrow-line-vertical" style="margin-left: 5px;"></div>
-                                <div class="arrow down"></div>
-                        </div>
-                        <!-- Annual Sales -->
-                        <section class="shape-container-row" style="justify-content: flex-start;">
-                            <div class="blue shape position-unset rectangle round cursor-pointer">
-                                <div class="content-in-shape"><span class="title">Annual Sales
-                                    </span></div>
-                            </div>
-
-                            <div class="flex-row" style="align-items:center">
-                                <div class="arrow-line" style="margin-left: 2em;"></div>
-                                <div class="arrow right" style="margin-right: 2em;"></div>
-                            </div>
+							<div class="flex-row" style="align-items:center">
+								<div class="arrow-line" style="margin-left: 2em;"></div>
+								<div class="arrow right" style="margin-right: 2em;"></div>
+							</div>
 
 
-                            <div class="new-shape diamond green">
-                                <div class="content-in-shape">
-                                    <span class="title">Sometimes an indication of P&C revenue potential
-                                    </span></div>
-                            </div>
+							<div class="new-shape diamond green">
+								<div class="content-in-shape">
+									<span class="title">How Big Are They</span></div>
+							</div>
 
-                        </section>
-                        <div class="flex-col" style="margin-left: 6em;">
-                                <div class="arrow up"></div>
-                                <div class="arrow-line-vertical" style="margin-left: 5px;"></div>
-                                <div class="arrow down"></div>
-                        </div>
-                        <!-- Growth Model -->
-                        <section class="shape-container-row" style="justify-content: flex-start;">
-                            <div class="blue shape position-unset rectangle round cursor-pointer">
-                                <div class="content-in-shape"><span class="title">Growth Model
-                                    </span></div>
-                            </div>
-
-                            <div class="flex-row" style="align-items:center">
-                                <div class="arrow-line" style="margin-left: 2em;"></div>
-                                <div class="arrow right" style="margin-right: 2em;"></div>
-                            </div>
+							<div class="flex-row" style="align-items:center">
+								<div class="arrow-line" style="margin-left: 2em;"></div>
+								<div class="arrow right" style="margin-right: 2em;"></div>
+							</div>
 
 
-                            <div class="new-shape diamond green">
-                                <div class="content-in-shape">
-                                    <span class="title">Stable?</span></div>
-                            </div>
+							<div class="new-shape diamond green">
+								<div class="content-in-shape">
+									<span class="title">How many locations
+									</span></div>
+							</div>
 
-                            <div class="flex-row" style="align-items:center">
-                                <div class="arrow-line" style="margin-left: 2em;"></div>
-                                <div class="arrow right" style="margin-right: 2em;"></div>
-                            </div>
+						</section>
+						<div class="flex-col" style="margin-left: 6em;">
+							<div class="arrow up"></div>
+							<div class="arrow-line-vertical" style="margin-left: 5px;"></div>
+							<div class="arrow down"></div>
+						</div>
+						<!-- Annual Sales -->
+						<section class="shape-container-row" style="justify-content: flex-start;">
+							<div class="blue shape position-unset rectangle round cursor-pointer">
+								<div class="content-in-shape"><span class="title">Annual Sales
+									</span></div>
+							</div>
 
-
-                            <div class="new-shape diamond green">
-                                <div class="content-in-shape"><span class="title">Aggressive?
-                                    </span></div>
-                            </div>
-
-                            <div class="flex-row" style="align-items:center">
-                                <div class="arrow-line" style="margin-left: 2em;"></div>
-                                <div class="arrow right" style="margin-right: 2em;"></div>
-                            </div>
-
-
-                            <div class="new-shape diamond green">
-                                <div class="content-in-shape"><span class="title">Regressive?
-                                    </span></div>
-                            </div>
-
-                        </section>
-                        <div class="flex-col" style="margin-left: 6em;">
-                                <div class="arrow up"></div>
-                                <div class="arrow-line-vertical" style="margin-left: 5px;"></div>
-                                <div class="arrow down"></div>
-                        </div>
-                        <!-- Buying Attitude -->
-                        <section class="shape-container-row" style="justify-content: flex-start;">
-                            <div class="green shape position-unset rectangle round cursor-pointer">
-                                <div class="content-in-shape"><span class="title">Buying Attitude
-                                    </span></div>
-                            </div>
-
-                            <div class="flex-row" style="align-items:center">
-                                <div class="arrow-line" style="margin-left: 2em;"></div>
-                                <div class="arrow right" style="margin-right: 2em;"></div>
-                            </div>
+							<div class="flex-row" style="align-items:center">
+								<div class="arrow-line" style="margin-left: 2em;"></div>
+								<div class="arrow right" style="margin-right: 2em;"></div>
+							</div>
 
 
-                            <div class="new-shape diamond green">
-                                <div class="content-in-shape">
-                                    <span class="title">If they won't play by the rules, we wont waste our time</span></div>
-                            </div>
+							<div class="new-shape diamond green">
+								<div class="content-in-shape">
+									<span class="title">Sometimes an indication of P&C revenue potential
+									</span></div>
+							</div>
+
+						</section>
+						<div class="flex-col" style="margin-left: 6em;">
+							<div class="arrow up"></div>
+							<div class="arrow-line-vertical" style="margin-left: 5px;"></div>
+							<div class="arrow down"></div>
+						</div>
+						<!-- Growth Model -->
+						<section class="shape-container-row" style="justify-content: flex-start;">
+							<div class="blue shape position-unset rectangle round cursor-pointer">
+								<div class="content-in-shape"><span class="title">Growth Model
+									</span></div>
+							</div>
+
+							<div class="flex-row" style="align-items:center">
+								<div class="arrow-line" style="margin-left: 2em;"></div>
+								<div class="arrow right" style="margin-right: 2em;"></div>
+							</div>
+
+
+							<div class="new-shape diamond green">
+								<div class="content-in-shape">
+									<span class="title">Stable?</span></div>
+							</div>
+
+							<div class="flex-row" style="align-items:center">
+								<div class="arrow-line" style="margin-left: 2em;"></div>
+								<div class="arrow right" style="margin-right: 2em;"></div>
+							</div>
+
+
+							<div class="new-shape diamond green">
+								<div class="content-in-shape"><span class="title">Aggressive?
+									</span></div>
+							</div>
+
+							<div class="flex-row" style="align-items:center">
+								<div class="arrow-line" style="margin-left: 2em;"></div>
+								<div class="arrow right" style="margin-right: 2em;"></div>
+							</div>
+
+
+							<div class="new-shape diamond green">
+								<div class="content-in-shape"><span class="title">Regressive?
+									</span></div>
+							</div>
+
+						</section>
+						<div class="flex-col" style="margin-left: 6em;">
+							<div class="arrow up"></div>
+							<div class="arrow-line-vertical" style="margin-left: 5px;"></div>
+							<div class="arrow down"></div>
+						</div>
+						<!-- Buying Attitude -->
+						<section class="shape-container-row" style="justify-content: flex-start;">
+							<div class="green shape position-unset rectangle round cursor-pointer">
+								<div class="content-in-shape"><span class="title">Buying Attitude
+									</span></div>
+							</div>
+
+							<div class="flex-row" style="align-items:center">
+								<div class="arrow-line" style="margin-left: 2em;"></div>
+								<div class="arrow right" style="margin-right: 2em;"></div>
+							</div>
+
+
+							<div class="new-shape diamond green">
+								<div class="content-in-shape">
+									<span class="title">If they won't play by the rules, we wont waste our time</span></div>
+							</div>
 
 
 
-                        </section>
-                    </div>
+						</section>
+					</div>
 
-                </div>
-
-
-            </mat-step>
-
-            <mat-step [completed]="false">
-                <div class="flex-col">
-                    <section class="shape-container-row" style="justify-content: space-around;">
-                        <div *ngIf="stage>=0" [@shapeAni-3-0]="stage" (click)="onClickShape(1)" class="new-shape circle gray">
-                            <div class="content-in-shape"><span class="title">Define your ideal prospect</span></div>
-                        </div>
-
-                        <div *ngIf="stage>=1" class="flex-row" style="align-items:center">
-                            <div class="arrow-line"></div>
-                            <div class="arrow right"></div>
-                        </div>
-
-                        <div *ngIf="stage>=1" (click)="onClickShape(2)" class="new-shape diamond green">
-                            <div class="content-in-shape">
-                                <span class="title">Structure the prospect</span></div>
-                        </div>
-
-                        <div *ngIf="stage>=2" class="flex-row" style="align-items:center">
-                            <div class="arrow-line"></div>
-                            <div class="arrow right"></div>
-                        </div>
-
-                        <div *ngIf="stage>=2" (click)="onClickShape(3)" class="new-shape diamond green">
-                            <div class="content-in-shape"><span class="title">Write down
-                                </span></div>
-                        </div>
-
-                    </section>
-
-                    <p></p>
-
-                    <div class="form-question">
-                        Many of us, when focused on building a book of business from scratch, found ourselves falling into a common trap. We would
-                        quote anything. Any type of business and any kind of risk. We had no parameters or standards upon
-                        which we would lean to ensure we were making the most efficient use of our time.
-
-                    </div>
-
-                    <p></p>
-                    <div class="content-box-no-width">
-                        <strong>Objective:</strong> To determine what characteristics our best opportunities possess, then
-                        to define those and structure our prospecting approach around those “ideal” parameters.
-                    </div>
-                    <p></p>
+				</div>
 
 
-                    <div class="form-question">
-                        Let’s take a moment to define your ideal prospect. Don’t worry, your definition will probably change several times throughout
-                        your career . . . what is most important is that we get used to writing down our objectives and working
-                        with a plan!
+			</mat-step>
 
-                    </div>
+			<mat-step [completed]="false">
+				<div class="flex-col">
+					<!-- <section class="shape-container-row" style="justify-content: space-around;"> -->
+					<section class="shape-section">
+						<!-- <div *ngIf="stage>=0" [@enterAnimation-00]="stage" (click)="onClickShape(1)" class="new-shape circle gray"> -->
+						<div *ngIf="stage>=0" [@enterAnimation-0]="stage" (click)="onClickShape(1)" class="shape circle gray">
 
-                    <section class="shape-container">
-                        <div [ngClass]="{ 'green': page==1, 'blue': page!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(1)">
-                            <div class="content-in-shape"><span class="title">My Ideal Prospect:
-                                </span></div>
-                        </div>
-                    </section>
-                </div>
-            </mat-step>
+							<div class="content-in-shape"><span class="title">Define your ideal prospect</span></div>
+						</div>
+
+						<!-- <div *ngIf="stage>=1"  class="flex-row" style="align-items:center"> -->
+						<div *ngIf="stage>=1" [@enterAnimation-arrow-1]="stage" class="arrow-container">
+							<div class="arrow-line"></div>
+							<div class="arrow right"></div>
+						</div>
+
+						<div *ngIf="stage>=1" [@enterAnimation-1]="stage" (click)="onClickShape(2)" class="shape diamond green">
+							<div class="content-in-shape">
+								<span class="title">Structure the prospect</span></div>
+						</div>
+
+						<!-- <div *ngIf="stage>=2" class="flex-row" style="align-items:center"> -->
+						<div *ngIf="stage>=2" [@enterAnimation-arrow-2]="stage" class="arrow-container">
+							<div class="arrow-line"></div>
+							<div class="arrow right"></div>
+						</div>
+
+						<div *ngIf="stage>=2" [@enterAnimation-2]="stage" (click)="(3)" class="shape diamond green">
+							<div class="content-in-shape"><span class="title">Write down
+								</span></div>
+						</div>
+
+					</section>
+
+					<p></p>
+
+					<div [@enterSentenceAnimation]="stage>=1" class="form-question">
+						Many of us, when focused on building a book of business from scratch, found ourselves falling into a common trap.
+						We would
+						quote anything. Any type of business and any kind of risk. We had no parameters or standards upon
+						which we would lean to ensure we were making the most efficient use of our time.
+
+					</div>
+
+					<p></p>
+					<div [@enterSentenceAnimation]="stage>=1" class="content-box-no-width">
+						<strong>Objective:</strong> To determine what characteristics our best opportunities possess, then
+						to define those and structure our prospecting approach around those “ideal” parameters.
+					</div>
+					<p></p>
 
 
-        </mat-horizontal-stepper>
+					<div [@enterSentenceAnimation]="stage>=2" class="form-question">
+						Let’s take a moment to define your ideal prospect. Don’t worry, your definition will probably change several
+						times throughout
+						your career . . . what is most important is that we get used to writing down our objectives and working
+						with a plan!
+
+					</div>
+
+					<section class="shape-container">
+						<div [ngClass]="{ 'green': page==1, 'blue': page!=1 }" class="shape position-unset rectangle round cursor-pointer"
+						 (click)="onClickPage(1)">
+							<div class="content-in-shape"><span class="title">My Ideal Prospect:
+								</span></div>
+						</div>
+					</section>
+				</div>
+			</mat-step>
 
 
-    </div>
+		</mat-horizontal-stepper>
 
-    <div class="page-footer>">
-			<button (click)="router.navigateByUrl('/Prospecting/2');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
-			<button (click)="router.navigateByUrl('/Prospecting');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+
+	</div>
+
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Prospecting/2');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Prospecting');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

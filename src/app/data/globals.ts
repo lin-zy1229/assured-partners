@@ -183,10 +183,49 @@ export const Animation_for_4_Shapes =
 				transition('3 <=> 2', animate('500ms ease-out')),
 			]
 		),
+
+		trigger(
+			'enterAnimation-3-3-up', [
+				state('void', style({ transform: 'translateX(+4.8em) rotate(-360deg)', opacity: 0 })),
+				state('1', style({ transform: 'translateX(+4.8em) rotate(-360deg)', opacity: 0 })),
+				state('2', style({ transform: 'translateX(22em)  translateY(-6em) rotate(-45deg)' })),
+				transition('2 <=> void', animate('500ms ease-out')),
+				transition('2 <=> 1', animate('500ms ease-out')),
+			]
+		), 
+		trigger(
+			'enterAnimation-3-3-down', [
+				state('void', style({ transform: 'translateX(+4.8em) rotate(-360deg)', opacity: 0 })),
+				state('1', style({ transform: 'translateX(+4.8em) rotate(-360deg)', opacity: 0 })),
+				state('2', style({ transform: 'translateX(22em) translateY(6em) rotate(-45deg)' })),
+				transition('2 <=> void', animate('500ms ease-out')),
+				transition('2 <=> 1', animate('500ms ease-out')),
+			]
+		),
 	]
 //Animation_for_Shapes
 export const Animation_for_Shapes =
 	[
+		//
+		// test
+		//
+		trigger(
+			'enterAnimation-00', [
+				state('void', style({ transform: 'translateX(-11em)' })),
+				state('0', style({ transform: 'translateX(0)' })),
+				state('1', style({ transform: 'translateX(0)' })),
+				state('2', style({ transform: 'translateX(-15em)' })),
+				state('3', style({ transform: 'translateX(-22em)' })),
+				transition('void <=> 0', animate('500ms ease-out')),
+				transition('1 <=> 2', animate('500ms ease-out')),
+				transition('1 <=> 0', animate('500ms ease-out')),
+				transition('2 <=> 0', animate('500ms ease-out')),
+				transition('0 <=> 3', animate('500ms ease-out')),
+				transition('1 <=> 3', animate('500ms ease-out')),
+				transition('2 <=> 3', animate('500ms ease-out')),
+			]
+		),
+
 		trigger(
 			'shapeAni-3-0', [
 				state('0', style({  })),
@@ -198,7 +237,18 @@ export const Animation_for_Shapes =
 			]
 		),
 
-
+		trigger(
+			'enterAnimation', [
+				transition(':enter', [
+					style({ transform: 'translateX(100%)', opacity: 0 }),
+					animate('300ms ease-out', style({ transform: 'translateX(0)', opacity: 1 }))
+				]),
+				transition(':leave', [
+					style({ transform: 'translateX(0)', opacity: 1 }),
+					animate('300ms ease-in', style({ transform: 'translateX(100%)', opacity: 0 }))
+				])
+			]
+		),
 
 
 		trigger(
@@ -387,6 +437,57 @@ export const Animation_for_Shapes =
 				transition('2 <=> void', animate('500ms ease-out')),
 			]
 		),
+		
+		trigger(
+			'enterAnimation-4-0', [
+				state('void', style({ transform: 'translateX(-11em)' })),
+				state('0', style({ transform: 'translateX(0)' })),
+				state('1', style({ transform: 'translateX(-11em)' })),
+				state('2', style({ transform: 'translateX(-15em)' })),
+				state('3', style({ transform: 'translateX(-22em)' })),
+				state('4', style({ transform: 'translateX(-29em)' })),
+				transition('void <=> 0', animate('500ms ease-out')),
+				transition('0 <=> 1', animate('500ms ease-out')),
+				transition('0 <=> 2', animate('500ms ease-out')),
+				transition('0 <=> 3', animate('500ms ease-out')),
+				transition('1 <=> 2', animate('500ms ease-out')),
+				transition('1 <=> 3', animate('500ms ease-out')),
+				transition('2 <=> 3', animate('500ms ease-out')),
+			]
+		),
+		trigger(
+			'enterAnimation-4-1', [
+				state('void', style({ transform: 'translateX(0) rotate(-360deg)', opacity: 0 })),
+				state('1', style({ transform: 'translateX(11em) rotate(-45deg)' })),
+				state('2', style({ transform: 'translateX(0) rotate(-45deg)' })),
+				state('3', style({ transform: 'translateX(-7em) rotate(-45deg)' })),
+				state('4', style({ transform: 'translateX(-15em) rotate(-45deg)' })),
+
+				transition('1 <=> void', animate('500ms ease-out')),
+				transition('1 <=> 2', animate('500ms ease-out')),
+				transition('1 <=> 3', animate('500ms ease-out')),
+				transition('2 <=> 3', animate('500ms ease-out')),
+			]
+		),
+		trigger(
+			'enterAnimation-4-2', [
+				state('void', style({ transform: 'translateX(0) rotate(-360deg)', opacity: 0 })),
+				state('2', style({ transform: 'translateX(15em) rotate(-45deg)' })),
+				state('3', style({ transform: 'translateX(7em) rotate(-45deg)' })),
+				state('4', style({ transform: 'translateX(0) rotate(-45deg)' })),
+				transition('2 <=> void', animate('500ms ease-out')),
+				transition('2 <=> 3', animate('500ms ease-out')),
+			]
+		),
+		trigger(
+			'enterAnimation-4-3', [
+				state('void', style({ transform: 'translateX(0%) rotate(-360deg)', opacity: 0 })),
+				state('3', style({ transform: 'translateX(22em) rotate(-45deg)' })),
+				transition('3 <=> void', animate('500ms ease-out')),
+			]
+		),
+
+
 
 
 		trigger(
@@ -533,8 +634,8 @@ export const Animation_for_Arrows =
 			'enterAnimation-formula-4-0', [
 				state('void', style({ transform: 'translateX(0)', opacity: 0 })),
 				state('1', style({ transform: 'translateX(0)' })),
-				state('2', style({ transform: 'translateX(-2.5em)' })),
-				state('3', style({ transform: 'translateX(-4.8em)' })),
+				state('2', style({ transform: 'translateX(-2.1em)' })),
+				state('3', style({ transform: 'translateX(-4.2em)' })),
 				transition('1 <=> void', animate('500ms ease-out')),
 				transition('1 <=> 2', animate('500ms ease-out')),
 				transition('1 <=> 3', animate('500ms ease-out')),
@@ -544,7 +645,7 @@ export const Animation_for_Arrows =
 		trigger(
 			'enterAnimation-formula-4-1', [
 				state('void', style({ transform: 'translateX(0)', opacity: 0 })),
-				state('2', style({ transform: 'translateX(2.5em)' })),
+				state('2', style({ transform: 'translateX(2.1em)' })),
 				state('3', style({ transform: 'translateX(0)' })),
 				transition('2 <=> void', animate('500ms ease-out')),
 				transition('1 <=> 2', animate('500ms ease-out')),
@@ -553,7 +654,7 @@ export const Animation_for_Arrows =
 		trigger(
 			'enterAnimation-formula-4-2', [
 				state('void', style({ transform: 'translateX(0)', opacity: 0 })),
-				state('3', style({ transform: 'translateX(+4.8em)' })),
+				state('3', style({ transform: 'translateX(+4.2em)' })),
 				transition('2 <=> void', animate('500ms ease-out')),
 				transition('1 <=> 2', animate('500ms ease-out')),
 			]

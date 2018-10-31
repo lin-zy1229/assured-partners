@@ -1,213 +1,233 @@
 <div class="page-container">
-    <div class="page-title">
-        Touches - Week 1 & 2 - Beginning Your Relationship Campaign
-    </div>
+	<div class="page-title">
+		Touches - Week 1 & 2 - Beginning Your Relationship Campaign
+	</div>
 
-    <div class="page-content-side">
+	<div class="page-content-side">
 
-        <div style="flex:8;">
-            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
-                <mat-step [completed]="false">
-                    <div class="flex-col">
-                        <div class="form-main-title">Cold Calling Averages</div>
-                        <div class="form-title">Some statistics:</div>
+		<div style="flex:8;">
+			<mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+				<mat-step [completed]="false">
+					<div class="flex-col">
+						<div class="form-main-title">Cold Calling Averages</div>
+						<div class="form-title">Some statistics:</div>
 
-                        <li class="form-description emphasis indent">2% of sales are made on the first contact</li>
-                        <li class="form-description emphasis indent">3% on the second contact</li>
-                        <li class="form-description emphasis indent">5% on the third contact</li>
-                        <li class="form-description emphasis indent">10% on the fourth contact</li>
-                        <li class="form-description emphasis indent">80% of sales are made between the fifth and twelfth
-                            contact
-                        </li>
-                        <li class="form-description emphasis indent">44% of sales reps quit after “No. 1”</li>
+						<li class="form-description emphasis indent">2% of sales are made on the first contact</li>
+						<li class="form-description emphasis indent">3% on the second contact</li>
+						<li class="form-description emphasis indent">5% on the third contact</li>
+						<li class="form-description emphasis indent">10% on the fourth contact</li>
+						<li class="form-description emphasis indent">80% of sales are made between the fifth and twelfth
+							contact
+						</li>
+						<li class="form-description emphasis indent">44% of sales reps quit after “No. 1”</li>
 
-                        <div class="form-question">
-                            Using only the phone to attempt to reach a prospect means on average, you must make eight attempts per prospect just to get
-                            a conversation. Your odds of setting a meeting after that? One in 35.
-                        </div>
-                    </div>
-                </mat-step>
+						<div class="form-question">
+							Using only the phone to attempt to reach a prospect means on average, you must make eight attempts per prospect
+							just to get
+							a conversation. Your odds of setting a meeting after that? One in 35.
+						</div>
+					</div>
+				</mat-step>
 
-                <mat-step [completed]="false">
-                    <div class="flex-col">
+				<mat-step [completed]="false">
+					<div class="flex-col">
 
-                        <div class="form-main-title">When to Call?</div>
-                        <div class="form-title">Time?</div>
+						<div class="form-main-title">When to Call?</div>
+						<div class="form-title">Time?</div>
 
-                        <li class="form-description emphasis indent">4:00 to 5:00 is best</li>
-                        <li class="form-description emphasis indent">8:00 to 10:00 is next</li>
-                        <li class="form-description emphasis indent">11:00 to 2:00 is worst</li>
-
-
-                        <div class="form-title">Day of the Week?</div>
-
-                        <li class="form-description emphasis indent">Thursday is best</li>
-                        <li class="form-description emphasis indent">Wednesday is next</li>
-                        <li class="form-description emphasis indent">Tuesday is the worst day to call</li>
+						<li class="form-description emphasis indent">4:00 to 5:00 is best</li>
+						<li class="form-description emphasis indent">8:00 to 10:00 is next</li>
+						<li class="form-description emphasis indent">11:00 to 2:00 is worst</li>
 
 
-                        <div class="form-title">Whom to Call?</div>
+						<div class="form-title">Day of the Week?</div>
 
-                        <li class="form-description emphasis indent">Firm with 100-500 employees has an average of seven
-                            people in the buying process – reach out to multiple contacts</li>
-                        <li class="form-description emphasis indent">CEOs & CFOs are obvious – dig deeply into the HR department,
-                            risk management, etc.</li>
-
-                    </div>
-                </mat-step>
-
-                <mat-step [completed]="false">
-                    <div class="flex-col">
+						<li class="form-description emphasis indent">Thursday is best</li>
+						<li class="form-description emphasis indent">Wednesday is next</li>
+						<li class="form-description emphasis indent">Tuesday is the worst day to call</li>
 
 
-                        <mat-horizontal-stepper>
-                            <mat-step [completed]="false">
-                                <div class="flex-col">
-                                    <section class="shape-container-row" style="justify-content: space-around;">
-                                        <div (click)="onClickShape(1)" class="new-shape circle gray">
-                                            <div class="content-in-shape"><span class="title">Week One
-                                                </span></div>
-                                        </div>
+						<div class="form-title">Whom to Call?</div>
 
-                                        <div class="flex-row" style="align-items:center">
-                                            <div class="arrow-line"></div>
-                                            <div class="arrow right"></div>
-                                        </div>
+						<li class="form-description emphasis indent">Firm with 100-500 employees has an average of seven
+							people in the buying process – reach out to multiple contacts</li>
+						<li class="form-description emphasis indent">CEOs & CFOs are obvious – dig deeply into the HR department,
+							risk management, etc.</li>
+
+					</div>
+				</mat-step>
+
+				<mat-step [completed]="false">
+					<div class="flex-col">
 
 
-                                        <div (click)="onClickShape(2)" class="new-shape diamond green">
-                                            <div class="content-in-shape">
-                                                <span class="title">Invite Contacts
+						<mat-horizontal-stepper>
+							<mat-step [completed]="false">
+								<div class="flex-col">
+									<!-- <section class="shape-container-row" style="justify-content: space-around;"> -->
+									<section class="shape-section">
+										<div *ngIf="stage>=0" [@enterAnimation-4-0]="stage" (click)="onClickShape(1)" class="shape circle gray">
+											<!-- <div (click)="onClickShape(1)" class="new-shape circle gray"> -->
+											<div class="content-in-shape"><span class="title">Week One
+												</span></div>
+										</div>
 
-                                                </span></div>
-                                        </div>
+										<div *ngIf="stage>=1" [@enterAnimation-arrow-5-0]="stage" class="arrow-container">
+											<!-- <div [@enterAnimation-arrow-5-0]="stage" class="flex-row" style="align-items:center"> -->
+											<div class="arrow-line"></div>
+											<div class="arrow right"></div>
+										</div>
 
-                                        <div class="flex-row" style="align-items:center">
-                                            <div class="arrow-line"></div>
-                                            <div class="arrow right"></div>
-                                        </div>
 
-                                        <div (click)="onClickShape(3)" class="new-shape diamond green">
-                                            <div class="content-in-shape"><span class="title">Mail Cards
-                                                </span></div>
-                                        </div>
+										<div *ngIf="stage>=1" [@enterAnimation-4-1]="stage" (click)="onClickShape(2)" class="shape diamond green">
+											<!-- <div (click)="onClickShape(2)" class="new-shape diamond green"> -->
+											<div class="content-in-shape">
+												<span class="title">Invite Contacts
 
-                                        <div class="flex-row" style="align-items:center">
-                                            <div class="arrow-line"></div>
-                                            <div class="arrow right"></div>
-                                        </div>
+												</span></div>
+										</div>
 
-                                        <div (click)="onClickShape(4)" class="new-shape diamond green">
-                                            <div class="content-in-shape"><span class="title">Follow Up
-                                                </span></div>
-                                        </div>
+										<!-- <div class="flex-row" style="align-items:center"> -->
+										<div *ngIf="stage>=2" [@enterAnimation-arrow-5-1]="stage" class="arrow-container">
+											<div class="arrow-line"></div>
+											<div class="arrow right"></div>
+										</div>
 
-                                    </section>
-                                </div>
-                            </mat-step>
+										<!-- <div (click)="onClickShape(3)" class="new-shape diamond green"> -->
+										<div *ngIf="stage>=2" [@enterAnimation-4-2]="stage" (click)="onClickShape(3)" class="shape diamond green">
+											<div class="content-in-shape"><span class="title">Mail Cards
+												</span></div>
+										</div>
 
-                            <mat-step [completed]="false">
-                                <div class="flex-col">
-                                    <div class="form-main-title">Week 1 -</div>
-                                    <li class="form-question">
-                                        Invite all the contacts on the lead lists to connect</li>
-                                    <li class="form-question">Mail a hand written card to each of the contacts stating that
-                                        you would like to meet them and learn more about their business</li>
-                                    <li class="form-question">Four or five days later send them an Email asking only if they
-                                        received the card – that’s all</li>
-                                </div>
-                            </mat-step>
-                        </mat-horizontal-stepper>
+										<!-- <div class="flex-row" style="align-items:center"> -->
+										<div *ngIf="stage>=3" [@enterAnimation-arrow-5-2]="stage" class="arrow-container">
+											<div class="arrow-line"></div>
+											<div class="arrow right"></div>
+										</div>
 
-                    </div>
-                </mat-step>
+										<!-- <div (click)="onClickShape(4)" class="new-shape diamond green"> -->
+										<div *ngIf="stage>=3" [@enterAnimation-4-3]="stage" (click)="(3)" class="shape diamond green">
+											<div class="content-in-shape"><span class="title">Follow Up
+												</span></div>
+										</div>
 
-                <mat-step [completed]="false">
-                    <div class="flex-col">
+									</section>
+								</div>
+							</mat-step>
 
-                        <div class="form-main-title">Week 2 -</div>
+							<mat-step [completed]="false">
+								<div class="flex-col">
+									<div class="form-main-title">Week 1 -</div>
+									<li class="form-question">
+										Invite all the contacts on the lead lists to connect</li>
+									<li class="form-question">Mail a hand written card to each of the contacts stating that
+										you would like to meet them and learn more about their business</li>
+									<li class="form-question">Four or five days later send them an Email asking only if they
+										received the card – that’s all</li>
+								</div>
+							</mat-step>
+						</mat-horizontal-stepper>
 
-                        <!-- <li class="form-question">Initiate a 2x/week posting campaign for those who have accepted your connection
+					</div>
+				</mat-step>
+
+				<mat-step [completed]="false">
+					<div class="flex-col">
+
+						<div class="form-main-title">Week 2 -</div>
+
+						<!-- <li class="form-question">Initiate a 2x/week posting campaign for those who have accepted your connection
                             request
                         </li> -->
-                        <li class="form-question">Utilize “Pointe Drive” to add another medium of “Touch”</li>
-                        <li class="form-question">Respond to any Emails received from the inquiry above – only saying something
-                            like “Great, I’ll be in touch soon!” Fight the urge to push for a meeting</li>
+						<li class="form-question">Utilize “Pointe Drive” to add another medium of “Touch”</li>
+						<li class="form-question">Respond to any Emails received from the inquiry above – only saying something
+							like “Great, I’ll be in touch soon!” Fight the urge to push for a meeting</li>
 
 
-                        <section class="shape-container-row" style="justify-content: space-around;">
-                            <div (click)="onClickShape(1)" class="new-shape circle gray">
-                                <div class="content-in-shape"><span class="title">Week Two
-                                    </span></div>
-                            </div>
+						<!-- <section class="shape-container-row" style="justify-content: space-around;"> -->
+						<section class="shape-section">
+							<!-- <div (click)="onClickShape(1)" class="new-shape circle gray"> -->
+							<div *ngIf="stage2>=0" [@enterAnimation-0]="stage2" (click)="onClickShape2(1)" class="shape circle gray">
+								<div class="content-in-shape"><span class="title">Week Two
+									</span></div>
+							</div>
 
-                            <div class="flex-row" style="align-items:center">
-                                <div class="arrow-line"></div>
-                                <div class="arrow right"></div>
-                            </div>
-
-
-                            <div (click)="onClickShape(2)" class="new-shape diamond green">
-                                <div class="content-in-shape">
-                                    <span class="title">Pointe Drive</span></div>
-                            </div>
-
-                            <div class="flex-row" style="align-items:center">
-                                <div class="arrow-line"></div>
-                                <div class="arrow right"></div>
-                            </div>
-
-                            <div (click)="onClickShape(3)" class="new-shape diamond green">
-                                <div class="content-in-shape"><span class="title">Compile and Respond
-                                    </span></div>
-                            </div>
-
-                        </section>
-                    </div>
-                </mat-step>
-            </mat-horizontal-stepper>
+							<!-- <div class="flex-row" style="align-items:center"> -->
+							<div *ngIf="stage2>=1" [@enterAnimation-arrow-1]="stage2" class="arrow-container">
+								<div class="arrow-line"></div>
+								<div class="arrow right"></div>
+							</div>
 
 
-        </div>
-        <div style="flex:1;">
+							<div *ngIf="stage2>=1" [@enterAnimation-1]="stage2" (click)="onClickShape2(2)" class="shape diamond green">
+								<div class="content-in-shape">
+									<span class="title">Pointe Drive</span></div>
+							</div>
 
-            <section class="shape-container">
-                <div [ngClass]="{ 'green': page==1, 'blue': page!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(1)">
-                    <div class="content-in-shape"><span class="title">Cold Calling Averages
-                        </span></div>
-                </div>
+							<!-- <div class="flex-row" style="align-items:center"> -->
+							<div *ngIf="stage2>=2" [@enterAnimation-arrow-2]="stage2" class="arrow-container">
 
-                <div class="arrow up"></div>
-                <div class="arrow-line-vertical"></div>
-                <div class="arrow down"></div>
+								<div class="arrow-line"></div>
+								<div class="arrow right"></div>
+							</div>
 
-                <div [ngClass]="{ 'green': page==2, 'blue': page!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(2)">
-                    <div class="content-in-shape"><span class="title">When to Call</span></div>
-                </div>
+							<div *ngIf="stage2>=2" [@enterAnimation-2]="stage2" (click)="(0)" class="shape diamond green">
+								<div class="content-in-shape"><span class="title">Compile and Respond
+									</span></div>
+							</div>
 
-                <div class="arrow up"></div>
-                <div class="arrow-line-vertical"></div>
-                <div class="arrow down"></div>
-
-                <div [ngClass]="{ 'green': page==3, 'blue': page!=3 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(3)">
-                    <div class="content-in-shape"><span class="title">Week 1</span></div>
-                </div>
-
-                <div class="arrow up"></div>
-                <div class="arrow-line-vertical"></div>
-                <div class="arrow down"></div>
-
-                <div [ngClass]="{ 'green': page==4, 'blue': page!=4 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickPage(4)">
-                    <div class="content-in-shape"><span class="title">Week 2</span></div>
-                </div>
-
-            </section>
-        </div>
-    </div>
+						</section>
+					</div>
+				</mat-step>
+			</mat-horizontal-stepper>
 
 
-    <div class="page-footer>">
-			<button (click)="router.navigateByUrl('/Prospecting/8');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
-			<button (click)="router.navigateByUrl('/Prospecting/6');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+		</div>
+		<div style="flex:1;">
+
+			<section class="shape-container">
+				<div [ngClass]="{ 'green': page==1, 'blue': page!=1 }" class="shape position-unset rectangle round cursor-pointer"
+				 (click)="onClickPage(1)">
+					<div class="content-in-shape"><span class="title">Cold Calling Averages
+						</span></div>
+				</div>
+
+				<div class="arrow up"></div>
+				<div class="arrow-line-vertical"></div>
+				<div class="arrow down"></div>
+
+				<div [ngClass]="{ 'green': page==2, 'blue': page!=2 }" class="shape position-unset rectangle round cursor-pointer"
+				 (click)="onClickPage(2)">
+					<div class="content-in-shape"><span class="title">When to Call</span></div>
+				</div>
+
+				<div class="arrow up"></div>
+				<div class="arrow-line-vertical"></div>
+				<div class="arrow down"></div>
+
+				<div [ngClass]="{ 'green': page==3, 'blue': page!=3 }" class="shape position-unset rectangle round cursor-pointer"
+				 (click)="onClickPage(3)">
+					<div class="content-in-shape"><span class="title">Week 1</span></div>
+				</div>
+
+				<div class="arrow up"></div>
+				<div class="arrow-line-vertical"></div>
+				<div class="arrow down"></div>
+
+				<div [ngClass]="{ 'green': page==4, 'blue': page!=4 }" class="shape position-unset rectangle round cursor-pointer"
+				 (click)="onClickPage(4)">
+					<div class="content-in-shape"><span class="title">Week 2</span></div>
+				</div>
+
+			</section>
+		</div>
+	</div>
+
+
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Prospecting/8');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Prospecting/6');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

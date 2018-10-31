@@ -85,31 +85,37 @@
 
                 <mat-step [completed]="false">
                     <div class="flex-col">
-                        <section class="shape-container-row" style="justify-content: space-around;">
-                            <div (click)="onClickShape(1)" class="new-shape circle gray">
+						<!-- <section class="shape-container-row" style="justify-content: space-around;"> -->
+						<section class="shape-section">
+                            <!-- <div (click)="onClickShape(1)" class="shape circle gray"> -->
+							<div *ngIf="stage>=0" [@enterAnimation-0]="stage" (click)="onClickShape(1)" class="shape circle gray">
                                 <div class="content-in-shape"><span class="title">Identifying regions and/or niches
                                     </span></div>
                             </div>
 
-                            <div class="flex-row" style="align-items:center">
+							<!-- <div class="flex-row" style="align-items:center"> -->
+							<div *ngIf="stage>=1" [@enterAnimation-arrow-1]="stage" class="arrow-container">
                                 <div class="arrow-line"></div>
                                 <div class="arrow right"></div>
                             </div>
 
 
-                            <div (click)="onClickShape(2)" class="new-shape diamond green">
+							<div *ngIf="stage>=1" [@enterAnimation-1]="stage" (click)="onClickShape(2)" class="shape diamond green">
+							<!-- <div (click)="onClickShape(2)" class="shape diamond green"> -->
                                 <div class="content-in-shape">
                                     <span class="title">Target companies
                                     </span></div>
                             </div>
 
-                            <div class="flex-row" style="align-items:center">
+                            <!-- <div class="flex-row" style="align-items:center"> -->
+							<div *ngIf="stage>=2" [@enterAnimation-arrow-2]="stage" class="arrow-container">
                                 <div class="arrow-line"></div>
                                 <div class="arrow right"></div>
                             </div>
 
 
-                            <div (click)="onClickShape(3)" class="new-shape diamond green">
+							<div *ngIf="stage>=2" [@enterAnimation-2]="stage" (click)="(0)" class="shape diamond green">
+							<!-- <div (click)="onClickShape(3)" class="shape diamond green"> -->
                                 <div class="content-in-shape"><span class="title">Establish Relationships
                                     </span></div>
                             </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
 import { Router } from '@angular/router';
-import {  Animation_for_3_Shapes, Animation_for_Arrows, Animation_for_Shapes } from '../../../../data/globals';
+import {  Animation_for_Sentence, Animation_for_3_Shapes, Animation_for_Arrows, Animation_for_Shapes } from '../../../../data/globals';
 
 @Component({
     selector: 'app-prospecting-where-to-begin-subitem',
@@ -10,7 +10,8 @@ import {  Animation_for_3_Shapes, Animation_for_Arrows, Animation_for_Shapes } f
 	, '../../../../common/common_styles.css'],
 	animations: [Animation_for_3_Shapes,
 		Animation_for_Arrows,
-		Animation_for_Shapes
+		Animation_for_Shapes,
+		Animation_for_Sentence
 	]
 })
 export class ProspectingWhereToBeginSubitemComponent implements OnInit {

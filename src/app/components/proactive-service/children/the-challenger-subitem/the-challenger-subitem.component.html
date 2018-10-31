@@ -1,46 +1,72 @@
 <div class="page-container">
-    <div class="page-title">
-        The Challenger
-    </div>
+	<div class="page-title">
+		The Challenger
+	</div>
 
 
 
-    <div class="page-content">
+	<div class="page-content">
 
-        <section class="shape-container-row" style="justify-content: space-around;">
-            <div (click)="onClickShape(1)" class="new-shape circle gray">
-                <div class="content-in-shape"><span class="title">Different view</span></div>
-            </div>
+		<!-- <section class="shape-container-row" style="justify-content: space-around;"> -->
+		<section class="shape-section">
+			<!-- <div (click)="onClickShape(1)" class="new-shape circle gray"> -->
+			<div *ngIf="stage>=0" [@enterAnimation-4-0]="stage" (click)="onClickShape(1)" class="shape circle gray">
+				<div class="content-in-shape"><span class="title">Different view</span></div>
+			</div>
 
-            <span class="new-formula">></span>
+			<span *ngIf="stage>=1" [@enterAnimation-formula-4-0]="stage" class="new-formula">></span>
 
-            <div (click)="onClickShape(2)" class="new-shape diamond green">
-                <div class="content-in-shape">
-                    <span class="title">Understands the customer’s business</span></div>
-            </div>
+			<!-- <div (click)="onClickShape(2)" class="new-shape diamond green"> -->
+			<div *ngIf="stage>=1" [@enterAnimation-4-1]="stage" (click)="onClickShape(2)" class="shape diamond green">
 
-            <span class="new-formula">></span>
+				<div class="content-in-shape">
+					<span class="title">Understands the customer’s business</span></div>
+			</div>
 
-            <div (click)="onClickShape(3)" class="new-shape diamond green">
-                <div class="content-in-shape"><span class="title">Loves to debate</span></div>
-            </div>
-
-            <span class="new-formula">></span>
-
-            <div (click)="(0)" class="new-shape diamond green">
-                <div class="content-in-shape"><span class="title">Pushes the customer</span></div>
-            </div>
-        </section>
-
-        <li class="form-question emphasis">Always has a different view of the world</li>
-        <li class="form-question emphasis">Understands the customer’s business</li>
-        <li class="form-question emphasis">Loves to debate</li>
-        <li class="form-question emphasis">Pushes the customer</li>
+			<span *ngIf="stage>=2" [@enterAnimation-formula-4-1]="stage" class="new-formula">></span>
 
 
-    </div>
-    <div class="page-footer>">
-			<button (click)="router.navigateByUrl('/Proactive%20Service/3');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
-			<button (click)="router.navigateByUrl('/Proactive%20Service/1');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+			<!-- <div (click)="onClickShape(3)" class="new-shape diamond green"> -->
+			<div *ngIf="stage>=2" [@enterAnimation-4-2]="stage" (click)="onClickShape(3)" class="shape diamond green">
+
+				<div class="content-in-shape"><span class="title">Loves to debate</span></div>
+			</div>
+
+			<span *ngIf="stage>=3" [@enterAnimation-formula-4-2]="stage" class="new-formula">></span>
+
+
+			<!-- <div (click)="(0)" class="new-shape diamond green"> -->
+			<div *ngIf="stage>=3" [@enterAnimation-4-3]="stage" (click)="(3)" class="shape diamond green">
+
+				<div class="content-in-shape"><span class="title">Pushes the customer</span></div>
+			</div>
+		</section>
+
+		<div [@enterSentenceAnimation]="stage>=0">
+
+			<li class="form-question emphasis">Always has a different view of the world</li>
+		</div>
+
+		<div [@enterSentenceAnimation]="stage>=1">
+
+			<li class="form-question emphasis">Understands the customer’s business</li>
+		</div>
+		<div [@enterSentenceAnimation]="stage>=2">
+
+			<li class="form-question emphasis">Loves to debate</li>
+		</div>
+		<div [@enterSentenceAnimation]="stage>=3">
+
+			<li class="form-question emphasis">Pushes the customer</li>
+		</div>
+
+
+
+	</div>
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Proactive%20Service/3');" mat-button color="primary" style="float:right;"
+		 href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Proactive%20Service/1');" mat-button color="primary" style="float:right;"
+		 href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>
