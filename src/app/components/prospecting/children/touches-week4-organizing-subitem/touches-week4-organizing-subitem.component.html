@@ -50,16 +50,28 @@
 
 		<div class="form-main-title">Week 4 -</div>
 
-		<li class="form-question">Categorize all the leads from these campaigns as <span class="emphasis">“A”</span>, those
+		<li [@enterSentenceAnimation]="stageSub1_1>=1" class="form-question">Categorize all the leads from these campaigns as <span class="emphasis">“A”</span>, those
 			who have engaged and with whom
 			you’ve set a meeting</li>
-		<li class="form-question"><span class="emphasis">“B”</span> potential <span class="emphasis">“A”</span> leads that
+		<li [@enterSentenceAnimation]="stageSub1_1>=2" class="form-question"><span class="emphasis">“B”</span> potential <span class="emphasis">“A”</span> leads that
 			have liked a post, responded to an email or Inmail, etc. but
 			haven’t agreed to a meeting</li>
-		<li class="form-question"><span class="emphasis">“C”</span> those from whom you haven’t seen any activity</li>
-		<li class="form-question">File your <span class="emphasis">“B”</span> and <span class="emphasis">“C”</span> contacts
+		<li [@enterSentenceAnimation]="stageSub1_1>=3" class="form-question"><span class="emphasis">“C”</span> those from whom you haven’t seen any activity</li>
+		<li [@enterSentenceAnimation]="stageSub1_1>=4" class="form-question">File your <span class="emphasis">“B”</span> and <span class="emphasis">“C”</span> contacts
 			to use again later in another campaign</li>
 
+
+		<mat-horizontal-stepper #stepperSub1_1 (selectionChange)="selectionChangeSub1_1($event)" class="sentence-stepper">
+			<mat-step [completed]="false">
+			</mat-step>
+			<mat-step [completed]="false">
+			</mat-step>
+			<mat-step [completed]="false">
+			</mat-step>
+			<mat-step [completed]="false">
+			</mat-step>
+		</mat-horizontal-stepper>
+		
 	</div>
 
 	<div class="page-footer>">

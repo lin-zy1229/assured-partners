@@ -17,7 +17,9 @@ import { Animation_for_4_Shapes, Animation_for_Sentence, Animation_for_3_Shapes,
 })
 export class TheFiveCategoriesOfSalesPeopleSubitemComponent implements OnInit {
 
-    stage: number = 0;
+	stage: number = 0;
+	stageSub1_1: number = 1;
+	
     constructor(public router: Router) { }
 
     ngOnInit() {
@@ -37,6 +39,9 @@ export class TheFiveCategoriesOfSalesPeopleSubitemComponent implements OnInit {
                 this.stage = _stage - 1;
             }
         }
-    }
+	}
+	selectionChangeSub1_1(event) {
+		this.stageSub1_1 = event.selectedIndex + 1;
+	}
 
 }

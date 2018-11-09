@@ -11,10 +11,28 @@ mat-horizontal-stepper.mat-stepper-horizontal {
     order: 0;
 }
 // remove stepper label
-::ng-deep app-using-sales-navigator-subitem mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
-    display: none;
-}
+// ::ng-deep app-using-sales-navigator-subitem mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
+//     display: none;
+// }
+
 // remove only last header line
-::ng-deep app-using-sales-navigator-subitem div.mat-horizontal-stepper-header-container div.mat-stepper-horizontal-line:nth-last-child(2) {
-    display: none;
+// ::ng-deep app-using-sales-navigator-subitem div.mat-horizontal-stepper-header-container div.mat-stepper-horizontal-line:nth-last-child(2) {
+//     display: none;
+// }
+
+//remove stepper label
+::ng-deep app-prospecting app-using-sales-navigator-subitem mat-horizontal-stepper#stepperSub1 div.mat-horizontal-content-container .mat-horizontal-stepper-content div div div mat-horizontal-stepper div.mat-horizontal-stepper-header-container mat-step-header {
+	//  display: none;
+}
+::ng-deep app-prospecting>div>div>div>app-using-sales-navigator-subitem>div>div>mat-horizontal-stepper>div>.mat-horizontal-stepper-content>div>div>div>mat-horizontal-stepper>div>mat-step-header {
+	display: none;
+}
+
+//remove page stepper label
+// ::ng-deep mat-horizontal-stepper .mat-horizontal-content-container .mat-horizontal-stepper-content mat-horizontal-stepper div.mat-horizontal-stepper-header-container {
+	// display: none;
+// }
+
+::ng-deep app-prospecting app-using-sales-navigator-subitem mat-horizontal-stepper div.mat-horizontal-content-container .mat-horizontal-stepper-content mat-horizontal-stepper.sentence-stepper div.mat-horizontal-stepper-header-container {
+	// display: flex;
 }

@@ -10,11 +10,15 @@ mat-horizontal-stepper.mat-stepper-horizontal {
 ::ng-deep app-prospecting-process-to-follow-subitem div.mat-horizontal-content-container{
     order: 0;
 }
-// remove stepper label
-::ng-deep app-prospecting-process-to-follow-subitem mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
-    display: none;
-}
-// remove only last header line
-::ng-deep app-prospecting-process-to-follow-subitem div.mat-horizontal-stepper-header-container div.mat-stepper-horizontal-line:nth-last-child(2) {
-    display: none;
+// // remove stepper label
+// ::ng-deep app-prospecting-process-to-follow-subitem mat-horizontal-stepper>div.mat-horizontal-stepper-header-container>mat-step-header>div.mat-step-label {
+//     display: none;
+// }
+// // remove only last header line
+// ::ng-deep app-prospecting-process-to-follow-subitem div.mat-horizontal-stepper-header-container div.mat-stepper-horizontal-line:nth-last-child(2) {
+//     display: none;
+// }
+
+::ng-deep app-prospecting>div>div>div>app-prospecting-process-to-follow-subitem>div>div>mat-horizontal-stepper>div>.mat-horizontal-stepper-content>div>div>div>mat-horizontal-stepper>div>mat-step-header {
+	// display: none;
 }

@@ -36,50 +36,54 @@
 		</section>
 
 
-		<div class="form-question">1. Determine a Proactive Service</div>
-		<div class="form-question">2. Place an action verb first (ex. Renewal Forecast becomes Forecasting Renewals or Loss
+		<div [@enterSentenceAnimation]="stage>=0" class="form-question">1. Determine a Proactive Service</div>
+
+		<div [@enterSentenceAnimation]="stage>=1" class="form-question">2. Place an action verb first (ex. Renewal Forecast
+			becomes Forecasting Renewals or Loss
 			Control becomes Controlling Losses)</div>
-		<div class="form-question">3. Develop the process</div>
-		<li class="form-description indent">What is needed to perform the service - almost always something tangible -
-			reports,
-			loss runs, policies, benefit plan designs, etc.</li>
-		<li class="form-description indent">What is done with the information obtained - analysis, review, audit, etc.</li>
-		<li class="form-description indent">Based on the information derived from step two, what is the plan of action,
-			specifically,
-			to correct the issue - negotiate with the underwrite, find better markets, develop a strategy, etc.</li>
-		<li class="form-description indent">Put the information into a step by step format
-			<ul style="list-style: none;">
-				<li class="form-description emphasis indent">A. Gather all the policies</li>
-				<li class="form-description emphasis indent">B. Review them for coverage gaps</li>
-				<li class="form-description emphasis indent">C. Contact the carrier to have the gaps filled and develop new
-					pricing models</li>
-			</ul>
-		</li>
 
-		<li class="form-description indent">Identify the strongest step - where does the producer's expertise shine through
-			- where's the MEAT of what we do - it is almost always step two or three</li>
-		<li class="form-description indent">Break that step into the process that makes it work
-			<ul style="list-style: none;">
-				<li class="form-description emphasis indent">A. Examine the exclusions</li>
-				<li class="form-description emphasis indent">B. Identify which exclusions need to be amended</li>
-				<li class="form-description emphasis indent">C. Market the coverage to find the best deal</li>
-			</ul>
-		</li>
+		<div [@enterSentenceAnimation]="stage>=2">
+			<div class="form-question">3. Develop the process</div>
+			<li class="form-description indent">What is needed to perform the service - almost always something tangible -
+				reports,
+				loss runs, policies, benefit plan designs, etc.</li>
+			<li class="form-description indent">What is done with the information obtained - analysis, review, audit, etc.</li>
+			<li class="form-description indent">Based on the information derived from step two, what is the plan of action,
+				specifically,
+				to correct the issue - negotiate with the underwrite, find better markets, develop a strategy, etc.</li>
+			<li class="form-description indent">Put the information into a step by step format
+				<ul style="list-style: none;">
+					<li class="form-description emphasis indent">A. Gather all the policies</li>
+					<li class="form-description emphasis indent">B. Review them for coverage gaps</li>
+					<li class="form-description emphasis indent">C. Contact the carrier to have the gaps filled and develop new
+						pricing models</li>
+				</ul>
+			</li>
 
-		<li class="form-description indent">You now have written two wedges:
-			<ul style="list-style: none;">
-				<li class="form-description emphasis indent">A. When your broker came out to evaluate your coverages and
-					they got out your policies, identified any areas where you needed more or less coverage and then developed
-					a marketing strategy to address these issues, so you didn't have to worry about paying for coverage you
-					don't need, or not having the coverage you do, how did that go?</li>
-				<li class="form-description emphasis indent">B. When your broker came out to evaluate your coverages and
-					they got our a list of your exclusions, identified any areas where you needed coverage or didn't need
-					coverage, then went to the market to determine your best deal, so you didn't have to worry about not
-					having coverage you need or paying extra for coverage you didn't need, were you satisfied with how they
-					did that?</li>
-			</ul>
-		</li>
+			<li class="form-description indent">Identify the strongest step - where does the producer's expertise shine through
+				- where's the MEAT of what we do - it is almost always step two or three</li>
+			<li class="form-description indent">Break that step into the process that makes it work
+				<ul style="list-style: none;">
+					<li class="form-description emphasis indent">A. Examine the exclusions</li>
+					<li class="form-description emphasis indent">B. Identify which exclusions need to be amended</li>
+					<li class="form-description emphasis indent">C. Market the coverage to find the best deal</li>
+				</ul>
+			</li>
 
+			<li class="form-description indent">You now have written two wedges:
+				<ul style="list-style: none;">
+					<li class="form-description emphasis indent">A. When your broker came out to evaluate your coverages and
+						they got out your policies, identified any areas where you needed more or less coverage and then developed
+						a marketing strategy to address these issues, so you didn't have to worry about paying for coverage you
+						don't need, or not having the coverage you do, how did that go?</li>
+					<li class="form-description emphasis indent">B. When your broker came out to evaluate your coverages and
+						they got our a list of your exclusions, identified any areas where you needed coverage or didn't need
+						coverage, then went to the market to determine your best deal, so you didn't have to worry about not
+						having coverage you need or paying extra for coverage you didn't need, were you satisfied with how they
+						did that?</li>
+				</ul>
+			</li>
+		</div>
 
 
 	</div>

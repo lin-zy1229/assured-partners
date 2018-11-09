@@ -1,95 +1,112 @@
 <div class="page-container">
-    <div class="page-title">
-        Rules of Prospect Engagement
-    </div>
+	<div class="page-title">
+		Rules of Prospect Engagement
+	</div>
 
-    <div class="page-content">
-
-
-        <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
-            <mat-step [completed]="false">
-                <div class="flex-col">
-                    <div>
-                        <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
-                    </div>
-
-                    <div class="form-title">
-                        Rules of Prospect Engagement
-                    </div>
-                    <div class="form-question">1. Put yourself in your prospect’s shoes</div>
-                    <div class="form-question">2. Speak English</div>
-                    <div class="form-question">3. Know your processes</div>
-                    <div class="form-question">4. Be ready to walk away</div>
-                    <div class="form-question">5. Give the prospect a reason to take you seriously</div>
-                    <div class="form-question">6. Don’t talk about yourself or your company – this is about him or her</div>
-
-                </div>
+	<div class="page-content">
 
 
-            </mat-step>
+		<mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+			<mat-step [completed]="false">
+				<div class="flex-col">
+					<div>
+						<button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					</div>
 
-            <mat-step [completed]="false">
-                <div class="flex-col">
+					<div class="form-title">
+						Rules of Prospect Engagement
+					</div>
+					<div [@enterSentenceAnimation]="stageSub1_1>=1" class="form-question">1. Put yourself in your prospect’s shoes</div>
+					<div [@enterSentenceAnimation]="stageSub1_1>=2" class="form-question">2. Speak English</div>
+					<div [@enterSentenceAnimation]="stageSub1_1>=3" class="form-question">3. Know your processes</div>
+					<div [@enterSentenceAnimation]="stageSub1_1>=4" class="form-question">4. Be ready to walk away</div>
+					<div [@enterSentenceAnimation]="stageSub1_1>=5" class="form-question">5. Give the prospect a reason to take you seriously</div>
+					<div [@enterSentenceAnimation]="stageSub1_1>=6" class="form-question">6. Don’t talk about yourself or your company – this is about him or her</div>
 
-                    <div>
-                        <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
-                    </div>
+				</div>
+				<mat-horizontal-stepper #stepperSub1_1 (selectionChange)="selectionChangeSub1_1($event)" class="sentence-stepper">
+					<mat-step [completed]="false">
+					</mat-step>
+					<mat-step [completed]="false">
+					</mat-step>
+					<mat-step [completed]="false">
+					</mat-step>
+					<mat-step [completed]="false">
+					</mat-step>
+					<mat-step [completed]="false">
+					</mat-step>
+					<mat-step [completed]="false">
+					</mat-step>
+				</mat-horizontal-stepper>
 
-                    <div class="form-title">
-                        Randy Schwantz and The Five Did Theys . . .
-                    </div>
-                    <div class="form-question">When Randy Schwantz wrote “The Wedge” he determined five questions that needed
-                        a yes answer before the prospect was qualified. They are:</div>
+			</mat-step>
 
-                    <li class="form-description emphasis indent">Did they tell you what the competition wasn’t/isn’t doing?</li>
-                    <li class="form-description emphasis indent">Did they tell you that was a problem?</li>
-                    <li class="form-description emphasis indent">Did they tell you what they wanted?</li>
-                    <li class="form-description emphasis indent">Did they invite you to come back?</li>
-                    <li class="form-description emphasis indent">Did they tell you they could fire their current agent?</li>
+			<mat-step [completed]="false">
+				<div class="flex-col">
 
-                </div>
-            </mat-step>
+					<div>
+						<button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					</div>
 
-            <mat-step [completed]="false">
-                <div class="flex-col">
+					<div class="form-title">
+						Randy Schwantz and The Five Did Theys . . .
+					</div>
+					<div class="form-question">When Randy Schwantz wrote “The Wedge” he determined five questions that needed
+						a yes answer before the prospect was qualified. They are:</div>
 
-                    <div class="flex-col" style="align-items: center">
-                        <div class="chat-box-green form-question" style="padding:2em; line-height: 2em; letter-spacing:.05em;">
-                            Telling your story will come naturally, don't force it
-                        </div>
-                        <div class="arrow chat-arrow-green down"></div>
+					<li class="form-description emphasis indent">Did they tell you what the competition wasn’t/isn’t doing?</li>
+					<li class="form-description emphasis indent">Did they tell you that was a problem?</li>
+					<li class="form-description emphasis indent">Did they tell you what they wanted?</li>
+					<li class="form-description emphasis indent">Did they invite you to come back?</li>
+					<li class="form-description emphasis indent">Did they tell you they could fire their current agent?</li>
 
+				</div>
+			</mat-step>
 
-                        <img src="assets/proactive-service/4-1.png">
-                    </div>
+			<mat-step [completed]="false">
+				<div class="flex-col">
 
-                    <p></p>
-                    <section class="shape-container-row" style="justify-content: center">
-                        <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
-                            <div class="content-in-shape"><span class="title">Rules of Prospect Engagement</span></div>
-                        </div>
-
-                        <div class="arrow left"></div>
-                        <div class="arrow-line"></div>
-                        <div class="arrow right"></div>
-
-                        <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
-                            <div class="content-in-shape"><span class="title">Randy Schwantz and The Five Did Theys...</span></div>
-                        </div>
-
-
-                    </section>
-                </div>
-            </mat-step>
+					<div class="flex-col" style="align-items: center">
+						<div class="chat-box-green form-question" style="padding:2em; line-height: 2em; letter-spacing:.05em;">
+							Telling your story will come naturally, don't force it
+						</div>
+						<div class="arrow chat-arrow-green down"></div>
 
 
-        </mat-horizontal-stepper>
+						<img src="assets/proactive-service/4-1.png">
+					</div>
+
+					<p></p>
+					<section class="shape-container-row" style="justify-content: center">
+						<div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer"
+						 (click)="onClickShape(1)">
+							<div class="content-in-shape"><span class="title">Rules of Prospect Engagement</span></div>
+						</div>
+
+						<div class="arrow left"></div>
+						<div class="arrow-line"></div>
+						<div class="arrow right"></div>
+
+						<div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer"
+						 (click)="onClickShape(2)">
+							<div class="content-in-shape"><span class="title">Randy Schwantz and The Five Did Theys...</span></div>
+						</div>
 
 
-    </div>
+					</section>
+				</div>
+			</mat-step>
 
-    <div class="page-footer>">
-			<button (click)="router.navigateByUrl('/Proactive%20Service/4');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
-			<button (click)="router.navigateByUrl('/Proactive%20Service/2');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+
+		</mat-horizontal-stepper>
+
+
+	</div>
+
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Proactive%20Service/4');" mat-button color="primary" style="float:right;"
+		 href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Proactive%20Service/2');" mat-button color="primary" style="float:right;"
+		 href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 </div>

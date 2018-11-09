@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
 import { Router } from '@angular/router';
-import {  Animation_for_Sentence, Animation_for_3_Shapes, Animation_for_Arrows, Animation_for_Shapes } from '../../../../data/globals';
+import { Animation_for_Sentence, Animation_for_3_Shapes, Animation_for_Arrows, Animation_for_Shapes } from '../../../../data/globals';
 
 @Component({
 	selector: 'app-prospecting-process-to-follow-subitem',
@@ -21,6 +21,9 @@ export class ProspectingProcessToFollowSubitemComponent implements OnInit {
 	appMainitemName: string = "app-prospecting";
 	appSubitemName: string = "app-prospecting-process-to-follow-subitem";
 	sectionCount: number = 2;
+
+	stageSub1_1: number = 1;
+	stageSub1_2: number = 1;
 
 	constructor(public router: Router) {
 
@@ -58,10 +61,18 @@ export class ProspectingProcessToFollowSubitemComponent implements OnInit {
 				this.stage = _stage - 1;
 			}
 		}
-    }
+	}
 	selectionChange(event) {
 		this.page = event.selectedIndex + 1;
 	}
+
+	selectionChangeSub1_1(event) {
+		this.stageSub1_1 = event.selectedIndex + 1;
+	}
+	selectionChangeSub1_2(event) {
+		this.stageSub1_2 = event.selectedIndex + 1;
+	}
+
 	moveStepper(index) {
 		this.stepper.selectedIndex = index;
 

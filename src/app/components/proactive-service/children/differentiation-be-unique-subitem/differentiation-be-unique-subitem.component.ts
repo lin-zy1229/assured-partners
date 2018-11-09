@@ -50,7 +50,7 @@ export class DifferentiationBeUniqueSubitemComponent implements OnInit {
         // } else {
         //     element.style.display = "flex";
         // }
-        // element.style.display = "none";
+        element.style.display = "none";
     }
 
 }

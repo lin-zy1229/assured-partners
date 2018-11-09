@@ -22,6 +22,9 @@ export class TouchesBeginningYourRelationshipCampaignSubitemComponent implements
 	appSubitemName: string = "app-touches-beginning-your-relationship-campaign-subitem";
 	sectionCount: number = 2;
 
+	stageSub1_1: number = 1;
+	stageSub1_2: number = 1;
+
 	constructor(public router: Router) {
 	}
 
@@ -60,6 +63,14 @@ export class TouchesBeginningYourRelationshipCampaignSubitemComponent implements
 	}
 	selectionChange(event) {
 		this.page = event.selectedIndex + 1;
+	}
+
+	selectionChangeSub1_1(event) {
+		this.stageSub1_1 = event.selectedIndex + 1;
+	}
+
+	selectionChangeSub1_2(event) {
+		this.stageSub1_2 = event.selectedIndex + 1;
 	}
 	moveStepper(index) {
 		this.stepper.selectedIndex = index;

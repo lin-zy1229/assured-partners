@@ -75,9 +75,9 @@ export const SubMenusProactiveService: Menu[] = [
 export const SubMenusProspecting: Menu[] = [
     { id: 1, title: 'Define your Ideal Prospect', sub_title: '' },
     { id: 2, title: 'Sales Navigator', sub_title: '' },
-    { id: 3, title: 'Search Spotlights', sub_title: '' },
-    { id: 4, title: 'Multi - Threading', sub_title: '' },
-    { id: 5, title: 'Why post on LinkedIn?', sub_title: '' },
+    // { id: 3, title: 'Search Spotlights', sub_title: '' },
+    // { id: 4, title: 'Multi - Threading', sub_title: '' },
+    // { id: 5, title: 'Why post on LinkedIn?', sub_title: '' },
     { id: 6, title: 'Prospecting - A Process to Follow', sub_title: '' },
     { id: 7, title: 'Touches - Week 1 & 2 - Beginning Your Relationship Campaign', sub_title: '' },
     { id: 8, title: 'Touches - Week 3 - Getting a Meeting', sub_title: '' },

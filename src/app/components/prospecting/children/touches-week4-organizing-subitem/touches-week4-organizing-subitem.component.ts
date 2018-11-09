@@ -18,9 +18,15 @@ import { Animation_for_4_Shapes, Animation_for_Sentence, Animation_for_3_Shapes,
 export class TouchesWeek4OrganizingSubitemComponent implements OnInit {
 
 	stage: number = 0;
+	stageSub1_1: number = 1;
+
 	constructor(public router: Router) { }
 
 	ngOnInit() {
+	}
+
+	selectionChangeSub1_1(event) {
+		this.stageSub1_1 = event.selectedIndex + 1;
 	}
 
 	onClickShape(_stage) {

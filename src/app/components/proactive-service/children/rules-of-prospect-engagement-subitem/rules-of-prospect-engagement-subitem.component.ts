@@ -1,12 +1,20 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material';
 import { Router } from '@angular/router';
+import { Animation_for_4_Shapes, Animation_for_Sentence, Animation_for_3_Shapes, Animation_for_Arrows, Animation_for_Shapes } from '../../../../data/globals';
 
 @Component({
     selector: 'app-rules-of-prospect-engagement-subitem',
     templateUrl: './rules-of-prospect-engagement-subitem.component.html',
     styleUrls: ['./rules-of-prospect-engagement-subitem.component.scss'
-        , '../../../../common/common_styles.css']
+        , '../../../../common/common_styles.css'],
+		animations: [
+			// Animation_for_3_Shapes,
+			Animation_for_Arrows,
+			Animation_for_Shapes,
+			Animation_for_Sentence,
+			Animation_for_4_Shapes
+		]
 })
 export class RulesOfProspectEngagementSubitemComponent implements OnInit {
 
@@ -14,6 +22,9 @@ export class RulesOfProspectEngagementSubitemComponent implements OnInit {
     appMainitemName: string = "app-proactive-service";
     appSubitemName: string = "app-rules-of-prospect-engagement-subitem";
 
+    stageSub1_1: number = 1;
+
+	
     constructor(public router:Router) {
     }
 
@@ -34,7 +45,10 @@ export class RulesOfProspectEngagementSubitemComponent implements OnInit {
     }
     selectionChange(event) {
         this.stage = event.selectedIndex + 1;
-    }
+	}
+	selectionChangeSub1_1(event) {
+		this.stageSub1_1 = event.selectedIndex + 1;
+	}
     moveStepper(index) {
         this.stepper.selectedIndex = index;
 

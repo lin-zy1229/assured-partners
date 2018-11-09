@@ -45,12 +45,12 @@ export class PriceCoverageServiceSubitemComponent implements OnInit {
         let selectorQuery = `${this.appMainitemName} ${this.appSubitemName} mat-horizontal-stepper div.mat-horizontal-stepper-header-container`;
         let element = <HTMLElement>document.querySelectorAll(selectorQuery)[0];
 
+        element.style.display = "none";
         // if (index == 2) {
         //     element.style.display = "none";
         // } else {
         //     element.style.display = "flex";
         // }
-        // element.style.display = "none";
     }
 
 }

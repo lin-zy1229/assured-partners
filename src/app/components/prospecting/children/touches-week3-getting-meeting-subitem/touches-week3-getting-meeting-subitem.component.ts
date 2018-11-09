@@ -22,6 +22,10 @@ export class TouchesWeek3GettingMeetingSubitemComponent implements OnInit {
 	appSubitemName: string = "app-touches-week3-getting-meeting-subitem";
 	sectionCount: number = 2;
 
+	stageSub1_1: number = 1;
+
+	stageSub1_2: number = 1;
+	
 	constructor(public router: Router) {
 	}
 
@@ -61,6 +65,15 @@ export class TouchesWeek3GettingMeetingSubitemComponent implements OnInit {
 	selectionChange(event) {
 		this.page = event.selectedIndex + 1;
 	}
+
+	selectionChangeSub1_1(event) {
+		this.stageSub1_1 = event.selectedIndex + 1;
+	}
+	selectionChangeSub1_2(event) {
+		this.stageSub1_2 = event.selectedIndex + 1;
+	}
+
+
 	moveStepper(index) {
 		this.stepper.selectedIndex = index;
 

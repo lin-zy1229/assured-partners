@@ -15,17 +15,28 @@
 
 						<div class="form-main-title">Week 3 -</div>
 
-						<li class="form-question">If you have had email responses, click throughs on your PointeDrive link or any other
+						<mat-horizontal-stepper #stepperSub1_1 (selectionChange)="selectionChangeSub1_1($event)" class="sentence-stepper">
+							<mat-step [completed]="false">
+							</mat-step>
+							<mat-step [completed]="false">
+							</mat-step>
+							<mat-step [completed]="false">
+							</mat-step>
+							<mat-step [completed]="false">
+							</mat-step>
+						</mat-horizontal-stepper>
+
+						<li [@enterSentenceAnimation]="stageSub1_1>=1" class="form-question">If you have had email responses, click throughs on your PointeDrive link or any other
 							interaction from your campaign, note those showing interest by placing them in category <span class="emphasis">“A”</span></li>
-						<li class="form-question">Begin to utilize your <span class="emphasis">“Inmail”</span> allotment
+						<li [@enterSentenceAnimation]="stageSub1_1>=2" class="form-question">Begin to utilize your <span class="emphasis">“Inmail”</span> allotment
 							to reach out to those you have categorized as “Top Contacts” opportunities – you get 30 per month,
 							use them judiciously and wisely – if you get a response, that Inmail does not count towards your
 							30
 							<!-- (see the sidebar at the right for Inmail direction) -->
 						</li>
-						<li class="form-question">Email the contacts who have not made your <span class="emphasis">“Top Contacts”</span>
+						<li [@enterSentenceAnimation]="stageSub1_1>=3" class="form-question">Email the contacts who have not made your <span class="emphasis">“Top Contacts”</span>
 							list with the same content as used in your Inmails</li>
-						<li class="form-question">Follow up your Inmails and Emails with phone calls and face to face cold
+						<li [@enterSentenceAnimation]="stageSub1_1>=4" class="form-question">Follow up your Inmails and Emails with phone calls and face to face cold
 							calls
 							<!-- – see page 13. -->
 						</li>
@@ -44,50 +55,76 @@
 
 						<div class="form-main-title">Inmail Priorities</div>
 
-						<div class="form-title">1. Personalize</div>
-						<li class="form-question emphasis indent">Reference commonalities
-						</li>
 
-						<div class="form-title">2. Build a Conversation</div>
-						<div class="flex-row">
-							<li class="form-question emphasis indent" style="margin-right:1em;">Ask a question – </li>
+						<mat-horizontal-stepper #stepperSub1_2 (selectionChange)="selectionChangeSub1_2($event)" class="sentence-stepper">
+							<mat-step [completed]="false">
+							</mat-step>
+							<mat-step [completed]="false">
+							</mat-step>
+							<mat-step [completed]="false">
+							</mat-step>
+							<mat-step [completed]="false">
+							</mat-step>
+							<mat-step [completed]="false">
+							</mat-step>
+							<mat-step [completed]="false">
+							</mat-step>
+						</mat-horizontal-stepper>
+						<div [@enterSentenceAnimation]="stageSub1_2>=1">
+							<div [@enterSentenceAnimation]="stageSub1_2>=1" class="form-title">1. Personalize</div>
 
+							<li class="form-question emphasis indent">Reference commonalities</li>
+						</div>
+
+						<div [@enterSentenceAnimation]="stageSub1_2>=2">
+							<div [@enterSentenceAnimation]="stageSub1_2>=2" class="form-title">2. Build a Conversation</div>
 							<div class="flex-row">
-								<div class="flex-col" style="align-items: center">
-									<img src="assets/mapping-it-out/7-2.png">
-									<div>You</div>
-								</div>
+								<li class="form-question emphasis indent" style="margin-right:1em;">Ask a question – </li>
 
-								<div class="flex-col">
-									<div class="flex-row">
-										<div class="arrow chat-arrow left" style="margin-top:1em;">
+								<div class="flex-row">
+									<div class="flex-col" style="align-items: center">
+										<img src="assets/mapping-it-out/7-2.png">
+										<div>You</div>
+									</div>
 
-										</div>
-										<div class="chat-box">
-											<span>“What is your opinion on this?”</span>
+									<div class="flex-col">
+										<div class="flex-row">
+											<div class="arrow chat-arrow left" style="margin-top:1em;">
+
+											</div>
+											<div class="chat-box">
+												<span>“What is your opinion on this?”</span>
+											</div>
 										</div>
 									</div>
-								</div>
 
+								</div>
 							</div>
 						</div>
 
+						<div [@enterSentenceAnimation]="stageSub1_2>=3">
+							<div [@enterSentenceAnimation]="stageSub1_2>=3" class="form-title">3. Keep it Short</div>
+							<li class="form-question emphasis indent">Really Short, one or two sentences
+							</li>
+						</div>
 
-						<div class="form-title">3. Keep it Short</div>
-						<li class="form-question emphasis indent">Really Short, one or two sentences
-						</li>
+						<div [@enterSentenceAnimation]="stageSub1_2>=4">
+							<div [@enterSentenceAnimation]="stageSub1_2>=4" class="form-title">4. Subject Lines Count</div>
+							<li class="form-question emphasis indent">Social & Content Related</li>
+						</div>
 
-						<div class="form-title">4. Subject Lines Count</div>
-						<li class="form-question emphasis indent">Social & Content Related</li>
-
-						<div class="form-title">5. Call to Action</div>
-						<li class="form-question emphasis indent">How are we going to move forward? Meeting, call, etc.
-						</li>
+						<div [@enterSentenceAnimation]="stageSub1_2>=5">
+							<div [@enterSentenceAnimation]="stageSub1_2>=5" class="form-title">5. Call to Action</div>
+							<li class="form-question emphasis indent">How are we going to move forward? Meeting, call, etc.
+							</li>
+						</div>
 
 
 
 
 					</div>
+
+
 				</mat-step>
 
 				<mat-step [completed]="false">

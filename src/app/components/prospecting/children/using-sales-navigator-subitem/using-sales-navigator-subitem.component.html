@@ -1,151 +1,612 @@
 <div class="page-container">
-    <div class="page-title">
-        Using Sales Navigator to Develop Lead Lists That Make Sense
-    </div>
+	<div class="page-title">
+		Using Sales Navigator to Develop Lead Lists That Make Sense
+	</div>
 
-    <div class="page-content-side">
+	<div class="page-content-side">
 
-        <div style="flex:8;">
-            <mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
-                <mat-step [completed]="false">
-                    <div class="flex-col">
-                        <div>
-                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
-                        </div>
+		<!-- <div style="flex:8;"> -->
+		<mat-horizontal-stepper #stepper (selectionChange)="selectionChange($event)">
+			<mat-step [completed]="false">
+				<div class="flex-col">
+					<div>
+						<button mat-button color="primary" (click)="onClickShape(4)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					</div>
 
-                        <div class="form-main-title">
-                            Search Options on <img src="assets/prospecting/3-1.png"> SALES NAVIGATOR
-                        </div>
-                        <div class="form-title">
-                            Advanced Search with Lead Builder
-                        </div>
-                        <li class="form-question emphasis indent">
-                            Build your lead list with advanced search filters including seniority, function, company size, etc.
-                        </li>
+					<!-- <div class="form-main-title">
+							Search Options on <img src="assets/prospecting/3-1.png"> SALES NAVIGATOR
+						</div>
+						<div class="form-title">
+							Advanced Search with Lead Builder
+						</div>
+						<li class="form-question emphasis indent">
+							Build your lead list with advanced search filters including seniority, function, company size, etc.
+						</li>
 
-                        <div class="form-title">
-                            People Search
-                        </div>
-                        <li class="form-question emphasis indent">
-                            With over 500m up-to-date professional profiles, you can find the people you need
-                        </li>
+						<div class="form-title">
+							People Search
+						</div>
+						<li class="form-question emphasis indent">
+							With over 500m up-to-date professional profiles, you can find the people you need
+						</li>
 
-                        <div class="form-title">
-                            Company Search
-                        </div>
-                        <li class="form-question emphasis indent">
-                            With over 2m company pages on LinkedIn.com, you can find the companies you want to target
-                        </li>
+						<div class="form-title">
+							Company Search
+						</div>
+						<li class="form-question emphasis indent">
+							With over 2m company pages on LinkedIn.com, you can find the companies you want to target
+						</li>
 
-                        <div class="form-title">
-                            Lead Builder
-                        </div>
-                        <li class="form-question emphasis indent">
-                            Quickly find prospects using the most popular search criteria on Sales Navigator
-                        </li>
+						<div class="form-title">
+							Lead Builder
+						</div>
+						<li class="form-question emphasis indent">
+							Quickly find prospects using the most popular search criteria on Sales Navigator
+						</li> -->
 
-                    </div>
+					<!-- Search sportlights -->
+					<div class="flex-row">
+						<div style="flex:8;">
+							<mat-horizontal-stepper #stepperSub1 id=stepperSub1 (selectionChange)="selectionChangeSub1($event)">
+								<mat-step [completed]="false">
+									<div class="flex-col">
+										<div>
+											<button mat-button color="primary" (click)="onClickShapeSub1(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+										</div>
 
+										<div class="form-main-title">
+											Search Spotlights
+										</div>
+										<div [@enterSentenceAnimation]="stageSub1_1>=1" class="form-question">
+											<span style="color:green">1. Job Changes:</span> Spotlight identifies prospects who have changed
+											jobs within the last three months
+										</div>
+										<div [@enterSentenceAnimation]="stageSub1_1>=2" class="form-question">
+											<span style="color:green">2. Shared Experiences:</span>
+											Spotlight uncovers prospects who attended the same schools, worked at the same companies, or belong to the
+											same LinkedIn
+											Groups as you
+										</div>
+										<div [@enterSentenceAnimation]="stageSub1_1>=3" class="form-question">
+											<span style="color:green">3. LinkedIn Activity:</span>
+											Spotlight shows prospects who have posted or shared content on LinkedIn in the past 30 days
+										</div>
+										<div [@enterSentenceAnimation]="stageSub1_1>=4" class="form-question">
+											<span style="color:green">4. Mentioned in the News:</span>
+											Spotlight finds prospects who have been mentioned in the news in the past 30 days
+										</div>
+										<div [@enterSentenceAnimation]="stageSub1_1>=5" class="form-question">
+											<span style="color:green"> 5. Brand Engagement:</span>
+											Spotlight identifies prospects who have fol lowed your company or commented on your company’s posts on
+											LinkedIn
+										</div>
 
-                </mat-step>
+									</div>
 
-                <mat-step [completed]="false">
-                    <div class="flex-col">
+									<mat-horizontal-stepper #stepperSub1_1 (selectionChange)="selectionChangeSub1_1($event)"  class="sentence-stepper">
+										<mat-step [completed]="false">
+										</mat-step>
+										<mat-step [completed]="false">
+										</mat-step>
+										<mat-step [completed]="false">
+										</mat-step>
+										<mat-step [completed]="false">
+										</mat-step>
+										<mat-step [completed]="false">
+										</mat-step>
+									</mat-horizontal-stepper>
+								</mat-step>
 
-                        <div>
-                            <button mat-button color="primary" (click)="onClickShape(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
-                        </div>
+								<mat-step [completed]="false">
+									<div class="flex-col">
 
-                        <div class="form-main-title">
-                            Getting Started
-                        </div>
+										<div>
+											<button mat-button color="primary" (click)="onClickShapeSub1(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+										</div>
 
-                        <div class="form-title">Step 1:</div>
-                        <div class="form-question">
-                            Use the search bar at the top of the home page
-                        </div>
-                        <div class="form-title">Step 2:</div>
-                        <div class="form-question">
-                            Use Keywords, Company or Title to get started on your search
-                        </div>
-                        <div class="form-title">Step 3:</div>
-                        <div class="form-question">
-                            The TeamLink filterfinds prospects who are connected to your colleagues
-                        </div>
-                        <div class="form-title">Step 4:</div>
-                        <div class="form-question">
-                            The Geography filter allows you to target people and companies by multiple zip codes, U.S. states, or geographic areas
-                        </div>
-                        <div class="form-title">Step 5:</div>
-                        <div class="form-question">
-                            Refine your search more with search filters such as: Company Type, Years of experience and Years at current company
-                        </div>
-                        <div class="flex-row" style="align-items: center;">
-                            <img src="assets/prospecting/3-1.png" style="margin-right:1em;">
-                            <div class="flex-col">
-                                <div class="form-title">LinkedIn Sales<br>Navigator</div>
-                                <div class="form-description" style="color:lightgray">LinkedIn Corporation</div>
-                                <mat-chip-list>
-                                    <mat-chip color="primary" selected>&nbsp;&nbsp;&nbsp;GET&nbsp;&nbsp;&nbsp;</mat-chip>
-                                </mat-chip-list>
-                            </div>
-                        </div>
-
-                    </div>
-                </mat-step>
-
-                <mat-step [completed]="false">
-                    <div class="flex-col">
-                        <div class="flex-row" style="align-items:center;">
-                            <div class="flex-col" style="align-items: center">
-                                <img src="assets/prospecting/3-2.png">
-                            </div>
-
-                            <div class="flex-col">
-                                <div class="flex-row">
-                                    <div class="arrow chat-arrow left" style="margin-top:1em;">
-
-                                    </div>
-                                    <div class="chat-box">
-                                        <span style="font-size:1.4em;line-height: 1.5em;">"building your pipeline is as simple as taking the
-                                            time to listen, engage, and respond in a meaningful way, on a regular basis."</span>
-                                        <div style="font-style: normal"> Kaka Sexton, Head of Social Media for LinkedIn</div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </mat-step>
+										<div class="form-main-title">
+											Saved Searches
+										</div>
+										<div class="form-question">
+											Searching in Sales Navigator also provides the unique ability to save your frequent searches
+										</div>
 
 
-            </mat-horizontal-stepper>
-        </div>
-        <div style="flex:1;">
+										<li class="form-description emphasis indent">
+											You can easily access recent and saved searches from the homepage</li>
+										<li class="form-description emphasis indent">
+											You can access the list of your saved searches from the Search bar dropdown</li>
+										<li class="form-description emphasis indent">
+											When you save your searches, you will receive automated alerts when new leads match your criteria</li>
+										<li class="form-description emphasis indent">
+											Those new leads will be delivered straight to your inbox when they are identified</li>
 
-            <section class="shape-container">
-                <div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(1)">
-                    <div class="content-in-shape"><span class="title">Search Options on Sales Navigator</span></div>
-                </div>
+									</div>
+								</mat-step>
 
-                <div class="arrow up"></div>
-                <div class="arrow-line-vertical"></div>
-                <div class="arrow down"></div>
-
-                <div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer" (click)="onClickShape(2)">
-                    <div class="content-in-shape"><span class="title">Getting Started
-                        </span></div>
-                </div>
+								<mat-step [completed]="false">
+									<div class="flex-col">
+										<div class="flex-col" style="align-items: flex-end">
+											<img width="100%" src="assets/prospecting/4-bg.png">
+										</div>
+									</div>
+								</mat-step>
 
 
-            </section>
-        </div>
-    </div>
+							</mat-horizontal-stepper>
+						</div>
+						<div style="flex:1;">
 
-    <div class="page-footer>">
-			<button (click)="router.navigateByUrl('/Prospecting/3');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
-			<button (click)="router.navigateByUrl('/Prospecting/1');" mat-button color="primary" style="float:right;" href="#"><i class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
+							<section class="shape-container">
+								<div [ngClass]="{ 'green': stageSub1==1, 'blue': stageSub1!=1 }" class="shape position-unset rectangle round cursor-pointer"
+								 (click)="onClickShapeSub1(1)">
+									<div class="content-in-shape"><span class="title">Search Spotlights</span></div>
+								</div>
+
+								<div class="arrow up"></div>
+								<div class="arrow-line-vertical"></div>
+								<div class="arrow down"></div>
+
+								<div [ngClass]="{ 'green': stageSub1==2, 'blue': stageSub1!=2 }" class="shape position-unset rectangle round cursor-pointer"
+								 (click)="onClickShapeSub1(2)">
+									<div class="content-in-shape"><span class="title">Saved Searches</span></div>
+								</div>
+
+
+							</section>
+						</div>
+					</div>
+					<!-- END -->
+				</div>
+
+
+			</mat-step>
+
+			<mat-step [completed]="false">
+				<div class="flex-col">
+
+					<div>
+						<button mat-button color="primary" (click)="onClickShape(4)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					</div>
+
+					<!-- <div class="form-main-title">
+							Getting Started
+						</div>
+
+						<div class="form-title">Step 1:</div>
+						<div class="form-question">
+							Use the search bar at the top of the home page
+						</div>
+						<div class="form-title">Step 2:</div>
+						<div class="form-question">
+							Use Keywords, Company or Title to get started on your search
+						</div>
+						<div class="form-title">Step 3:</div>
+						<div class="form-question">
+							The TeamLink filterfinds prospects who are connected to your colleagues
+						</div>
+						<div class="form-title">Step 4:</div>
+						<div class="form-question">
+							The Geography filter allows you to target people and companies by multiple zip codes, U.S. states, or geographic
+							areas
+						</div>
+						<div class="form-title">Step 5:</div>
+						<div class="form-question">
+							Refine your search more with search filters such as: Company Type, Years of experience and Years at current
+							company
+						</div>
+						<div class="flex-row" style="align-items: center;">
+							<img src="assets/prospecting/3-1.png" style="margin-right:1em;">
+							<div class="flex-col">
+								<div class="form-title">LinkedIn Sales<br>Navigator</div>
+								<div class="form-description" style="color:lightgray">LinkedIn Corporation</div>
+								<mat-chip-list>
+									<mat-chip color="primary" selected>&nbsp;&nbsp;&nbsp;GET&nbsp;&nbsp;&nbsp;</mat-chip>
+								</mat-chip-list>
+							</div>
+						</div> -->
+
+					<!-- Multithreading -->
+					<div class="flex-row">
+						<div style="flex:8;">
+							<mat-horizontal-stepper #stepperSub2 (selectionChange)="selectionChangeSub2($event)">
+
+								<mat-step [completed]="false">
+									<div class="flex-col">
+										<div>
+											<button mat-button color="primary" (click)="onClickShapeSub2(4)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+										</div>
+
+										<div class="form-main-title">
+											Focused, one-relationship approaches:
+										</div>
+
+										<li class="form-description emphasis indent">
+											Increase the potential for a deal to fall through</li>
+										<li class="form-description emphasis indent">
+											Fail to take into account the ways B2B sales have transformed</li>
+
+									</div>
+								</mat-step>
+
+								<mat-step [completed]="false">
+									<div class="flex-col">
+
+										<div>
+											<button mat-button color="primary" (click)="onClickShapeSub2(4)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+										</div>
+										<div class="form-main-title">
+											In Addition:
+										</div>
+
+										<li class="form-description emphasis indent">
+											The number of decision makers has increased</li>
+										<li class="form-description emphasis indent">
+											CEB research reveals that on average 5.4 people now sign off on each B2B purchasing decision</li>
+
+									</div>
+								</mat-step>
+
+								<mat-step [completed]="false">
+									<div class="flex-col">
+
+										<div>
+											<button mat-button color="primary" (click)="onClickShapeSub2(4)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+										</div>
+
+										<div class="form-main-title">
+											Multi – Threading Best Practices
+
+										</div>
+
+										<li class="form-description emphasis indent">Tailor your approach to each contact
+										</li>
+										<li class="form-description emphasis indent">Understand what matters to each individual
+										</li>
+										<li class="form-description emphasis indent">Keep up with contacts via LinkedIn to become familiar
+											with their needs, goals, and priorities
+										</li>
+										<li class="form-description emphasis indent">Identify other important players in the company by watching
+											what is posted
+										</li>
+
+									</div>
+								</mat-step>
+
+								<mat-step [completed]="false">
+									<div class="flex-col">
+
+										<div class="flex-row" style="align-items: center; padding-top: 2em;padding-bottom: 2em;">
+											<!-- Multi - Threading -->
+											<div class="flex-col">
+												<section class="shape-container-row" style="justify-content: flex-start;">
+													<div class="gray shape position-unset circle cursor-pointer">
+														<div class="content-in-shape"><span class="title">Multi - Threading
+															</span></div>
+													</div>
+													<div class="flex-row" style="align-items:center">
+														<div class="arrow-line" style="margin-left: 2em;"></div>
+														<div class="arrow right" style="margin-right: 2em;"></div>
+													</div>
+												</section>
+											</div>
+
+											<div class="flex-col" style="align-items: center; margin-left:-2em;margin-right:-2em;">
+												<!-- HR VP, Controller -->
+												<section class="shape-container-row" style="justify-content: flex-start">
+													<div class="green shape position-unset diamond cursor-pointer" style="margin-right: 2em;">
+														<div class="content-in-shape"><span class="title">HR VP
+															</span></div>
+													</div>
+													<div class="green shape position-unset diamond cursor-pointer" style="margin-left: 2em;">
+														<div class="content-in-shape"><span class="title">Controller
+															</span></div>
+													</div>
+												</section>
+
+												<div style="transform: rotate(-90deg);margin-bottom: 1em;">
+													<img src="assets/blueprint-process/13-arrow-double.png">
+												</div>
+
+												<!-- CFO, -->
+												<section class="shape-container-row" style="justify-content: flex-start;">
+													<div class="green shape position-unset diamond cursor-pointer">
+														<div class="content-in-shape"><span class="title">CFO
+															</span></div>
+													</div>
+
+												</section>
+												<div style="transform: rotate(90deg); margin-top: 1em;">
+													<img src="assets/blueprint-process/13-arrow-double.png">
+												</div>
+												<!-- Risk Manager, Other Staff -->
+												<section class="shape-container-row" style="justify-content: flex-start;">
+													<div class="green shape position-unset diamond cursor-pointer" style="margin-right: 2em;">
+														<div class="content-in-shape"><span class="title">Risk Manager
+															</span></div>
+													</div>
+													<div class="green shape position-unset diamond cursor-pointer" style="margin-left: 2em;">
+														<div class="content-in-shape"><span class="title">Other Staff (clerks, etc.)
+															</span></div>
+													</div>
+												</section>
+											</div>
+
+											<!-- Thread1 and Thread2 -->
+											<div class="flex-row" style="align-items: center">
+												<div>
+													<img src="assets/blueprint-process/13-arrow-double.png">
+												</div>
+												<section class="shape-container">
+													<div class="green shape position-unset diamond cursor-pointer" style="margin-bottom: 2em;">
+														<div class="content-in-shape"><span class="title">Thread 1
+															</span></div>
+													</div>
+													<div class="green shape position-unset diamond cursor-pointer" style="margin-top: 2em;">
+														<div class="content-in-shape"><span class="title">Thread 2
+															</span></div>
+													</div>
+												</section>
+											</div>
+
+
+										</div>
+										<div class="form-question">
+											When it comes to priming a sales prospecting pipeline, most insurance producers have been trained to focus
+											on a single prospect
+											or lead at each targeted company. But new research suggests that this approach is losing effectiveness
+											in a modern, social-driven sales world
+
+										</div>
+									</div>
+								</mat-step>
+
+
+							</mat-horizontal-stepper>
+						</div>
+						<div style="flex:1;">
+
+							<section class="shape-container">
+								<div [ngClass]="{ 'green': stageSub2==1, 'blue': stageSub2!=1 }" class="shape position-unset rectangle round cursor-pointer"
+								 (click)="onClickShapeSub2(1)">
+									<div class="content-in-shape"><span class="title">Focused, one relationship approaches:
+										</span></div>
+								</div>
+
+								<div class="arrow up"></div>
+								<div class="arrow-line-vertical"></div>
+								<div class="arrow down"></div>
+
+								<div [ngClass]="{ 'green': stageSub2==2, 'blue': stageSub2!=2 }" class="shape position-unset rectangle round cursor-pointer"
+								 (click)="onClickShapeSub2(2)">
+									<div class="content-in-shape"><span class="title">In Addition:</span></div>
+								</div>
+
+
+								<div class="arrow up"></div>
+								<div class="arrow-line-vertical"></div>
+								<div class="arrow down"></div>
+
+								<div [ngClass]="{ 'green': stageSub2==3, 'blue': stageSub2!=3 }" class="shape position-unset rectangle round cursor-pointer"
+								 (click)="onClickShapeSub2(3)">
+									<div class="content-in-shape"><span class="title">Multi – Threading Best Practices</span></div>
+								</div>
+
+							</section>
+						</div>
+					</div>
+					<!-- END -->
+				</div>
+			</mat-step>
+
+			<mat-step [completed]="false">
+				<div class="flex-col">
+
+					<div>
+						<button mat-button color="primary" (click)="onClickShape(4)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+					</div>
+
+					<!-- <div class="form-main-title">
+							Getting Started
+						</div>
+
+						<div class="form-title">Step 1:</div>
+						<div class="form-question">
+							Use the search bar at the top of the home page
+						</div>
+						<div class="form-title">Step 2:</div>
+						<div class="form-question">
+							Use Keywords, Company or Title to get started on your search
+						</div>
+						<div class="form-title">Step 3:</div>
+						<div class="form-question">
+							The TeamLink filterfinds prospects who are connected to your colleagues
+						</div>
+						<div class="form-title">Step 4:</div>
+						<div class="form-question">
+							The Geography filter allows you to target people and companies by multiple zip codes, U.S. states, or geographic
+							areas
+						</div>
+						<div class="form-title">Step 5:</div>
+						<div class="form-question">
+							Refine your search more with search filters such as: Company Type, Years of experience and Years at current
+							company
+						</div>
+						<div class="flex-row" style="align-items: center;">
+							<img src="assets/prospecting/3-1.png" style="margin-right:1em;">
+							<div class="flex-col">
+								<div class="form-title">LinkedIn Sales<br>Navigator</div>
+								<div class="form-description" style="color:lightgray">LinkedIn Corporation</div>
+								<mat-chip-list>
+									<mat-chip color="primary" selected>&nbsp;&nbsp;&nbsp;GET&nbsp;&nbsp;&nbsp;</mat-chip>
+								</mat-chip-list>
+							</div>
+						</div> -->
+
+					<div class="flex-row">
+						<div style="flex:8;">
+							<mat-horizontal-stepper #stepperSub3 (selectionChange)="selectionChangeSub3($event)">
+								<mat-step [completed]="false">
+									<div class="flex-col">
+										<div>
+											<button mat-button color="primary" (click)="onClickShapeSub3(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+										</div>
+
+										<div class="form-main-title">Why post on LinkedIn?</div>
+
+										<div class="form-question">1. Establish yourself as a thought leader with expertise</div>
+										<li class="form-question emphasis indent">Industry insights, trends, functional expertise</li>
+
+										<div class="form-question">2. Add value to your network</div>
+										<li class="form-question emphasis indent">Leadership, career pieces, productivity tips</li>
+
+										<div class="form-question">3. Recognize your network to build relationships</div>
+										<li class="form-question emphasis indent">Colleagues’ posts, client news, tag connections</li>
+
+										<div class="form-question">4. Share why you are proud to work at your company</div>
+										<li class="form-question emphasis indent">Culture, achievements, leadership perspectives</li>
+
+										<div class="form-question">5. Drive action with a clear call to action</div>
+										<li class="form-question emphasis indent">Product promotion, job postings, marketing content</li>
+
+									</div>
+								</mat-step>
+
+								<mat-step [completed]="false">
+									<div class="flex-col">
+
+										<div>
+											<button mat-button color="primary" (click)="onClickShapeSub3(3)"><i class="fa fa-arrow-left" style="padding-bottom: 3px;"></i>&nbsp;&nbsp;&nbsp;Back</button>
+										</div>
+										<div class="form-main-title">Five Bottlenecks to Growth</div>
+
+										<div class="form-question">1. Expectations</div>
+										<li class="form-question emphasis indent">Goals</li>
+										<li class="form-question emphasis indent">Book Size</li>
+										<li class="form-question emphasis indent">Capabilities (What you actually have vs. what you believe you
+											have)</li>
+
+										<div class="form-question">2. Time</div>
+										<li class="form-question emphasis indent">Fewer accounts, bigger accounts</li>
+
+										<div class="form-question">3. Who Do I Call On</div>
+
+										<div class="form-question">4. How Do I Get Them to Meet With Me</div>
+
+										<div class="form-question">5. Why Should They Buy From Me</div>
+
+									</div>
+								</mat-step>
+
+								<mat-step [completed]="false">
+									<div class="flex-col">
+										<div class="flex-col" style="align-items: flex-end">
+											<img width="100%" src="assets/prospecting/6-bg.png">
+										</div>
+									</div>
+								</mat-step>
+
+
+							</mat-horizontal-stepper>
+						</div>
+						<div style="flex:1;">
+
+							<section class="shape-container">
+								<div [ngClass]="{ 'green': stageSub3==1, 'blue': stageSub3!=1 }" class="shape position-unset rectangle round cursor-pointer"
+								 (click)="onClickShapeSub3(1)">
+									<div class="content-in-shape"><span class="title">Why post on LinkedIn?
+										</span></div>
+								</div>
+
+								<div class="arrow up"></div>
+								<div class="arrow-line-vertical"></div>
+								<div class="arrow down"></div>
+
+								<div [ngClass]="{ 'green': stageSub3==2, 'blue': stageSub3!=2 }" class="shape position-unset rectangle round cursor-pointer"
+								 (click)="onClickShapeSub3(2)">
+									<div class="content-in-shape"><span class="title">Five Bottlenecks to Growth</span></div>
+								</div>
+
+
+							</section>
+						</div>
+					</div>
+
+				</div>
+			</mat-step>
+
+			<mat-step [completed]="false">
+
+				<div class="flex-row">
+					<div style="flex:8;">
+						<div class="flex-row" style="align-items:center;">
+							<div class="flex-col" style="align-items: center">
+								<img src="assets/prospecting/3-2.png">
+							</div>
+
+							<div class="flex-col">
+								<div class="flex-row">
+									<div class="arrow chat-arrow left" style="margin-top:1em;">
+
+									</div>
+									<div class="chat-box">
+										<span style="font-size:1.4em;line-height: 1.5em;">"building your pipeline is as simple as taking the
+											time to listen, engage, and respond in a meaningful way, on a regular basis."</span>
+										<div style="font-style: normal"> Kaka Sexton, Head of Social Media for LinkedIn</div>
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div style="flex:1;">
+						<section class="shape-container">
+							<div [ngClass]="{ 'green': stage==1, 'blue': stage!=1 }" class="shape position-unset rectangle round cursor-pointer"
+							 (click)="onClickShape(1)">
+								<div class="content-in-shape"><span class="title">Search Spotlights</span></div>
+							</div>
+
+							<div class="arrow up"></div>
+							<div class="arrow-line-vertical"></div>
+							<div class="arrow down"></div>
+
+							<div [ngClass]="{ 'green': stage==2, 'blue': stage!=2 }" class="shape position-unset rectangle round cursor-pointer"
+							 (click)="onClickShape(2)">
+								<div class="content-in-shape"><span class="title">Multi-Threading
+									</span></div>
+							</div>
+
+							<div class="arrow up"></div>
+							<div class="arrow-line-vertical"></div>
+							<div class="arrow down"></div>
+
+							<div [ngClass]="{ 'green': stage==3, 'blue': stage!=3 }" class="shape position-unset rectangle round cursor-pointer"
+							 (click)="onClickShape(3)">
+								<div class="content-in-shape"><span class="title">Why post on LinkedIn?
+									</span></div>
+							</div>
+
+
+						</section>
+					</div>
+				</div>
+
+
+			</mat-step>
+
+
+		</mat-horizontal-stepper>
+		<!-- </div> -->
+		<!-- <div style="flex:1;"> -->
+		<!-- </div> -->
+	</div>
+
+	<div class="page-footer>">
+		<button (click)="router.navigateByUrl('/Prospecting/3');" mat-button color="primary" style="float:right;" href="#">Next&nbsp;&nbsp;&nbsp;<i
+			 class="fa fa-arrow-right" style="padding-bottom: 3px"></i></button>
+		<button (click)="router.navigateByUrl('/Prospecting/1');" mat-button color="primary" style="float:right;" href="#"><i
+			 class="fa fa-arrow-left" style="padding-bottom: 3px"></i>&nbsp;&nbsp;&nbsp;Prev</button>
 	</div>
 
 

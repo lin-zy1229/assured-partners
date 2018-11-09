@@ -48,21 +48,34 @@
 			<span class="form-question">The Five Categories of Sales People</span>
 		</div>
 
-		<div class="form-question">
+		<mat-horizontal-stepper #stepperSub1_1 (selectionChange)="selectionChangeSub1_1($event)" class="sentence-stepper">
+			<mat-step [completed]="false">
+			</mat-step>
+			<mat-step [completed]="false">
+			</mat-step>
+			<mat-step [completed]="false">
+			</mat-step>
+			<mat-step [completed]="false">
+			</mat-step>
+			<mat-step [completed]="false">
+			</mat-step>
+		</mat-horizontal-stepper>
+
+		<div [@enterSentenceAnimation]="stageSub1_1>=1" class="form-question">
 			<span class="form-question indent">1. The Hard Worker</span>
 		</div>
-		<div class="form-question">
+		<div [@enterSentenceAnimation]="stageSub1_1>=2" class="form-question">
 			<span class="form-question indent">2. The Challenger</span>
 
 		</div>
-		<div class="form-question">
+		<div [@enterSentenceAnimation]="stageSub1_1>=3" class="form-question">
 			<span class="form-question indent">3. The Relationship Builder</span>
 
 		</div>
-		<div class="form-question">
+		<div [@enterSentenceAnimation]="stageSub1_1>=4" class="form-question">
 			<span class="form-question indent">4. The Lone Wolf</span>
 		</div>
-		<div class="form-question">
+		<div [@enterSentenceAnimation]="stageSub1_1>=5" class="form-question">
 			<span class="form-question indent">5. The Reactive Problem Solver</span>
 		</div>
 
